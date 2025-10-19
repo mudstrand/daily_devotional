@@ -320,7 +320,8 @@ def main():
     if not rec:
         return
 
-    fmt = format_for_html(rec)
+    # fmt = format_for_html(rec)
+    # print(f"rec: {rec}")
 
     poster = TelegramPoster()
     if not poster.is_configured():
@@ -330,11 +331,12 @@ def main():
         return
 
     ok = poster.post_devotion(
-        message_id=fmt["message_id"],
-        subject=fmt["subject"],
-        verse=fmt["verse"],
-        reflection=fmt["reflection"],
-        prayer=fmt["prayer"],
+        message_id=rec["message_id"],
+        subject=rec["subject"],
+        verse=rec["verse"],
+        reading=rec["reading"],
+        reflection=rec["reflection"],
+        prayer=rec["prayer"],
         silent=args.silent,
     )
 

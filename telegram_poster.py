@@ -21,6 +21,7 @@ class TelegramPoster:
         message_id: str,
         subject: str,
         verse: str,
+        reading: str,
         reflection: str,
         prayer: str,
         silent: bool = False,
@@ -31,21 +32,27 @@ class TelegramPoster:
             )
             return False
 
-        # subject, verse, reflection, prayer are already HTML-escaped/converted by caller
+        # subject, verse, reading, reflection, prayer are already HTML-escaped/converted by caller
         parts = []
-        if message_id:
-            parts.append(f"<code>message id: {subject and ''}{message_id}</code>")
+        parts.append("✝️ <b>Pastor Al's Daily Devotional</b> ✝️")
         if subject:
-            parts.append(f"<b>{subject}</b>")
+            parts.append(f"<b>{subject.title()}</b>")
+            parts.append("━━━━━━━━━━━━━━━")
         if verse:
-            parts.append("<i>Verse:</i>")
-            parts.append(verse)
+            parts.append("💒 <b>Verse:</b>")
+            if reading:
+                parts.append(f"<i>{verse}</i>   📙 <i>({reading})</i>")
+            else:
+                parts.append(f"<i>{verse}</i>")
         if reflection:
-            parts.append("<i>Reflection:</i>")
-            parts.append(reflection)
+            parts.append("💭 <b>Reflection:</b>")
+            parts.append(f"{reflection}")
         if prayer:
-            parts.append("<i>Prayer:</i>")
+            parts.append("🙏 <b>Prayer:</b>")
             parts.append(prayer)
+        parts.append("━━━━━━━━━━━━━━━")
+        if message_id:
+            parts.append(f"#{message_id}")
 
         # Blank line between sections -> Telegram supports \n\n in HTML mode, preserved as new lines
         message = "\n\n".join(parts).strip()
