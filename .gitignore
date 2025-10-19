@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+daily_devotional.db-shm
+daily_devotional.db-wal

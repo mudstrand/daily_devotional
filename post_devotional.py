@@ -2,34 +2,29 @@
 """
 post_devotional.py
 
-Reads one devotional from the SQLite database, converts its text to Telegram-safe HTML,
-and posts it via telegram_poster.TelegramPoster.
+Reads one devotional from the SQLite database and posts it via telegram_poster.TelegramPoster
+without any markdown/HTML conversion. Text is used as-is from the database, with minimal
+normalization:
 
-Highlights:
--  Balanced-first emphasis conversion:
-    • If bold (**) markers are globally unbalanced, all ** are dropped (no conversion).
-    • If single-underscore (_) italics are unbalanced, drop single _ markers (keep __ literal).
-    • If single-asterisk (*) italics are unbalanced, drop single * markers (keep ** bold intact).
-  Otherwise, matched pairs are converted to <b>...</b> and <i>...</i> safely.
+-    Reflection newline normalization:
+    • Replace any CR/LF line breaks with spaces (collapse newlines into single spaces).
+    • Collapse multiple spaces/tabs into a single space.
+    • Trim leading/trailing whitespace.
 
--  Paragraph handling:
-    • Keeps blank lines (paragraph breaks).
-    • Joins single newlines within paragraphs (soft wraps) into spaces.
-    • No <br> tags (Telegram HTML expects literal newlines).
+-    Verse formatting:
+    • Apply the same normalization as above.
+    • After removing newlines, find the last "(" and insert a single newline just BEFORE it.
+      If no "(" exists, the verse is unchanged.
 
--  Spacing:
-    • Adds spacing around <b>/<i> tags so tags don’t jam against words/punctuation.
-
--  Amen cleanup:
-    • Removes stray markers immediately around the word “Amen”.
+-    Optional double-underscore cleanup in subject/verse/reflection/prayer (e.g., "lives__are")
+    normalized to a single space.
 
 Requirements:
--  database.py providing init_db, get_devotional, get_random_unread, get_random_read, mark_read
--  telegram_poster.py with TelegramPoster using parse_mode="HTML"
+-    database.py providing init_db, get_devotional, get_random_unread, get_random_read, mark_read
+-    telegram_poster.py with TelegramPoster
 """
 
 import argparse
-import html
 import re
 from datetime import date
 from typing import Optional, Dict
@@ -37,186 +32,51 @@ from typing import Optional, Dict
 import database
 from telegram_poster import TelegramPoster
 
-# -------------------- Regex utilities and placeholders --------------------
+# -------------------- Simple normalization helpers --------------------
 
-RE_CRLF = re.compile(r"\r\n?")
-RE_MANY_BLANKS = re.compile(r"\n{3,}")  # 3+ blank lines -> 2
-RE_MARKER_ONLY = re.compile(r"(?m)^\s*([*_]{1,3})\s*$")
-RE_DOUBLE_SPACE = re.compile(r"[ \t]{2,}")
-
-# Placeholders to survive HTML escaping
-B_OPEN, B_CLOSE = "«B»", "«/B»"
-I_OPEN, I_CLOSE = "«I»", "«/I»"
-
-# -------------------- Normalization --------------------
+RE_CRLF = re.compile(r"\r\n?")  # \r\n or \r -> \n
+RE_ANY_NEWLINE = re.compile(r"\n+")  # any runs of \n
+RE_DOUBLE_SPACE = re.compile(r"[ \t]{2,}")  # 2+ spaces/tabs -> 1 space
+RE_MULTI_UNDERSCORES = re.compile(r"_{2,}")  # 2+ underscores -> 1 space
 
 
-def normalize_structure_balanced(s: str) -> str:
+def normalize_simple(text: Optional[str]) -> str:
     """
-    Normalize line endings and paragraph structure:
-    - Keep paragraph breaks (blank lines).
-    - Within each paragraph, join single newlines to spaces.
-    - Remove lines that are only markers like "**" or "_".
+    Minimal normalization:
+    - Convert CR/LF to LF, then collapse all newlines to single spaces.
+    - Collapse multiple spaces/tabs to a single space.
+    - Strip leading/trailing whitespace.
     """
-    if not s:
+    if not text:
         return ""
-    s = RE_CRLF.sub("\n", s)
-    s = RE_MARKER_ONLY.sub("", s)
-
-    blocks = [b.strip() for b in s.split("\n\n") if b.strip()]
-    joined = []
-    for b in blocks:
-        # Join single newlines within a paragraph
-        b = re.sub(r"(?<!\n)\n(?!\n)", " ", b)
-        joined.append(b)
-
-    s = "\n\n".join(joined)
-    s = RE_MANY_BLANKS.sub("\n\n", s)
+    s = text
+    s = RE_CRLF.sub("\n", s)  # unify line endings
+    s = RE_ANY_NEWLINE.sub(" ", s)  # collapse any newlines to single spaces
+    s = RE_DOUBLE_SPACE.sub(" ", s)  # collapse repeated spaces/tabs
     return s.strip()
 
 
-# -------------------- Balance checks --------------------
-
-
-def is_bold_balanced(s: str) -> bool:
-    # Count non-overlapping occurrences of ** (ignore *** by letting it count as ** + *)
-    tokens = re.findall(r"\*\*(?!\*)", s)
-    return len(tokens) % 2 == 0
-
-
-def is_asterisk_ital_balanced(s: str) -> bool:
-    # Count single * that are not part of ** (and not escaped)
-    tokens = re.findall(r"(?<!\*)\*(?!\*)", s)
-    return len(tokens) % 2 == 0
-
-
-def is_underscore_ital_balanced(s: str) -> bool:
-    # Count single _ that are not part of __ (and not escaped)
-    tokens = re.findall(r"(?<!_)_(?!_)", s)
-    return len(tokens) % 2 == 0
-
-
-# -------------------- Conversion to Telegram-safe HTML --------------------
-
-
-def add_spacing_around_tags(html_text: str) -> str:
+def normalize_field(text: Optional[str]) -> str:
     """
-    Insert spaces around <b>…</b> and <i>…</i> when adjacent to non-space chars,
-    except at line starts/ends.
+    Apply simple normalization plus a gentle cleanup for repeated underscores.
     """
-    # Space before opening tag if previous char is not whitespace/newline
-    html_text = re.sub(r"(?<![\s\n])(<b>|<i>)", r" \1", html_text)
-    # Space after closing tag if followed by non-space and not newline
-    html_text = re.sub(r"(</b>|</i>)(?=[^\s\n])", r"\1 ", html_text)
-    # Trim line-leading spaces introduced by the above
-    html_text = re.sub(r"\n +", "\n", html_text)
-    # Collapse multiple spaces
-    html_text = RE_DOUBLE_SPACE.sub(" ", html_text)
-    # Avoid space before punctuation
-    html_text = re.sub(r"\s+([,;:.!?])", r"\1", html_text)
-    return html_text
-
-
-def clean_leftover_markers_around_tags(s: str) -> str:
-    """
-    Remove raw markers glued to tag boundaries or left dangling at line ends.
-    """
-    # Remove markers just before a closing tag or just after an opening tag
-    s = re.sub(r"(?:\*\*|__|\*|_)+(</[bi]>)", r"\1", s)
-    s = re.sub(r"(<[bi]>)\s*(?:\*\*|__|\*|_)+", r"\1", s)
-    # Remove trailing markers at end of lines
-    s = re.sub(r"[ \t]*(?:\*\*|__|\*|_)+\s*(?=\n|$)", "", s)
+    s = normalize_simple(text)
+    s = RE_MULTI_UNDERSCORES.sub(" ", s)
     return s
 
 
-def normalize_amen(html_text: str) -> str:
+def format_verse(text: Optional[str]) -> str:
     """
-    Remove stray markdown markers (**, __, *, _) immediately adjacent to 'Amen'
-    (case-insensitive), preserving the period if present.
+    Normalize verse and then insert a newline just BEFORE the last '(' if present.
     """
-    if not html_text:
-        return html_text
-    s = RE_DOUBLE_SPACE.sub(" ", html_text)
-    # Remove markers before Amen
-    s = re.sub(r"(?i)(?:\s*(?:\*\*|__|\*|_)\s*)+(Amen)(\b)", r" \1\2", s)
-    # Remove markers after Amen (with optional punctuation)
-    s = re.sub(r"(?i)(Amen)([.!?]?)\s*(?:\*\*|__|\*|_)+(\s*$)", r"\1\2\3", s)
-    # Case where punctuation is after markers: Amen** .
-    s = re.sub(r"(?i)(Amen)\s*(?:\*\*|__|\*|_)+\s*([.!?])(\s*$)", r"\1\2\3", s)
-    # Tidy spaces around punctuation and newlines
-    s = re.sub(r"\s+([.!?])", r"\1", s)
-    s = re.sub(r"[ \t]+\n", "\n", s)
-    return s
-
-
-def convert_balanced_md_to_html(s: str) -> str:
-    """
-    Balanced-first conversion:
-    - If ** markers are unbalanced globally, drop all ** (no bold).
-    - If single _ markers are unbalanced, drop single _ (keep __ as literal).
-    - If single * markers are unbalanced, drop single * (keep ** for bold).
-    - Otherwise, convert matched pairs to <b>/<i> using placeholders, then escape and restore.
-    Keeps paragraphs (blank lines) and literal newlines for Telegram HTML.
-    """
+    s = normalize_field(text)
     if not s:
         return ""
-
-    s = normalize_structure_balanced(s)
-
-    # 1) Bold decision
-    if is_bold_balanced(s):
-        s = re.sub(
-            r"\*\*(.+?)\*\*",
-            lambda m: f"{B_OPEN}{m.group(1)}{B_CLOSE}",
-            s,
-            flags=re.DOTALL,
-        )
-    else:
-        # Reduce *** -> ** + * then strip all ** to plain text
-        s = s.replace("***", "*")
-        s = s.replace("**", "")
-
-    # 2) Underscore italics decision (single _ only)
-    if is_underscore_ital_balanced(s):
-        s = re.sub(
-            r"(?<!_)_(?!_)(.+?)(?<!_)_(?!_)",
-            lambda m: f"{I_OPEN}{m.group(1)}{I_CLOSE}",
-            s,
-            flags=re.DOTALL,
-        )
-    else:
-        s = re.sub(r"(?<!_)_(?!_)", "", s)
-
-    # 3) Asterisk italics decision (single * only)
-    if is_asterisk_ital_balanced(s):
-        s = re.sub(
-            r"(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)",
-            lambda m: f"{I_OPEN}{m.group(1)}{I_CLOSE}",
-            s,
-            flags=re.DOTALL,
-        )
-    else:
-        s = re.sub(r"(?<!\*)\*(?!\*)", "", s)
-
-    # 4) Escape remaining text
-    s = html.escape(s, quote=True)
-
-    # 5) Restore placeholders to HTML tags
-    s = s.replace(B_OPEN, "<b>").replace(B_CLOSE, "</b>")
-    s = s.replace(I_OPEN, "<i>").replace(I_CLOSE, "</i>")
-
-    # 6) Tidy around tags and remove leftover markers
-    s = add_spacing_around_tags(s)
-    s = clean_leftover_markers_around_tags(s)
-
-    # 7) Final whitespace cleanup
-    s = RE_DOUBLE_SPACE.sub(" ", s)
-    s = RE_MANY_BLANKS.sub("\n\n", s)
-    return s.strip()
-
-
-def to_html_field(raw: Optional[str]) -> str:
-    return convert_balanced_md_to_html(raw or "")
+    last_paren = s.rfind("(")
+    if last_paren != -1:
+        # Insert a newline before the last '('
+        s = s[:last_paren].rstrip() + "\n" + s[last_paren:].lstrip()
+    return s
 
 
 # -------------------- DB record selection --------------------
@@ -247,51 +107,12 @@ def pick_devotional(
     return None
 
 
-# -------------------- Format fields for Telegram HTML --------------------
-
-
-def format_for_html(rec: Dict[str, Optional[str]]) -> Dict[str, str]:
-    subject_html = to_html_field(rec.get("subject"))
-    verse_html = to_html_field(rec.get("verse"))
-    refl_html = to_html_field(rec.get("reflection"))
-    prayer_html = to_html_field(rec.get("prayer"))
-
-    # Post-conversion cleanups
-    verse_html = collapse_literal_underscores(verse_html)
-    refl_html = collapse_literal_underscores(refl_html)
-    prayer_html = collapse_literal_underscores(prayer_html)
-
-    # Targeted Amen cleanup
-    prayer_html = normalize_amen(prayer_html)
-
-    # Also collapse accidental double spaces in verse (e.g., "lives  are")
-    verse_html = RE_DOUBLE_SPACE.sub(" ", verse_html)
-
-    return {
-        "message_id": html.escape(rec.get("message_id") or "", quote=True),
-        "subject": subject_html,
-        "verse": verse_html,
-        "reflection": refl_html,
-        "prayer": prayer_html,
-    }
-
-
-def collapse_literal_underscores(s: str) -> str:
-    """
-    Replace literal runs of underscores (two or more) with a single space.
-    Operates on the final HTML-safe text (so it won't affect tags).
-    """
-    if not s:
-        return s
-    return re.sub(r"_{2,}", " ", s)
-
-
 # -------------------- CLI and main --------------------
 
 
 def build_args():
     p = argparse.ArgumentParser(
-        description="Post a devotional (HTML) from the database to Telegram."
+        description="Post a devotional from the database to Telegram (no markdown/HTML conversion)."
     )
     p.add_argument("--message-id", help="Post a specific devotional by message_id.")
     p.add_argument(
@@ -320,8 +141,14 @@ def main():
     if not rec:
         return
 
-    # fmt = format_for_html(rec)
-    # print(f"rec: {rec}")
+    # Normalize fields for posting
+    subject = normalize_field(rec.get("subject"))
+    verse = format_verse(rec.get("verse"))  # special rule: newline before last '('
+    reflection = normalize_field(rec.get("reflection"))  # replace newlines with spaces
+    prayer = normalize_field(rec.get("prayer"))
+    reading = (
+        normalize_field(rec.get("reading")) if rec.get("reading") is not None else ""
+    )
 
     poster = TelegramPoster()
     if not poster.is_configured():
@@ -331,12 +158,12 @@ def main():
         return
 
     ok = poster.post_devotion(
-        message_id=rec["message_id"],
-        subject=rec["subject"],
-        verse=rec["verse"],
-        reading=rec["reading"],
-        reflection=rec["reflection"],
-        prayer=rec["prayer"],
+        message_id=rec.get("message_id", ""),
+        subject=subject,
+        verse=verse,
+        reading=reading,
+        reflection=reflection,
+        prayer=prayer,
         silent=args.silent,
     )
 
