@@ -1,0 +1,31 @@
+BOT
+=================================================================================================
+Done! Congratulations on your new bot. You will find it at t.me/devotio_cotidiana_bot. You can now add a description, about section and profile picture for your bot, see /help for a list of commands. By the way, when you've finished creating your cool bot, ping our Bot Support if you want a better username for it. Just make sure the bot is fully operational before you do this.
+
+Use this token to access the HTTP API:
+7889085859:AAESpF-t0COMNZo-FOIqOfdbZ2RVLJgx1zg
+Keep your token secure and store it safely, it can be used by anyone to control your bot.
+
+For a description of the Bot API, see this page: https://core.telegram.org/bots/api
+
+
+GROUP
+=================================================================================================
+GetIDsBot - Get Meta information in Telegram
+
+Available commands:
+» /admins to get a list of all current admins.
+» /json in reply to a message to get it's bot api json variant.
+» /user in reply to a message for info about that user.
+
+This chat
+ ├ id: -1003119189697
+ ├ title: Daily Devotional
+ ├ username: daily_devotional_group
+ └ type: supergroup
+
+Its admins:
+🤖 GetIDs Bot
+⭐️ Mark Udstrand
+
+ℹ️ Commands are rate limited in group chats. I do not talk unless asked to do so.
