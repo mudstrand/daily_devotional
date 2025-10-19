@@ -2,10 +2,12 @@
 import argparse
 import sqlite3
 from typing import Optional
+import os
 
-DEFAULT_DB = "daily_devotional.db"
 DEFAULT_TABLE = "devotionals"
 DEFAULT_COLUMN = "prayer"
+
+devotional_db = os.getenv("DEVOTIONAL_DB")
 
 
 def clean_text(text: Optional[str]) -> Optional[str]:
@@ -34,8 +36,8 @@ def main():
     )
     ap.add_argument(
         "--db",
-        default=DEFAULT_DB,
-        help="Path to SQLite DB (default: daily_devotional.db)",
+        default=devotional_db,
+        help="Path to SQLite DB",
     )
     ap.add_argument(
         "--table", default=DEFAULT_TABLE, help="Table name (default: devotionals)"

@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 import sqlite3
 from pathlib import Path
+import os
 
-DB_PATH = "daily_devotional.db"  # change if different
 ORIG_DIR = Path("orig")  # directory with <message_id>.txt files
 TABLE = "devotionals"  # table name
+db_devotional = os.getenv("DEVOTIONAL_DB")
 
 
 def main():
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(db_devotional)
     cur = conn.cursor()
 
     # speed up batch updates
