@@ -27,7 +27,7 @@ Requirements:
 import argparse
 import re
 from datetime import date
-from typing import Optional, Dict
+from typing import Dict, Optional
 
 import database
 from telegram_poster import TelegramPoster

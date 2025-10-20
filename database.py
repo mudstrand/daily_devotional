@@ -159,7 +159,7 @@ def get_random_unread(limit: int, db_path: str = DB_PATH):
         return list(
             conn.execute(
                 """
-        SELECT d.message_id, d.subject, d.verse, d.reflection, d.prayer
+        SELECT d.message_id, d.subject, d.verse, d.reading, d.reflection, d.prayer
         FROM devotionals d
         LEFT JOIN read_history r ON r.message_id = d.message_id
         WHERE r.message_id IS NULL
