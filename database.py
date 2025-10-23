@@ -2,7 +2,7 @@
 import os
 import sqlite3
 from contextlib import contextmanager
-from datetime import datetime
+from datetime import datetime, date
 from typing import Any, Dict, Iterable, Optional
 
 DB_PATH = os.getenv("DEVOTIONAL_DB")
@@ -201,14 +201,14 @@ def mark_read(
         return
     if not mark_date:
         mark_date = date.today().isoformat()
-        with get_conn(db_path) as conn:
-            conn.executemany(
-                """
-            INSERT OR REPLACE INTO read_history (message_id, read_date)
-            VALUES (?, ?)
-            """,
-                [(mid, mark_date) for mid in message_ids],
-            )
+    with get_conn(db_path) as conn:
+        conn.executemany(
+            """
+        INSERT OR REPLACE INTO read_history (message_id, read_date)
+        VALUES (?, ?)
+        """,
+            [(mid, mark_date) for mid in message_ids],
+        )
 
 
 def unmark_read(message_id: str, db_path: str = DB_PATH) -> None:
