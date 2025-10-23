@@ -1,0 +1,33 @@
+message_id: 1211055dd8400bd7
+subject   : Tthoughts to live by
+from      : pastor sather <pastorsather@wiktel.com>
+to        : <Undisclosed-Recipient:;>
+date      : Mon, 4 May 2009 13:54:27 -0600
+===================================================================
+Body (clean, unformatted):
+===================================================================
+Spam detection software, running on the system "host141.hostmonster.com", has
+identified this incoming email as possible spam. The original message
+has been attached to this so you can view it (if it isn't spam) or label
+similar future email. If you have any questions, see
+the administrator of that system for details.
+
+Content preview: 05/05/09~~~food for thought~~~God's will is always being done
+in the power of the Holy Spirkit.... Our Bible Verse for Today: And He said:
+'Verily, I say unto you, that there are some of them which stand here, which
+shall not taste of death, till they have seen the Kingdom of God come with
+power.' (Mk. 9:1) [...] 
+
+Content analysis details: (6.0 points, 5.0 required)
+
+pts rule name description
+---- ---------------------- --------------------------------------------------
+1.8 DATE_IN_PAST_12_24 Date: is 12 to 24 hours before Received: date
+-0.0 SPF_PASS SPF: sender matches SPF record
+0.0 HTML_MESSAGE BODY: HTML included in message
+4.2 FORGED_MUA_OUTLOOK Forged mail pretending to be from MS Outlook
+
+The original message was not completely plain text, and may be unsafe to
+open with some email clients; in particular, it may contain a virus,
+or confirm that your address can receive spam. If you wish to view
+it, it may be safer to save it to a file and open it with an editor.
