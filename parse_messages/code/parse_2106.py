@@ -14,6 +14,20 @@ BODY_HEADER_RE = re.compile(
     re.MULTILINE,
 )
 
+# Repairs words that were hyphenated across line breaks:
+#   "for-\n\ngiveness" -> "forgiveness"
+#   "ex-\n ample"      -> "example"
+# Keeps true hyphens inside lines (e.g., "re-form") intact.
+HYPHEN_LINEBREAK_RE = re.compile(r"-\s*(?:\r?\n)+\s*")
+
+
+def repair_linebreak_hyphenation(s: str) -> str:
+    if not s:
+        return ""
+    # Only remove hyphens that are immediately followed by linebreak(s),
+    # targeting soft hyphenation due to wrapping.
+    return HYPHEN_LINEBREAK_RE.sub("", s)
+
 
 def normalize_keep_newlines(s: str) -> str:
     if s is None:
@@ -27,8 +41,13 @@ def normalize_keep_newlines(s: str) -> str:
         .replace("\u00a0", " ")
         .replace("\u2007", " ")
         .replace("\u202f", " ")
-        .replace("\u00ad", "")
+        .replace("\u00ad", "")  # soft hyphen
     )
+
+    # Rejoin words split across line breaks via hyphenation
+    s = repair_linebreak_hyphenation(s)
+
+    # Collapse spaces/tabs but keep newlines for section parsing
     s = re.sub(r"[ \t]+", " ", s)
     return s.strip()
 
@@ -36,8 +55,12 @@ def normalize_keep_newlines(s: str) -> str:
 def scrub_inline(s: str) -> str:
     if s is None:
         return ""
+    # Remove common markdown/emphasis markers (extend if needed)
     s = s.replace("*", "")
+    # Normalize escaped newlines and actual newlines to spaces
     s = s.replace("\\n", " ")
+    s = re.sub(r"(?:\r?\n)+", " ", s)
+    # Collapse whitespace
     s = re.sub(r"\s+", " ", s)
     return s.strip()
 
@@ -102,6 +125,10 @@ PRAYER_LEADING_SIGNATURE_RE = re.compile(
 def parse_one(full_text: str) -> Dict[str, object]:
     hdr = extract_header_fields(full_text)
     body = normalize_keep_newlines(extract_body(full_text))
+
+    # Optional: flattened, fully scrubbed body (handy for search/display)
+    body_flat = scrub_inline(body)
+
     lines = body.splitlines()
 
     v_idx = r_idx = None
@@ -116,10 +143,12 @@ def parse_one(full_text: str) -> Dict[str, object]:
 
     p_idx = None
     if r_idx is not None:
+        # Prayer usually follows reflection; find the opening
         for i in range(r_idx + 1, len(lines)):
             if PRAYER_SIGNATURE_RE.match(lines[i]) or PRAYER_OPENER_RE.match(lines[i]):
                 p_idx = i
                 break
+        # Fallback: find trailing Amen block
         if p_idx is None:
             for i in range(len(lines) - 1, r_idx, -1):
                 if PRAYER_AMEN_RE.search(lines[i]):
@@ -141,7 +170,6 @@ def parse_one(full_text: str) -> Dict[str, object]:
     if prayer_raw:
         prayer_raw = PRAYER_LEADING_SIGNATURE_RE.sub("", prayer_raw, count=1)
 
-    # Build output with found_reading at the bottom
     record: Dict[str, object] = {
         "message_id": hdr.get("message_id", ""),
         "date_utc": hdr.get("date", ""),
@@ -150,6 +178,7 @@ def parse_one(full_text: str) -> Dict[str, object]:
         "reflection": scrub_inline(reflection_raw),
         "prayer": scrub_inline(prayer_raw),
         "original_content": body,
+        "original_content_flat": body_flat,
         "found_verse": v_idx is not None,
         "found_reflection": r_idx is not None,
         "found_prayer": p_idx is not None,
