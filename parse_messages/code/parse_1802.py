@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Daily Devotional Message Parser (batch 1806)
+Daily Devotional Message Parser (batch 1802)
 
 Extracts:
--     header fields (message_id, subject, from, to, date)
--     verse block
--     reflection block (Thought)
--     prayer block (Prayer)
--     optional reading (from subject '(read ...)' or body rules)
+-    header fields (message_id, subject, from, to, date)
+-    verse block
+-    reflection block (Thought)
+-    prayer block (Prayer)
+-    optional reading (from subject '(read ...)' or body rules)
 
 Per-batch adjustments live in BatchConfig.
 """
@@ -30,31 +30,31 @@ from typing import Dict, List, Optional, Tuple
 @dataclass
 class BatchConfig:
     # I/O
-    input_dir: str = "1806"
-    out_json: str = "parsed_1806.json"
+    input_dir: str = "1802"
+    out_json: str = "parsed_1802.json"
 
     # Header/body separator string in the files
     header_body_sep: str = "=" * 67
 
-    # Month name variants used in dates (kept for robustness if needed)
+    # Month names (kept for robustness)
     month_abbr: str = r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?"
     month_full: str = r"(?:January|February|March|April|May|June|July|August|September|October|November|December)"
 
-    # Labels and signatures appearing in this batch
+    # Labels appearing in this batch
     verse_labels: List[str] = None  # patterns for verse header
     thought_labels: List[str] = None  # patterns for thought header
     prayer_labels: List[str] = None  # patterns for prayer header
-    signature_phrase: str = r"PASTOR\s+AL"  # not present here but supported
+    signature_phrase: str = r"PASTOR\s+AL"  # not used here but supported
 
     # Reading extraction window
     reading_lookahead: int = 6
 
 
 def default_verse_labels() -> List[str]:
-    # This batch uses "VERSE FOR TODAY"
+    # Primarily "VERSE FOR TODAY"
     return [
         r"(?:THE\s+)?VERSE\s+FOR\s+TODAY",
-        r"(?:THE\s+)?VERSE\s+FOR",  # generic fallback to allow dates/titles if present
+        r"(?:THE\s+)?VERSE\s+FOR",  # generic fallback (dates/titles)
     ]
 
 
@@ -67,6 +67,8 @@ def default_thought_labels() -> List[str]:
 def default_prayer_labels() -> List[str]:
     return [
         r"PRAYER\s+FOR\s+TODAY",
+        r"PRAYER\s+FOR\s+TODAY\.",  # some samples use a period
+        r"PRAYER\s+FOR\s+TODAY\s*$",  # missing colon
     ]
 
 
@@ -92,7 +94,7 @@ def build_body_header_re(sep: str) -> re.Pattern:
 
 
 def build_date_patterns(cfg: BatchConfig) -> Tuple[str, str]:
-    # Month name variants (kept available for robustness)
+    # Month name variants (kept for robustness)
     MONTH_NAME = rf"(?:{cfg.month_abbr}|{cfg.month_full})"
     DATE_NUM = r"\d{1,2}"
     DATE_YEAR = r"(?:\d{2}|\d{4})"
@@ -118,15 +120,15 @@ def build_date_patterns(cfg: BatchConfig) -> Tuple[str, str]:
 def build_detection_patterns(cfg: BatchConfig) -> Dict[str, object]:
     DATE_VARIANT, _ = build_date_patterns(cfg)
 
-    # Build multi-header detectors (lists), tolerant to underscores and optional colon/semicolon/question mark
+    # Build multi-header detectors (lists), tolerant to underscores and optional punctuation
     def compile_lines(patterns: List[str]) -> List[re.Pattern]:
         return [
-            re.compile(rf"^\s*_*\s*{pat}\s*[:;]?\s*\??\s*_*\s*$", re.IGNORECASE)
+            re.compile(rf"^\s*_*\s*{pat}\s*[:;.]?\s*\??\s*_*\s*$", re.IGNORECASE)
             for pat in patterns
         ]
 
     def compile_joins(patterns: List[str]) -> List[re.Pattern]:
-        return [re.compile(rf"{pat}\s*[:;]\s*", re.IGNORECASE) for pat in patterns]
+        return [re.compile(rf"{pat}\s*[:;.]?\s*", re.IGNORECASE) for pat in patterns]
 
     verse_line_re_list = compile_lines(cfg.verse_labels)
     verse_join_re_list = compile_joins(cfg.verse_labels)
@@ -137,13 +139,13 @@ def build_detection_patterns(cfg: BatchConfig) -> Dict[str, object]:
     prayer_line_re_list = compile_lines(cfg.prayer_labels)
     prayer_join_re_list = compile_joins(cfg.prayer_labels)
 
-    # Explicit "VERSE FOR <DATE|TODAY>" on one line (capture tail)
+    # Explicit "VERSE FOR <DATE|TODAY>" (capture tail if any)
     verse_for_line_re = re.compile(
-        rf"^\s*_*\s*(?:THE\s+)?VERSE\s+FOR\s*(?:{DATE_VARIANT}|TODAY)\s*[:;]?\s*_*\s*(?P<after>.*)$",
+        rf"^\s*_*\s*(?:THE\s+)?VERSE\s+FOR\s*(?:{DATE_VARIANT}|TODAY)\s*[:;.]?\s*_*\s*(?P<after>.*)$",
         re.IGNORECASE,
     )
 
-    # Signature (not present in this batch, but kept for compatibility)
+    # Signature (not present here but supported)
     prayer_signature_any_re = re.compile(
         rf'(^|\b)[*_"\s]*{cfg.signature_phrase}\s*[*_"]*(?:[,:\-]\s*)?($|\b)',
         re.IGNORECASE,
@@ -420,21 +422,23 @@ def slice_sections(
 ) -> tuple[str, str, str]:
     """
     Slice blocks:
-      - Verse: from verse header line forward to the first of thought/prayer/signature/end.
+      - Verse: from verse header line forward to the first of thought/prayer/signature/end. If no verse header,
+               everything before thought/prayer is treated as verse (fallback).
       - Reflection: from thought header's content/next line up to prayer header or signature or end.
       - Prayer: from prayer header content to signature/end. If no prayer header but signature exists,
-                prayer will be empty (signature-only signoff).
+                prayer will be empty (signoff-only).
     """
     verse_text = reflection_text = prayer_text = ""
 
-    # Verse slice
+    # Determine stops
+    stops = [
+        idx for idx in [thought_line, prayer_line, signature_line] if idx is not None
+    ]
+    first_stop = min(stops) if stops else None
+
+    # Verse slice with fallback when no explicit verse header (e.g., Feb. 14)
     if verse_line is not None:
-        stop_candidates = [
-            idx
-            for idx in [thought_line, prayer_line, signature_line]
-            if idx is not None
-        ]
-        stop_line = min(stop_candidates) if stop_candidates else len(lines)
+        stop_line = first_stop if first_stop is not None else len(lines)
         chunks: List[str] = []
 
         # Inline tail after header (e.g., "VERSE FOR TODAY: <tail>")
@@ -451,6 +455,12 @@ def slice_sections(
             chunks.append("\n".join(lines[nxt:stop_line]).strip())
 
         verse_text = "\n".join([c for c in chunks if c]).strip()
+    else:
+        # Fallback: treat pre-thought/prayer text as verse if present
+        if first_stop is not None and first_stop > 0:
+            pre = "\n".join(lines[:first_stop]).strip()
+            if pre:
+                verse_text = pre
 
     # Reflection slice
     if thought_line is not None:
@@ -471,7 +481,7 @@ def slice_sections(
 
         # Remove accidental trailing header
         reflection_text = re.sub(
-            r"(?:^|\n)\s*_*\s*(?:THE\s+)?THOUGHT\s+FOR\s+(?:TODAY|[A-Z][A-Za-z\.]+\s+\d{1,2}(?:\s*,\s*(?:\d{2}|\d{4}))?)\s*[:;]?\s*_*\s*$",
+            r"(?:^|\n)\s*_*\s*(?:THE\s+)?THOUGHT\s+FOR\s+(?:TODAY|[A-Z][A-Za-z\.]+\s+\d{1,2}(?:\s*,\s*(?:\d{2}|\d{4}))?)\s*[:;.]?\s*_*\s*$",
             "",
             reflection_text,
             flags=re.IGNORECASE,
@@ -561,12 +571,12 @@ def main() -> None:
     ap.add_argument(
         "--input-dir",
         default=BatchConfig().input_dir,
-        help="Directory containing .txt messages (default: 1806)",
+        help="Directory containing .txt messages (default: 1802)",
     )
     ap.add_argument(
         "--out",
         default=BatchConfig().out_json,
-        help="Output JSON file (default: parsed_1806.json)",
+        help="Output JSON file (default: parsed_1802.json)",
     )
     args = ap.parse_args()
 
