@@ -1,23 +1,25 @@
 #!/usr/bin/env python3
 """
-Daily Devotional Message Parser (batch 0809)
+Daily Devotional Message Parser (Meditation → Thought → Prayer) — batch 0703
 
 Parses “thoughts to live by” notes with structure:
--         Dateline banner: mm/dd/yy or mm/dd/yyyy (tolerates 11//19/08), optional ~~~ (food for thought) ~~~ title,
-         or date + title without phrase
--         Verse header: Our/Bible Verse(s)/Verses for Today, Our Verse for Today
--         Reflection header: Our/The Lesson for Today, A Lesson to be learned, Our Thought for Today
--         Prayer header: Our Prayer for Today / Prayer Suggestion / Suggested Prayer
+-           Optional dateline banner: mm/dd/yy or mm/dd/yyyy (tolerates stray spaces and 11//19/08),
+          optional ~~~ (food for thought) ~~~ title (case-insensitive)
+-           Verse section header: Our Meditation for <x>:
+-           Reflection section header: Our Thought(s) for Today:
+-           Prayer section header: Our Prayer for Today:
 
 Extracts:
--         header fields (message_id, subject, from, to, date)
--         verse, reflection, prayer
--         original_content (normalized)
+-           header fields (message_id, subject, from, to, date)
+-           verse, reflection, prayer
+-           original_content (normalized)
 """
 
 from __future__ import annotations
 
-import json, re, unicodedata
+import json
+import re
+import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
@@ -25,8 +27,8 @@ from typing import Dict, List, Optional, Tuple
 
 @dataclass
 class BatchConfig:
-    input_dir: str = "0809"
-    out_json: str = "parsed_0809.json"
+    input_dir: str = "0703"
+    out_json: str = "parsed_0703.json"
     header_body_sep: str = "=" * 67
     signature_name: str = r"(?:Pastor\s+Al(?:vin)?\s*(?:&|and)\s*Marcie\s+Sather)"
 
@@ -77,6 +79,68 @@ BODY_HEADER_RE = re.compile(
     re.MULTILINE,
 )
 
+# Optional dateline banner (tolerates 11//19/08 and spaces in date)
+DATE_BANNER_RE = re.compile(
+    r"""
+    ^\s*
+    (?:
+        \d{2}//\d{2}/\d{2}                 # 11//19/08 typo
+        |
+        \d{2}/\s*\d{2}/\d{2}(?:\d{2})?     # 03/27/07 or 03/ 27/2007
+    )
+    (?:
+        \s*~\s*~\s*~\s*(?:~\s*)?
+        \s*\(?\s*food\s+for\s+thought\s*\)?\s*
+        \s*~\s*~\s*~\s*(?:~\s*)?.*
+        |
+        \s*~\s*~\s*~\s*(?:~\s*)?.*
+    )?
+    \s*$
+    """,
+    re.IGNORECASE | re.VERBOSE,
+)
+
+# Headers (explicit, with minor flexibility for variants):
+
+# Verse section begins with: Our Meditation for <x>:
+# Accepts: Today / Mon. / Tue. / the Day / etc. Any text until the colon.
+MEDITATION_HDR_RE = re.compile(
+    r"""
+    ^\s*
+    Our\s+Meditation\s+for\b
+    .*?
+    \s*:\s*$
+    """,
+    re.IGNORECASE | re.VERBOSE,
+)
+
+# Reflection section begins with: Our Thought for Today: (sometimes “Our Thoughts for Today:”)
+THOUGHT_HDR_RE = re.compile(
+    r"""
+    ^\s*
+    Our\s+Thoughts?\s+for\s+Today
+    \s*:\s*$
+    """,
+    re.IGNORECASE | re.VERBOSE,
+)
+
+# Prayer section begins with: Our Prayer for Today:
+PRAYER_HDR_RE = re.compile(
+    r"""
+    ^\s*
+    Our\s+Prayer\s+for\s+Today
+    \s*:\s*$
+    """,
+    re.IGNORECASE | re.VERBOSE,
+)
+
+# Sign-off and tail verse trimmer
+SIGNATURE_RE = re.compile(rf"^\s*{CFG.signature_name}\s*$", re.IGNORECASE)
+TAIL_VERSE_RE = re.compile(
+    r'^\s*The\s+Lord\s+said,?\s*".*?"\s*~?\s*-?\s*John[: ]\s*\d+:\d+\s*$',
+    re.IGNORECASE,
+)
+
 
 def extract_header_fields(full_text: str) -> Dict[str, str]:
     hdr = {"message_id": "", "subject": "", "from": "", "to": "", "date": ""}
@@ -106,100 +170,24 @@ def extract_body(full_text: str) -> str:
     return full_text.strip()
 
 
-# Dateline banner: tolerate 11/14/08, 11/14/2008, and typo 11//19/08; optional (food for thought)
-DATE_BANNER_RE = re.compile(
-    r"""
-    ^\s*
-    (?:
-        \d{2}//\d{2}/\d{2}                 # 11//19/08 typo
-        |
-        \d{2}/\d{2}/\d{2}(?:\d{2})?        # 11/14/08 or 11/14/2008
-    )
-    (?:
-        \s*~\s*~\s*~\s*(?:~\s*)?
-        \s*\(?\s*food\s+for\s+thought\s*\)?\s*
-        \s*~\s*~\s*~\s*(?:~\s*)?.*
-        |
-        \s*~\s*~\s*~\s*(?:~\s*)?.*
-    )?
-    \s*$
-    """,
-    re.IGNORECASE | re.VERBOSE,
-)
-
-# Verse header variations (cover singular/plural and with/without "Our"/"Bible")
-VERSES_HDR_RE = re.compile(
-    r"""
-    ^\s*
-    (?:
-        (?:Our\s+)?Bible\s+Verse(?:s)?\s+for\s+Today
-        |
-        Our\s+Verses\s+for\s+Today
-        |
-        Our\s+Verse\s+for\s+Today
-        |
-        Bible\s+Verse\s+for\s+Today
-        |
-        Bible\s+Verses\s+for\s+Today
-    )
-    \s*[:\-]?\s*$
-    """,
-    re.IGNORECASE | re.VERBOSE,
-)
-
-# Reflection/lesson/thought header variations
-THOUGHTS_HDR_RE = re.compile(
-    r"""
-    ^\s*
-    (?:
-        Our\s+Lesson\s+for\s+Today
-        |
-        The\s+Lesson\s+for\s+Today
-        |
-        A\s+Lesson\s+to\s+be\s+learned
-        |
-        Our\s+Thought\s+for\s+Today
-    )
-    \s*[:\-]?\s*$
-    """,
-    re.IGNORECASE | re.VERBOSE,
-)
-
-PRAYER_HDR_RE = re.compile(
-    r"""
-    ^\s*
-    (?:
-        Our\s+Prayer\s+for\s+Today
-        |
-        Prayer\s+Suggestion
-        |
-        Suggested\s+Prayer
-    )
-    \s*[:\-]?\s*$
-    """,
-    re.IGNORECASE | re.VERBOSE,
-)
-
-SIGNATURE_RE = re.compile(rf"^\s*{CFG.signature_name}\s*$", re.IGNORECASE)
-TAIL_VERSE_RE = re.compile(
-    r'^\s*The\s+Lord\s+said,?\s*".*?"\s*~?\s*-?\s*John[: ]\s*\d+:\d+\s*$', re.IGNORECASE
-)
-
-
 def slice_sections(body: str) -> Tuple[str, str, str]:
     lines = body.splitlines()
     start = 0
     if lines and DATE_BANNER_RE.match(lines[0]):
         start = 1
-    idx_verses = idx_thoughts = idx_prayer = idx_signature = None
+
+    idx_meditation: Optional[int] = None
+    idx_thought: Optional[int] = None
+    idx_prayer: Optional[int] = None
+    idx_signature: Optional[int] = None
 
     for i in range(start, len(lines)):
         ln = lines[i]
-        if idx_verses is None and VERSES_HDR_RE.match(ln):
-            idx_verses = i
+        if idx_meditation is None and MEDITATION_HDR_RE.match(ln):
+            idx_meditation = i
             continue
-        if idx_thoughts is None and THOUGHTS_HDR_RE.match(ln):
-            idx_thoughts = i
+        if idx_thought is None and THOUGHT_HDR_RE.match(ln):
+            idx_thought = i
             continue
         if idx_prayer is None and PRAYER_HDR_RE.match(ln):
             idx_prayer = i
@@ -210,7 +198,7 @@ def slice_sections(body: str) -> Tuple[str, str, str]:
             idx_signature = i
             continue
 
-    if idx_verses is None and idx_thoughts is None and idx_prayer is None:
+    if idx_meditation is None and idx_thought is None and idx_prayer is None:
         return "", "", ""
 
     def block(start_idx: Optional[int], stops: List[Optional[int]]) -> str:
@@ -225,8 +213,8 @@ def slice_sections(body: str) -> Tuple[str, str, str]:
             content.pop()
         return "\n".join(content).strip()
 
-    verse_raw = block(idx_verses, [idx_thoughts, idx_prayer, idx_signature])
-    reflection_raw = block(idx_thoughts, [idx_prayer, idx_signature])
+    verse_raw = block(idx_meditation, [idx_thought, idx_prayer, idx_signature])
+    reflection_raw = block(idx_thought, [idx_prayer, idx_signature])
     prayer_raw = block(idx_prayer, [idx_signature])
     return verse_raw, reflection_raw, prayer_raw
 
@@ -253,10 +241,10 @@ def parse_one(full_text: str) -> Dict[str, object]:
 
 
 def main() -> None:
-    import argparse, json
+    import argparse
 
     ap = argparse.ArgumentParser(
-        description="Parse devotionals (Verses → Lesson/Thought → Prayer)"
+        description="Parse devotionals (Meditation → Thought → Prayer)"
     )
     ap.add_argument(
         "--input-dir",
@@ -269,16 +257,19 @@ def main() -> None:
         help=f"Output JSON file (default: {CFG.out_json})",
     )
     args = ap.parse_args()
+
     input_dir = Path(args.input_dir)
     files = sorted(input_dir.glob("*.txt"))
     if not files:
         print(f"No files found in {input_dir.resolve()}")
         Path(args.out).write_text("[]", encoding="utf-8")
         return
+
     rows: List[Dict[str, object]] = []
     for fp in files:
         txt = fp.read_text(encoding="utf-8", errors="replace")
         rows.append(parse_one(txt))
+
     Path(args.out).write_text(
         json.dumps(rows, indent=2, ensure_ascii=False), encoding="utf-8"
     )

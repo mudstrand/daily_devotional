@@ -9,6 +9,7 @@ def build_commands(n_str: str):
     return [
         f"mv parsed_{n_str}.json loadable",
         f"mv {n_str} {n_str}.done",
+        f"mv {n_str}.ids delete",  # NEW: move the IDs file into delete/
         f"cp parse_{n_str}.py parse_{prev_n}.py",
         f"mv parse_{n_str}.py code",
     ]
