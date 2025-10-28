@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 """
-Daily Devotional Message Parser (batches 1007–1012)
+Daily Devotional Message Parser (batches 1001–1012)
 
 Parses “thoughts to live by” notes with structure:
--      Dateline banner: mm/dd/yyyy, mm?dd/yyyy, or mm/dd/yy, optionally followed by ~~~ FOOD FOR THOUGHT ~~~ title
--      Verse header: Our/Bible Verse for Today
--      Reflection header: Our/The Lesson for Today, or A Lesson to be learned
--      Prayer header: Prayer Suggestion or Suggested Prayer
+-     Dateline banner: mm/dd/yyyy, mm?dd/yyyy, or mm/dd/yy, optional ~~~ FOOD FOR THOUGHT ~~~ title
+     (tolerates 3–4 tildes and optional spaces around tildes; banner may omit the FOOD FOR THOUGHT phrase)
+-     Verse header: Our/Bible Verse(s) for Today
+-     Reflection header: Our/The Lesson for Today, or A Lesson to be learned
+-     Prayer header: Prayer Suggestion or Suggested Prayer
 
 Extracts:
--      header fields (message_id, subject, from, to, date)
--      verse, reflection, prayer
--      original_content (normalized)
+-     header fields (message_id, subject, from, to, date)
+-     verse, reflection, prayer
+-     original_content (normalized)
 """
 
 from __future__ import annotations
@@ -30,8 +31,8 @@ from typing import Dict, List, Optional, Tuple
 
 @dataclass
 class BatchConfig:
-    input_dir: str = "1007"
-    out_json: str = "parsed_1007.json"
+    input_dir: str = "1001"
+    out_json: str = "parsed_1001.json"
     header_body_sep: str = "=" * 67
     signature_name: str = r"(?:Pastor\s+Al(?:vin)?\s*(?:&|and)\s*Marcie\s+Sather)"
 
@@ -125,35 +126,65 @@ def extract_body(full_text: str) -> str:
 # Content slicing (headers)
 # =========================
 
-# Dateline banner: allow mm/dd/yyyy, mm?dd/yyyy, and mm/dd/yy; optional FOOD FOR THOUGHT suffix
+# Dateline banner:
+# - mm/dd/yyyy or mm?dd/yyyy or mm/dd/yy
+# - optional FOOD FOR THOUGHT segment with 3–4 tildes and optional spaces
+# - or just date + arbitrary title (e.g., "01/24/2010~~~ OUR PRIVILEGE...")
 DATE_BANNER_RE = re.compile(
     r"""
     ^\s*
-    (?:
-        \d{2}/\d{2}/\d{4}        # 07/07/2010
+    (?P<date>
+        \d{2}/\d{2}/\d{4}
         |
-        \d{2}[^0-9]\d{2}/\d{4}  # 11?02/2010
+        \d{2}[^0-9]\d{2}/\d{4}
         |
-        \d{2}/\d{2}/\d{2}       # 10/17/24 (rare malformed)
+        \d{2}/\d{2}/\d{2}
     )
-    (?:\s*~~~\s*(?:FOOD\s+FOR\s+THOUGHT|food\s+for\s+thought)\s*~~~.*)?\s*$
+    (?:
+        \s*~\s*~\s*~\s*(?:~\s*)?
+        (?:
+            (?:FOOD\s+FOR\s+THOUGHT|food\s+for\s+thought)
+            \s*~\s*~\s*~\s*(?:~\s*)?.*
+            |
+            .+                             # tolerate arbitrary title after tildes
+        )
+    )?
+    \s*$
     """,
     re.IGNORECASE | re.VERBOSE,
 )
 
-# Verse header variants
+# Verse header variants (singular and plural)
 VERSES_HDR_RE = re.compile(
-    r"^\s*(?:Our\s+Bible\s+Verse\s+for\s+Today|Bible\s+Verse\s+for\s+Today)\s*[:\-]?\s*$",
-    re.IGNORECASE,
+    r"""
+    ^\s*
+    (?:
+        (?:Our\s+)?Bible\s+Verse\s+for\s+Today
+        |
+        (?:Our\s+)?Bible\s+Verses\s+for\s+Today
+    )
+    \s*[:\-]?\s*$
+    """,
+    re.IGNORECASE | re.VERBOSE,
 )
 
-# Reflection header variants (include “A Lesson to be learned”)
+# Reflection header variants
 THOUGHTS_HDR_RE = re.compile(
-    r"^\s*(?:Our\s+Lesson\s+for\s+Today|The\s+Lesson\s+for\s+Today|A\s+Lesson\s+to\s+be\s+learned)\s*[:\-]?\s*$",
-    re.IGNORECASE,
+    r"""
+    ^\s*
+    (?:
+        Our\s+Lesson\s+for\s+Today
+        |
+        The\s+Lesson\s+for\s+Today
+        |
+        A\s+Lesson\s+to\s+be\s+learned
+    )
+    \s*[:\-]?\s*$
+    """,
+    re.IGNORECASE | re.VERBOSE,
 )
 
-# Prayer header variants (include “Suggested Prayer”)
+# Prayer header variants
 PRAYER_HDR_RE = re.compile(
     r"^\s*(?:Prayer\s+Suggestion|Suggested\s+Prayer)\s*[:\-]?\s*$",
     re.IGNORECASE,

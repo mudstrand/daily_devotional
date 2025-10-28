@@ -4,15 +4,14 @@ import subprocess
 import sys
 
 
-def build_commands(n: int):
-    prev_n = n - 1
-    cmds = [
-        f"mv parsed_{n}.json loadable",
-        f"mv {n} {n}.done",
-        f"cp parse_{n}.py parse_{prev_n}.py",
-        f"mv parse_{n}.py code",
+def build_commands(n_str: str):
+    prev_n = str(int(n_str) - 1).zfill(len(n_str))  # keep same width as input
+    return [
+        f"mv parsed_{n_str}.json loadable",
+        f"mv {n_str} {n_str}.done",
+        f"cp parse_{n_str}.py parse_{prev_n}.py",
+        f"mv parse_{n_str}.py code",
     ]
-    return cmds
 
 
 def prompt_approve(cmds):
@@ -29,7 +28,6 @@ def prompt_approve(cmds):
 def run_commands(cmds):
     for c in cmds:
         print(f"+ {c}")
-        # Split into argv safely
         argv = shlex.split(c)
         try:
             subprocess.run(argv, check=True)
@@ -46,20 +44,19 @@ def main():
         print("Usage: python manage_batch.py <number>", file=sys.stderr)
         sys.exit(1)
 
-    try:
-        n = int(sys.argv[1])
-    except ValueError:
-        print("Error: <number> must be an integer (e.g., 1806).", file=sys.stderr)
+    n_str = sys.argv[1].strip()
+    if not n_str.isdigit():
+        print(
+            "Error: <number> must be all digits (e.g., 0912 or 1806).", file=sys.stderr
+        )
         sys.exit(2)
 
-    cmds = build_commands(n)
+    cmds = build_commands(n_str)
 
-    # Print and confirm
     if not prompt_approve(cmds):
         print("Aborted.")
         sys.exit(0)
 
-    # Execute
     run_commands(cmds)
     print("Done.")
 
