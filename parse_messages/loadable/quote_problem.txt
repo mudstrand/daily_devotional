@@ -1,0 +1,2549 @@
+LT client: LanguageTool
+LT server: http://localhost:8010
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ften " fruit bearing" is mistaken for mer...
+field  : reflection
+code   : code -g parsed_0609.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...s prays for Himself "Father, the time has...
+field  : verse
+code   : code -g parsed_0610.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... for His disciples, "I pray for them. I a...
+field  : verse
+code   : code -g parsed_0610.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ers we are included."While I was with the...
+field  : verse
+code   : code -g parsed_0610.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Jesus is arrested, "Then Simon Peter, wh...
+field  : verse
+code   : code -g parsed_0610.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...le and His teaching."I have spoken openly...
+field  : verse
+code   : code -g parsed_0610.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ld, " Jesus replied."I always taught in t...
+field  : verse
+code   : code -g parsed_0610.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ey know what I said." (John 18:19-21) NIV...
+field  : verse
+code   : code -g parsed_0610.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...nt (which in Aramaic" is Gabbatha) (John ...
+field  : verse
+code   : code -g parsed_0610.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... from top to bottom."Let's not tear it, "...
+field  : verse
+code   : code -g parsed_0610.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...lot who will get it." This happened that ...
+field  : verse
+code   : code -g parsed_0610.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e that it was Jesus."Woman, " He said, Wh...
+field  : verse
+code   : code -g parsed_0611.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...you are looking for?" Thinking he was the...
+field  : verse
+code   : code -g parsed_0611.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Jesus said, "Do not hold on to Me...
+field  : verse
+code   : code -g parsed_0611.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...hers and tell them, 'I am returning to my...
+field  : verse
+code   : code -g parsed_0611.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...10:9 where it says, "That if you confess ...
+field  : prayer
+code   : code -g parsed_0611.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...among them and said."Peace be with you!" ...
+field  : verse
+code   : code -g parsed_0611.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...."Peace be with you!" Then He said to Tho...
+field  : verse
+code   : code -g parsed_0611.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e You." Jesus said, "Take care of my shee...
+field  : verse
+code   : code -g parsed_0611.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...now that I love You." Jesus said, "Feed m...
+field  : verse
+code   : code -g parsed_0611.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...d from impetuous to "rock' and his relati...
+field  : reflection
+code   : code -g parsed_0611.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...m impetuous to "rock' and his relationshi...
+field  : reflection
+code   : code -g parsed_0611.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... brothers. He says, "I will declare your ...
+field  : verse
+code   : code -g parsed_0701.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ft of salvation is, "heaven came down and...
+field  : prayer
+code   : code -g parsed_0702.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ll remember no more." (Hebrews 10:16, 17)...
+field  : verse
+code   : code -g parsed_0703.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... very little while, "He who is coming wil...
+field  : verse
+code   : code -g parsed_0703.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ophet Hosea's words."Forgive all our sins...
+field  : verse
+code   : code -g parsed_0704.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...sacrifice of praise." (Hosea 14:2)...
+field  : verse
+code   : code -g parsed_0704.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...6:19-21 is so true, "Don't store up your ...
+field  : prayer
+code   : code -g parsed_0705.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... has two directives."Grace" relates to th...
+field  : reflection
+code   : code -g parsed_0705.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...wo directives."Grace" relates to the forg...
+field  : reflection
+code   : code -g parsed_0705.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...t as it is written: "The righteous will l...
+field  : verse
+code   : code -g parsed_0705.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...? As it is written: "God's name is blasph...
+field  : verse
+code   : code -g parsed_0707.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... wrote it like this "He declares His word...
+field  : reflection
+code   : code -g parsed_0707.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...As it is written: "There is no one righ...
+field  : verse
+code   : code -g parsed_0707.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...t tends toward evil."All have turned asid...
+field  : reflection
+code   : code -g parsed_0707.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...l have turned aside." As Scriptures say: ...
+field  : reflection
+code   : code -g parsed_0707.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...belief. Jesus said, "You brood of vipers!...
+field  : reflection
+code   : code -g parsed_0707.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...they start to worry."Do I have enough fai...
+field  : reflection
+code   : code -g parsed_0708.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...I have enough faith?" They wonder, "Is my...
+field  : reflection
+code   : code -g parsed_0708.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...s apart from works: "Blessed are they who...
+field  : verse
+code   : code -g parsed_0708.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...hought to yourself, "Well, I'm not to bad...
+field  : reflection
+code   : code -g parsed_0708.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... forceful answer is "Of course not! Such ...
+field  : reflection
+code   : code -g parsed_0708.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...from its power. The "power of sin' refers...
+field  : reflection
+code   : code -g parsed_0708.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...n. On the contrary, "It is Through Isaac ...
+field  : verse
+code   : code -g parsed_0710.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...calls~she was told, "The older will serve...
+field  : verse
+code   : code -g parsed_0710.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...~ Rebekah was told, "The older will serve...
+field  : verse
+code   : code -g parsed_0710.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...r He says to Moses, "I will have mercy on...
+field  : verse
+code   : code -g parsed_0710.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... Him who formed it, 'Why did You make me ...
+field  : verse
+code   : code -g parsed_0710.json:160
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...t is by faith says: "Do not say in your h...
+field  : verse
+code   : code -g parsed_0710.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... bring Christ down) "or 'Who will descend...
+field  : verse
+code   : code -g parsed_0710.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...the Scripture says, "Anyone who trusts in...
+field  : verse
+code   : code -g parsed_0710.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...you ever been asked."How do I become a Ch...
+field  : reflection
+code   : code -g parsed_0710.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... become a Christian?" Well these verses g...
+field  : reflection
+code   : code -g parsed_0710.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Isaiah boldly says, "I was found by those...
+field  : verse
+code   : code -g parsed_0710.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..., as it is written: "The deliver will com...
+field  : verse
+code   : code -g parsed_0710.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... been His counselor?" "Who has ever given...
+field  : verse
+code   : code -g parsed_0711.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...llow our conscience."If you do anything y...
+field  : reflection
+code   : code -g parsed_0711.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ight you are sinning" means that to go ag...
+field  : reflection
+code   : code -g parsed_0711.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... ourselves and ask, "How much influence d...
+field  : reflection
+code   : code -g parsed_0712.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... will be discounted."The builders themsel...
+field  : reflection
+code   : code -g parsed_0712.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ugh a wall of flames" means that unfaithf...
+field  : reflection
+code   : code -g parsed_0712.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: .... As it is written: "He catches the wise ...
+field  : verse
+code   : code -g parsed_0712.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ftiness, and again, "The Lord knows that ...
+field  : verse
+code   : code -g parsed_0712.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says: "I am not writing thi...
+field  : verse
+code   : code -g parsed_0801.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...judge those outside."Expel the wicked man...
+field  : verse
+code   : code -g parsed_0801.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... man from among you." (I Corinthians 5:12...
+field  : verse
+code   : code -g parsed_0801.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...dy? For it is said, "The two will become ...
+field  : verse
+code   : code -g parsed_0801.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says, "Now about food sacri...
+field  : verse
+code   : code -g parsed_0802.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says, "To the weak I became...
+field  : verse
+code   : code -g parsed_0802.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ness (Exodus 15-16)."They were baptized i...
+field  : reflection
+code   : code -g parsed_0802.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...he cloud and the sea" means that just as ...
+field  : reflection
+code   : code -g parsed_0802.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...; as it is written: "The people sat down ...
+field  : verse
+code   : code -g parsed_0802.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says, "These things happene...
+field  : verse
+code   : code -g parsed_0802.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...thing is beneficial."Everything is permis...
+field  : verse
+code   : code -g parsed_0802.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...thing is permissible" ~ but not everythin...
+field  : verse
+code   : code -g parsed_0802.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...of conscience, for, "The earth is the Lor...
+field  : verse
+code   : code -g parsed_0802.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...l have equal value. 'Submission" is 'mutu...
+field  : reflection
+code   : code -g parsed_0802.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...l value. 'Submission" is 'mutual commitme...
+field  : reflection
+code   : code -g parsed_0802.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ual commitment' and 'cooperation....
+field  : reflection
+code   : code -g parsed_0802.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ook the cup, saying."This cup is the new ...
+field  : verse
+code   : code -g parsed_0802.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...n remembrance of Me." For whenever you ea...
+field  : verse
+code   : code -g parsed_0802.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...n into God's family."We have all received...
+field  : reflection
+code   : code -g parsed_0803.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ived the same Spirit" means that we have ...
+field  : reflection
+code   : code -g parsed_0803.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says, "I am the least of th...
+field  : verse
+code   : code -g parsed_0803.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says: "Listen I will tell y...
+field  : verse
+code   : code -g parsed_0804.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says, "I wrote you out of g...
+field  : verse
+code   : code -g parsed_0804.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says, "If anyone has cause ...
+field  : verse
+code   : code -g parsed_0804.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...eed to live for Him."Wherever the Spirit ...
+field  : reflection
+code   : code -g parsed_0804.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...s, He gives freedom."...
+field  : reflection
+code   : code -g parsed_0804.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says, "If we are out of our...
+field  : verse
+code   : code -g parsed_0805.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...an nature, He says: "For if the willingne...
+field  : verse
+code   : code -g parsed_0806.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says: "I do not want to see...
+field  : verse
+code   : code -g parsed_0806.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says: "I am afraid that jus...
+field  : verse
+code   : code -g parsed_0806.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul's says, "I may not be a train...
+field  : verse
+code   : code -g parsed_0806.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... teachers, he says: "besides everything e...
+field  : verse
+code   : code -g parsed_0806.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...But He said to me, "My grace is sufficie...
+field  : verse
+code   : code -g parsed_0806.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says: "I have made a fool o...
+field  : verse
+code   : code -g parsed_0806.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul writes: "I am afraid that whe...
+field  : verse
+code   : code -g parsed_0806.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says: "I was one of the mos...
+field  : verse
+code   : code -g parsed_0807.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...y heard the report: "The man who formerly...
+field  : verse
+code   : code -g parsed_0807.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... Jesus Christ says, "I am the way, the tr...
+field  : prayer
+code   : code -g parsed_0807.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says, "Let me ask you this ...
+field  : verse
+code   : code -g parsed_0807.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...we sang as children."Jesus loves the litt...
+field  : reflection
+code   : code -g parsed_0807.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ildren of the world." We are all his chil...
+field  : reflection
+code   : code -g parsed_0807.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul asks, "Have I now become yo...
+field  : verse
+code   : code -g parsed_0808.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ifferent approaches."Christ will be of no...
+field  : reflection
+code   : code -g parsed_0808.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... will be of no value" means that Christ's...
+field  : reflection
+code   : code -g parsed_0808.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...nd Jesus said that, "Those who are forgiv...
+field  : reflection
+code   : code -g parsed_0808.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... in (Matthew 11:28) "Come to Me ~ all of ...
+field  : reflection
+code   : code -g parsed_0811.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...members of one body."In your anger do not...
+field  : verse
+code   : code -g parsed_0811.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...our anger do not sin". Do not let the sun...
+field  : verse
+code   : code -g parsed_0811.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ch you already have." (author unknown) Am...
+field  : prayer
+code   : code -g parsed_0811.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...God told Abram ~ "I will make you a gr...
+field  : verse
+code   : code -g parsed_0811.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e from Reggie White."The promises made, b...
+field  : reflection
+code   : code -g parsed_0901.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...s angel to feed him."You don't have enoug...
+field  : reflection
+code   : code -g parsed_0901.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...gh for your journey." "What journey" I'm ...
+field  : reflection
+code   : code -g parsed_0901.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: .... I'm all washed up." "You're not through...
+field  : reflection
+code   : code -g parsed_0901.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... You may be asking: "How does one go abou...
+field  : reflection
+code   : code -g parsed_0901.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...lso been said that, "by being forgiving w...
+field  : reflection
+code   : code -g parsed_0901.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Arise, shine, for yo...
+field  : verse
+code   : code -g parsed_0902.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...r prayer should be, "Take my life and let...
+field  : prayer
+code   : code -g parsed_0902.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...er has commanded Me."Come now; let us lea...
+field  : verse
+code   : code -g parsed_0902.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e now; let us leave."...
+field  : verse
+code   : code -g parsed_0902.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...tly to one another, "Why this waste of pe...
+field  : verse
+code   : code -g parsed_0902.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...love casts out fear." once we surrender t...
+field  : reflection
+code   : code -g parsed_0902.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...lled to be a doormat" for other, called t...
+field  : reflection
+code   : code -g parsed_0902.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Lord, I have had mis...
+field  : prayer
+code   : code -g parsed_0902.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...will leave Me alone." (John 16:31, 32) Ma...
+field  : reflection
+code   : code -g parsed_0902.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...him the third time, 'Do you love Me? Yet ...
+field  : reflection
+code   : code -g parsed_0902.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Feed My Sheep." (John 21:17b)...
+field  : verse
+code   : code -g parsed_0903.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... in I Thessalonians."Night and day prayin...
+field  : reflection
+code   : code -g parsed_0903.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... holiness before God" (3:10-13) "The very...
+field  : reflection
+code   : code -g parsed_0903.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ality in your heart."Behold what manner o...
+field  : prayer
+code   : code -g parsed_0903.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...th bestowed upon us." Amen....
+field  : prayer
+code   : code -g parsed_0903.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...s requirements?) God' glory, His holiness...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... life here on earth."We all, beholding th...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e Spirit of the Lord". (2 Corinthians 3:1...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ise will come true: "I will cleanse you f...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...path of much prayer."Call unto Me, and I ...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ch thou knowest not." It is when we turn ...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ich they had in God."Ye believe in God, B...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... Believe also in Me." "Believe Me, that I...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...do shall he do also." Here on earth He ha...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Because I live, you ...
+field  : verse
+code   : code -g parsed_0904.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...lly died too in Him."Our old man was cruc...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... crucified with Him." With Him we were ra...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... gives us the answer" "The life that I no...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ives us the answer" "The life that I now ...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...work to do His will." Doesn't that includ...
+field  : reflection
+code   : code -g parsed_0904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...t up in these words."We know that we are ...
+field  : reflection
+code   : code -g parsed_0905.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...lieth in wickedness." "Love not the world...
+field  : reflection
+code   : code -g parsed_0905.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."My witness ~ not onl...
+field  : reflection
+code   : code -g parsed_0905.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...portant question is 'how can we become bo...
+field  : reflection
+code   : code -g parsed_0905.json:161
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...otence in the world."The effectual ferven...
+field  : reflection
+code   : code -g parsed_0905.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...s man availeth much." It is only when the...
+field  : reflection
+code   : code -g parsed_0905.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."I want you to know h...
+field  : verse
+code   : code -g parsed_0905.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ured out unto death." In Gethsemane "He o...
+field  : reflection
+code   : code -g parsed_0905.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...t cannot be uttered."He maketh intercessi...
+field  : reflection
+code   : code -g parsed_0905.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... to the Will of God." What a prospect is ...
+field  : reflection
+code   : code -g parsed_0905.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...lleth no good thing." and again (Romans 8...
+field  : reflection
+code   : code -g parsed_0906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."If you refuse to tak...
+field  : verse
+code   : code -g parsed_0906.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...d to His disciples, "If any one wishes to...
+field  : verse
+code   : code -g parsed_0906.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...and be raised again."Peter rebuked Him, s...
+field  : reflection
+code   : code -g parsed_0906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ebuked Him, saying, 'Be it far from Thee,...
+field  : reflection
+code   : code -g parsed_0906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... never be unto Thee." Christ's answer was...
+field  : reflection
+code   : code -g parsed_0906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."If anyone comes to M...
+field  : verse
+code   : code -g parsed_0906.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...inherited from Adam."The flesh is enmity ...
+field  : reflection
+code   : code -g parsed_0906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...s enmity against God" and so the soul tha...
+field  : reflection
+code   : code -g parsed_0906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ven as He has said, "Love your enemies, b...
+field  : reflection
+code   : code -g parsed_0906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ou gravest Me to do." Yes He sacrificed a...
+field  : reflection
+code   : code -g parsed_0906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...n the consciousness 'I am dead to sin'. I...
+field  : reflection
+code   : code -g parsed_0906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... resurrection in us."Christ died unto sin...
+field  : reflection
+code   : code -g parsed_0906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...h He liveth unto God" (vs. 10) It is only...
+field  : reflection
+code   : code -g parsed_0906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ed sin on the cross."There is now no cond...
+field  : reflection
+code   : code -g parsed_0906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ws and regulations. 'Yes ~ Christ came to...
+field  : reflection
+code   : code -g parsed_0907.json:21
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... we stop and think, 'that the world is fu...
+field  : reflection
+code   : code -g parsed_0907.json:35
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... crucified with Him." They that are Chris...
+field  : reflection
+code   : code -g parsed_0907.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says' "But when God, who se...
+field  : verse
+code   : code -g parsed_0907.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...the penitent sinner."Go in peace." The si...
+field  : reflection
+code   : code -g parsed_0908.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...sinner."Go in peace." The sinner foolishl...
+field  : reflection
+code   : code -g parsed_0908.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...is why Paul insists."If I try to substitu...
+field  : reflection
+code   : code -g parsed_0908.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...st died for nothing."...
+field  : reflection
+code   : code -g parsed_0908.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... to save the sinner."See what God has don...
+field  : reflection
+code   : code -g parsed_0908.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...t sinner for heaven." For that timeless m...
+field  : reflection
+code   : code -g parsed_0908.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...lieve the good news." (Mark 1:15)...
+field  : verse
+code   : code -g parsed_0908.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...he words "I"m sorry." Sometimes those wor...
+field  : reflection
+code   : code -g parsed_0908.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...urself the question "What am I laboring f...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e saved are to live."Blessed are the poor...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e what would I like?" Toward their neighb...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Blessed are those wh...
+field  : verse
+code   : code -g parsed_0909.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...o cover all my sins." As God's child, fil...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...cy takes care of us."Blessed are the merc...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...s, words, and deeds."Pure" leaves no doub...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...rds, and deeds."Pure" leaves no doubt as ...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...to show in our life."Be pure, " He says r...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... she knew was wrong."Your sins are forgiv...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...tor had assured her."Come to worship next...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... ask will change it."Jesus resolutely set...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...t out for Jerusalem."Why did Jesus die on...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...us die on the cross?" a five-year-old boy...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...he sinner, I'm safe."Forgiven, " With Jes...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...h or muscles at all."I am weak but He is ...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... there all the time."An ever-present help...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...sent help in trouble" is how the Psalmist...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...utside in the world."About ten dollars, "...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...s in the human body."Precious, " God answ...
+field  : reflection
+code   : code -g parsed_0909.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Come, you who are bl...
+field  : verse
+code   : code -g parsed_0909.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...n to Jesus' bargain."Rest" He calls it. H...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Jesus' bargain."Rest" He calls it. He off...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...rricane called life."I will give you rest...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... hinges on the word "I'. The "I" who offe...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... how Jesus answered."Your God will come. ...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... Isaiah had written."Then will the eyes o...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...f the deaf unstopped" (35:4, 5). Yes Isai...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... on a desert island."I wish I was back ho...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...and again it was so."Oh how I miss those ...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...s, " said the third."I wish they were bac...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...wish they were back." Jesus' offer is far...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ut this God of love."Do you love me?" a c...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ove."Do you love me?" a child may ask his...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e receive a big hug."Do You love me?" I a...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...hug."Do You love me?" I ask God and in re...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... meet on the street."Have a nice day, " w...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...nd in (Romans 8:28)."In all things God wo...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...d are called by Him." Before we can be th...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... the funeral sermon."I don't want a lot o...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...of tears, " he said."I want them to give ...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...God has done for me." Like that grandfath...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...aring, I try it too."Everyone else is doi...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...oing it, " I excuse."I'm not as bad as so...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...nner I need to know."Transgressions are f...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...in payment for them."Sins are covered, " ...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...n once someone say, "Shouldn't a believer...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Therefore if any man...
+field  : verse
+code   : code -g parsed_0910.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... of believers here: "[They] sang the song...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e song of the Lamb: 'Great and marvelous ...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...s King of the ages. '" Looking ahead to h...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ame that famous line" "Here I stand. I ca...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...men." What about us?" Are we willing to a...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...al of death's sting."I'm afraid of my sin...
+field  : reflection
+code   : code -g parsed_0910.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...strength to answer: "He's my only Savior....
+field  : prayer
+code   : code -g parsed_0911.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... confirmation class."You never know when ...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...en you'll need them." He didn't mean just...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ore I first collect."You have eternal lif...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: .... He pointed to God."He's the one who beg...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...d?" Nicodemus asked."Surely he cannot ent...
+field  : verse
+code   : code -g parsed_0911.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...r's womb to be born!" Jesus answered, "I ...
+field  : verse
+code   : code -g parsed_0911.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e not just what-ifs." They are very real ...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... believing coworker."I do!" replied the C...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ving coworker."I do!" replied the Christi...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...plied the Christian."Without my faith I c...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ith I couldn't walk." There is no true pe...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...gged with the nine, "Jesus, Master, "have...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..." Now ask yourself, 'How well do my actio...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ers and unbelievers?"...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...faith burning, HOW? "Blessed. are those w...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...l sufficient Savior."Believe in the Lord ...
+field  : reflection
+code   : code -g parsed_0911.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... Jesus' forgiveness."Make straight in the...
+field  : reflection
+code   : code -g parsed_0912.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...highway for our God." Let the world plot ...
+field  : reflection
+code   : code -g parsed_0912.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...rding to God's Word."Repent and be saved,...
+field  : reflection
+code   : code -g parsed_0912.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... Giver of Christmas."Make known among the...
+field  : reflection
+code   : code -g parsed_0912.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...as if it were today."Before you know it, ...
+field  : reflection
+code   : code -g parsed_0912.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...midst of His people." Did you notice what...
+field  : reflection
+code   : code -g parsed_0912.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...h takes it all away."A launderer's soap, ...
+field  : reflection
+code   : code -g parsed_0912.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...emove grease of sin."A refiner's fire, " ...
+field  : reflection
+code   : code -g parsed_0912.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...one of God's angels."Do not be afraid, Ma...
+field  : reflection
+code   : code -g parsed_0912.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...nt, " Mary answered."May it be to me as y...
+field  : verse
+code   : code -g parsed_0912.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...me as you have said." (Luke 1:38)....
+field  : verse
+code   : code -g parsed_0912.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...sang of those gifts."He has raised up a h...
+field  : reflection
+code   : code -g parsed_0912.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..., to ask ourselves: "Am I a sinner? How m...
+field  : reflection
+code   : code -g parsed_0912.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...y to sing with joy, "The happy Christmas ...
+field  : reflection
+code   : code -g parsed_0912.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... remedy Paul offers."Present your request...
+field  : reflection
+code   : code -g parsed_0912.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...star is even better."You word is a lamp t...
+field  : reflection
+code   : code -g parsed_1001.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ould heartily agree."We have seen His sta...
+field  : reflection
+code   : code -g parsed_1001.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...corner of the world?" "I can't do very mu...
+field  : reflection
+code   : code -g parsed_1001.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... has come." He said."The kingdom of God i...
+field  : verse
+code   : code -g parsed_1001.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...lieve the Good News!" (Mark 1:5)...
+field  : verse
+code   : code -g parsed_1001.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Jesus tells us."Whoever does the wil...
+field  : reflection
+code   : code -g parsed_1001.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...rites, " some reply."A wheelchair for wea...
+field  : reflection
+code   : code -g parsed_1001.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...as Christ's promise."Just say the word, "...
+field  : reflection
+code   : code -g parsed_1001.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...oundation for faith."Jesus loves me, this...
+field  : reflection
+code   : code -g parsed_1001.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...rites, " some reply."A wheelchair for wea...
+field  : reflection
+code   : code -g parsed_1001.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...as Christ's promise."Just say the word, "...
+field  : reflection
+code   : code -g parsed_1001.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...oundation for faith."Jesus loves me, this...
+field  : reflection
+code   : code -g parsed_1001.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...od's eternal church."Built by God" is not...
+field  : reflection
+code   : code -g parsed_1002.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...church."Built by God" is not just some ab...
+field  : reflection
+code   : code -g parsed_1002.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... thought or said it."God must be punishin...
+field  : reflection
+code   : code -g parsed_1002.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."If you forgive those...
+field  : verse
+code   : code -g parsed_1002.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ted, we should ask, "Have I forgiven the ...
+field  : reflection
+code   : code -g parsed_1002.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..., heaven in the end."We eagerly await a S...
+field  : reflection
+code   : code -g parsed_1002.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...a Savior from there." When that day comes...
+field  : reflection
+code   : code -g parsed_1002.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...me you have trouble?" "How come you're si...
+field  : reflection
+code   : code -g parsed_1002.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...point of the temple."If you are the Son o...
+field  : verse
+code   : code -g parsed_1002.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...o do, Look to Jesus."It is written, " He ...
+field  : reflection
+code   : code -g parsed_1002.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...wing down before me." Sound familiar? "Wh...
+field  : reflection
+code   : code -g parsed_1002.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...loosen the doctrine?" Satan hints to the ...
+field  : reflection
+code   : code -g parsed_1002.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...o the church member."Take the easy way, "...
+field  : reflection
+code   : code -g parsed_1002.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... to Jesus and said, "Lord, doesn't it see...
+field  : verse
+code   : code -g parsed_1002.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."You search the Scrip...
+field  : verse
+code   : code -g parsed_1002.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... means, God with us." (Matthew 1:23)...
+field  : verse
+code   : code -g parsed_1003.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...He builds and fixes."Through Him all thin...
+field  : reflection
+code   : code -g parsed_1003.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...nd, He's still busy."On this rock I will ...
+field  : reflection
+code   : code -g parsed_1003.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...~ Jesus has told us."I am the way." He's ...
+field  : reflection
+code   : code -g parsed_1003.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ld us."I am the way." He's not just some ...
+field  : reflection
+code   : code -g parsed_1003.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... the place of power." (Luke 22:69)...
+field  : verse
+code   : code -g parsed_1003.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ict already decided."Guilty, " the court ...
+field  : reflection
+code   : code -g parsed_1003.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...He has words for me."Go in peace, " He sa...
+field  : reflection
+code   : code -g parsed_1003.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...before Him each day." ~ "Plunged into the...
+field  : reflection
+code   : code -g parsed_1003.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ll responded again, "We will do everythin...
+field  : verse
+code   : code -g parsed_1003.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ured of forgiveness."Go in peace, " He te...
+field  : reflection
+code   : code -g parsed_1003.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e who crucified Him."Father, " He prayed ...
+field  : reflection
+code   : code -g parsed_1003.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ghtiest ever spoken."Them." Jesus said. H...
+field  : reflection
+code   : code -g parsed_1003.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...t ever spoken."Them." Jesus said. He ment...
+field  : reflection
+code   : code -g parsed_1003.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...the man's sincerity."Remember me, " and C...
+field  : reflection
+code   : code -g parsed_1003.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...s paid for our sins."Christ has indeed be...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...aised from the dead." "He lives to silenc...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...th them in heaven. ."He is risen, " Easte...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...d that first Easter."They were overjoyed ...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...n they saw the Lord." For them resurrecti...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...demption of sinners."These are the Script...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ass?" He was asking."Then go to My Word. ...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... testifies about Me."...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...isen Savior left us."Surely" He began mea...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...vior left us."Surely" He began meaning, "...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...as He would give it."To the end of the ag...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...her end of the line."That's enough, " rep...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...tion of God's love, "If you had one hundr...
+field  : verse
+code   : code -g parsed_1004.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... and glorious dress."Come, inherit the ki...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Words from Jesus ~ "All those who want t...
+field  : verse
+code   : code -g parsed_1004.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... name covers us all."Children of God, " J...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...t we were by nature."We were by nature ob...
+field  : reflection
+code   : code -g parsed_1004.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Jesus says: "I will send you the ...
+field  : verse
+code   : code -g parsed_1005.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... bless and keep you."We are the apple of ...
+field  : reflection
+code   : code -g parsed_1005.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."They will have the s...
+field  : verse
+code   : code -g parsed_1005.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...enter heaven's door."He cares for you." P...
+field  : reflection
+code   : code -g parsed_1005.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...r."He cares for you." Peter says. ~~~ He ...
+field  : reflection
+code   : code -g parsed_1005.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...g, so why should I ?" (John 5:16, 17)...
+field  : verse
+code   : code -g parsed_1006.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...'s bridge to heaven."No one come to the F...
+field  : reflection
+code   : code -g parsed_1006.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..., " His Father said."Well done because of...
+field  : reflection
+code   : code -g parsed_1006.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... Me and for sinners." All this Jesus did,...
+field  : reflection
+code   : code -g parsed_1006.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...id of sin's payment."It is finished." Fro...
+field  : reflection
+code   : code -g parsed_1006.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ent."It is finished." From the grave He r...
+field  : reflection
+code   : code -g parsed_1006.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...rds we need to hear."With You There is fo...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...here is forgiveness." ~ Yes God sent His ...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e psalmist tells me."God has hurled them ...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e depths of the sea." Jesus came to wrap ...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... He places the sign."No fishing allowed, ...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... we can breath free."The Cross of Calvary...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...The Cross of Calvary" it's called, those ...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ago. When God says, "I have redeemed you,...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...imes."You are mine, "The God of all grace...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...?" He [Jesus] asked."Who do you say I am?...
+field  : verse
+code   : code -g parsed_1007.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Who do you say I am?" Peter answered, "Yo...
+field  : verse
+code   : code -g parsed_1007.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...eant, " some answer."You're the one whom ...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ing good preaching, "I don't need Him yet...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: .... You are my Savior." Amen....
+field  : prayer
+code   : code -g parsed_1007.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Believe, " God said."Trust My one and onl...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ernal life is yours." All we have to do i...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ver the whole world."The atoning sacrific...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... she heard it again."Your sins are forgiv...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... can lay hold on Me."Go on peace, " He co...
+field  : reflection
+code   : code -g parsed_1007.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...d from that purpose." He steadfastly set ...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... to go to Jerusalem."  (Luke 9:51) The gr...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ling purpose of God." You did not choose ...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Me, but I chose you."  (John 15:16) The w...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ill be accomplished.'...But they understo...
+field  : verse
+code   : code -g parsed_1008.json:48
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...asked ourselves is, "Is the Son of God pr...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...escribably precious." Thomas. said to Him...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...a very simple one ~ "Come to Me." ...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e one ~ "Come to Me." ...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Which of you, if his...
+field  : verse
+code   : code -g parsed_1008.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ve an attitude of a "good child." ...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...de of a "good child." ...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...al thing imaginable." I have called you f...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... called you friends."  Our friendship wit...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... listen to Him say, "Let not your heart b...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...r heart be troubled." ...
+field  : reflection
+code   : code -g parsed_1008.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...kness overtakes you."  (John 12:35b)...
+field  : verse
+code   : code -g parsed_1008.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Jesus says: "When you pray, go in...
+field  : verse
+code   : code -g parsed_1009.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...m, Jesus told them, "as you know, we are ...
+field  : verse
+code   : code -g parsed_1009.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."If you are offering ...
+field  : verse
+code   : code -g parsed_1009.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...". someone said to Hi...
+field  : verse
+code   : code -g parsed_1009.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Someone said to Him,...
+field  : verse
+code   : code -g parsed_1009.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...) Beware of saying, "Oh, I am longing to ...
+field  : reflection
+code   : code -g parsed_1010.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...in, and you will too" (John 14:19)....
+field  : reflection
+code   : code -g parsed_1011.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...n can never be yours". but the Spirit Him...
+field  : reflection
+code   : code -g parsed_1011.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...f makes intercession" in each of our live...
+field  : reflection
+code   : code -g parsed_1011.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...seem unusable by God' for any major task....
+field  : reflection
+code   : code -g parsed_1012.json:175
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ule her; her finance' would come close to...
+field  : reflection
+code   : code -g parsed_1012.json:189
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...on ~ OR if you will "God's hand in the sa...
+field  : reflection
+code   : code -g parsed_1012.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ople should worship "with the inclination...
+field  : reflection
+code   : code -g parsed_1101.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... with all your mind.' This is the first a...
+field  : verse
+code   : code -g parsed_1102.json:314
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...t the believer might"live through Him." H...
+field  : reflection
+code   : code -g parsed_1102.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ht"live through Him." How is this possibl...
+field  : reflection
+code   : code -g parsed_1102.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e world also loves. 'The crowd judges fri...
+field  : reflection
+code   : code -g parsed_1102.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... John does not say: 'Let us love those wh...
+field  : reflection
+code   : code -g parsed_1102.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... rich. No, he says; 'Let us love the bret...
+field  : reflection
+code   : code -g parsed_1102.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...yer for his people) "I want you to know h...
+field  : verse
+code   : code -g parsed_1305.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."I have been given al...
+field  : verse
+code   : code -g parsed_1307.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... the (Gr. It means: "All the days. "). He...
+field  : reflection
+code   : code -g parsed_1307.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ans: "All the days. "). He means to give ...
+field  : reflection
+code   : code -g parsed_1307.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...us, for Your words, "Lo, I am, with you a...
+field  : prayer
+code   : code -g parsed_1307.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... enables them to say"I delight to do Thy ...
+field  : reflection
+code   : code -g parsed_1307.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ul-in following the "Light that leads to ...
+field  : reflection
+code   : code -g parsed_1307.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...34 Jesus replied, "I tell you the truth...
+field  : verse
+code   : code -g parsed_1307.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."My gracious favor is...
+field  : verse
+code   : code -g parsed_1307.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...rned against you-don't blame God-seek Him...
+field  : reflection
+code   : code -g parsed_1308.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ll experience joyDon't base your life on ...
+field  : reflection
+code   : code -g parsed_1310.json:77
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...'s side. Victory is "not by force nor by ...
+field  : reflection
+code   : code -g parsed_1311.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... old saying of some-" I'm a self-made Man...
+field  : reflection
+code   : code -g parsed_1311.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...nt of the psalmist; "The Lord is my light...
+field  : prayer
+code   : code -g parsed_1311.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..." fallen-thrown down" Success and prosper...
+field  : reflection
+code   : code -g parsed_1401.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...iptures tell us to; "Trust in the Lord wi...
+field  : prayer
+code   : code -g parsed_1710.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... own understanding. ". . Amen....
+field  : prayer
+code   : code -g parsed_1710.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."If anyone is in Chri...
+field  : verse
+code   : code -g parsed_1711.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."There is no one righ...
+field  : verse
+code   : code -g parsed_1711.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Unless you change an...
+field  : verse
+code   : code -g parsed_1711.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Stand firm, with the...
+field  : verse
+code   : code -g parsed_1711.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."In whom we have rede...
+field  : verse
+code   : code -g parsed_1711.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...llow up of verse 9) "That in the dispensa...
+field  : verse
+code   : code -g parsed_1711.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... praise of His glory" (Eph. 1:14)...
+field  : verse
+code   : code -g parsed_1711.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Give thanks in all t...
+field  : verse
+code   : code -g parsed_1711.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... Lord Jesus Christ. ". . . (Eph. 5:20)...
+field  : verse
+code   : code -g parsed_1711.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."What is the surpassi...
+field  : verse
+code   : code -g parsed_1711.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...to previous verses) "So tat in ages to co...
+field  : verse
+code   : code -g parsed_1711.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...t all believers can "come boldly unto the...
+field  : reflection
+code   : code -g parsed_1712.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Now, therefore, you ...
+field  : verse
+code   : code -g parsed_1712.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."If indeed you have h...
+field  : verse
+code   : code -g parsed_1712.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."To me, (Paul) who am...
+field  : verse
+code   : code -g parsed_1712.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."I pray that from His...
+field  : verse
+code   : code -g parsed_1712.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...e day of redemption." (Eph. 4:30)...
+field  : verse
+code   : code -g parsed_1801.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Paul says"you can be sure that...
+field  : verse
+code   : code -g parsed_1801.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...hings of this world." (Eph. 5:5)...
+field  : verse
+code   : code -g parsed_1801.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...uke and expose them." (Eph. 5; 11)...
+field  : verse
+code   : code -g parsed_1801.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Be careful how you l...
+field  : verse
+code   : code -g parsed_1801.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Christ at whose Name"every knee will bow,...
+field  : reflection
+code   : code -g parsed_1801.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... and under the earth" (Philippians 2:10)....
+field  : reflection
+code   : code -g parsed_1801.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...bring good news, are"beautiful." It is a ...
+field  : reflection
+code   : code -g parsed_1801.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...news, are"beautiful." It is a wonderful p...
+field  : reflection
+code   : code -g parsed_1801.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ave had to share The"Good News." I pray t...
+field  : prayer
+code   : code -g parsed_1801.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...share The"Good News." I pray that You wou...
+field  : prayer
+code   : code -g parsed_1801.json:8
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ing us up to heaven." (Philippians 3:14)...
+field  : verse
+code   : code -g parsed_1802.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Always be full of jo...
+field  : verse
+code   : code -g parsed_1803.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Let everyone see tha...
+field  : verse
+code   : code -g parsed_1803.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Don't worry about an...
+field  : verse
+code   : code -g parsed_1803.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Keep putting into pr...
+field  : verse
+code   : code -g parsed_1803.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."When I was in Thessa...
+field  : verse
+code   : code -g parsed_1803.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."My child, never forg...
+field  : verse
+code   : code -g parsed_1803.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Wisdom is a tree of ...
+field  : verse
+code   : code -g parsed_1803.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."My child, don't lose...
+field  : verse
+code   : code -g parsed_1803.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Do not envy violent ...
+field  : verse
+code   : code -g parsed_1803.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."My children, listen ...
+field  : verse
+code   : code -g parsed_1803.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Do not do as the wic...
+field  : verse
+code   : code -g parsed_1804.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... The oLD SAYING is: "do not do anything i...
+field  : reflection
+code   : code -g parsed_1804.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Mark out a straight ...
+field  : verse
+code   : code -g parsed_1804.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... and stay safe. Don 't get side tracked, ...
+field  : verse
+code   : code -g parsed_1804.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."If you have cosigned...
+field  : verse
+code   : code -g parsed_1804.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Say to wisdom, "You ...
+field  : verse
+code   : code -g parsed_1804.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Listen to me! For I ...
+field  : verse
+code   : code -g parsed_1804.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Enduring wealth. . ....
+field  : reflection
+code   : code -g parsed_1804.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Way (s) Used for a "...
+field  : reflection
+code   : code -g parsed_1804.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Ages ago I was set u...
+field  : verse
+code   : code -g parsed_1804.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...at Jesus is the one "In whom are hidden a...
+field  : reflection
+code   : code -g parsed_1804.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Wise people treasure...
+field  : verse
+code   : code -g parsed_1805.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."To hide hatred is to...
+field  : verse
+code   : code -g parsed_1805.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...d turn off the flow!' (Proverbs 10:18, 19...
+field  : verse
+code   : code -g parsed_1805.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."Trust in your money ...
+field  : verse
+code   : code -g parsed_1805.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ..."The plans of the god...
+field  : verse
+code   : code -g parsed_1805.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...uth when he stated, "The tongue is a smal...
+field  : reflection
+code   : code -g parsed_1806.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Who can say, "I have cleansed my h...
+field  : verse
+code   : code -g parsed_1808.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ible to please God. "Only justified peopl...
+field  : reflection
+code   : code -g parsed_1808.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Solomon said, "The greater my wisdo...
+field  : verse
+code   : code -g parsed_1809.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...on said to himself, "Come now, let's give...
+field  : verse
+code   : code -g parsed_1809.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Solomon says, "Then I saw that ther...
+field  : verse
+code   : code -g parsed_1809.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ord says FOR TODAY: "God seeks for what h...
+field  : reflection
+code   : code -g parsed_1810.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...joy for all people. 'Today in the town of...
+field  : reflection
+code   : code -g parsed_1812.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...mas reminds us that "when the set time ha...
+field  : reflection
+code   : code -g parsed_1812.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...heaven. " He added: "It is easier for a c...
+field  : verse
+code   : code -g parsed_1901.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...0) reminds us, that "the fear of the Lord...
+field  : reflection
+code   : code -g parsed_1902.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...nesty of our words. 'Just as I am" "Just ...
+field  : reflection
+code   : code -g parsed_1902.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...words. 'Just as I am" "Just as I pretend ...
+field  : reflection
+code   : code -g parsed_1902.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Love Jesus" becomes "O How I like Jesus' ...
+field  : reflection
+code   : code -g parsed_1902.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ay knowing that the "Lord reigns forever....
+field  : reflection
+code   : code -g parsed_1903.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...rd Gethsemane means "place of the olive p...
+field  : reflection
+code   : code -g parsed_1903.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...of the olive press, "and that perfectly d...
+field  : reflection
+code   : code -g parsed_1903.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... OUR behalf. There, "in anguish, He praye...
+field  : reflection
+code   : code -g parsed_1903.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...wald Chambers said, "Jesus rarely comes w...
+field  : reflection
+code   : code -g parsed_1904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...miah a direct call, "Before you were born...
+field  : reflection
+code   : code -g parsed_1904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...r with these words. "BECAUSE OF JESUS, WE...
+field  : reflection
+code   : code -g parsed_1904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...d to lead them to a "land flowing with mi...
+field  : reflection
+code   : code -g parsed_1904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...es. The Bible says, "Walk by the spirit, ...
+field  : reflection
+code   : code -g parsed_1904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...h David we can say, "As for God, His way ...
+field  : reflection
+code   : code -g parsed_1904.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...trials and troubles "so we can comfort th...
+field  : reflection
+code   : code -g parsed_1905.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...that the Lord says, "I have engraved you ...
+field  : reflection
+code   : code -g parsed_1905.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...The serpent said, "Really? did God real...
+field  : verse
+code   : code -g parsed_1905.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Jesus said, "My God, My God, why ...
+field  : verse
+code   : code -g parsed_1905.json:6
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...s courageand faith. "If you declare with ...
+field  : reflection
+code   : code -g parsed_1905.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ... recall His promise."Those who hope in th...
+field  : reflection
+code   : code -g parsed_1906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...and wonderfully made" tobring glory to ou...
+field  : reflection
+code   : code -g parsed_1906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ive or die, we win. "For to me, to live i...
+field  : reflection
+code   : code -g parsed_1906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...id put it this way, "Those who know your ...
+field  : reflection
+code   : code -g parsed_1906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...ts and horses can be"brought to their kne...
+field  : reflection
+code   : code -g parsed_1906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...heir knees and fall," BUT those who trust...
+field  : reflection
+code   : code -g parsed_1906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...Driven Life, wrote: "When you think about...
+field  : reflection
+code   : code -g parsed_1906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...also assure us:that "He will never leave ...
+field  : reflection
+code   : code -g parsed_1906.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...miracles of long ago" (v. 11). The act of...
+field  : reflection
+code   : code -g parsed_1907.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘"’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...once in Scriptures, "We must seek God's w...
+field  : reflection
+code   : code -g parsed_2106.json:7
+========================================================================
+Grammar (EN_UNPAIRED_QUOTES): Unpaired symbol: ‘'’ seems to be missing [category: PUNCTUATION; type: typographical]
+snippet: ...envy violent people;' do not copy their w...
+field  : verse
+code   : code -g parsed_2106.json:20
+========================================================================
+Total grammar issues shown: 509
