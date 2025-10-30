@@ -2,7 +2,7 @@
 import json
 import sys
 import argparse
-from typing import Any, Dict, Iterable, Tuple, List
+from typing import Any, Dict, Iterable, Tuple, List, Union
 
 EXPECTED = {
     "found_verse": True,
@@ -69,10 +69,32 @@ def delete_by_message_id(obj: Any, target_id: str) -> Tuple[Any, int]:
     return obj, deleted
 
 
-def parse_args() -> Tuple[str, str]:
+def clean_string(s: str) -> str:
+    # Apply replacements in the exact order:
+    # 1) ". . . " -> ". "
+    s = s.replace(". . . ", ". ")
+    # 2) ". . ." -> "."
+    s = s.replace(". . .", ".")
+    # 3) ". \"" -> ".\""
+    s = s.replace('. "', '."')
+    return s
+
+
+def clean_obj(obj: Any) -> Any:
+    # Recursively traverse and clean all string values
+    if isinstance(obj, str):
+        return clean_string(obj)
+    if isinstance(obj, list):
+        return [clean_obj(item) for item in obj]
+    if isinstance(obj, dict):
+        return {k: clean_obj(v) for k, v in obj.items()}
+    return obj
+
+
+def parse_args() -> Tuple[str, Union[str, None], bool]:
     parser = argparse.ArgumentParser(
         prog=sys.argv[0],
-        description="Validate parsed JSON and optionally delete one record by message_id.",
+        description="Validate parsed JSON and optionally delete one record by message_id or clean text.",
         allow_abbrev=False,
     )
     parser.add_argument(
@@ -81,13 +103,19 @@ def parse_args() -> Tuple[str, str]:
         metavar="message_id",
         help="Single message_id to delete",
     )
+    parser.add_argument(
+        "-c",
+        "--clean",
+        action="store_true",
+        help="Clean up text by applying specific search-and-replace steps",
+    )
     parser.add_argument("path", help="path to JSON file")
     args = parser.parse_args()
-    return args.path, args.delete
+    return args.path, args.delete, args.clean
 
 
 def main() -> None:
-    path, delete_id = parse_args()
+    path, delete_id, do_clean = parse_args()
 
     try:
         with open(path, "r", encoding="utf-8") as f:
@@ -95,6 +123,8 @@ def main() -> None:
     except Exception as e:
         print(f"Error reading/parsing JSON: {e}", file=sys.stderr)
         sys.exit(2)
+
+    modified = False
 
     if delete_id:
         data, removed = delete_by_message_id(data, delete_id)
@@ -104,13 +134,26 @@ def main() -> None:
                 file=sys.stderr,
             )
         else:
-            try:
-                with open(path, "w", encoding="utf-8") as f:
-                    json.dump(data, f, indent=2, ensure_ascii=False)
-                print(f"Deleted {removed} record(s) and updated {path}")
-            except Exception as e:
-                print(f"Error writing updated JSON: {e}", file=sys.stderr)
-                sys.exit(3)
+            modified = True
+            print(f"Deleted {removed} record(s)")
+
+    if do_clean:
+        cleaned = clean_obj(data)
+        if cleaned != data:
+            data = cleaned
+            modified = True
+            print("Applied cleanup replacements")
+        else:
+            print("Cleanup found nothing to change")
+
+    if modified:
+        try:
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            print(f"Updated {path}")
+        except Exception as e:
+            print(f"Error writing updated JSON: {e}", file=sys.stderr)
+            sys.exit(3)
 
     mismatched: List[Tuple[str, str]] = []
     for rec in iter_records(data):
