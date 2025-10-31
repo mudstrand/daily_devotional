@@ -1,0 +1,10 @@
+[dbg-0909:pre-extract] sanitized repr: 'Solomon said "I saw that there is nothing better for people than to be happy in their work. That is why they are here! No one will bring them back from death to enjoy life in the future. "'
+[dbg-0909:pre-extract] sanitized tail: ' are here! No one will bring them back from death to enjoy life in the future. "'
+[dbg-0909:pre-extract] groups: []
+[dbg-0909:pre-extract] BOOK_REF_WITH_COLON matches: []
+[dbg-0909:pre-extract] BOOK_REF_ANY_DIGIT matches: []
+[dbg-0909:post-extract:None] sanitized repr: 'Solomon said "I saw that there is nothing better for people than to be happy in their work. That is why they are here! No one will bring them back from death to enjoy life in the future. "'
+[dbg-0909:post-extract:None] sanitized tail: ' are here! No one will bring them back from death to enjoy life in the future. "'
+[dbg-0909:post-extract:None] groups: []
+[dbg-0909:post-extract:None] BOOK_REF_WITH_COLON matches: []
+[dbg-0909:post-extract:None] BOOK_REF_ANY_DIGIT matches: []

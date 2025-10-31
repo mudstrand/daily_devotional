@@ -2,16 +2,16 @@
 import json
 import os
 import re
-import sys
 import shutil
-from typing import Dict, Tuple, Optional
+import sys
+from typing import Dict, Tuple
 
 # Default fields to process
 DEFAULT_FIELDS = ["subject", "verse", "reflection", "prayer", "reading"]
 
 # Map abbreviation -> full name (case-sensitive)
 ABBR_TO_FULL = {
-    "Ps": "Psalms",
+    "Ps": "Psalm",
     "Ro": "Romans",
     "Jer": "Jeremiah",
     "Heb": "Hebrews",
@@ -36,6 +36,17 @@ ABBR_TO_FULL = {
     "Lam": "Lamentations",
     "Eccl": "Ecclesiastes",
     "Jm": "James",
+    "Deut": "Deuteronomy",
+    "Zech.": "Zechariah",
+    "Num.": "Numbers",
+    "Eph": "Ephesians",
+    "Sam": "Samuel",
+    "Chr": "Chronicles",
+    "Neh": "Nehemiah",
+    "Nah": "Nahum",
+    "Ecc": "Ecclesiastes",
+    "Ec": "Ecclesiastes",
+    "Prov": "Proverbs",
 }
 
 # Build combined regex: whole-word abbr with optional dot and optional space
@@ -151,10 +162,10 @@ def process_file(path: str, mode: str, fields_to_use) -> Tuple[int, int]:
             print(SEPARATOR)
             print(f"file  : {name}:{line}")
             print(f"field : {key}")
-            print(f"snippet:")
+            print("snippet:")
             print(f"    {value_match_snippet(val)}")
             print()
-            print(f"after:")
+            print("after:")
             print(f"    {preview_after(val)}")
             print(f"code  : code -g {name}:{line}")
 
