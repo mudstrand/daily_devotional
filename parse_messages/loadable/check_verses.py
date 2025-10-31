@@ -9,38 +9,53 @@ from typing import Any, Dict, List, Optional, Tuple
 
 TARGET_FIELD = "verse"
 
+# ---------------------------
+# Patterns: support verse ranges/lists (e.g., 5-6, 7, 9-11) and suffixes (21a, 21b)
+# ---------------------------
+
 # Trailing punctuation/boundary class including common Unicode colon lookalikes
 TRAIL_PUNCT = r"\s\)\]\}\.,;:!?\uFE55\u2236\uFF1A\u00B7\u2019\u201D"
 
-BOOK_REF_WITH_COLON = re.compile(
+# Book + Chapter:Verse(s) — supports ranges/lists and verse letter suffixes (e.g., 21a, 21b)
+BOOK_REF_WITH_VERSES = re.compile(
     rf"""
-    (?:^|[\s\(\[\{{,;:])                 # leading boundary
-    (                                     # group 1: book name
-        (?:[1-3]|I{{1,3}})?\s*            # optional numeric/roman prefix
-        [A-Za-z][A-Za-z.\s]*?             # book letters/periods/spaces (lazy)
+    (?:^|[\s\(\[\{{,;:])                       # leading boundary
+    (                                           # group 1: book name
+        (?:[1-3]|I{{1,3}})?\s*                  # optional numeric/roman prefix
+        [A-Za-z][A-Za-z.\s]*?                   # book letters/periods/spaces (lazy)
     )
     \s*
-    (\d+)                                  # group 2: chapter
-    \s*[:\u2236\uFF1A\uFE55]\s*            # colon or unicode lookalikes
-    (\d+)                                  # group 3: verse
-    (?:$|[{TRAIL_PUNCT}])                  # trailing boundary
+    (\d+)                                        # group 2: chapter
+    \s*[:\u2236\uFF1A\uFE55]\s*                  # colon or unicode lookalikes
+    (\d+[a-cA-C]?)                                # group 3: first verse (digits + optional a/b/c)
+    (                                            # group 4: optional more verses (ranges/lists)
+        (?:\s*[-–—]\s*\d+[a-cA-C]?               #   - range like -24 or -21a (accept hyphen/en/em dashes)
+        | \s*,\s*\d+[a-cA-C]?                    #   , list item like , 27 or , 21b
+        )+                                       # one or more additions
+    )?                                           # optional
+    (?:$|[{TRAIL_PUNCT}])                        # trailing boundary
     """,
     re.VERBOSE,
 )
 
-BOOK_REF_ANY_DIGIT = re.compile(
+# Book + Chapter only (fallback)
+BOOK_REF_CHAPTER_ONLY = re.compile(
     rf"""
-    (?:^|[\s\(\[\{{,;:])                  # leading boundary
-    (                                     # group 1: book name
+    (?:^|[\s\(\[\{{,;:])                       # leading boundary
+    (                                           # group 1: book name
         (?:[1-3]|I{{1,3}})?\s*
         [A-Za-z][A-Za-z.\s]*?
     )
     \s*
-    (\d+)                                  # group 2: number (chapter)
-    (?:$|[{TRAIL_PUNCT}])                  # trailing boundary
+    (\d+)                                        # group 2: chapter
+    (?:$|[{TRAIL_PUNCT}])                        # trailing boundary
     """,
     re.VERBOSE,
 )
+
+# ---------------------------
+# Unicode sanitation
+# ---------------------------
 
 # Zero-width / BOMs to remove
 ZERO_WIDTHS = "".join(
@@ -89,6 +104,10 @@ PARENS_NORMALIZE = {
     "❨": "(",
     "❩": ")",
 }
+
+# ---------------------------
+# Helpers
+# ---------------------------
 
 
 def script_dir() -> str:
@@ -161,21 +180,46 @@ def sanitize_verse(text: str) -> str:
     return s.strip()
 
 
+def _normalize_verses(first: str, tail: Optional[str]) -> str:
+    """
+    Build a normalized verse string from first + optional tail.
+    - Normalize en/em dash to hyphen
+    - Remove spaces around '-' and ','
+    - Lowercase any letter suffixes (e.g., 21B -> 21b)
+    """
+    # Lowercase suffix on first
+    first = re.sub(
+        r"^(\d+)([A-Ca-c])$", lambda m: m.group(1) + m.group(2).lower(), first
+    )
+    if not tail:
+        return first
+    t = tail
+    t = t.replace("–", "-").replace("—", "-")
+    # Tighten punctuation spacing
+    t = re.sub(r"\s*-\s*", "-", t)
+    t = re.sub(r"\s*,\s*", ",", t)
+    # Lowercase any suffixes in the tail
+    t = re.sub(r"(\d+)([A-Ca-c])", lambda m: m.group(1) + m.group(2).lower(), t)
+    return first + t
+
+
 def _find_last_book_ch_vers(s: str) -> Optional[str]:
     last = None
-    for m in BOOK_REF_WITH_COLON.finditer(s):
+    for m in BOOK_REF_WITH_VERSES.finditer(s):
         last = m
     if last:
         book = sanitize_verse(last.group(1))
         ch = last.group(2)
-        vs = last.group(3)
-        return f"{book} {ch}:{vs}"
+        v1 = last.group(3)
+        tail = last.group(4) or ""
+        verses = _normalize_verses(v1, tail)
+        return f"{book} {ch}:{verses}"
     return None
 
 
 def _find_last_book_ch_only(s: str) -> Optional[str]:
     last = None
-    for m in BOOK_REF_ANY_DIGIT.finditer(s):
+    for m in BOOK_REF_CHAPTER_ONLY.finditer(s):
         last = m
     if last:
         book = sanitize_verse(last.group(1))
@@ -186,7 +230,7 @@ def _find_last_book_ch_only(s: str) -> Optional[str]:
 
 def extract_bibleish(text: str) -> Optional[str]:
     """
-    Take the last book+chapter:verse anywhere; fallback to last book+chapter.
+    Take the last book+chapter:verse(s) anywhere; fallback to last book+chapter.
     """
     if not isinstance(text, str):
         return None
@@ -213,7 +257,7 @@ def emit_miss(filename: str, date_only: str, line: int, line_text: str) -> None:
     print(line_text)
 
 
-# ---------- New: robust per-object logging support ----------
+# ---------- Robust per-object logging support ----------
 
 
 def find_top_level_object_spans(content: str) -> List[Tuple[int, int]]:
@@ -222,8 +266,6 @@ def find_top_level_object_spans(content: str) -> List[Tuple[int, int]]:
     Simple scanner that assumes the top-level is a JSON array of objects.
     """
     spans: List[Tuple[int, int]] = []
-
-    # Find the first '[' and last ']' to bound the array
     start_arr = content.find("[")
     end_arr = content.rfind("]")
     if start_arr == -1 or end_arr == -1 or end_arr <= start_arr:
@@ -232,17 +274,14 @@ def find_top_level_object_spans(content: str) -> List[Tuple[int, int]]:
     i = start_arr + 1
     n = end_arr
     while i < n:
-        # Skip whitespace and commas
         while i < n and content[i] in " \t\r\n,":
             i += 1
         if i >= n:
             break
         if content[i] != "{":
-            # Not an object start; try to skip (defensive)
             i += 1
             continue
 
-        # We are at the start of an object; find its matching closing brace at depth 0
         depth = 0
         j = i
         in_string = False
@@ -264,13 +303,11 @@ def find_top_level_object_spans(content: str) -> List[Tuple[int, int]]:
                 elif ch == "}":
                     depth -= 1
                     if depth == 0:
-                        # end of object is at j
                         spans.append((i, j + 1))
                         i = j + 1
                         break
             j += 1
         else:
-            # Unterminated; abort
             break
 
     return spans
@@ -292,8 +329,6 @@ def best_line_for_verse_in_object(
     """
     lines = obj_text.splitlines()
     rel_line = None
-    # Search for the "verse": "..." within the slice only
-    # Use a tolerant regex to avoid escape/spacing mismatches in JSON
     escaped_val = re.escape(verse_value if isinstance(verse_value, str) else "")
     pat = re.compile(
         r'^\s*"verse"\s*:\s*"' + escaped_val + r'"\s*(?:,|})', re.MULTILINE
@@ -302,7 +337,6 @@ def best_line_for_verse_in_object(
     if m:
         rel_line = obj_text.count("\n", 0, m.start()) + 1
     else:
-        # fallback: any line containing the verse key
         for i, line in enumerate(lines, start=1):
             if '"verse"' in line:
                 rel_line = i
@@ -310,7 +344,6 @@ def best_line_for_verse_in_object(
     if rel_line is None:
         rel_line = 1
     abs_line = object_start_line + (rel_line - 1)
-    # Get the exact text of that line (absolute from full file isn't available here, but we return the slice line)
     line_text = lines[rel_line - 1] if 1 <= rel_line <= len(lines) else ""
     return abs_line, line_text
 
@@ -343,7 +376,6 @@ def process_record(
                 object_text, verse, object_start_line
             )
         else:
-            # Fallback legacy behavior (can misattribute on duplicates)
             line_no, line_text = 1, ""
         emit_miss(filename, date_only, line_no, line_text)
         return
@@ -369,7 +401,6 @@ def process_file(
 
     data, content = loaded
     if isinstance(data, list):
-        # Build object spans once for precise logging
         spans = find_top_level_object_spans(content)
         first = True
         for idx, item in enumerate(data):
@@ -395,7 +426,6 @@ def process_file(
                 print("")
             first = False
     elif isinstance(data, dict):
-        # Single object file: object slice is the entire content
         process_record(
             data,
             name,
@@ -415,7 +445,7 @@ def main():
     import argparse
 
     ap = argparse.ArgumentParser(
-        description="Extract Bible references from the 'verse' field. Robust unicode sanitation. On misses, logs the exact line within the same object to avoid duplicate misattribution."
+        description="Extract Bible references from the 'verse' field. Supports verse ranges/lists (e.g., 5-6, 7, 9-11) and suffixes (21a/b/c). Robust unicode sanitation. On misses, logs the exact line within the same object."
     )
     ap.add_argument(
         "--dir",
