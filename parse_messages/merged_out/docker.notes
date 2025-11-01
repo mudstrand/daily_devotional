@@ -1,0 +1,5 @@
+pull the image
+docker pull erikvl87/languagetool:latest
+
+run the image
+docker run --rm -p 8010:8010 erikvl87/languagetool:latest

@@ -1,9 +1,0 @@
-message_id: 16636cc1aa4b8289
-subject   : Checking
-from      : pastor.sather@charter.net
-to        : "'mud@mudworks.net'" <mud@mudworks.net>
-date      : Tue, 02 Oct 2018 17:00:38 -0500
-===================================================================
-Body (clean, unformatted):
-===================================================================
-Address Book Someone is blocking the Devo's
