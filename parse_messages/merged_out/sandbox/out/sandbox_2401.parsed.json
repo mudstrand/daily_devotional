@@ -18,7 +18,12 @@
         ]
       }
     ],
-    "raw": "The fool says in his heart, \"There is no God.\" They are corrupt, their deeds are vile; there is no one who does good. (Psalm 14:1)"
+    "raw": "The fool says in his heart, \"There is no God.\" They are corrupt, their deeds are vile; there is no one who does good. (Psalm 14:1)",
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "file": "sandbox_2401.json",
@@ -39,6 +44,11 @@
         ]
       }
     ],
-    "raw": "A wise man is mightier than a strong man, and a man  of knowledge is more powerful than a strong man. So  don’t go to war without wise guidance; victory depends on having many counselors. (Proverbs 24:5-6)"
+    "raw": "A wise man is mightier than a strong man, and a man  of knowledge is more powerful than a strong man. So  don’t go to war without wise guidance; victory depends on having many counselors. (Proverbs 24:5-6)",
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]

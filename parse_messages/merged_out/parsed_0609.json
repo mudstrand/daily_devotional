@@ -11,7 +11,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "10db5fdae0f26a8b",
@@ -25,7 +30,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "10dc0458e71eb727",
@@ -39,7 +49,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "10dc57d0cd4dd64b",
@@ -53,7 +68,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "10dcfe13ca6831fe",
@@ -67,7 +87,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "10dd4f87166737e8",
@@ -81,7 +106,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "10dd9f969d750a5a",
@@ -95,13 +125,18 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "10de4572f7477ae2",
     "date_utc": "Sun, 24 Sep 2006 16:56:51 -0500",
     "subject": "thoughts to live by",
-    "verse": "Jesus says: \"If I had not come and spoken to them, they would not be guilty of sin. Now, however, they have no excuse for their sin. He who hates Me hates My Father as well. If I had not done among them what no one else did, they would not be guilty of sin. But now they have seen these miracles, and yet they have hated both Me and My Father. But this is written in their Law; They hated Me without reason\". (John 15:22-25) NIV",
+    "verse": "Jesus says: \"If I had not come and spoken to them, they would not be guilty of sin. Now, however, they have no excuse for their sin. He who hates Me hates My Father as well. If I had not done among them what no one else did, they would not be guilty of sin. But now they have seen these miracles, and yet they have hated both Me and My Father. But this is written in their Law; They hated Me without reason\". (John 15:22-25)",
     "reflection": "The greatest sin we can commit is to reject Christ. When Jesus says \"they have no excuse,\" He is referring to the work of the cross. When we think about His sacrifice for us, rejecting him is unforgivable. Jesus' Teaching, Preaching, and Miracles all plainly reveal Who He was, but yet much of the world rejects Him and also hates the Christian. It is pretty plain to see by what is happening in the Moslem countries.",
     "prayer": "Dear Lord, I'm so thankful that I have a loving God, I am so thankful that You call all who love You, Your child. I pray that one day there will be no more hatred in the world. I pray that all men will be able to live side by side in love. Amen.",
     "reading": "",
@@ -109,7 +144,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "10de987cf94c9fff",
@@ -123,7 +163,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "10deeb9d19e3fc54",
@@ -137,7 +182,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "10df3dfb7571bff1",
@@ -151,7 +201,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "10df8fee614ac332",
@@ -165,20 +220,30 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "10dfe355aa7446f7",
     "date_utc": "Fri, 29 Sep 2006 17:11:57 -0500",
     "subject": "thoughts to live by",
     "reflection": "Jesus said to the disciples that the Holy Spirit would tell them \"about the future\" the nature of their mission, the opposition they would face, and the final outcome of their efforts. They did not fully understand these predictions until the Holy Spirit came after Jesus' death and resurrection. The Holy Spirit revealed truths to the disciples that they wrote down in the books that are now the New Testament. The truth into which the Holy Spirit guides us is the truth about Christ. The Spirit also helps us through patient practice to discern right from wrong.",
-    "verse": "Jesus said to His disciples, \"But when he, the Spirit of truth, comes, he will guide you into all the truth. He will not speak on his own; he will speak only what he hears, and he will tell you what is yet to come.\" (John 16:13) NIV",
+    "verse": "Jesus said to His disciples, \"But when he, the Spirit of truth, comes, he will guide you into all the truth. He will not speak on his own; he will speak only what he hears, and he will tell you what is yet to come.\" (John 16:13)",
     "prayer": "Dear Heavenly Father, once again I thank You for the workings of Your Holy Spirit. Help me to always be patient and quick to listen to his leading and guiding. Forgive me for allowing the busyness of each day to take control of my life. Bless my e-mail buddies today with good health and safety. Amen.",
     "reading": "",
     "original_content": "GOOD MORNING!!!...(food for thought)...If a care is too small to be turned into a prayer,\nit is to small to be made into a burden. (I Pet. 5:7)\n\nOur Meditation for Today:\n\nJesus said to His disciples, \"But when he the Spirit of truth, comes, \nhe will guide you into all truth. He will not speak on his own; he will\nspeak only what he hears, and he will tell you what is yet to come.\" (Jn 16:13) NIV\n\nOur Thought for Today:\n\nJesus said to the disciples that the Holy Spirit would tell them \"about the future\"\nthe nature of their mission, the opposition they would face, and the final outcome \nof their efforts...\n\nThey did not fully understand these predictions until the Holy Spirit came after Jesus'\ndeath and resurrection. The Holy Spirit revealed truths to the disciples that they\nwrote down in the books that are now the New Testament...\n\nThe truth into which the Holy Spirit guides us is the truth about Christ. The Spirit also \nhelps us through patient practice to discern right from wrong...\n\nOur Prayer for Today:\n\nDear Heavenly Father, once again I thank You for the workings of Your Holy Spirit.\nHelp me to always be patient and quick to listen to his leading and guiding. Forgive \nme for allowing the busyness of each day to take control of my life. Bless my e-mail \nbuddies today with good health and safety...Amen.\n\nLook up, when you have to little strength to look within...\nYou're in the prayers of two who care...\nPastor Al & Marcie Sather",
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]

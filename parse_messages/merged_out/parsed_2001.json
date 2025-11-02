@@ -11,7 +11,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Luke 19:1-10",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16f63c5b56c2d9cf",
@@ -25,13 +30,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 37:7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16f68f8783ee3e68",
     "date_utc": "2020-01-03T01:15:12+00:00",
     "subject": "THE IMPORTANCE OF OBEDIENCE",
-    "verse": "We know that we have come to know Him if we keep His commandments… But if anyone obeys His Word, love for God is truly made complete to t him. (1 John 2:3, 5)  ",
+    "verse": "We know that we have come to know Him if we keep His commandments… But if anyone obeys His Word, love for God is truly made complete to t him. (1 John 2:3, 5)",
     "reflection": "The question that has been asked more than once is; “How can we know for sure that we belong to Christ?” This passage gives two ways to know; if you do what Christ says, and live as Christ wants. What does Christ tell us to do? John answers in (3:23) “Believe in the name of His Son, Jesus Christ and love one another.” True Christian faith results in a loving behavior; that is why John says that, the way we act can give us the assurance that we belong to Christ.",
     "prayer": "Lord, help us to live out our faith through loving actions, believing in Jesus and showing compassion to others. May our lives reflect Your love and give us assurance that we belong to You. (AI)",
     "original_content": "message_id: 16f68f8783ee3e68\nsubject   : Subject: THE IMPORTANCE OF OBEDIENCE (1-3-2020)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Thu, 2 Jan 2020 19:15:12 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’ Verse:*\n\n*We know that we have come to know Him if we keep His commandments…*\n\n*But if anyone obeys His Word, love for God is truly made complete to t\nhim. *(I Jn. 2:3, 5)\n\n\n\n*Today’s Reflection:*\n\nThe question that has been asked more than once is; “How can we know for\nsure that we belong to Christ?” This passage gives two ways to know; if\nyou *do* what Christ says, and *live *as Christ wants. What does Christ\ntell us to do? John answers in (3:23) “Believe in the name of His Son,\nJesus Christ *and* love one another.” True Christian faith results in a\nloving behavior; that is why John says that, *the way we act can give us\nthe assurance that we belong to Christ. *\n\n* Pastor Al*\n",
@@ -39,7 +49,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 John 3:18-19 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16f6e112d31fd0ad",
@@ -53,7 +68,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 12:2 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16f735c62eee6a84",
@@ -67,7 +87,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 1:6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16f78182952aefd5",
@@ -81,7 +106,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 16:33 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16f7d5eef7b34257",
@@ -95,7 +125,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 8:13 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16f82d5bea8cdf00",
@@ -109,7 +144,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 3:7-8 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16f87b69bf45dbc8",
@@ -123,7 +163,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Mark 5:34 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16f8ca0b5bbfd15a",
@@ -137,7 +182,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 3:3-4 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16f91ed90fe1f8a2",
@@ -151,7 +201,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 16:24 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16f96e297c2be443",
@@ -165,7 +220,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 2:3-4 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16f9c4b8e0386de1",
@@ -179,13 +239,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 40:1-4",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fa17db3e095a66",
     "date_utc": "2020-01-14T00:39:27+00:00",
     "subject": "TAKE IT TO THE LORD.",
-    "verse": "You are of your father the devil, and the desires of your father you want to do. He was a murder from the beginning, and does not stand in the truth, because there is no truth in him. When he speaks a lie, he speaks from his own resources, for he is a liar and the father of it. (John 8:44) ",
+    "verse": "You are of your father the devil, and the desires of your father you want to do. He was a murder from the beginning, and does not stand in the truth, because there is no truth in him. When he speaks a lie, he speaks from his own resources, for he is a liar and the father of it. (John 8:44)",
     "reflection": "Whatever pops up, whether “good” of “bad,” we need to pause, praise, and pray. We need to attend to whatever it is without projecting or jumping to conclusions, knowing Jesus goes with us wherever we go. I admit it sometimes feels risky to not immediately brace for the worst, but the peace I’ve gained through this practice is priceless. Whatever you face today, bring it to Jesus, giving thanks for the Holy Spirit's power to never let you give up",
     "prayer": "Lord, help us pause and bring all our experiences to You, trusting in Your presence and guidance. May we find peace in surrendering our worries and giving thanks for Your unfailing support through every circumstance. (AI)",
     "original_content": "message_id: 16fa17db3e095a66\nsubject   : Subject: TAKE IT TO THE LORD. (1-14-2020)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : Alvin Sather <pastor.sather5@gmail.com>, Angie Truscinski <atruscinski@hotmail.com>, \"Bart & Dorie Krenke\" <krenke@midstatesd.net>, \"Bill & Marilyn Nelson\" <marbill28@gmail.com>, Brennen Sather <brennenchamp@gmail.com>, \"Brian & Trish Waage\" <brianntrish@wiktel.com>, Cassidy Nelson <cassidylnelson23@gmail.com>, Chuck Clow <chuckc@wiktel.com>, \"Clark & Sandra Sather\" <clark.sather@gmail.com>, Courtney Nelson <corkygoose@gmail.com>, \"Craig & Peggy Swanson\" <pcswanson@midstatesd.net>, \"Curt & Marilyn Zimdars\" <cmzimdars@wiktel.com>, \"Dale & Debi Wiskow\" <dlw@wiktel.com>, \"Dan & Karla Cummings\" <dkcummings@midstatesd.net>, Dee Burkel <dbur@wiktel.com>, \"Don & Margaret Lake\" <dmlake@midstatesd.net>, \"Donnie & Donna Dominiack\" <ddominiack@midstatesd.net>, \"Doug & Corena Green\" <green@wiktel.com>, Duane Olson <duaneo05118@gmail.com>, \"Dwight & Carolyn Lange\" <dclange@wiktel.com>, Eileen Kilen <ekilen@wiktel.com>, Elderbush Apts <elderb@wiktel.com>, \"Ellis & Darlene Waage\" <edwaage@wiktel.com>, Eunice Korczak <snookyk@gmail.com>, Felix Korczak <squidbrain@gmail.com>, \"Franklin & Laray Frislie\" <lfrislie@badger.k12.mn.us>, \"Gary & Leslie Udstrand\" <gbu@digitalwind.net>, \"Gene & Rose Fenstrom\" <dozenrosebuds2002@yahoo.com>, \"Gerald & Donna Graff\" <gdgraff@wiktel.com>, Glen Darst <gdarst@wiktel.com>, Gracia Nelson <gracianelson@yahoo.com>, \"Harold & Betty Hudson\" <bjhjhud@frontier.com>, \"Harold (2) Hudson\" <hhcpa@comcast.net>, \"Harvey & Becky Melby\" <hmelby@wiktel.com>, \"Jerome & Dee Burkel\" <2river@wiktel.com>, \"Joe & Shirly Burian\" <burian@wiktel.com>, \"Kirk & Desirae Surat\" <kirksurat@midstatesd.net>, Laura Melby <lauramelby@hotmail.com>, Linda Hantke <lelba@midstatesd.net>, Lois Halbakken <Lhbakken64@gmail.com>, Lyle Mattson <lylema@wiktel.com>, Madison Udstrand <madyudstrand@gmail.com>, Mark Udstrand <mud@mudworks.net>, Mary Graves <magraves@midstatesd.net>, Megan Sather <mm.sather@charter.net>, Michael Sather <mike_sather@hotmail.com>, Missy Udstrand <melissa.udstrand@gmail.com>, \"Neil & Abby Sather\" <nasather2@gmail.com>, \"Paul & Carol Ann Karlovitz\" <cak17min@yahoo.com>, Rae Ann Dozal <littlegdole@yahoo.com>, \"Richard & Annie Novacek\" <ranovacek@wiktel.com>, \"Rick & Trish Sather\" <mnsather@charter.net>, Robert Stoop <pinball@wiktel.com>, Roger Green <rgreen@wiktel.com>, Rolland Deschene <roldes3@hotmail.com>, Ryan Sather <ryan.sather@gmail.com>, Stephanie Kilen <skilen@wiktel.com>, \"Steve & Kim Riggen\" <riggen@midstatesd.net>, \"Steve & Kristy Nelson\" <stevenkristy@msn.com>, Stevie Bredeson <stevieleigh.0724@gmail.com>, \"Tim & Carol Urbaniak\" <tlc@wiktel.com>, Tracy Halbakken <tlsnh1111@gmail.com>, \"Troy & Cheryl Power\" <tcpower@me.com>, Wendy Lee <wenstalee@yahoo.com>, Will Udstrand <will.udstrand@gmail.com>\ndate      : Mon, 13 Jan 2020 18:39:27 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*You are of your father the devil, and the desires of your father y**ou\nwant to do. He was a murder from the beginning, and does **not stand in the\ntruth, because there is no truth in him. When **he speaks a lie, he speaks\nfrom his own resources, for he is a **liar and the father of it. *(Jn. 8:44)\n\n\n\n\n*Today’s Reflection:*\n\nWhatever pops up, whether “good” of “bad,” we need\n\nto pause, praise, and pray. We need to attend to whatever it is\nwithout projecting\nor jumping to conclusions, knowing Jesus goes with us wherever we go. I\nadmit it sometimes feels risky to not immediately brace for the worst, *but*\nthe peace I’ve gained through this practice\n\nis priceless. *Whatever you face today, **bring it to *\n\n*Jesus, giving thanks for the Holy Spirit's power to*\n\n*never let you give up*\n\n*Pastor Al *\n",
@@ -193,13 +258,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 4:6-7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fa6784247153df",
     "date_utc": "2020-01-14T23:51:37+00:00",
     "subject": "ASK--SEEK--KNOCK",
-    "verse": " So I say to you, “Ask and it will be given to you; seek and you will find;\nknock and the door will be opened  to you (Luke 11:9)",
+    "verse": "So I say to you, “Ask and it will be given to you; seek and you will find;\nknock and the door will be opened  to you (Luke 11:9)",
     "reflection": "My heart hurts whenever I picture those closed doors. I think of Jesus letting us know that if we knock, He will always open the door to us. I guess I’ve always imagined us knocking to get in and Jesus opening the door to welcome us inside. But as I pray for others, I now realize that sometimes when I knock, we’re the\nones who are inside, and we need Jesus to free us to come out and to let others pour in. Following Jesus can mean opening doors—literal and metaphorical—that create isolation between ourselves and others.",
     "prayer": "Lord, help us to recognize the doors we've closed in our lives and grant us the courage to open them, allowing Your love to flow both in and out. May we follow Your example of radical hospitality, breaking down barriers and welcoming others into our hearts and lives. (AI)",
     "original_content": "message_id: 16fa6784247153df\nsubject   : Subject: ASK--SEEK--KNOCK (1-15-20200\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Tue, 14 Jan 2020 17:51:37 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*So I say to you, “Ask and it will be given to you; seek and you will **find;\nknock and the door will be opened *\n\n*to you *(Lk. 11:9)\n\n\n*Today’s Reflection:*\n\nMy heart hurts whenever I picture those closed doors.\n\nI think of Jesus letting us know that if we knock, He\n\nwill always open the door to us. I guess I’ve always imagined us knocking\nto get in and Jesus opening the door to welcome us *inside.* But as I pray for\nothers, I now realize that sometimes when I knock, we’re the\n\nones who are inside, and we need Jesus to free us to come out and to let\nothers pour in. *Following Jesus *\n\n*can mean opening **doors—literal and metaphorical—that create\nisolation **between\nourselves and others.*\n\n* Pastor Al*\n",
@@ -207,13 +277,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:5 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fabcab823a59cd",
     "date_utc": "2020-01-16T00:39:47+00:00",
     "subject": "A NEW CREATION",
-    "verse": "Fear not, for I have redeemed you; I have called you  by your name. (Isaiah 43:1) (NKJV)  ",
+    "verse": "Fear not, for I have redeemed you; I have called you  by your name. (Isaiah 43:1)",
     "reflection": "We are told that we need not fear, but still for some it still is a constant companion. But if we are walking with Jesus He has given us a new foundation on which to stand. Paul says in 2 Corinthians 5:17 (NIV) that if we are in Christ, we are a “new creation.” Jesus gave us the power to step on “all the power of the enemy without being hurt (Luke 10:19), KJV, but the bigger victory is that our name is written in heaven. So let us take heart that Jesus knows our name and we are His new creation. He will help us overcome our fears.",
     "prayer": "Lord, help us to embrace our identity as Your new creation and find courage in knowing that our names are written in heaven. May we trust in Your power to overcome our fears and walk confidently with You. (AI)",
     "original_content": "message_id: 16fabcab823a59cd\nsubject   : Subject: A NEW CREATION (1-16-2020)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Wed, 15 Jan 2020 18:39:47 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*Fear not, for I have redeemed you; I have called you *\n\n*by **your name. *(Isa. 43:1) *(NKJV)*\n\n\n\n*Today’s Reflection:*\n\nWe are told that we need not fear, but still for some it still is a\nconstant companion. But if we are walking\n\nwith Jesus He has given us a new foundation on which\n\nto stand. Paul says in 2 Cor. 5:17 (NIV) that if we are\n\nin Christ, we are a “new creation.” Jesus gave us the power to step on “all\nthe power of the enemy without being hurt (Lk. 10:19), KJV, but the bigger\nvictory is\n\nthat our name is written in heaven. *So let us take heart that Jesus knows\nour name and we **are His new creation. **He will help us overcome our\nfears.*\n\n* Pastor Al*\n",
@@ -221,13 +296,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 8:15 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fb0f55ded281f0",
     "date_utc": "2020-01-17T00:44:28+00:00",
     "subject": "FOLLOWING THE MASTER",
-    "verse": "As Jesus was going down the road, He saw Matthew sitting at his tax collector booth. “Follow Me and be  My disciple,”Jesus said to him. So, Matthew got up and followed Him. (Matthew 9:9) (NLT)",
+    "verse": "As Jesus was going down the road, He saw Matthew sitting at his tax collector booth. “Follow Me and be  My disciple,”Jesus said to him. So, Matthew got up and followed Him. (Matthew 9:9)",
     "reflection": "Following religious rules doesn’t make us mature believers. It makes us fearful of the consequences for breaking them and judgmental toward those who do not adhere to them. In contrast, following Jesus places the emphases on a relationship with Him. When that friendship becomes our focus, everything\nelse falls into place. Here is the irony: being Jesus disciple means we follow rules designed to make us better Christians.",
     "prayer": "Lord, help us focus on our relationship with You rather than rigid rules, knowing that true discipleship flows from a loving connection. Guide us to embrace Your teachings with open hearts, growing in maturity and compassion for others as we follow Your example. (AI)",
     "original_content": "message_id: 16fb0f55ded281f0\nsubject   : Subject: FOLLOWING THE MASTER (1-17-2020)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Thu, 16 Jan 2020 18:44:28 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*As Jesus was going down the road, He saw Matthew sitting **at his tax\ncollector booth. “Follow Me and be *\n\n*My disciple,”**Jesus said to him. So, Matthew got up and followed Him. *(Mt.\n9:9) *(NLT)*\n\n\n\n*Today’s Reflection:*\n\nFollowing religious rules doesn’t make us mature believers. It makes us\nfearful of the consequences\n\nfor breaking them and judgmental toward those who\n\ndo not adhere to them. In contrast, following Jesus\n\nplaces the emphases on a relationship with Him.\n\nWhen that friendship becomes our focus, everything\n\nelse falls into place. *Here is the irony: being Jesus disciple **means we\nfollow rules designed to make *\n\n*us better Christians.*\n\n* Pastor Al *\n",
@@ -235,7 +315,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 16:24 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fb60c7a0c94efa",
@@ -249,7 +334,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 5:3-5 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fbb3b9843da494",
@@ -263,7 +353,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 3:19 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fc0865a5c38286",
@@ -277,7 +372,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 6:19-20 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fc5992e7f949b9",
@@ -291,7 +391,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 2:6-7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fca8162e7e491f",
@@ -305,7 +410,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 25:35-36 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fcfa67e6a0ed17",
@@ -319,7 +429,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 8:37-39 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fd50e271ea2683",
@@ -333,7 +448,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 5:14-15 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fda1aad9ac3bb3",
@@ -347,7 +467,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 18:20 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fdf3ea00b75acb",
@@ -361,7 +486,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:6-8 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fe477df7d0cda3",
@@ -375,7 +505,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 2:5-7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fe97ce903e55b0",
@@ -389,7 +524,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 4:3 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16fee9bc3e56ba51",
@@ -403,7 +543,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 11:33-34 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16ff3db3dd4aa191",
@@ -417,13 +562,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 11:28-30 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16ff8f056428b94d",
     "date_utc": "2020-01-31T00:11:38+00:00",
     "subject": "PRAYING FOR A CHANGE OF HEARTS",
-    "verse": "Many of the disciples said, “This is very hard to understand. How can anyone accept it?” Jesus was aware that His  disciples were complaining, so He said to them, “Does this offend you?”At this point many of His disciples turned away and deserted Him. (John 6:60—61, 66)",
+    "verse": "60 On hearing it, many of his disciples said, “This is a hard teaching. Who can accept it?” 61 Aware that his disciples were grumbling about this, Jesus said to them, “Does this offend you? 62 Then what if you see the Son of Man ascend to where he was before! 63 The Spirit gives life; the flesh counts for nothing. The words I have spoken to you-they are full of the Spirit and life. 64 Yet there are some of you who do not believe.” For Jesus had known from the beginning which of them did not believe and who would betray him. 65 He went on to say, “This is why I told you that no one can come to me unless the Father has enabled them.” 66 From this time many of his disciples turned back and no longer followed him. (John 6:60-66)",
     "reflection": "Offending others when standing for the truth is inevitable. We can’t control how others receive our words, but we can control the manner in which we present them. Jesus never stooped to name calling, or verbally tearing apart the character of anyone who disagreed with Him. Neither should we. Our role is to follow His example and trust His Holy Spirit to change the hearts of those who take offense.",
     "prayer": "Lord of Life, help us to speak Your truth with gentleness and respect, following the example of Jesus in our interactions with others. May Your Holy Spirit work in the hearts of those who hear, bringing understanding and transformation. (AI)",
     "original_content": "message_id: 16ff8f056428b94d\nsubject   : Subject: PRAYING FOR A CHANGE OF HEARTS (1-31-2020)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Thu, 30 Jan 2020 18:11:38 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*Many of the disciples said, “This is very hard to understand.*\n\n*How can anyone accept it?” Jesus was aware that His *\n\n*disciples **were complaining, so He said to them, “Does this offend you?”**At\nthis point many of His disciples turned away and deserted **Him. *(Jn.\n6:60—61, 66)\n\n\n\n*Today’s Reflection:*\n\nOffending others when standing for the truth is inevitable. We\n\ncan’t control how others receive our words, but we can control\n\nthe manner in which we present them. Jesus never stooped to\n\nname calling, or verbally tearing apart the character of anyone\n\nwho disagreed with Him. Neither should we. *Our **role is to *\n\n*follow His example and trust His Holy Spirit to **change the *\n\n*hearts of those who take offense. *\n\n* Pastor Al*\n",
@@ -431,6 +581,11 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 4:6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]

@@ -11,7 +11,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1601a3d506e6dfee",
@@ -25,7 +30,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1601f4487167222c",
@@ -39,7 +49,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "160247cfc46f0ae9",
@@ -53,7 +68,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16029a9532190c5c",
@@ -67,7 +87,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1602f348062b06fd",
@@ -81,7 +106,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1603416e0dccfcdd",
@@ -95,7 +125,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16039102f7f1b044",
@@ -109,7 +144,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1603e3610c4f5bdc",
@@ -123,7 +163,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1604381a8498a78f",
@@ -137,7 +182,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "160489fc2a54b6e0",
@@ -151,7 +201,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1604da972a858afe",
@@ -165,7 +220,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16052da4f34a6bb5",
@@ -179,7 +239,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "160584b67461df87",
@@ -193,7 +258,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1605d322699f6cc9",
@@ -207,7 +277,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16062466699b3d7a",
@@ -221,7 +296,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16067826c9bd7933",
@@ -235,7 +315,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1606cc482bf329cd",
@@ -249,7 +334,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16071c6530699c67",
@@ -263,7 +353,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16076cba75737557",
@@ -277,7 +372,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1607c39d18d7bfc4",
@@ -291,7 +391,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "160814a2c234305d",
@@ -305,7 +410,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "160865d9473e61d9",
@@ -319,7 +429,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1608ba9f2bfde048",
@@ -333,7 +448,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "160928c995252cd3",
@@ -347,7 +467,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16095ed6698ae948",
@@ -361,7 +486,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1609afb0fdacaaa0",
@@ -375,7 +505,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "160a02fff984af4f",
@@ -389,7 +524,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "160a523c06bc2e31",
@@ -403,7 +543,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "160aa6aea53e9544",
@@ -417,7 +562,12 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "160afb5845c8316f",
@@ -431,6 +581,11 @@
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
-    "found_reading": false
+    "found_reading": false,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]

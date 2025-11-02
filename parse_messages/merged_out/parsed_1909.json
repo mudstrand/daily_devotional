@@ -11,7 +11,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalmread 135:1-4",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cef6ebb9806e14",
@@ -25,7 +30,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 136",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cf4a0ba7fe4b74",
@@ -39,7 +49,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 138",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cf9a273e996c47",
@@ -53,7 +68,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Jeremiah 1:5 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cf9b2c3d94b66e",
@@ -67,7 +87,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 141",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cfeeda9fdad443",
@@ -81,7 +106,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 34:17-18 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d0434a0a15ae70",
@@ -95,7 +125,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 143",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d094eb52c6a4af",
@@ -109,7 +144,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ecclesiastes 12:13-14 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d0e776ae7e0a2a",
@@ -123,7 +163,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 145:13-21",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d1371bde2d8aaa",
@@ -137,7 +182,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 146",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d18bf4af4ba9d6",
@@ -151,7 +201,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 139:1-3 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d1dd125a239ed5",
@@ -165,7 +220,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Revelation 5:13 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d22fc1d1e648c3",
@@ -179,7 +239,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 149:1-9",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d281696defcbfa",
@@ -193,7 +258,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "review the book or Psalms",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d2d5db55c1db8f",
@@ -207,7 +277,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Esther 7:1-9",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d31f58975732d5",
@@ -221,7 +296,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Luke 18:1-8",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d3777c428b2b1b",
@@ -235,7 +315,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 2:8, 9",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d3ccb157cacac4",
@@ -249,7 +334,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 3:16-21",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d41dfeb51aa143",
@@ -263,7 +353,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 24",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d46ebaf56af603",
@@ -277,7 +372,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 13:8-14",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d4c0dccbc3ef39",
@@ -291,7 +391,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "2 Corinthians 12:1-10",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d5144a1b7d65ed",
@@ -305,13 +410,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Genesis 1:24-31",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d559d3514dcce1",
     "date_utc": "2019-09-21T20:57:09+00:00",
     "subject": "OUR WORST ENEMY IS OVERCOME",
-    "verse": "The great dragon was hurled down—that ancient serpent called\nthe devil, who leads the whole world astray. (Revelation 12:9)",
+    "verse": "The great dragon was hurled down-that ancient serpent called\nthe devil, who leads the whole world astray. (Revelation 12:9)",
     "reflection": "In my human reasoning, I believe Satan struck in the Garden\nof Eden first to get even with God for throwing him out of\nheaven. For this he became an avid enemy of God, he could\nnot avenge himself on the Lord. So Satan turn to Adam and\nEve, the very crown of creation whom God had made in His own\nimage. As we all know he hasn’t quit yet: “the whole world\nis under the control of the evil one” (I John 5:19). Take\nnote of this, the world is given over to all the fruits of\nthe flesh: “sexual immorality, impurity and debauchery;\nidolatry and witchcraft; hatred, discord, jealousy, fits of\nrage, selfish ambition, dissension, factions and envy;\ndrunkenness, orgies, and the like” (Galatians 5:19-21). All the\nwhile Satan tempts people to the greatest sin of\nall—UNBELIEF. BUT CHRIST PAID IT ALL ON THE CROSS.",
     "prayer": "Lord God, we acknowledge that Satan, once an angel created\nby You, became prideful and rebelled against Your authority.\nHis rebellion began before the fall of humanity and led to\nhis expulsion from heaven. Unable to take vengeance on You,\nhe turned his hatred toward Adam and Eve, the crown of Your\ncreation made in Your image. Through deceit and temptation\nin the Garden of Eden, Satan introduced sin into the world,\nand ever since, \"the whole world is under the control of the\nevil one\" (1 John 5:19). Protect us from the fruits of the\nflesh and the greatest sin of unbelief. Thank You, Lord\nJesus, for paying it all on the cross and conquering sin and\nSatan. Strengthen our faith to remain steadfast in Your\ngrace and truth. Amen. (AI)",
     "original_content": "message_id: 16d559d3514dcce1\nsubject   : Subject for 9/22/19: OUR WORST ENEMY IS OVERCOME (read Rev. 12:7-12)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Sat, 21 Sep 2019 15:57:09 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Verse for Today:*\n\n*The great dragon was hurled down—that ancient serpent*\n\n*called the devil, who leads the whole world astray. *(Rev. 12:9)\n\n\n\n*Thoughts for Today:*\n\nIn my human reasoning, I believe Satan struck in the Garden\n\nof Eden first to get even with God for throwing him out of\n\nheaven. For this he became an avid enemy of God, he could\n\nnot avenge himself on the Lord. So Satan turn to Adam and\n\nEve, the very crown of creation whom God had made in His\n\nown image. As we all know he hasn’t quit yet: “the whole\n\nworld is under the control of the evil one” (I Jn. 5:19). Take\n\nnote of this, *the world is given over to all the fruits of the *\n\n*flesh:* “sexual immorality, impurity and debauchery; idolatry\n\nand witchcraft; hatred, discord, jealousy, fits of rage, selfish\n\nambition, dissension, factions and envy; drunkenness, orgies,\n\nand the like” (Gal. 5:19-21). All the while Satan tempts people\n\nto the *greatest* sin of all—UNBELIEF. *BUT CHRIST PAID IT ALL*\n\n*ON THE CROSS.*\n\n* Pastor Al *\n",
@@ -319,7 +429,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Revelation 12:7-12",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d5b893e3057629",
@@ -333,7 +448,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Mark 8:34-38",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d60fca9f8d55df",
@@ -347,7 +467,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 20:28 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d65e73ab052154",
@@ -361,7 +486,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Mark 4:26-29",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d6af175f69276f",
@@ -375,7 +505,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 5:7-12",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d7014895927418",
@@ -389,7 +524,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Genesis 24:50-610",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d75519c6e62e08",
@@ -403,7 +543,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Mark 6:1-6",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d7a50175b4b744",
@@ -417,7 +562,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 91",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d7f660b8f93fca",
@@ -431,7 +581,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 14:1-140",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d84950f4dd0e09",
@@ -445,6 +600,11 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 1:1-14",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]

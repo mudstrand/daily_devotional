@@ -11,13 +11,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:19-20 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b09020a0685e9b",
     "date_utc": "2021-08-02T22:35:34+00:00",
     "subject": "HE IS AWARE OF ALL THINGS",
-    "verse": "The Lord is watching everywhere, keeping His eyes on both the evil and the good. (Proverbs 15:3)  ",
+    "verse": "The Lord is watching everywhere, keeping His eyes on both the evil and the good. (Proverbs 15:3)",
     "reflection": "At times it seems like God is letting evil run rampant in the world, and we wonder if He even notices. But God sees everything clearly -both the evil actions and the evil intentions lying behind them. He is not an indifferent observer. He cares and is active in our world. Right NOW , His work may be unseen and unfelt, but don’t give up. One day He will wipe out evil and punish evil doers, just as He will establish the good and reward those who do His will.",
     "prayer": "Dear Lord, I pray for patience and that I will remain faithful while waiting for that wonderful day! Amen.",
     "original_content": "message_id: 17b09020a0685e9b\nsubject   : Subject: HE IS AWARE OF ALL THINGS\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Mon, 2 Aug 2021 17:35:34 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*The Lord is watching everywhere, keeping His eyes on both the evil*\n\n*and the good. *(Pro. 15:3)\n\n\n\n*Reflection:*\n\nAt times it seems like God is letting evil run rampant in the world,\n\nand we wonder if He even notices. But God sees everything clearly\n\n—both the evil actions and the evil intentions lying behind them.\n\nHe is not an indifferent observer. He cares and is active in our\n\nworld. Right *NOW*, His work may be unseen and unfelt, but\n\ndon’t give up. One day He will wipe out evil and punish evil-\n\ndoers, just as He will establish the good and reward those who do\n\nHis will.\n\n*Pastor Sather*\n\n*Dear Lord, I pray for patience and that I will remain faithful *\n\n*while waiting for that wonderful day! Amen.*\n",
@@ -25,7 +30,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 94:9-11 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b0deea89b77f32",
@@ -39,7 +49,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 4:8 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b1337a560f60f1",
@@ -53,7 +68,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 4:8 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b1d2bec302fd21",
@@ -67,7 +87,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Proverbs 11:14 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b226cb8f09e527",
@@ -81,7 +106,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:19 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b27a28797d2bae",
@@ -95,7 +125,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 4:13-15 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b2cf0e4d651310",
@@ -109,7 +144,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Jeremiah 17:9-10 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b31a00ccf155f3",
@@ -123,7 +163,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 3:23-24 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b372486a1fc6b4",
@@ -137,7 +182,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 8:28 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b3c5cbd85ab5a3",
@@ -151,7 +201,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 4:6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b41607f642ebc7",
@@ -165,13 +220,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 37:23-24 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b4657f7524ea16",
     "date_utc": "2021-08-14T20:26:15+00:00",
     "subject": "HONESTY IS THE BEST POLICY",
-    "verse": "The lord demands fairness in every business deal; He sets the stand. (Proverbs 16:11) ",
+    "verse": "The lord demands fairness in every business deal; He sets the stand. (Proverbs 16:11)",
     "reflection": "Whether we buy or sell, make a product or offer a\nservice, we know what is fair and honest and what\nis unfair and dishonest. Sometimes we feel pressure\nto be dishonest to advance ourselves or gain more\nprofit.\nBut we want to obey God, there is no middle\nground.\nGod demands honesty in every business\ntransaction.\nNo amount of rationalizing can justify\na dishonest business practice. Honesty and fairness\nare not always easy, but they are what God demands.\nAsk Him for discernment and courage to be consist ently honest and fair.",
     "prayer": "Dear Heavenly Father, I pray for discernment on all my dealings. Amen.",
     "original_content": "message_id: 17b4657f7524ea16\nsubject   : Subject: HONESTY IS THE BEST POLICY\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Sat, 14 Aug 2021 15:26:15 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*The lord demands fairness in every business deal;*\n\n*He sets the stand. *(Pro. 16:11)\n\n\n\n*Today’s Reflection:*\n\nWhether we buy or sell, make a product or offer a\n\nservice, we know what is fair and honest and what\n\nis unfair and dishonest. Sometimes we feel pressure\n\nto be dishonest to advance ourselves or gain more\n\nprofit. But we want to obey God, there is no middle\n\nground. God demands honesty in every business\n\ntransaction. No amount of rationalizing can justify\n\na dishonest business practice. Honesty and fairness\n\nare not always easy, but they are what God demands.\n\nAsk Him for discernment and courage to be consist-\n\nently honest and fair.\n\n*Pastor Sather*\n\n*Dear Heavenly Father, I pray for discernment on *\n\n*all my dealings. **Amen.*\n",
@@ -179,7 +239,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Proverbs 11:1 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b4b7af61b33339",
@@ -193,7 +258,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 4:6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b50dcd4281eac1",
@@ -207,7 +277,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Proverbs 13:14 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b55d4e89f834da",
@@ -221,13 +296,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Leviticus 19:32 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b5ac7aecfa3821",
     "date_utc": "2021-08-18T19:40:41+00:00",
     "subject": "THE IMPORTANCE OF RESTRAINT",
-    "verse": "It is more important to be patient than powerful: it is better to have self-control than to conquer a city. We may throw the dice, but the Lord determines how they  fall.\n(Proverbs 16:32, 33) ",
+    "verse": "It is more important to be patient than powerful: it is better to have self-control than to conquer a city. We may throw the dice, but the Lord determines how they  fall.\n(Proverbs 16:32, 33)",
     "reflection": "Self-control is superior to conquest. Success in busin ess, school, or home life can be ruined by a person\nwho loses control of his or her temper, So it is a great\npersonal victory to control your temper. When you\nfeel yourself ready to explode, remember that losing\ncontrol may cause you to forfeit what you want most.",
     "prayer": "Dear Heavenly Father, when I feel like I am about to lose my self-control remind me to bite my tongue Amen",
     "original_content": "message_id: 17b5ac7aecfa3821\nsubject   : Subject: THE IMPORTANCE OF RESTRAINT\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Wed, 18 Aug 2021 14:40:41 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verses:*\n\n*It is more important to be patient than powerful: it is*\n\n*better to have self-control than to conquer a city. We*\n\n*may throw the dice, but the Lord determines how they *\n\n*fall. *(Pro. 16:32, 33)\n\n\n\n*Today’s Reflection:*\n\nSelf-control is superior to conquest. Success in busin-\n\ness, school, or home life can be ruined by a person\n\nwho loses control of his or her temper, So it is a great\n\npersonal victory to control your temper. When you\n\nfeel yourself ready to explode, remember that losing\n\ncontrol may cause you to forfeit what you want most.\n\n*Pastor Sather*\n\n*Dear Heavenly Father, when I feel like I am about*\n\n*to lose my self-control remind me to bite my tongue*\n\n*Amen*\n",
@@ -235,7 +315,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:19-20 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b603b25245f276",
@@ -249,7 +334,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Peter 1:6-7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b65c34c7fea998",
@@ -263,7 +353,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 2:5-6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b6a593afcc2405",
@@ -277,7 +372,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 4:32 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b6f876b2732854",
@@ -291,7 +391,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 John 3:18 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b74edd0da6e0e8",
@@ -305,7 +410,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 4:4-5 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b7f37fcded1944",
@@ -319,13 +429,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:19 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b84257eff6a0aa",
     "date_utc": "2021-08-26T20:27:35+00:00",
     "subject": "\"FOOT--IN--THE--MOUTH\" DISEASE",
-    "verse": "The mouth of fools is their ruin; their lips get  them into trouble. What dainty morsels rumors  are—but they sink deep into one’s heart. (Proverbs 18:7-8) ",
+    "verse": "The mouth of fools is their ruin; their lips get  them into trouble. What dainty morsels rumors  are-but they sink deep into one’s heart. (Proverbs 18:7-8)",
     "reflection": "It is hard to refuse to listen to gossip as it is to\nturn down a delicious dessert. Taking just one\nmorsel of either one creates a taste for more.\nYou can resist rumors the-same-way a deter mined dieter resists candy-never even open\nthe box. If you don’t nibble on the first bite of\ngossip, you can’t take the second and the third.",
     "prayer": "Dear Lord, help me measure carefully any so called new news being spread about another person, and not pass on something that is fact- less. Amen.",
     "original_content": "message_id: 17b84257eff6a0aa\nsubject   : Subject: \"FOOT--IN--THE--MOUTH\" DISEASE\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Thu, 26 Aug 2021 15:27:35 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verses*\n\n*The mouth of fools is their ruin; their lips get *\n\n*them into trouble. What dainty morsels rumors *\n\n*are—but they sink deep into one’s heart.*\n\n(Pro. 18:7-8)\n\n\n\n*Today’s Reflection:*\n\nIt is hard to refuse to listen to gossip as it is to\n\nturn down a delicious dessert. Taking just one\n\nmorsel of either one creates a taste for more.\n\nYou can resist rumors the-same-way a deter-\n\nmined dieter resists candy—never even open\n\nthe box. If you don’t nibble on the first bite of\n\ngossip, you can’t take the second and the third.\n\n*Pastor Sather*\n\n*Dear Lord, help me measure carefully any so*\n\n*called new news being spread about another *\n\n*person, and not pass on something that is fact-*\n\n*less. **Amen. *\n",
@@ -333,13 +448,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:26 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b897eaba3303fc",
     "date_utc": "2021-08-27T21:23:05+00:00",
     "subject": "GOD OR WEALTH",
-    "verse": "The rich think of their wealth as an impregnable defense; they imagine it is a high wall of safety. (Proverbs 18:11) ",
+    "verse": "The rich think of their wealth as an impregnable defense; they imagine it is a high wall of safety. (Proverbs 18:11)",
     "reflection": "To imagine their wealth is their strongest defense,\nrich people are sadly mistaken. Money cannot\nprovide safety-there are to many ways for it to\nlose its power. The government may cease to back\nit-thieves nay steal it-inflation may rob it of all\nvalue. But God never loses His power. He is always dependable. Where do you look for security\nand safety-in uncertain wealth OR God who is\nalways faithful?",
     "prayer": "Dear Lord, forgive me for having looked in all the wrong places for security from time to time. Amen.",
     "original_content": "message_id: 17b897eaba3303fc\nsubject   : Subject: GOD OR WEALTH\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Fri, 27 Aug 2021 16:23:05 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*The rich think of their wealth as an impregnable*\n\n* defense; they imagine it is a high wall of safety.*\n\n(Pro. 18:11)\n\n\n\n*Today’s Reflection:*\n\nTo imagine their wealth is their strongest defense,\n\nrich people are sadly mistaken. Money *cannot*\n\nprovide safety—there are to many ways for it to\n\nlose its power. The government may cease to back\n\nit—thieves nay steal it—inflation may rob it of all\n\nvalue. *But* God *never* loses His power. He is\n\n*always* dependable. Where do you look for security\n\nand safety—in uncertain wealth *OR* God who is\n\nalways faithful?\n\n*Pastor Sather*\n\n*Dear Lord, forgive me for having looked in all*\n\n*the wrong places for security from time to time.*\n\n*Amen. *\n",
@@ -347,13 +467,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 6:19-21 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b8e99a96c1d167",
     "date_utc": "2021-08-28T21:10:40+00:00",
     "subject": "WEIGH CAREFULLY ALL FACTS",
-    "verse": "what a shame, what a folly, to give advice before listening to the facts.— Intelligent people are al- ways open to new ideas. In fact they look for them. Any story sounds true until someone sets the record  straight. (Proverbs 18:13, 15, 17)",
+    "verse": "what a shame, what a folly, to give advice before listening to the facts.- Intelligent people are al- ways open to new ideas. In fact they look for them. Any story sounds true until someone sets the record  straight. (Proverbs 18:13, 15, 17)",
     "reflection": "In these concise statements, there are three basic\nprinciples for making sound decisions: (1) Get the\nfacts before answering. (2) Be open to new ideas.\n(3)\nMake sure you hear both sides of the story be fore judging. All three principles center around\nseeking additional information. This is difficult\nwork, but the only alternative is prejudice-judg ing before getting the facts.",
     "prayer": "Dear Lord, I know I have been guilty at times of judging without knowing all the facts, please forgive me I pray in Jesus name. Amen.",
     "original_content": "message_id: 17b8e99a96c1d167\nsubject   : Subject: WEIGH CAREFULLY ALL FACTS\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Sat, 28 Aug 2021 16:10:40 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verses:*\n\n*what a shame, what a folly, to give advice before*\n\n* listening to the facts.— Intelligent people are al-*\n\n*ways open to new ideas. In fact they look for them.*\n\n*Any story sounds true until someone sets the record *\n\n*straight. *(Pro. 18:13, 15, 17)\n\n\n\n*Today’s Reflection:*\n\nIn these concise statements, *there are* three basic\n\nprinciples for making sound decisions: (1) Get the\n\nfacts before answering. (2) Be open to new ideas.\n\n(3) Make sure you hear both sides of the story be-\n\nfore judging. *All three* principles center around\n\nseeking additional information. This is difficult\n\nwork, but the only alternative is prejudice—judg-\n\ning before getting the facts.\n\n*Pastor Sather*\n\n*Dear Lord, I know I have been guilty at times*\n\n*of judging* *without knowing all the facts, please*\n\n*forgive me I pray in Jesus name. **Amen.*\n",
@@ -361,7 +486,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:19 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b938ac63f8c648",
@@ -375,13 +505,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 5:25-28 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b98f23ad74b6b5",
     "date_utc": "2021-08-30T21:23:37+00:00",
     "subject": "A TRUE FRIEND",
-    "verse": "There are “friends” who destroy each other, but  real friends stick closer than a brother. (Proverbs 18:24) ",
+    "verse": "There are “friends” who destroy each other, but  real friends stick closer than a brother. (Proverbs 18:24)",
     "reflection": "Loneliness is everywhere-many people feel cut\noff and alienated from others. Being in a crowd\njust makes people more aware of their isolation.\nWe all need friends who will stick close, listen,\ncare, and offer help when it is needed-in good\ntimes and bad. A friend is A push when you are stopped A guide when you are searching A song when you are glad A word when you are lonely A smile when you are sad",
     "prayer": "Dear Heavenly Father, help me to recognize people who need a true friend and then give me the ability to take on the challenge. Amen.",
     "original_content": "message_id: 17b98f23ad74b6b5\nsubject   : Subject: A TRUE FRIEND\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Mon, 30 Aug 2021 16:23:37 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*There are “friends” who destroy each other, but*\n\n*real friends stick closer than a brother. *(Pro.18:24)\n\n\n\n*Today’s Reflection:*\n\nLoneliness is everywhere—many people feel cut\n\noff and alienated from others. Being in a crowd\n\njust makes people more aware of their isolation.\n\nWe all need friends who will stick close, listen,\n\ncare, and offer help when it is needed—in good\n\ntimes and bad.\n\n*A friend is—*\n\nA push when you are stopped—\n\nA guide when you are searching—\n\nA song when you are glad—\n\nA word when you are lonely—\n\nA smile when you are sad—\n\n*Pastor Sather*\n\n*Dear Heavenly Father, help me to recognize people*\n\n*who need a true friend and then give me the ability*\n\n*to take on the challenge. **Amen. *\n",
@@ -389,13 +524,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 15:13 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17b9dd568807f976",
     "date_utc": "2021-08-31T20:10:14+00:00",
     "subject": "ADJUSTING PRIORITIES",
-    "verse": "It is better to be poor and honest than to be a fool and dishonest. (Proverbs 19:1) ",
+    "verse": "It is better to be poor and honest than to be a fool and dishonest. (Proverbs 19:1)",
     "reflection": "A blameless life is far more valuable than wealth,\nbut most people don’t act as if they believed this.\nAfraid of not getting everything they want, they\nwill pay any price to increase their wealth cheating on their taxes, stealing from stores or\nemployers, withholding tithes, refusing to give.\nBut when we know and love God, we realize that\na lower standard of living-or even poverty-is\na small price to pay for personal integrity. Do your\nactions show that you sacrifice your integrity to\nincrease your wealth? What changes do you need\nto make in order to get your priorities straight?",
     "prayer": "Dear Heavenly Father, I know that I am far from perfect and never will be on this side of paradise, so I pray You will continue to be patient with me while we work together on my problems. Amen",
     "original_content": "message_id: 17b9dd568807f976\nsubject   : Subject: ADJUSTING PRIORITIES\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Tue, 31 Aug 2021 15:10:14 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*It is better to be poor and honest than to be a fool*\n\n*and dishonest. *(Pro. 19:1)\n\n\n\n*Today’s Reflection:*\n\nA blameless life is far more valuable than wealth,\n\nbut most people don’t act as if they believed this.\n\nAfraid of not getting everything they want, they\n\nwill pay any price to increase their wealth—\n\ncheating on their taxes, stealing from stores or\n\nemployers, withholding tithes, refusing to give.\n\nBut when we know and love God, we realize that\n\na lower standard of living—or even poverty—is\n\na small price to pay for personal integrity. Do your\n\nactions show that you sacrifice your integrity to\n\nincrease your wealth? What changes do you need\n\nto make in order to get your priorities straight*?*\n\n* Pastor Sather*\n\n*Dear Heavenly Father, I know that I am far *\n\n*from perfect and never will be on this side of*\n\n*paradise, so I pray You will continue to be *\n\n*patient with me while we work together on*\n\n*my * *problems. Amen*\n",
@@ -403,6 +543,11 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Proverbs 28:6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]

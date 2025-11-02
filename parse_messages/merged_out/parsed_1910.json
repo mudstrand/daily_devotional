@@ -11,7 +11,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Peter 3:13-22",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d8f01dd3c6eab6",
@@ -25,7 +30,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Mark 9:33-37",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d9422d80941e2e",
@@ -39,7 +49,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Mark 8:22-25",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d9905a1496c9c5",
@@ -53,7 +68,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 12:13-21",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16d9e742574df0bc",
@@ -67,7 +87,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 15:1-8",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16da395bb18b8d80",
@@ -81,7 +106,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 15:9-17",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16da8c2dc477fe39",
@@ -95,7 +125,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Peter 5:1-11",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16dade847e7778f0",
@@ -109,7 +144,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 145:15-16 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16db2fe6683e82cd",
@@ -123,7 +163,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Peter 2:25 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16db81fa3879b778",
@@ -137,7 +182,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Luke 18:16 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16dbd3b7f3462e6e",
@@ -151,7 +201,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Genesis 50:15-21",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16dc22d2f96595e4",
@@ -165,7 +220,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Corinthians 1:10-17",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16dc79e3ede950fa",
@@ -179,7 +239,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 6:25-34",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16dccc3b582bfe8f",
@@ -193,7 +258,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Timothy 6:6-10",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16dd1edbf50da3c8",
@@ -207,7 +277,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "2 Corinthians 6:3-13",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16dd6f9c5863fcfa",
@@ -221,13 +296,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Mark 2:23-28",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16ddc35234a6dbca",
     "date_utc": "2019-10-18T00:12:13+00:00",
     "subject": "THE CALL TO CONSTANCY",
-    "verse": "“You have neglected the more important matters of the\nlaw—justice, mercy and faithfulness. . . .you strain out a\ngnat but swallow a camel.” (Matthew 23:23-24)",
+    "verse": "“You have neglected the more important matters of the\nlaw-justice, mercy and faithfulness. . . .you strain out a\ngnat but swallow a camel.” (Matthew 23:23-24)",
     "reflection": "Jesus, by precept and example, encourages constancy in one’s\nChristian faith and love. In His Sermon on the Mount, He\ntried to correct religious imbalance, such as this\ninconsistency: “You have heard that it was said, ‘Love your\nneighbor and hate your enemy.’ But I tell you: Love your\nenemies and pray for those who persecute you” (Matthew 5:43-44).\nJesus helped us to be consistent by setting this priority:\nSeek first His kingdom and His righteousness, and all these\nthings will be given to you as well” (Matthew 6:33).",
     "prayer": "Lord Jesus, help me to love without hesitation, even when it\nfeels difficult. Teach my heart to be steadfast in faith and\ngentle in spirit. May I seek Your kingdom in all that I do,\ntrusting that You alone provide what I truly need. Let my\nlife reflect Your constant love today and always. Amen. (AI)",
     "original_content": "message_id: 16ddc35234a6dbca\nsubject   : Subject: THE CALL TO CONSTANCY (read Mt. 23:23-32)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Thu, 17 Oct 2019 19:12:13 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Verse for Today:*\n\n*“You have neglected the more important matters of the *\n\n*law—justice, mercy and faithfulness. . . .you strain out *\n\n*a gnat but swallow a camel.” *(Mt. 23:23-24)\n\n\n\n*Thoughts Regarding This Verse:*\n\nJesus, by precept and example, encourages constancy in one’s\n\nChristian faith and love. In His Sermon on the Mount, He tried\n\nto correct religious imbalance, such as *this* inconsistency: “You\n\nhave heard that it was said, ‘Love your neighbor and hate your\n\nenemy.’ *But* I tell you: Love your enemies and pray for those who persecute\nyou” (Mt. 5:43-44). Jesus helped us to be consistent by setting this\npriority: *Seek first His kingdom and His righteousness, **and all these\nthings will be given to you *\n\n*as well” *(Mt. 6:33).\n\n* Pastor Al*\n",
@@ -235,7 +315,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 23:23-32",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16de154b4f5d3593",
@@ -249,7 +334,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 18:1-15",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16de685b3e1d650c",
@@ -263,7 +353,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 5:1-15",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16debad7a3059794",
@@ -277,7 +372,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Mark 10:46-52",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16df0f7c2c11f87c",
@@ -291,7 +391,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 40",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16df5db305e0123e",
@@ -305,7 +410,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 12:20-36",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16dfb28a4853dd2f",
@@ -319,7 +429,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Peter 2:1-3",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16e004577ce23efd",
@@ -333,7 +448,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 21:12-17",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16e055e8dafa27a3",
@@ -347,7 +467,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Hebrews 4:15 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16e0a7bf0c812dba",
@@ -361,7 +486,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 2:6-15",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16e0f460f16fe642",
@@ -375,7 +505,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Galatians 5:16-26",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16e14cd24d80385d",
@@ -389,7 +524,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 6:51 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16e18f29fa887e41",
@@ -403,7 +543,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Corinthians 6:12-20",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16e1f9e1c89348e9",
@@ -417,6 +562,11 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 3:21-26",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]

@@ -11,7 +11,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 6:1-4 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17311bb2c6d14fe8",
@@ -25,7 +30,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 4:6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17316aaf3e5949bf",
@@ -39,7 +49,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 8:36 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1731b9bde031b869",
@@ -53,7 +68,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 92:12-15 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173213d108a5a4da",
@@ -67,7 +87,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 15:4-5 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1732640d0083f510",
@@ -81,7 +106,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 18:3-4 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1732bbc4f6f92b98",
@@ -95,7 +125,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 14:16-17 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173308aaa1a8ff11",
@@ -109,13 +144,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 4:8 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17335c2bacddfc57",
     "date_utc": "2020-07-09T22:47:01+00:00",
     "subject": "LET GO AND LET GOD",
-    "verse": "Refrain from anger and turn from wrath; do  not fret—it only leads to evil. (Psalm 37:8)",
+    "verse": "Refrain from anger and turn from wrath; do  not fret-it only leads to evil. (Psalm 37:8)",
     "reflection": "Anger, rage, and envy are very destructive\nemotions.\nThey reveal a lack of faith that\nGod loves us and is in control. We should\nnot worry, instead we should trust in God,\ngiving ourselves to Him for His use and\nsafekeeping.\nWhen you dwell on your\nproblems, you will become anxious and\nangry.\nBut if you concentrate on God and\nHis goodness, you will find peace. Where do you focus your attention?",
     "prayer": "Gracious God, help us to release our anger, rage, and envy, and instead focus our hearts and minds on Your goodness and love. Grant us the strength to trust in Your control and find peace in surrendering ourselves to Your care and purpose. (AI)",
     "original_content": "message_id: 17335c2bacddfc57\nsubject   : Subject: LET GO AND LET GOD (7-10-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Thu, 9 Jul 2020 17:47:01 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*Refrain from anger and turn from wrath; do *\n\n*not fret—it only leads to evil.* Ps. 37:8)\n\n\n\n*Today’s Reflection:*\n\nAnger, rage, and envy are very destructive\n\nemotions. They reveal a lack of faith that\n\nGod loves us and is in control. We should\n\nnot worry, instead we should trust in God,\n\ngiving ourselves to Him for His use and\n\nsafekeeping. When you dwell on your\n\nproblems, you will become anxious and\n\nangry. But if you concentrate on God and\n\nHis goodness, you will find peace. *Where*\n\n*do you focus your attention?*\n\n* Pastor Sather *\n",
@@ -123,7 +163,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:19-20 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1733ab7203a32ed7",
@@ -137,7 +182,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 25:40 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1733ffeccbad3d3f",
@@ -151,7 +201,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 3:13 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173459b181e99b6c",
@@ -165,7 +220,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 5:15-16 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1734a4baf291a80d",
@@ -179,7 +239,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:22-25 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1734f94bff610313",
@@ -193,7 +258,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Peter 4:10 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17354c491fb62e4c",
@@ -207,7 +277,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 15:10-11 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17359acd56aa3f77",
@@ -221,7 +296,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 3:13-14 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1735ed03ddbd0cfe",
@@ -235,7 +315,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 3:13 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17363e6ff85e3cbe",
@@ -249,7 +334,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 10:27 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173693c8635111ea",
@@ -263,13 +353,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 6:6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1736e765b5485562",
     "date_utc": "2020-07-20T23:01:57+00:00",
     "subject": "ACCEPTING GOD'S GRACE",
-    "verse": "But by the grace of God, I am what I am.  (1 Corinthians 15:10) NIV",
+    "verse": "But by the grace of God, I am what I am.  (1 Corinthians 15:10)",
     "reflection": "Paul wrote of working harder than the other\napostles. This was not an arrogant boast,\nbecause he knew that his power came from\nGod and that it didn’t really matter who\nworked hardest. Because of his prominent\nposition as a Pharisee, Paul’s conversion\nmade him the object of even greater perse caution than the other apostles; thus, he had\nto work harder to preach the same message.\nLord help me to embrace the grace You offer.",
     "prayer": "Faithful God, help us to embrace Your grace fully and work diligently in service to You, remembering always that our strength comes from You alone. May we, like Paul, persevere through challenges and persecution, trusting in Your power to accomplish Your purposes through us. (AI)",
     "original_content": "message_id: 1736e765b5485562\nsubject   : Subject: ACCEPTING GOD'S GRACE (7-21-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Mon, 20 Jul 2020 18:01:57 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*But by the grace of God, I am what I am. *\n(I Cor. 15:10) NIV\n\n\n\n*Today’s Reflection:*\n\nPaul wrote of working harder than the other\n\napostles. This was not an arrogant boast,\n\nbecause he knew that his power came from\n\nGod and that it didn’t really matter who\n\nworked hardest. Because of his prominent\n\nposition as a Pharisee, Paul’s conversion\n\nmade him the object of even greater perse-\n\ncution than the other apostles; thus, he had\n\nto work harder to preach the same message.\n\n*Lord help me to embrace the grace You*\n\n*offer.*\n\n* Pastor Sather*\n",
@@ -277,7 +372,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 2:8-10 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1737396e6ca88b59",
@@ -291,7 +391,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 4:13 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173789eccb85f345",
@@ -305,13 +410,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Proverbs 3:5-6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1737dbfe9866ce86",
     "date_utc": "2020-07-23T22:16:36+00:00",
     "subject": "FLYING TOGETHER",
-    "verse": "Let us go right into the presence of God,  with true hearts fully trusting Him, for  our evil consciences have been sprinkled  with Christ’s blood to make us clean,  and our bodies have been washed with pure water.—without wavering, let us  hold tightly to the hope we say we have,  for God can be trusted to keep His  promise. Think of ways to encourage one another to out bursts of love and  good deeds. (Hebrews 10:22-25)",
+    "verse": "Let us go right into the presence of God,  with true hearts fully trusting Him, for  our evil consciences have been sprinkled  with Christ’s blood to make us clean,  and our bodies have been washed with pure water.-without wavering, let us  hold tightly to the hope we say we have,  for God can be trusted to keep His  promise. Think of ways to encourage one another to out bursts of love and  good deeds. (Hebrews 10:22-25)",
     "reflection": "We have significant privileges associated with our new life in Christ: (1) We have personal access to God through Christ and can draw near to Him without an elaborate system (10:22) (2) we grow in faith, overcome doubts and questions, and deepen our relationship with God (10:23); (3) we may enjoy encourage ment from one another (10:24) (4) we may worship together (10:25).",
     "prayer": "Gracious God, thank You for the incredible privileges we have in Christ, including direct access to You, growth in faith, mutual encouragement, and corporate worship. Help us to fully embrace and live out these blessings as we draw near to You and support one another in our spiritual journey. (AI)",
     "original_content": "message_id: 1737dbfe9866ce86\nsubject   : Subject: FLYING TOGETHER (7-24-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Thu, 23 Jul 2020 17:16:36 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verses:*\n\n*Let us go right into the presence of God, *\n\n*with true** hearts fully trusting Him, for *\n\n*our evil consciences **have been sprinkled *\n\n*with Christ’s blood to make** us clean, *\n\n*and our bodies have been washed with*\n\n*pure water.—without wavering, let us *\n\n*hold tightly **to the hope we say we have, *\n\n*for God can be trusted** to keep His *\n\n*promise. Think of ways to encourage*\n\n*one another to out bursts of love and *\n\n*good deeds. *(Heb. 10:22-25)\n\n\n\n*Today’s Reflection:*\n\nWe have significant privileges associated\n\nwith our new life in Christ: (1) We have\n\npersonal access to God through Christ\n\nand can draw near to Him without an\n\nelaborate system (10:22) (2) we grow\n\nin faith, overcome doubts and questions,\n\nand deepen our relationship with God\n\n(10:23); (3) we may enjoy encourage-\n\nment from one another (10:24) *(4) we*\n\n*may worship* *together (10:25).*\n\n*Pastor Sather*\n",
@@ -319,13 +429,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 2:18-19 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17382d7d7f554c1a",
     "date_utc": "2020-07-24T22:00:50+00:00",
     "subject": "DO YOUR BEST TO KEEP THE PEACE",
-    "verse": "Turn away from evil and do good.  Work hard at living in peace with  others. (Psalm 34: 14)",
+    "verse": "Turn away from evil and do good.  Work hard at living in peace with  others. (Psalm 34:14)",
     "reflection": "Somehow people think that peace should come to them with no effort. But David explained that we are to work hard at peace. Paul echoes this thought in Romans 12:18. A person who wants peace cannot be argument tative and contentious. Remember peaceful relationships come from our efforts at peace making. Lets work hard at living in peace with others each day.",
     "prayer": "Holy God, help us to diligently pursue peace in our relationships, setting aside contentiousness and striving to be peacemakers in our daily interactions. Grant us the wisdom and patience to work hard at fostering harmony with others, just as You have called us to do. (AI)",
     "original_content": "message_id: 17382d7d7f554c1a\nsubject   : Subject: DO YOUR BEST TO KEEP THE PEACE (7-25-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Fri, 24 Jul 2020 17:00:50 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*Turn away from evil and do good. *\n\n*Work hard **at living in peace with *\n\n*others. *(Ps. 34: 14)\n\n\n*Today’s Reflection:*\n\nSomehow people think that peace should\n\ncome to them with no effort. But David\n\nexplained that we are to work hard at peace.\n\nPaul echoes this thought in Ro. 12:18. A\n\nperson who wants peace cannot be argumen-\n\ntative and contentious. Remember peaceful\n\nrelationships come from our efforts at peace-\n\nmaking. *Lets work hard **at living in peace *\n\n*with others each day.*\n\n*Pastor Sather*\n",
@@ -333,7 +448,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 12:18 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1738829ba94be66c",
@@ -347,7 +467,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 4:4-6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1738d2cd391703de",
@@ -361,7 +486,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Luke 18:1 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1739263d59f412ec",
@@ -375,7 +505,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:26 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173979ce6baa29a4",
@@ -389,7 +524,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 8:28 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1739ca3ee847873c",
@@ -403,7 +543,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 3:16 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173a1b2fc050472e",
@@ -417,7 +562,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 3:13-14 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173a6e8997c14e72",
@@ -431,6 +581,11 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Malachi 3:6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]

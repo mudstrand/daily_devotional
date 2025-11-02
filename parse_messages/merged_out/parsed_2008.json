@@ -11,7 +11,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 62:5-6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173b13427c45057b",
@@ -25,7 +30,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 3:15 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173b64b68e8e0587",
@@ -39,7 +49,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 3:12-14 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173bb906ef7b3399",
@@ -53,13 +68,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 4:6-7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173c0a3c16f9e731",
     "date_utc": "2020-08-05T22:00:24+00:00",
     "subject": "RESIST FEAR",
-    "verse": "“Be strong and courageous. Do not be afraid or terrified because of them, for the Lord your God goes with you, He will never leave you nor forsake you.” (Deuteronomy 31:6) ",
+    "verse": "“Be strong and courageous. Do not be afraid or terrified because of them, for the Lord your God goes with you, He will never leave you nor forsake you.” (Deuteronomy 31:6)",
     "reflection": "HOW DO YOU react when worry enters your mind? . What do you do when you can’t seem to ignore or rationalize your fear away? If this happens take a deep breath and pray.\nAsk God to fill you with His peace so that you can rest\nin His presence. Lord help me grow my faith so that is guards my heart and allows me to manage my emotions. Amen.",
     "prayer": "Faithful God, help us to turn to You in moments of worry and fear, breathing deeply and seeking Your peace that surpasses all understanding. Strengthen our faith so that it may guard our hearts and minds, enabling us to manage our emotions and find rest in Your loving presence. (AI)",
     "original_content": "message_id: 173c0a3c16f9e731\nsubject   : Subject: RESIST FEAR (9-6-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Wed, 5 Aug 2020 17:00:24 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*“Be strong and courageous. Do not be*\n\n*afraid or terrified because of them,*\n\n*for the Lord your God goes with you,*\n\n*He will never leave you nor forsake you.”*\n\n(Deut. 31:6)\n\n\n\n*Today’s Reflection:*\n\nHOW DO YOU react when worry enters\n\nyour mind? . What do you do when you\n\ncan’t seem to ignore or rationalize your\n\nfear away? If this happens take a deep\n\nbreath and pray. Ask God to fill you\n\nwith His peace so that you can rest\n\nin His presence. *Lord help me grow*\n\n*my faith so that is guards my heart *\n\n*and allows me to manage my*\n\n*emotions. Amen.*\n\n*Pastor Sather*\n",
@@ -67,7 +87,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Joshua 1:9 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173c5d43e3532bc4",
@@ -81,7 +106,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Proverbs 3:5-6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173caef0930b4e53",
@@ -95,7 +125,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:17 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173d03a5fc01f5ed",
@@ -109,7 +144,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Joshua 1:9 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173d581df944258e",
@@ -123,7 +163,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Samuel 8:6-7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173daada84499165",
@@ -137,7 +182,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Proverbs 17:22 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173df91a8b1b9f44",
@@ -151,7 +201,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 5:29-30 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173e4ad4a6583a77",
@@ -165,13 +220,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 5:44 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173e9d3ab04ad49b",
     "date_utc": "2020-08-13T21:57:10+00:00",
     "subject": "WHEN GOD SEEMS SILENT",
-    "verse": "To you, O Lord, I call; My rock, do not be  deaf to me. For if You are silent to me, I  will become like those who go down to  the pit. (Psalm 28:1) ",
+    "verse": "To you, O Lord, I call; My rock, do not be  deaf to me. For if You are silent to me, I  will become like those who go down to  the pit. (Psalm 28:1)",
     "reflection": "SOMETIMES IN YOUR prayer life it might seem as if God is quiet-that maybe He is not present or hearing you. If this happens to you, continue praying. Keep track of your prayers and how you feel.\nOften you will discover that this deserted period in you prayer life has brought about the most beautiful blooms.",
     "prayer": "Faithful God, help us persevere in prayer even when we feel distant from You, trusting that You are always present and working in our lives. May we find joy and growth in the quiet seasons, knowing that You are cultivating beautiful blooms within us. (AI)",
     "original_content": "message_id: 173e9d3ab04ad49b\nsubject   : Subject: WHEN GOD SEEMS SILENT (8-14-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Thu, 13 Aug 2020 16:57:10 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s verse:*\n\n*To you, O Lord, I call; My rock, do not be *\n\n*deaf to me. For if You are silent to me, I *\n\n*will become like those who go down to *\n\n*the pit. *(Ps. 28:1)\n\n\n\n*Today’s Reflection:*\n\nSOMETIMES IN YOUR prayer life it might\n\nseem as if God is quiet—that maybe He is\n\nnot present or hearing you. If this happens to\n\nyou, continue praying. Keep track of your\n\nprayers and how you feel.\n\n*Often you will discover that this deserted *\n\n*period in you prayer life has brought *\n\n*about the most beautiful blooms.*\n\n* Pastor Sather*\n",
@@ -179,13 +239,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 13:1-2 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173ef0691e4f222e",
     "date_utc": "2020-08-14T22:10:52+00:00",
     "subject": "FULFILLING HIS PURPOSE",
-    "verse": "And we know that God causes everything to  work together for the god of those who  love God and are called according to  His purpose for them. (Romans 8:28) ",
+    "verse": "And we know that God causes everything to  work together for the god of those who  love God and are called according to  His purpose for them. (Romans 8:28)",
     "reflection": "God “works in everything” not just in isolated incidents for our good. This does not mean that all that happens to us is good. Evil is prevalent in our fallen world, but God is able to turn every circumstance around for our long-range good. Note that God is not working to make us happy but to fulfill His purpose. Note also that this promise is not for every body. It can only be claimed by those who love God.",
     "prayer": "Almighty God, help us trust in Your sovereign power to work all things for our ultimate good, even amidst the challenges of this fallen world. May we align our hearts with Your purpose, loving You deeply and faithfully as we navigate life's journey. (AI)",
     "original_content": "message_id: 173ef0691e4f222e\nsubject   : Subject: FULFILLING HIS PURPOSE (8-15-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Fri, 14 Aug 2020 17:10:52 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s verse:*\n\n*And we know that God causes everything to *\n\n*work together** for the god of those who *\n\n*love **God and are called according** to *\n\n*His purpose **for them.* (Ro. 8;28)\n\n\n\n*Today’s Reflection:*\n\nGod “works in everything” not just in\n\nisolated incidents for our good. This\n\ndoes not mean that all that happens to\n\nus is good. Evil is prevalent in our\n\nfallen world, but God is able to turn\n\nevery circumstance around for our\n\nlong-range good. Note that God is\n\nnot working to make us happy but\n\nto fulfil His purpose. *Note also *\n\n*that this promise is not for every-*\n\n*body.** It **can **only be claimed by *\n\n*those who love God.*\n\n* Pastor Sather *\n",
@@ -193,7 +258,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 8:38-39 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173f4352ab5df492",
@@ -207,7 +277,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:22-25 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173f9a411e6e9c52",
@@ -221,7 +296,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 4:11-13 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "173fe7e31c6b1f40",
@@ -235,7 +315,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Proverbs 3:5-6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17403b91a51b2586",
@@ -249,7 +334,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:2-4 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17408efa1d4f03fe",
@@ -263,7 +353,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 3:12-14 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1740dfc07aff6c01",
@@ -277,7 +372,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 27:1 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17412f0eafbb1798",
@@ -291,13 +391,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 2:5-7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1741867572189a36",
     "date_utc": "2020-08-22T23:01:00+00:00",
     "subject": "BORN OF WATER",
-    "verse": "Jesus answered, “Very truly I tell you,  no one c an enter the kingdom of God  unless they a re born of water and the  Spirit. (John 2:5) ",
+    "verse": "Jesus answered, “Very truly I tell you,  no one c an enter the kingdom of God  unless they a re born of water and the  Spirit. (John 2:5)",
     "reflection": "Throughout the Bible water is used as a symbol for new life and birth. Water washes away our mistakes and sins. Water reminds us that there is always a chance to start over and begin anew. Wash me and I will be clean.",
     "prayer": "Merciful God, cleanse us with your living water, washing away our sins and renewing our spirits. May we embrace the fresh start you offer, emerging clean and renewed in your grace. (AI)",
     "original_content": "message_id: 1741867572189a36\nsubject   : Subject: BORN OF WATER (8-23-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Sat, 22 Aug 2020 18:01:00 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*Jesus answered, “Very truly I tell you, *\n\n*no one c**an enter the kingdom of God *\n\n*unless they a**re born of water and the *\n\n*Spirit. **(Jn. 2:5)*\n\n\n\n*Today’s Reflection:*\n\n*Throughout the Bible* water is used as\n\na symbol for new life and birth. Water\n\nwashes away our mistakes and sins.\n\nWater reminds us that there is always\n\na chance to start over and begin anew.\n\n*Wash me and I will be clean.*\n\n* Pastor Sather*\n",
@@ -305,13 +410,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Titus 3:5 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1741d653967eacb9",
     "date_utc": "2020-08-23T22:16:47+00:00",
     "subject": "COMPLETE IN CHRIST",
-    "verse": "So you also are complete through your union with Christ, who is the head of every ruler and authority . (Colossians 2:10) ",
+    "verse": "So you also are complete through your union with Christ, who is the head of every ruler and authority . (Colossians 2:10)",
     "reflection": "Many Bible translations use the word fullness instead of complete. In Ephesians Paul reminds us of the foulness we have in Christ. In Jesus, we are filled with all good things.The fullness of God is our re-birthright. In Him we can be satisfied and content. In Him we are complete.",
     "prayer": "Almighty God, fill us with the fullness of Your love and grace through Christ, that we may find true contentment and satisfaction in Him alone. Help us to embrace our completeness in Jesus, recognizing the abundance of good gifts You have bestowed upon us as Your children. (AI)",
     "original_content": "message_id: 1741d653967eacb9\nsubject   : Subject: COMPLETE IN CHRIST (8-24-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Sun, 23 Aug 2020 17:16:47 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*So you also are complete through your union*\n\n*with Christ, who is the head of every ruler and*\n\n*authority**. *(Col. 2:10)\n\n\n\n*Today’s Reflection:*\n\nMany Bible translations use the word fullness\n\ninstead of complete. In Ephesians Paul reminds\n\nus of the fulness we have in Christ. In Jesus,\n\nwe are filled with all good things.The fullness\n\nof God is our re-birthright. In Him we can\n\nbe satisfied and content. *In Him we are *\n\n*complete.*\n\n* Pastor Sather*\n",
@@ -319,7 +429,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 3:19 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17422b396b29736f",
@@ -333,7 +448,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 1:4-5 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17431c83bf568472",
@@ -347,7 +467,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 John 5:3 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1743740718da4d12",
@@ -361,13 +486,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 4:5 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1743c301d4bacea0",
     "date_utc": "2020-08-29T21:47:00+00:00",
     "subject": "WE ARE NOT RUNNING ALONE",
-    "verse": "Since we are surrounded by such a great cloud of witnesses... let us run with perseverance the race marked out for us. (Hebrews 12:1) ",
+    "verse": "Since we are surrounded by such a great cloud of witnesses... let us run with perseverance the race marked out for us. (Hebrews 12:1)",
     "reflection": "When you read this verse what is the first thing\nyou notice? Isn’t it telling us that following God\nis not a solo endeavor? Remember we are not alone!",
     "prayer": "Lord of Life, help us to recognize and cherish the community of believers You have placed around us, supporting and encouraging one another as we follow Your path together. May we never forget that in You, we are never truly alone. (AI)",
     "original_content": "message_id: 1743c301d4bacea0\nsubject   : Subject: WE ARE NOT RUNNING ALONE (8-30-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Sat, 29 Aug 2020 16:47:00 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*Since we are surrounded by such a great cloud*\n\n*of witnesses…let us run with perseverance the*\n\n*race marked out for us. *(Heb. 12:1)\n\n\n\n*Today’s Reflection:*\n\nWhen you read this verse what is the first thing\n\nyou notice? Isn’t it telling us that following God\n\nis not a solo endeavor? *Remember we are not*\n\n*alone!*\n\n* Pastor Sather*\n",
@@ -375,7 +505,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 3:13-14 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "174411d18a3b3cde",
@@ -389,7 +524,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 34:17-18 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1744680e2fcc8cc0",
@@ -403,6 +543,11 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 4:6-7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]

@@ -11,7 +11,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Hebrews 4:14-16",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b1adf46d9deace",
@@ -25,7 +30,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Isaiah 40:27-31",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b1fdcc65981152",
@@ -39,7 +49,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "1 Peter 4:7-11",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b2519536c41c77",
@@ -53,7 +68,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "John 17:1-5",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b2a28fead55bb6",
@@ -67,7 +87,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 119:71-75",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b2f7d11081895f",
@@ -81,7 +106,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Mark 5:1-20",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b348e736d4306b",
@@ -95,7 +125,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Philippians 1:12-26",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b3987abf39b08d",
@@ -109,7 +144,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Philippians 2:1-11",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b3ee026b53c865",
@@ -123,7 +163,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 1:1-3",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b441e44e493802",
@@ -137,7 +182,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 2:1-5",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b4959df5139050",
@@ -151,7 +201,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 3:1-5",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b4e6fac6f0c305",
@@ -165,7 +220,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 4:1-8",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b53839c579f2ff",
@@ -179,7 +239,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 5:1-8",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b58a2aba1fc45f",
@@ -193,7 +258,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 6:1-9",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b5de89d5d15552",
@@ -207,7 +277,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 7:11-17",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b62a4c1f2acbe3",
@@ -221,7 +296,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 8",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b67fe5f7c163c2",
@@ -235,7 +315,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 9:1-10",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b6d367066fc195",
@@ -249,7 +334,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 10:1-15",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b724a2e4ba7e70",
@@ -263,7 +353,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 13:1-6",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b777932bce3e9d",
@@ -277,7 +372,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 13:1-6",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b7c5e158dd1e2b",
@@ -291,7 +391,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 15:1-5",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b81e7aeec6b799",
@@ -305,7 +410,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 16:1:11",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b863a6a8d0086d",
@@ -319,7 +429,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 18:1-8",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b8c39b3256caba",
@@ -333,7 +448,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 19:1-4",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b91687a55c89a0",
@@ -347,7 +467,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 20",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b9659b5bf92f1a",
@@ -361,7 +486,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 21:1-7",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16b9b61a84579c30",
@@ -375,7 +505,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 23",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16ba437874080ebe",
@@ -389,7 +524,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 24",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16ba5fa459065811",
@@ -403,7 +543,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 25:4-10",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16bab03ab0cdb85d",
@@ -417,6 +562,11 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 26",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]

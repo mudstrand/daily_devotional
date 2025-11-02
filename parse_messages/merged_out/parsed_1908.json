@@ -11,7 +11,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 90:1-10",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c5f424610287eb",
@@ -25,7 +30,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 90",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c647ee30bbb1a5",
@@ -39,7 +49,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 91",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c697e01e8cb685",
@@ -53,7 +68,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 92",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c6e687c3f61ce5",
@@ -67,7 +87,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 95:1-7",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c739d6eeb89153",
@@ -81,7 +106,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 95",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c78ee1f1eca5be",
@@ -95,7 +125,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 5:19-20 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c7dddf9eb2df30",
@@ -109,7 +144,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 102:1-17",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c832fed7f4b537",
@@ -123,7 +163,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Micah 7:19 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c8d8fdaf6bbf74",
@@ -137,7 +182,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 106:1-15",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c92cab58b391c1",
@@ -151,7 +201,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 109: 21-31",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c9832fdc2e7e0d",
@@ -165,7 +220,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "read: Psalm 111",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c9cd8600198f26",
@@ -179,7 +239,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 8:12 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16ca24ce8b4daf17",
@@ -193,7 +258,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 115",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16ca799b0d020d6c",
@@ -207,7 +277,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 116",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cac0b1439e1ab4",
@@ -221,7 +296,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 117",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cb09373733d45f",
@@ -235,7 +315,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 119:9-16",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cb6dc70e32446a",
@@ -249,7 +334,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 119:12-24",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cbbf1be9201f49",
@@ -263,7 +353,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 121",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cc35ff35b6ce49",
@@ -277,7 +372,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 122",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cc65061266b20e",
@@ -291,7 +391,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 125",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16ccb696275d6aac",
@@ -305,13 +410,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 126",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cd0a4303c3f5fa",
     "date_utc": "2019-08-27T01:15:17+00:00",
     "subject": "TRUST GOD TO PROVIDE",
-    "verse": "Unless the Lord builds a house, the work of the builders is\nuseless. Unless the Lord protects the city, guarding it with\nsentries will do no good. (Psalm 127:1, 2)",
+    "verse": "Unless the Lord builds a house, the work of the builders is\nuseless. Unless the Lord protects the city, guarding it with\nsentries will do no good. (Psalm 127:1-2)",
     "reflection": "A family without God can never experience the spiritual bond\nGod brings to relationships. A city without God will crumble\nfrom evil and corruption from the inside. Don’t make the\nmistake of leaving God out of your life. If you do, all your\naccomplishments will be futile. Make God your highest\npriority, and let Him do the building.",
     "prayer": "Heavenly Father, You are the foundation of our lives,\nfamilies, and communities. Help us to make You our highest\npriority, so that our relationships are grounded in Your\nlove and strength. Let us build our homes and cities on Your\nfirm foundation, that they may stand strong against all that\nwould threaten to divide or destroy. Guide us to honor You\nin all we do, trusting in Your power to sustain and bless\nus. Amen. (AI)",
     "original_content": "message_id: 16cd0a4303c3f5fa\nsubject   : Subject for 8/27/19 TRUST GOD TO PROVIDE (read Ps. 127)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Mon, 26 Aug 2019 20:15:17 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*Unless the Lord builds a house, the work of the builders is*\n\n*useless. Unless the Lord protects the city, guarding it with*\n\n*sentries will do no good. *(Ps. 127:1, 2)\n\n\n\n*Today’s Thought:*\n\nA family without God can never experience the spiritual\n\nbond God brings to relationships. A city without God will\n\ncrumble from evil and corruption from the inside. Don’t\n\nmake the mistake of leaving God out of your life. If you\n\ndo, all your accomplishments will be futile. *Make God *\n\n*your highest priority, and let Him do the building.*\n\n* Pastor Al *\n",
@@ -319,13 +429,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 127",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cd5e37f7848f7c",
     "date_utc": "2019-08-28T01:42:32+00:00",
     "subject": "GOD IS THE TRUE HEAD OF THE HOME",
-    "verse": "How happy are those who fear the Lord—all who follow His\nways! (Psalm 128:1)",
+    "verse": "How happy are those who fear the Lord-all who follow His\nways! (Psalm 128:1)",
     "reflection": "In this chapter the Psalmist writes that a good family life\nis a reward for following God. The values outlined in God’s\nWord include, love, service, honesty, integrity, and prayer.\nThese help all relationships, and they are especially vital\nto the home life. Is your home life heavenly or hectic?\nReading and obeying God’s Word is a good place to start to\nmake your family all that is should be. God will reward your\ndevotion to Him with inner peace.",
     "prayer": "Heavenly Father, thank You for the blessing of family and\nthe values Your Word teaches us-love, service, honesty,\nintegrity, and prayer. Help us to build homes that reflect\nYour holiness and peace, where relationships flourish and\nYour presence is honored. May our devotion to You bring\ninner peace and make our family life truly heavenly. Amen.\n(AI)",
     "original_content": "message_id: 16cd5e37f7848f7c\nsubject   : \nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Tue, 27 Aug 2019 20:42:32 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Subject for 8/28/19 *GOD IS THE TRUE HEAD OF THE HOME (read Ps. 128:1-8)\n\n\n\n*Today’s Verse: *\n\n*How happy are those who fear the Lord—all who follow His ways!*\n\n(Ps. 128:1)\n\n\n\n*Today’ Thoughts:*\n\nIn this chapter the Psalmist writes that a good family life is a reward for\n\nfollowing God. The values outlined in God’s Word include, love, service,\n\nhonesty, integrity, and prayer. These help all relationships, and they are\n\nespecially vital to the home life. Is your home life heavenly or hectic?\n\nReading and obeying God’s Word is a good place to start to make your\n\nfamily all that is should be. *God will reward your devotion to Him with *\n\n*inner peace.*\n\n* Pastor Al*\n",
@@ -333,21 +448,31 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 128:1-8",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16cdaeb6aefdd14a",
     "date_utc": "2019-08-29T01:09:17+00:00",
     "subject": "GOD WILL BRING US THROUGH",
-    "verse": "Let Israel now say—from my earliest youth my enemies have\npersecuted me. But they have never been able to finish me\noff. (Psalm 129: 1b-2)",
+    "verse": "They have greatly oppressed me from my youth, but they have not gained the victory over me. (Psalm 129:2)",
     "reflection": "The people of Israel were persecuted from their earliest\ndays but never destroyed completely. The same is true of the\nchurch. Christians have faced times of severe persecution,\nbut the church has never been destroyed. As Jesus said to\nPeter, “Now I say to you that you are Peter, and upon this\nrock I will build my church, and all the powers of hell will\nnot conquer it.” (Matthew 16:18) When You face persecution and\ndiscrimination take courage—The church will never be\ndestroyed. Remember—God will bring us through the tough\ntimes.",
     "prayer": "Heavenly Father, thank You for the promise that Your church,\nbuilt on the foundation of Jesus Christ as the true Rock,\nwill never be overcome by the forces of evil or death. In\ntimes of persecution and hardship, grant us courage and\nsteadfast faith, knowing that You uphold and protect Your\npeople. Help us to trust in Your unshakable power and\nfaithfulness to bring us through every trial until we share\nin Your eternal victory. Amen. (AI)",
-    "original_content": "message_id: 16cdaeb6aefdd14a\nsubject   : Subject for 8/29/19 GOD WILL BRING US THROUGH (read Ps. 129:1-8)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Wed, 28 Aug 2019 20:09:17 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Verse for Today:*\n\n*Let Israel now say—from my earliest youth my enemies have *\n\n*persecuted me. But they have never been able to finish me off.*\n\n(Ps. 129: 1b-2)\n\n\n\n*Today’s Thought:*\n\nThe people of Israel were persecuted from their earliest days\n\nbut never destroyed completely. The same is true of the church.\n\nChristians have faced times of severe persecution, but the church\n\nhas never been destroyed. As Jesus said to Peter, “Now I say to\n\nyou that you are Peter, and upon this rock I will build my church,\n\nand all the powers of hell will not conquer it.” (Mt. 16:18) When\n\nYou face persecution and discrimination take courage—The church\n\nwill never be destroyed.\n\n*Remember—God will bring us through the tough times.*\n\n* Pastor Al*\n",
+    "original_content": "message_id: 16cdaeb6aefdd14a\nsubject   : Subject for 8/29/19 GOD WILL BRING US THROUGH (read Ps. 129:1-8)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Wed, 28 Aug 2019 20:09:17 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Verse for Today:*\n\n*Let Israel now say—from my earliest youth my enemies have *\n\n*persecuted me. But they have never been able to finish me off.*\n\n(Psalm 129:2)\n\n\n\n*Today’s Thought:*\n\nThe people of Israel were persecuted from their earliest days\n\nbut never destroyed completely. The same is true of the church.\n\nChristians have faced times of severe persecution, but the church\n\nhas never been destroyed. As Jesus said to Peter, “Now I say to\n\nyou that you are Peter, and upon this rock I will build my church,\n\nand all the powers of hell will not conquer it.” (Mt. 16:18) When\n\nYou face persecution and discrimination take courage—The church\n\nwill never be destroyed.\n\n*Remember—God will bring us through the tough times.*\n\n* Pastor Al*\n",
     "found_verse": true,
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 129:1-8",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16ce01b63c12eede",
@@ -361,7 +486,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 130:1-8",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16ce53540d93da9d",
@@ -375,7 +505,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 131",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c4fb5fbd572c16",
@@ -389,7 +524,12 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 84",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "16c5455cc7c56ced",
@@ -403,6 +543,11 @@
     "found_reflection": true,
     "found_prayer": false,
     "reading": "Psalm 86:1-12",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]

@@ -11,7 +11,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Hebrews 11:6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "176c536dc663c75a",
@@ -25,13 +30,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 4:7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "176ca8115f3b921b",
     "date_utc": "2021-01-03T23:07:06+00:00",
     "subject": "CAN YOU WAIT",
-    "verse": "Wait patiently for the Lord. Be brave and  courageous.  Yes, wait patiently for the Lord.  (Psalm 27:14) ",
+    "verse": "Wait patiently for the Lord. Be brave and  courageous.  Yes, wait patiently for the Lord.  (Psalm 27:14)",
     "reflection": "David knew from experience what it meant to wait for the Lord. He had been anointed king at age 16 but didn’t become king until he was 30. During the interim, he was chased through the wilderness by jealous king Saul.\nDavid had to wait on God for the fulfillment of his promise to reign. Later, after becoming king, He was chased by his rebellious son, Absalom. Waiting for God is not easy Often it seems that He isn’t answering our prayers or doesn’t understand the urgency of our situation. That kind of thinking implies that God is not in control or is not fair. But God IS worth waiting for (Lamentations 3:24-26 calls us to hope in and wait for the Lord because often God uses times of waiting to refresh, renew, and teach us. Make good use of your waiting times by discov ering what God may be trying to teach you in them.",
     "prayer": "Gracious God, help us to trust in Your perfect timing and to use periods of waiting as opportunities for growth and renewal. Teach us patience and perseverance as we seek Your will, knowing that You are always working for our good. (AI)",
     "original_content": "message_id: 176ca8115f3b921b\nsubject   : Subject: CAN YOU WAIT (1-4-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Sun, 3 Jan 2021 17:07:06 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n* Wait patiently for the Lord. Be brave and *\n\n*courageous.** Yes, wait patiently for the Lord. *\n\n(Ps. 27:14)\n\n\n\n*Today’s Reflection:*\n\nDavid knew from experience what it meant to\n\nwait for the Lord. He had been anointed king at\n\nage 16 but didn’t become king until he was 30.\n\nDuring the interim, he was chased through the wilderness by jealous king\nSaul. David had to\n\nwait on God for the fulfilment of his promise to\n\nreign. Later, after becoming king, He was chased\n\nby his rebellious son, Absalom. Waiting for God\n\nis not easy Often it seems that He isn’t answering\n\nour prayers or doesn’t understand the urgency of\n\nour situation. That kind of thinking implies that\n\nGod is not in control or is not fair. But God *IS *\n\nworth waiting for (Lam. 3:24-26 calls us to hope\n\nin and wait for the Lord because often God uses\n\ntimes of waiting to refresh, renew, and teach us.\n\n*Make good use of your waiting times **by* *discov-*\n\n*ering **what God may be trying to teach you in*\n\n* them.*\n\n* Pastor Sather*.\n",
@@ -39,13 +49,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Lamentations 3:25-26 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "176cfa625394d7a7",
     "date_utc": "2021-01-04T23:05:41+00:00",
     "subject": "A TIME TO PRAY A TIME TO ACT",
-    "verse": "The Lord said to Moses, “Why are you crying out to Me! Use your shepherd’s staff—hold it over the water, and a path will open before you through the sea. Then all the people of Israel will pass through on dry ground. (Exodus 14:15)",
+    "verse": "The Lord said to Moses, “Why are you crying out to Me! Use your shepherd’s staff-hold it over the water, and a path will open before you through the sea. Then all the people of Israel will pass through on dry ground. (Exodus 14:15)",
     "reflection": "The Lord told Moses to stop praying and get moving!\nPrayer must have a vital place in our lives, but there\nis also a place for action. Sometimes we know what\nto do but we pray for more guidance as an excuse to\npostpone doing it. If we know what we should do, then it's time to get moving,",
     "prayer": "Almighty God, grant us the courage to act decisively when we know Your will, and help us discern when it's time to move forward in faith rather than lingering in prayer. Guide our steps as we seek to balance contemplation with action in our daily walk with You. (AI)",
     "original_content": "message_id: 176cfa625394d7a7\nsubject   : Subject: A TIME TO PRAY A TIME TO ACT (1-5-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Mon, 4 Jan 2021 17:05:41 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verses:*\n\n*The Lord said to Moses, “Why are you crying out to Me! **Use your\nshepherd’s staff—hold it over the water, and a **path will open before you\nthrough the sea. Then all the **people of Israel will pass through on dry\nground.*\n\n\n\n*Today’s Reflection:*\n\nThe Lord told Moses to stop praying and get moving!\n\nPrayer must have a vital place in our lives, but there\n\nis also a place for action. Sometimes we know what\n\nto do but we pray for more guidance as an excuse to\n\npostpone doing it. *If we know what we should do,*\n\n*then it's time to get moving, *\n\n* Pastor Sather*\n",
@@ -53,7 +68,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Joshua 1:9 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "176d520b1d44cf83",
@@ -67,7 +87,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 46:1-2 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "176d9d8a313d2dc7",
@@ -81,13 +106,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 150:3-5 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "176df5369cc444ab",
     "date_utc": "2021-01-08T00:09:14+00:00",
     "subject": "The author is unknown to the text I am about to share--",
-    "verse": "His question is—Will God really live on earth?  Why, even the highest heavens cannot contain You.  How much less this temple that I have built.! Listen  to my prayer and my request, O Lord my God. Hear  the cry and prayer that Your servant is making to You today. (1 Kings 8:27, 28",
+    "verse": "His question is-Will God really live on earth?  Why, even the highest heavens cannot contain You.  How much less this temple that I have built.! Listen  to my prayer and my request, O Lord my God. Hear  the cry and prayer that Your servant is making to You today. (1 Kings 8:27, 28",
     "reflection": "We should try our best to build a beautiful and help ful place of worship to be a testimony and credit to God. In so doing, however, we must remember that God cannot be contained in our buildings or beautiful settings. He is far greater than any building, so we must focus our praise on Him and not merely on the place of worship.",
     "prayer": "Eternal God, as we strive to create beautiful spaces for worship, remind us that Your presence extends far beyond any structure we could build, and help us to focus our hearts and minds on praising You above all else. (AI)",
     "original_content": "message_id: 176df5369cc444ab\nsubject   : Subject: The author is unknown to the text I am about to share--\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Thu, 7 Jan 2021 18:09:14 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\nthe thought is it could possibly have been Jeremiah\n\n(1-8-21)\n\n\n\n*Today’s Verses:*\n\n*His question is—**Will God really live on earth? *\n\n*Why, even the **highest heavens cannot contain You. *\n\n*How much less this temple **that I have built.! Listen *\n\n*to my prayer and my request, O Lord** my God. Hear *\n\n*the cry and prayer that Your servant is making** to You today. *(I Kings\n8:27, 28\n\n\n\n*Today’s Reflection:*\n\nWe should try our best to build a beautiful and help-\n\nful place of worship to be a testimony and credit to God. In so doing, however,\nwe must remember that\n\nGod cannot be contained in our buildings or beautiful settings. *He is far\ngreater than **any building, so we must focus our praise on Him and **not\nmerely on *\n\n*the place of worship. *\n\n*Pastor Sather*\n",
@@ -95,7 +125,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 139:7-10 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "176e45b4a027362c",
@@ -109,7 +144,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 33:13-15 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "176eea8b29a325bf",
@@ -123,7 +163,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 6:33 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "176f3da7d03cbcf7",
@@ -137,13 +182,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 5:1-2 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "176f8deaf157766b",
     "date_utc": "2021-01-12T23:11:52+00:00",
     "subject": "SYMBOL OF CHRIST'S AUTHORITY",
-    "verse": "“I will place on His shoulder the key to the house  of David; what He opens no one can shut, and  what He shuts no one can open.” (Isaiah 22:22)   ",
+    "verse": "“I will place on His shoulder the key to the house  of David; what He opens no one can shut, and  what He shuts no one can open.” (Isaiah 22:22)",
     "reflection": "You will find this verse quoted in Revelation 3:7 by John.\nAs the one who possesses all power in heaven and\non earth Jesus exercises His power to delegate autho rity by entrusting to His disciples the office of the\nKeys:\nthe authority to retain the sins of the impenit ent and to remit the sins of those who repent and\nbelieve in Jesus as Savior. This is the power the\nchurch exercises through the public ministry: it is\nthe power to close and to open heaven. Let us thank the Lord Jesus, the head of the church for having given His followers the power to forgive. Let us also remem ber to pray for our Government Officials.",
     "prayer": "Holy God, we thank You for entrusting Your church with the power to forgive sins and share Your grace with the world. Guide our leaders, both in the church and in government, to use their authority wisely and in accordance with Your will. (AI)",
     "original_content": "message_id: 176f8deaf157766b\nsubject   : Subject: SYMBOL OF CHRIST'S AUTHORITY (1-13-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Tue, 12 Jan 2021 17:11:52 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*“I will place on His shoulder the key to the house *\n\n*of David; what He opens no one can shut, and *\n\n*what He shuts no one can open.” *(Isa. 22:22)\n\n\n\n*Today’s Reflection:*\n\nYou will find this verse quoted in Rev. 3:7 by John.\n\nAs the one who *possesses* all power in heaven and\n\non earth Jesus exercises His power to delegate autho-\n\nrity by entrusting to His disciples the office of the\n\nKeys: the authority to retain the sins of the impenit-\n\nent and to remit the sins of those who repent and\n\nbelieve in Jesus as Savior. This is the power the\n\nchurch exercises through the public ministry: it is\n\nthe power to close and to open heaven.\n\n*Let us thank the Lord Jesus, the head of the *\n\n*church for having given His followers the power*\n\n* to forgive.*\n\n\n\n*Let us also remem**ber to pray for our Government Officials.*\n\n* Pastor Sather *\n",
@@ -151,13 +201,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 16:19 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "176fe294d8d51f26",
     "date_utc": "2021-01-13T23:51:28+00:00",
     "subject": "HOW TO OVERCOME SATAN",
-    "verse": "He told them,“I saw Satan falling from heaven as a flash of lightening! And I have given you  all the power of the enemy, and you can walk  among  snakes and scorpions and crush them. Nothing will injure you. But don’t rejoice just  because evil spirits obey you; rejoice because  your names are registered as citizens of heaven.” (Luke 10:18-20)  ",
+    "verse": "He told them,“I saw Satan falling from heaven as a flash of lightening! And I have given you  all the power of the enemy, and you can walk  among  snakes and scorpions and crush them. Nothing will injure you. But don’t rejoice just  because evil spirits obey you; rejoice because  your names are registered as citizens of heaven.” (Luke 10:18-20)",
     "reflection": "Jesus may have been looking ahead to his victory over Satan at the cross. John 12:31, 32, indicates\nthat Satan would be judged and driven out at the time of Jesus’ death. On the other hand, Jesus may have been warning His disciples against pride. Perhaps He was referring to Isaiah 14:12-17, which begins, “How you are fallen from heaven, O shin ning star, son of the morning!” Some interpreters identify this verse with Satan and explain that\nSatan’s pride led to all evil we see on earth today.\nTo Jesus’ disciples, who were thrilled with their power over evil spirits (“snakes and scorpions”), He may have been giving this stern warning; “Yours is the kind of pride that led to Satan’s downfall. Be careful!” Pastor Saher Let us thank God for giving us the victory over Satan through Jesus Christ our Lord.",
     "prayer": "Almighty God, we thank You for the victory over evil that You have given us through Your Son Jesus Christ, and we humbly ask for Your guidance to remain vigilant against pride in our own lives. (AI)",
     "original_content": "message_id: 176fe294d8d51f26\nsubject   : Subject: HOW TO OVERCOME SATAN (1-14-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Wed, 13 Jan 2021 17:51:28 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verses:*\n\n*He told them,“I saw Satan falling from heaven*\n\n* as **a flash of lightening! And I have given you *\n\n*all the power of the enemy, and you can walk *\n\n*among** snakes and scorpions and crush them. Nothing **will injure you.\nBut don’t rejoice just *\n\n*because **evil spirits obey you; rejoice because *\n\n*your **names are registered as citizens of heaven.”*\n\n(Lk. 10:18-20)\n\n\n*Today’s Reflection:*\n\nJesus may have been looking ahead to his victory over Satan at the cross.\nJn. 12:31, 32, indicates\n\nthat Satan would be judged and driven out at the\n\ntime of Jesus’ death. On the other hand, Jesus may have been warning His\ndisciples against pride. Perhaps He was referring to Isa. 14:12-17, which\nbegins, “How you are fallen from heaven, O shin-\n\nning star, son of the morning!” Some interpreters identify this verse with\nSatan and explain that\n\nSatan’s pride led to all evil we see on earth today.\n\nTo Jesus’ disciples, who were thrilled with their power over evil spirits\n(“snakes and scorpions”),\n\nHe may have been giving this stern warning;\n\n*“Yours is the kind of* *pride that led to Satan’s downfall. Be careful!”*\n\n* Pastor Saher*\n\n*Let us thank God for giving us the victory over*\n\n*Satan through Jesus Christ our Lord.*\n",
@@ -165,7 +220,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 6:11-12 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17703149bde75472",
@@ -179,13 +239,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 16:20 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177084b2fb30064b",
     "date_utc": "2021-01-15T23:04:41+00:00",
     "subject": "THE HEAVENLY BRIDEGROOM AND BRIDE",
-    "verse": "I saw the Holy City, the new Jerusalem, coming  down out of heaven from God, prepared  as a bride beautifully dressed for her husband. (Revelation 21:2) ",
+    "verse": "I saw the Holy City, the new Jerusalem, coming  down out of heaven from God, prepared  as a bride beautifully dressed for her husband. (Revelation 21:2)",
     "reflection": "Through-out Scripture we are made aware of Christ’s love, because of His love He died for the church. But that isn’t the end of the story. The heavenly Bridegroom will come again in glory. St. John had a highly symbolic vision of the forthcom ing reunion of Christ with His church. We are pictured as coming to meet Him “prepared as a bride beautifully dressed for her husband.” The dress is the righteousness of Christ in which we are clad through faith in the Savior. Once again we need to pray that the Holy Spirit may sustain in us the great expectation of Jesus' return in glory.",
     "prayer": "Lord Jesus, as we await Your glorious return, clothe us in Your righteousness and keep our hearts filled with joyful anticipation. May the Holy Spirit sustain our faith and prepare us to meet You, our heavenly Bridegroom, with hearts overflowing with love and gratitude. (AI)",
     "original_content": "message_id: 177084b2fb30064b\nsubject   : Subject: THE HEAVENLY BRIDEGROOM AND BRIDE (1-16-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Fri, 15 Jan 2021 17:04:41 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*I saw the Holy City, the new Jerusalem, coming *\n\n*down out of heaven **from God, prepared *\n\n*as **a bride beautifully dressed for her* *husband. *(Rev. 21:2)\n\n\n\n*Today’s Reflection:*\n\nThrough-out Scripture we are made aware\n\nof Christ’s love, because of His love He\n\ndied for the church. But that isn’t the end\n\nof the story. The heavenly Bridegroom\n\nwill come again in glory. St. John had a\n\nhighly symbolic vision of the forthcom-\n\ning reunion of Christ with His church.\n\nWe are pictured as coming to meet Him *“prepared **as a bride beauti**fully\ndressed *\n\n*for her husband.” *The dress is the right-eousness of Christ in which we\nare clad through faith in the Savior. *Once **again *\n\n*we need to pray that the Holy Spirit*\n\n*may sustain in us the great expectation *\n\n*of **Jesus' return i**n glory.*\n\n* Pastor Sather*\n",
@@ -193,7 +258,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 5:25-27 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1770d626513de17d",
@@ -207,7 +277,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 2:5-8 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177123edb4134641",
@@ -221,13 +296,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Corinthians 15:3-4 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17717c14d044303c",
     "date_utc": "2021-01-18T23:08:00+00:00",
     "subject": "GOD'S PERSPECTIVE",
-    "verse": "Be on your guard, stand true to what you believe in. Be courageous. Be strong. And everything you do must be done in love. (1 Corinthians 16:13, 14) ",
+    "verse": "Be on your guard, stand true to what you believe in. Be courageous. Be strong. And everything you do must be done in love. (1 Corinthians 16:13, 14)",
     "reflection": "As the Corinthians awaited Paul’s next visit, they were directed to (1)\nbe on their guard against spiritual dangers, (2) stand firm in the faith (3) be courageous, (4) be strong and, (5) do everything with kindness\nand in love. Today as we wait for the return of Christ, we should follow the same instructions. We need to remember love involves unselfish service to others; to show it gives evidence that you care. Remember to let love be your highest goal.",
     "prayer": "Faithful God, help us stand firm in our faith, be courageous and strong, and do everything with kindness and love as we await Christ's return. May we remember that love involves unselfish service to others, and guide us to make love our highest goal in all we do. (AI)",
     "original_content": "message_id: 17717c14d044303c\nsubject   : Subject: GOD'S PERSPECTIVE (1-19-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Mon, 18 Jan 2021 17:08:00 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verses:*\n\n*Be on your guard, stand true to what you believe in. Be courageous. **Be\nstrong. And everything you do must be done in love.*\n\n(I Cor. 16:13, 14)\n\n\n\n*Today’s Reflection:*\n\nAs the Corinthians awaited Paul’s next\n\nvisit, they were directed to (1) be on their guard against spiritual\ndangers, (2) stand\n\nfirm in the faith (3) be courageous, (4) be strong and, (5) do everything\nwith kindness\n\nand in love. Today as we wait for the return\n\nof Christ, we should follow the same instruc-tions. We need to remember\nlove involves unselfish service to others; *to show *it gives evidence that\nyou care. *Remember** to let *\n\n*love be your highest goal.*\n\n* Pastor Sather*\n\n\nLet us pray for a peaceful innagration\n",
@@ -235,13 +315,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Peter 5:8-9 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1771ce40f0f4d0ef",
     "date_utc": "2021-01-19T23:04:04+00:00",
     "subject": "LETTING THE LORD SETTLE IT",
-    "verse": "Judge nothing before the appointed time;  wait tell the Lord comes. (1 Corinthians 4:5) ",
+    "verse": "Judge nothing before the appointed time;  wait tell the Lord comes. (1 Corinthians 4:5)",
     "reflection": "It also wars us. We are to confront those who are sinning (see I Corinthians 5:12, 13), but we must not judge who is a better servant of Christ. When you judge some one, you invariably consider yourself better-and that is arrogant. Somethings we need to gladly leave to the Lord. When He comes again, He will take things in hand and settle them once and for all.",
     "prayer": "Let us ask the Savior to grant us wisdom and love to make the right choices when it is time to do so.",
     "original_content": "message_id: 1771ce40f0f4d0ef\nsubject   : Subject: LETTING THE LORD SETTLE IT (1-20-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Tue, 19 Jan 2021 17:04:04 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*Judge nothing before the appointed time; *\n\n*wait tell the Lord comes. *(I Cor. 4:5)\n\n\n\n*Today’s Reflection:*\n\nIt also wars us. We are to confront those\n\nwho are sinning (see I Cor. 5:12, 13),\n\n*but *we must not judge who is a better\n\nservant of Christ. When you judge some-\n\none, you invariably consider yourself\n\nbetter—and that is arrogant*. Some**things*\n\n*we need to gladly leave to the Lord. *\n\n*When He comes again, He **will take *\n\n*things in hand and settle them once *\n\n*and for all.*\n\n* Pastor Sather*\n\n\n\n*Let us ask the Savior to grant us wisdom *\n\n*and love to make the right** choices when *\n\n*it is time to do so.*\n",
@@ -249,7 +334,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 7:1-2 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177221874f147d31",
@@ -263,13 +353,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 2:5-8 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1772749fa5cba60e",
     "date_utc": "2021-01-21T23:31:36+00:00",
     "subject": "OUR TRUE HOPE",
-    "verse": "The People who walk in darkness will see a great light—a light that will shine on all who live in the land where death casts its shadow.  (Isaiah 9:2) ",
+    "verse": "The People who walk in darkness will see a great light-a light that will shine on all who live in the land where death casts its shadow.  (Isaiah 9:2)",
     "reflection": "Here Isaiah refers to Jesus as Great Light the apostle John also referred to Jesus as the “Light” (JohnI:9) Jesus referred to Him self as the “Light of the world” (John 8:12. When I read the fact that this was considered as a time of ‘great darkness, on the 6th I thought we were heading into a similar time, the fact of the matter is we live in such a time. That ‘darkness” is sin. Then I remembered\nGod’s promise that He would send a light who would shine on everyone living in the shadow of death. He would be both\n“Wonderful Counselor” and “Mighty God.” This message of hope was fulfilled in the birth of Christ and the establishment of His eternal Kingdom. He came to deliver (all) people from their slavery to sin, the darkness we live in today.",
     "prayer": "Lord Jesus, Light of the world, shine Your truth and love into the darkness of our lives and guide us along Your path of righteousness. Help us to embrace Your eternal Kingdom and find freedom from the shadows of sin that surround us. (AI)",
     "original_content": "message_id: 1772749fa5cba60e\nsubject   : Subject: OUR TRUE HOPE (1-22-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Thu, 21 Jan 2021 17:31:36 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*The People who walk in darkness will see a great light—a light** that will\nshine on all who live in the land where death casts its** shadow. *\n\n(Isa. 9:2)\n\n\n\n*Today’s Reflection: *\n\nHere Isaiah refers to Jesus as Great Light—\n\nthe apostle John also referred to Jesus as\n\nthe “Light” (Jn. I:9) Jesus referred to Him-\n\nself as the “*Light of the world” *(Jn 8:12.\n\nWhen I read the fact that this was considered as a time of ‘great darkness,\non the 6th I thought we were heading into a similar time, the fact of the\nmatter is we live in such a time. That ‘darkness” is sin. Then I remembered\n\nGod’s promise that He would send a light\n\nwho would shine on everyone living in the shadow of death. He would be both\n\n“Wonderful Counselor” and “Mighty God.” This message of hope was fulfilled\nin the\n\nbirth of Christ and the establishment of His\n\neternal Kingdom. *He came to deliver (all) people from **their slavery to\nsin, the darkness we live in today.*\n\n* Pastor Sather *\n",
@@ -277,13 +372,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 1:4-5 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1772c619e52a0812",
     "date_utc": "2021-01-22T23:15:31+00:00",
     "subject": "SURRENDER THE OLD TO RECEIVE THE NEW",
-    "verse": "As he (Saul) was nearing Damascus on his mission, a brilliant light from heaven suddenly beamed down on him.\nHe fell to the ground and heard a voice saying to him,  “Saul, Saul! Why are you persecuting me?\n(Acts 9:3, 4)",
+    "verse": "As he neared Damascus on his journey, suddenly a light from heaven flashed around him. He fell to the ground and heard a voice say to him, 'Saul, Saul, why do you persecute me? (Acts 9:3-4)",
     "reflection": "Paul refers to his experience as the start of his new life in Christ (1 Corinthians 9:1; 15:18; Galatians 1:15, 16). At the center of this wonder ful experience was Jesus Christ. Paul did not see a vision he saw the risen Christ Himself (9:17). Paul acknowledged Jesus as Lord, confessed his own sin, surrendered his life to Christ, and resolved to obey Him. True conversion comes from a personal encounter with Jesus Christ and leads to a new life in\na relationship with Him.",
     "prayer": "Ask the Holy Spirit to keep you in the faith so the Savior Jesus Christ may be glorified in and through you",
     "original_content": "message_id: 1772c619e52a0812\nsubject   : Subject: SURRENDER THE OLD TO RECEIVE THE NEW (1-23-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Fri, 22 Jan 2021 17:15:31 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verses:*\n\n*As he (Saul) was nearing Damascus on his mission, a **brilliant light from\nheaven sud-*\n\n*denly beamed down on **him. He fell to the ground and heard a voice\nsaying **to him, *\n\n*“Saul, Saul! Why are you persecuting me?*\n\n(Acts 9:3, 4)\n\n\n\n*Today’s Reflection:*\n\nPaul refers to his experience as the start of\n\nhis new life in Christ (1 Cor. 9:1; 15:18;\n\nGal. 1:15, 16). At the center of this wonder-\n\nful experience was Jesus Christ. Paul did not\n\nsee a vision he saw the risen Christ Himself\n\n(9:17). Paul acknowledged Jesus as Lord, confessed his own sin, surrendered\nhis life\n\nto Christ, and resolved to obey Him. True conversion comes from a personal\nencounter\n\nwith Jesus Christ and leads to a new life in\n\na relationship with Him.\n\n* Pastor Sather*\n\n*Ask the Holy Spirit to keep you in the faith so the **Savior Jesus Christ\nmay be glorified in and **through you *\n",
@@ -291,13 +391,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "2 Corinthians 5:17 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177317d7286be13b",
     "date_utc": "2021-01-23T23:04:01+00:00",
     "subject": "RECONCILIATION WITH GOD COME FIRST",
-    "verse": "We are Christ’s ambassadors, and God is using us to speak to you. We urge you, as though Christ Himself were here pleading  with you, “Be reconciled to God.” (2 Corinthians 5:2) ",
+    "verse": "We are Christ’s ambassadors, and God is using us to speak to you. We urge you, as though Christ Himself were here pleading  with you, “Be reconciled to God.” (2 Corinthians 5:2)",
     "reflection": "God’s reconciliation of sinners is the top most truth of the Gospel. Reconciliation with God proceeds-not follows-reconciliation to one another in the\ncommunity.\nAn ambassador is an official representative of one country to another. As believers, we are Christ’s ambassadors, sent with His message of reconciliation to the world. An ambassador of reconciliation has an important responsibility.\nWe dare not take this responsibility lightly. How well are you fulfilling your commission of Christ’s ambassador?",
     "prayer": "Ask His help for affecting greater reconciliation among people.",
     "original_content": "message_id: 177317d7286be13b\nsubject   : Subject: RECONCILIATION WITH GOD COME FIRST (1-24-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Sat, 23 Jan 2021 17:04:01 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’ Verse:*\n\n*We are Christ’s ambassadors, and God is using **us to speak to you. We\nurge you, as though Christ **Himself were here pleading *\n\n*with you, “Be recon**ciled to God.”*\n\n(2 Cor. 5:2)\n\n\n\n*Today’s Reflection:*\n\nGod’s reconciliation of sinners is the top-\n\nmost truth of the Gospel. Reconciliation\n\nwith God proceeds—not follows—reconciliation to one another in the\n\ncommunity. An ambassador is an official representtative of one country to\nanother.\n\nAs believers, we are Christ’s ambassadors, sent with His message of\nreconciliation to\n\nthe world. An ambassador of reconciliation has an important responsibility.\nWe dare not\n\ntake this responsibility lightly. *How well *\n\n*are you fulfilling your commission of Christ’s **ambassador?*\n\n* Pastor Sather*\n\n*Ask His help for affecting greater recon-*\n\n*cil**iation **among people.*\n",
@@ -305,13 +410,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 1:19-20 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17736be00ec098dc",
     "date_utc": "2021-01-24T23:32:38+00:00",
     "subject": "JESUS THE GO-BETWEEN",
-    "verse": "For Christ Himself has made peace be- tween us Jews and you Gentiles by making  us all one people. He has broken down the wall of hostility that used to separate us.  (Ephesians 2:14) ",
+    "verse": "For Christ Himself has made peace be- tween us Jews and you Gentiles by making  us all one people. He has broken down the wall of hostility that used to separate us.  (Ephesians 2:14)",
     "reflection": "By faith in the redeeming work of Christ Jesus we, are at peace with God, who is our heavenly Father and we are His sons and daughters. As God children, we are brothers and sisters to one another and strive to live at peace. The Psalmist declares, “How good and pleasant it is when brothers live together in unity!” (Psalm 133:1). When-ever we cross a bridge, we can be remind ed that through our Spiritual bridge, we are one with God and with one another.",
     "prayer": "Thank the Lord Jesus for enabling you to be at peace with God for you can now pray to Him boldly and confidently in Jesus’ name.",
     "original_content": "message_id: 17736be00ec098dc\nsubject   : Subject: JESUS THE GO-BETWEEN (1-25-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Sun, 24 Jan 2021 17:32:38 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*For Christ Himself has made peace be-*\n\n*tween us Jews and **you Gentiles **by making *\n\n*us all one people. He has broken **down the wall of hostility** that used\nto separate us. *\n\n(Eph. 2:14)\n\n\n\n*Today’s Reflection:*\n\nBy faith in the redeeming work of Christ\n\nJesus we, are at peace with God, who is\n\nour heavenly Father and we are His sons\n\nand daughters. As God children, we are brothers and sisters to one another\nand strive to live at peace. The Psalmist declares, “How good and pleasant\nit is when brothers\n\nlive together in unity!” (Ps. 133:1). *When-ever we **cross **a bridge, we\ncan be remind-*\n\n*ed that through our **Spiritual bridge, we*\n\n*are one with God and with one **another. *\n\n* Pastor Sather*\n\n*Thank the Lord Jesus for enabling you to be *\n\n*at peace **with God for you** can now pray to Him boldly and **confidently\nin Jesus’ name.*\n",
@@ -319,13 +429,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Galatians 3:28 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1773bc6f3c349eae",
     "date_utc": "2021-01-25T23:00:30+00:00",
     "subject": "POSSESSING ALL--YET POOR",
-    "verse": "Your attitude should be the same that Christ Jesus had. Though He was God, He did not demand and cling to His rights as God.  (Philippians 2:5, 6) ",
+    "verse": "Your attitude should be the same that Christ Jesus had. Though He was God, He did not demand and cling to His rights as God.  (Philippians 2:5, 6)",
     "reflection": "Jesus Christ was humble, willing to give up His rights in order to obey God and serve people. Like Christ, we should have a servant’s attitude, serving out of love for God and for others, not out of guilt and fear. Remember you can choose your attitude. You can approach life expecting to be served, or you can look for opportune ities to serve others. See Mark 10:45 for more on Christ’s attitude of servant hood.",
     "prayer": "Give thanks to God for His unspeakable grace in sending His Son into the World as the all-sufficient Savior.",
     "original_content": "message_id: 1773bc6f3c349eae\nsubject   : Subject: POSSESSING ALL--YET POOR (1-26-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Mon, 25 Jan 2021 17:00:30 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verses:*\n\n*Your attitude should be the same that Christ Jesus had. **Though **He was\nGod, He did not demand and cling to **His rights as God. *\n\n(Phil. 2:5, 6)\n\n\n\n*Today’s Reflection:*\n\nJesus Christ was humble, willing to give\n\nup His rights in order to obey God and\n\nserve people. Like Christ, we should have a servant’s attitude, serving out\nof love for\n\nGod and for others, not out of guilt and fear. Remember you can choose your\nattitude.\n\nYou can approach life expecting to be\n\nserved, or you can look for opportun-\n\nities to serve others. *See Mk. 10:45 for *\n\n*more on Christ’s attitude of servant-*\n\n*hood.*\n\n* Pastor Sather*\n\n*Give thanks to God for His unspeakable grace in sending **His Son into the\nWorld *\n\n*as the all-sufficient Savior.*\n",
@@ -333,7 +448,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 2:3-4 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17741464ace20b0e",
@@ -347,7 +467,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 5:8 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177461e6df918afe",
@@ -361,13 +486,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 5:1 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1774b5187199f286",
     "date_utc": "2021-01-28T23:26:10+00:00",
     "subject": "A PRICE TO PAY",
-    "verse": "And since we are His children, we will share His treasures—for everything God gives to  His Son, Christ, is ours, too. But if we are  to share His glory, we must also share His suffering. (Romans 8:17)",
+    "verse": "And since we are His children, we will share His treasures-for everything God gives to  His Son, Christ, is ours, too. But if we are  to share His glory, we must also share His suffering. (Romans 8:17)",
     "reflection": "There is a price to pay for being identified with Jesus. Along with the great treasures, Paul mentions the sufferings that Christians must face. What kind of sufferings are we to endure? For first century believers, there was economic and social persecution, and some even faced death. We, too, must pay a price for following Jesus. In many parts of the world, Christians face pressures just a sever as those faced by Christ’s first followers. Even in countries where Christianity is tolerated or encouraged, Christians must not become complacent. To live as Jesus did-serving others, giving up one’s right, resisting pressures to conform to the world-always exacts a price. Nothing we suffer, however, can compare-to the great price that Jesus paid to save us.",
     "prayer": "During times of difficulty ask the Holy Spirit to assure you, on the basis of God's promises in His Word, that you belong to Christ's family.",
     "original_content": "message_id: 1774b5187199f286\nsubject   : Subject: A PRICE TO PAY (1-29-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : Alvin Sather <pastor.sather5@gmail.com>, Angie Truscinski <atruscinski@hotmail.com>, \"Bart & Dorie Krenke\" <krenke@midstatesd.net>, \"Bill & Marilyn Nelson\" <marbill28@gmail.com>, Brennen Sather <brennenchamp@gmail.com>, \"Brian & Trish Waage\" <brianntrish@wiktel.com>, Cassidy Nelson <cassidylnelson23@gmail.com>, Chuck Clow <chuckc@wiktel.com>, \"Clark & Sandra Sather\" <clark.sather@gmail.com>, Courtney Nelson <corkygoose@gmail.com>, \"Craig & Peggy Swanson\" <pcswanson@midstatesd.net>, \"Curt & Marilyn Zimdars\" <cmzimdars@wiktel.com>, \"Dale & Debi Wiskow\" <dlw@wiktel.com>, Dale Strege <dale.r.strege@gmail.com>, \"Dan & Karla Cummings\" <dkcummings@midstatesd.net>, David Niemela <dav.niemela@gmail.com>, Dee Burkel <dbur@wiktel.com>, \"Don & Margaret Lake\" <dmlake@midstatesd.net>, \"Donnie & Donna Dominiack\" <ddominiack@midstatesd.net>, \"Doug & Corena Green\" <green@wiktel.com>, Duane Olson <duaneo05118@gmail.com>, \"Dwight & Carolyn Lange\" <dclange@wiktel.com>, Eileen Kilen <ekilen@wiktel.com>, Elderbush Apts <elderb@wiktel.com>, \"Ellis & Darlene Waage\" <edwaage@wiktel.com>, Eunice Korczak <snookyk@gmail.com>, Felix Korczak <squidbrain@gmail.com>, \"Franklin & Laray Frislie\" <lfrislie@badger.k12.mn.us>, \"Gary & Leslie Udstrand\" <gbu@digitalwind.net>, \"Gene & Rose Fenstrom\" <dozenrosebuds2002@yahoo.com>, \"Gerald & Donna Graff\" <gdgraff@wiktel.com>, Glen Darst <gdarst@wiktel.com>, Gracia Nelson <gracianelson@yahoo.com>, \"Harold & Betty Hudson\" <bjhjhud@frontier.com>, \"Harold (2) Hudson\" <hhcpa@comcast.net>, \"Harvey & Becky Melby\" <hmelby@wiktel.com>, \"Jerome & Dee Burkel\" <2river@wiktel.com>, \"Kirk & Desirae Surat\" <kirksurat@midstatesd.net>, Laura Melby <lauramelby@hotmail.com>, Linda Hantke <lelba@midstatesd.net>, Lois Halbakken <Lhbakken64@gmail.com>, Lyle Mattson <lylema@wiktel.com>, Madison Udstrand <madyudstrand@gmail.com>, Mark Udstrand <invitations@linkedin.com>, Mark Udstrand <mud@mudworks.net>, Mary Graves <magraves@midstatesd.net>, Michael Sather <mike_sather@hotmail.com>, Missy Udstrand <melissa.udstrand@gmail.com>, \"Neil & Abby Sather\" <nasather2@gmail.com>, \"Paul & Carol Ann Karlovitz\" <cak17min@yahoo.com>, Rae Ann Dozal <littlegdole@yahoo.com>, \"Rick & Trish Sather\" <mnsather@charter.net>, Robert Stoop <pinball@wiktel.com>, Roger Green <rgreen@wiktel.com>, Rolland Deschene <roldes3@hotmail.com>, Ryan Sather <ryan.sather@gmail.com>, Stephanie Kilen <skilen@wiktel.com>, \"Steve & Kim Riggen\" <riggen@midstatesd.net>, \"Steve & Kristy Nelson\" <stevenkristy@msn.com>, Stevie Bredeson <stevieleigh.0724@gmail.com>, \"Tim & Carol Urbaniak\" <tlc@wiktel.com>, Tracy Halbakken <tlsnh1111@gmail.com>, \"Troy & Cheryl Power\" <tcpower@me.com>, Wendy Lee <wenstalee@yahoo.com>, Will Udstrand <will.udstrand@gmail.com>\ndate      : Thu, 28 Jan 2021 17:26:10 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*And since we are His children, we will share His treasures—for everything\nGod gives to *\n\n*His Son, Christ, is ours, too. But if we are *\n\n*to share His** glory, we must also share His suffering. *(Ro. 8:17)\n\n\n\n*Today’s Reflection: *\n\nThere is a price to pay for being identified with Jesus. Along with the\ngreat treasures, Paul mentions the sufferings that Christians must face. What\nkind of sufferings are we to endure? For first century believers, there was\neconomic and social persecution, and some even faced death. We, too, must\npay a price\n\nfor following Jesus. In many parts of the world, Christians face pressures\njust a sever\n\nas those faced by Christ’s first followers.\n\nEven in countries where Christianity is tolerated or encouraged, Christians\nmust\n\nnot become complacent. To live as Jesus\n\ndid—serving others, giving up one’s right, resisting pressures to conform\nto the world—always exacts a price. *Nothing we suffer, however, can\ncomp**are—to\nthe great price that Jesus paid to save **us. *\n\n* Pastor Sather*\n\n*During times of difficulty ask the Holy Spirit to*\n\n*assure you, on the basis of God's promises in*\n\n*His Word, that you belong to Christ's family. *\n",
@@ -375,13 +505,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "2 Timothy 3:12 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177509c638e6de88",
     "date_utc": "2021-01-30T00:06:02+00:00",
     "subject": "THE DAY OF HOPE HAS DAWNED",
-    "verse": "Someone calls to me from Seir, “Watchman, what is left of the night? . . . The watchman replies, “Morning is coming, but also the night.” (Isaiah 21:11-12) ",
+    "verse": "Someone calls to me from Seir, “Watchman, what is left of the night? . . . The watchman replies, “Morning is coming, but also the night.” (Isaiah 21:11-12)",
     "reflection": "It is night in many parts of the world; there is dense spiritual darkness-witchcraft, sorcery, Satanism. There are the primitive religions of voodoo, paganism, and occult ism that even in our so-called enlightened times and places are practiced. But Christ ians have ample reason to thank God for the coming of Jesus Christ the light of the world. This is what God did through His Son: “He has rescued us from the dominion of dark ness and brought us into the kingdom of the Son He loves, in whom we have redemption, the forgiveness of sins” (Colossians 1:13-14). What glorious Good News to shine throughout the world!",
     "prayer": "Holy God, we thank You for sending Jesus Christ as the light of the world, rescuing us from darkness and bringing us into Your kingdom of love and forgiveness. Shine Your glorious Good News throughout the world, dispelling spiritual darkness and drawing all people to Your redeeming grace. (AI)",
     "original_content": "message_id: 177509c638e6de88\nsubject   : Subject: THE DAY OF HOPE HAS DAWNED (1-30-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Fri, 29 Jan 2021 18:06:02 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verses:*\n\n*Someone calls to me from Seir, “Watchman, what is left of the **night? . .\n. The watchman replies, “Morning is coming, but **also the night.” *(Isa\n21:11-12)\n\n\n\n*Today’s Reflection:*\n\nIt is night in many parts of the world; there\n\nis dense spiritual darkness—witchcraft, sorcery, Satanism. There are the\nprimative religions of voodoo, paganism, and occult-\n\nism that even in our so-called enlightened times and places are practiced. But\nChrist-\n\nians have ample reason to thank God for the coming of Jesus Christ the\nlight of the world. This is what God did through His Son: “He has rescued\nus from the dominion of dark-\n\nness and brought us into the kingdom of the Son He loves, in whom we have\nredemption, the forgiveness of sins” (Col. 1:13-14). *What glorious Good\nNews to shine through**out *\n\n*the world!*\n\n* Pastor Sather*\n",
@@ -389,7 +524,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 1:13-14 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17755c02d956ddc4",
@@ -403,7 +543,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 2:8-10 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1775aa14f55c4ece",
@@ -417,7 +562,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 19:1-3 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1775accb8a8d4f46",
@@ -431,6 +581,11 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Timothy 6:17-19 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]

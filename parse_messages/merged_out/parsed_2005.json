@@ -11,7 +11,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 8:1-2 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "171d780ae7ad6280",
@@ -25,7 +30,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 10:1 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "171dcb3d530ab346",
@@ -39,7 +49,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 5:3-4 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "171e1d37495d0d32",
@@ -53,7 +68,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 1:14 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "171e71a2ea46a696",
@@ -67,13 +87,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 2:3-4 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "171ec1b7e2708615",
     "date_utc": "2020-05-06T22:29:17+00:00",
     "subject": "HAVING GODLY WORTH",
-    "verse": "Then God said,  “Let us  make people in our image, to be like ourselves. They will be masters over all life—the fish in the sea, the birds in the sky, and all the livestock, wild animals, and small animals.” (Genesis 1:26)",
+    "verse": "Then God said,  “Let us  make people in our image, to be like ourselves. They will be masters over all life-the fish in the sea, the birds in the sky, and all the livestock, wild animals, and small animals.” (Genesis 1:26)",
     "reflection": "I believe it is important that we take note of the fact that God uses the plural form when speaking about the creation of mankind.\nKnowing that we are made in God’s image and\nso share many of His characteristics provides a solid basis for self-worth. Human worth is not based on possessions, achievements, physical attractiveness, or public acclaim. Instead , it is based on being made in God’s image. Because\nwe bear God’s image, we can feel positive about ourselves. Criticizing or downgrading ourselves is criticizing what God has made and the abilities He has given us.",
     "prayer": "Almighty God, help us to recognize and cherish the divine image within ourselves and others, finding our true worth in Your creation rather than worldly measures. May we honor the abilities You've given us and treat ourselves and our fellow humans with the respect and dignity befitting those made in Your likeness. (AI)",
     "original_content": "message_id: 171ec1b7e2708615\nsubject   : Subject: HAVING GODLY WORTH (5-7-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Wed, 6 May 2020 17:29:17 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*Then God said, **“Let us* * make people in our image, to be **like\nourselves. They will be masters **over all life—the fish **in the sea, the\nbirds in the sky, and all the livestock, wild*\n\n*animals, and small animals.” *(Gen. 1:26)\n\n\n\n*Today’s Reflection:*\n\nI believe it is important that we take note of the fact that God uses the\nplural form when speaking about the creation of mankind. Knowing that we\nare made in God’s image and\n\nso share many of His characteristics provides a solid basis for self-worth.\nHuman worth *is not* based on possessions, achievements, physical\nattractiveness, or public acclaim. *Instead*, it is based on being made in\nGod’s image. Because\n\nwe bear God’s image, we can feel positive about ourselves*.* *Criticizing\nor downgrading ourselves is criticizing what **God has made and the\nabilities He has given us.*\n\n* Pastor Sather*\n",
@@ -81,7 +106,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 139:14 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "171f1357678c4544",
@@ -95,7 +125,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 4:6-7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "171f677e3d15f281",
@@ -109,7 +144,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 John 4:19-21 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "171fb61bc7e2f49e",
@@ -123,7 +163,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 3:19 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17200e7a675054fa",
@@ -137,7 +182,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 10:9 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17205c2829847676",
@@ -151,13 +201,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:19-20 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1720b1c4f35dcae3",
     "date_utc": "2020-05-12T22:58:24+00:00",
     "subject": "BEING OPEN TO HIS GUIDANCE",
-    "verse": "The Lord says, “I will guide you along the best pathway for your life. I will advise you and watch over you.” (Psalm 32:8) ",
+    "verse": "The Lord says, “I will guide you along the best pathway for your life. I will advise you and watch over you.” (Psalm 32:8)",
     "reflection": "When we yield our lives to Jesus, we never know what the outcome will be, but he always comes through for us. When we believe and obey Jesus, in spite of unfavorable circumstances, we receive tremendous blessings He’s already prepared for us. What is Jesus instructing you to do? Are you ready to obey?",
     "prayer": "Gracious God, help us to trust and obey Jesus even when circumstances seem unfavorable, knowing that You have prepared blessings beyond our imagination. Give us the courage to yield our lives fully to Your will and follow Your instructions without hesitation. (AI)",
     "original_content": "message_id: 1720b1c4f35dcae3\nsubject   : Subject: BEING OPEN TO HIS GUIDANCE (5-13-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Tue, 12 May 2020 17:58:24 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*The Lord says, “I will guide you along the best **pathway for your life. I\nwill advise you and **watch over you.” *(Ps. 32:8)\n\n\n\n*Today’s Reflection:*\n\nWhen we yield our lives to Jesus, we never know what the outcome will be,\nbut he always comes through for us. When we believe and obey Jesus, in\nspite of unfavor-able circumstances, we receive tremendous blessings He’s\nalready prepared for us.\n\n*What is Jesus* *instructing you to do? Are you **ready to* *obey?*\n\n* Pastor Sather*\n",
@@ -165,7 +220,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Proverbs 3:5-6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "172104618cdf5e38",
@@ -179,7 +239,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 2:10 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "172155150d4d522d",
@@ -193,7 +258,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 4:6-7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1721a9b5804b14d6",
@@ -207,7 +277,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Peter 5:10 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1721f8e8fb0536e9",
@@ -221,7 +296,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 139:1-3 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17224d7d4812c49b",
@@ -235,7 +315,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 46:1-2 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1722a0f6fd977afd",
@@ -249,13 +334,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:22 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1722f4264df3acd5",
     "date_utc": "2020-05-19T23:26:20+00:00",
     "subject": "MAKING ALL THINGS NEW",
-    "verse": "I saw the Holy City, the new Jerusalem, coming down out of heaven, from God, prepared as a bride beautifully dressed for her husband (Revelation 21:2) ",
+    "verse": "I saw the Holy City, the new Jerusalem, coming down out of heaven, from God, prepared as a bride beautifully dressed for her husband (Revelation 21:2)",
     "reflection": "The new Jerusalem is where God lives among His people.\nInstead of us going up to meet Him, He comes down to be with us, just as God became a man in Jesus Christ and lived among us (John 1:14). Wherever God reigns there is peace, security, and love.",
     "prayer": "Eternal God, as we contemplate the new Jerusalem where You dwell among Your people, fill our hearts with the peace, security, and love that flow from Your presence. May we eagerly anticipate the day when You will make Your home with us, just as You did through Jesus Christ. (AI)",
     "original_content": "message_id: 1722f4264df3acd5\nsubject   : Subject: MAKING ALL THINGS NEW (5-20-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Tue, 19 May 2020 18:26:20 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*I saw the Holy City, the new Jerusalem, coming **down out of heaven, from\nGod, prepared as a **bride beautifully **dressed for her husband *(Rev.\n21:2)\n\n\n\n*Today’s Reflection:*\n\nThe new Jerusalem is where God lives among His people. Instead of us going\nup to meet Him, He comes down to be with us, just as God became a man in\nJesus Christ and lived among us (Jn. 1:14).\n\n*Wherever God reigns there is peace, security, **and love.*\n\n* Pastor Sather*\n",
@@ -263,7 +353,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Revelation 21:3 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1723455aed6e2c17",
@@ -277,7 +372,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 1:21 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "172396d7e87c3243",
@@ -291,7 +391,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 15:5-6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1723e4ca8bd88342",
@@ -305,7 +410,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Thessalonians 5:16-18 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17243ba56b3b763a",
@@ -319,7 +429,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 13:34-35 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17248e6d98b8ec11",
@@ -333,7 +448,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Philippians 2:5-7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1724dc3eb2840be0",
@@ -347,7 +467,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 1:12 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17253119d4b90711",
@@ -361,13 +486,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 14:1-3 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1725878279a462c6",
     "date_utc": "2020-05-27T23:29:29+00:00",
     "subject": "RECEIVING TRUE NOURISHMENT",
-    "verse": "Jesus said, “I am the living bread that came down from heaven. Whoever eats  this bread will live forever.\nThis bread is my flesh, which I will give for the life of  the world.” (John 6:51) ",
+    "verse": "Jesus said, “I am the living bread that came down from heaven. Whoever eats  this bread will live forever.\nThis bread is my flesh, which I will give for the life of  the world.” (John 6:51)",
     "reflection": "Have we ever taken the time to study the list of medications and supplements we take, much of which our human bodies can normally get from a healthy diet\nand ten minutes of fresh air and sunshine an provide. How often do we do the same with our spiritual health?\nWe depend on supplements-some else’s insights, Sunday sermons, a brief nugget heard on T V, as our entire spiritual intake for the week. We lean on supplements rather than a rich diet of daily Bible reading, prayer time, and reflection with Jesus. In (John 15:7) He says we should “abide” with Him. We need to establish a regular extend time of savoring the Bread of Life, taking time to ensure our spiritual nutritional balance.",
     "prayer": "Holy God, help us to nourish our souls by abiding in Your presence and feasting on Your Word daily, rather than relying solely on spiritual supplements. May we cultivate a rich diet of prayer, Scripture, and reflection to grow ever closer to You. (AI)",
     "original_content": "message_id: 1725878279a462c6\nsubject   : Subject: RECEIVING TRUE NOURISHMENT (5-28-20)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Wed, 27 May 2020 18:29:29 -0500\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*Jesus said, “I am the living bread that came down **from heaven. Whoever\neats *\n\n*this bread will live **forever. This bread is my flesh, which I will\ngive **for\nthe life of *\n\n*the world.” *(Jn. 6:51)\n\n\n\n*Today’s Reflection:*\n\nHave we ever taken the time to study the list of medications and\nsupplements we take, much of which our human bodies\n\ncan normally get from a healthy diet\n\nand ten minutes of fresh air and sunshine an provide. How often do we do\nthe same with our spiritual health?\n\nWe depend on supplements—some else’s insights, Sunday sermons, a brief\nnugget heard on T V, as our entire spiritual intake for the week. We lean\non supplements rather than a rich diet of daily Bible\n\nreading, prayer time, and reflection with Jesus. In (Jn. 15:7) He says we\nshould “abide” with Him. *We need to **establish *\n\n*a regular extend time of savoring the*\n\n*Bread of Life, taking time to ensure our spiritual **nutritional balance.*\n\n\n*Pastor Sather*\n",
@@ -375,7 +505,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "John 15:4-5 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1725da653c4b6737",
@@ -389,7 +524,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "2 Corinthians 4:16-18 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1726291e5e4f67a9",
@@ -403,7 +543,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 6:33 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17267b342349b984",
@@ -417,7 +562,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 3:9-10 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1726d0b1a190a764",
@@ -431,6 +581,11 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 12:2 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]

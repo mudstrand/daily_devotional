@@ -11,7 +11,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 12:4-6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1776a67804846b33",
@@ -25,7 +30,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 4:6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1776f49956188887",
@@ -39,7 +49,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 4:10 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177743b0d9657ed9",
@@ -53,7 +68,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 5:8 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177791e6cd454706",
@@ -67,7 +87,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 2:6-7 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1777ebccb87d9977",
@@ -81,7 +106,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "1 Corinthians 3:7-9 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177840804680712a",
@@ -95,7 +125,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 4:6 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1778910f57d20abb",
@@ -109,13 +144,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 25:4-5 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1778e69efcf8d53e",
     "date_utc": "2021-02-11T00:07:23+00:00",
     "subject": "WE ARE CHRIST'S GUESTS",
-    "verse": "Then Jesus directed them to have all people  sit down in groups on the green grass.  (Mark 6:9) ",
+    "verse": "Then Jesus directed them to have all people  sit down in groups on the green grass.  (Mark 6:9)",
     "reflection": "Divine grace really means that we are Christ’s guests. We come to His holy meal empty handed. Salvation is God’s\noutright gift-we contribute nothing. The Good Shepherd, who laid down His life on our behalf, leads us to the “green\ngrass” of His Word, providing all we need for our spiritual nurture.\nWe sing, “The Lord is My Shepherd, I’ll not want; He makes me lie down in green pastures; He leads me by quiet waters.",
     "prayer": "Let us express our gratefulness to the Savior for having us as His guests and for providing for all our needs.",
     "original_content": "message_id: 1778e69efcf8d53e\nsubject   : Subject: WE ARE CHRIST'S GUESTS (2-11-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Wed, 10 Feb 2021 18:07:23 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*Then Jesus directed them to have all people *\n\n*sit down in **groups on the green grass. *\n\n(Mk. 6:9)\n\n\n\n*Today’s Reflection:*\n\nDivine grace really means that we are\n\nChrist’s guests. We come to His holy\n\nmeal empty handed. Salvation is God’s\n\noutright gift—we contribute nothing.\n\nThe Good Shepherd, who laid down His\n\nlife on our behalf, leads us to the “green\n\ngrass” of His Word, providing all we need\n\nfor our spiritual nurture. We sing, “*The *\n\n*Lord is My Shepherd, I’ll not want;*\n\n*He makes me lie down in green pastures; *\n\n*He leads me **by quiet waters.*\n\n* Pastor Sather*\n\n*Let us express our gratefulness to the *\n\n*Savior for having **us as His guests and *\n\n*for providing for all our needs.*\n",
@@ -123,7 +163,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 23:1-3 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1779364ccd951fe1",
@@ -137,7 +182,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Matthew 28:19-20 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "17798baac683e4ed",
@@ -151,7 +201,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Colossians 3:13 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "1779d5c271e59e2b",
@@ -165,7 +220,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Ephesians 5:31-33 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177a303de6b91d78",
@@ -179,7 +239,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 103:1-5 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177a804722c8507b",
@@ -193,7 +258,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 5:20-21 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177ad324144a7f3e",
@@ -207,7 +277,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Titus 2:7-8 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177b27d31d830a68",
@@ -221,13 +296,18 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Luke 3:4 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177b79ccf31c9c14",
     "date_utc": "2021-02-19T00:07:23+00:00",
     "subject": "FAMINE OF THE WORLD",
-    "verse": "“The time is surely coming,” says the Sovereign Lord, “when I will send a famine on the land—not a famine of bread or water but of hearing the Word of the Lord.” (Amos 8:11)",
+    "verse": "“The time is surely coming,” says the Sovereign Lord, “when I will send a famine on the land-not a famine of bread or water but of hearing the Word of the Lord.” (Amos 8:11)",
     "reflection": "The people had no appetite for God’s Word when prophets like Amos brought it. Because of their apathy, God said He would take away even the opportunity to hear His word. We have His Word, the Bible. But many still look everywhere for answers to life’s problems except in scriptures. You can help them by directing them to the Bible, showing them the parts that speak to their special needs and questions. God’s Word is available to us. Let us help people know it before a time comes when they can not find it.",
     "prayer": "Let us ask God to grant us the continual use of His Word and the sacraments, that through them we may be nurtured and strengthened.",
     "original_content": "message_id: 177b79ccf31c9c14\nsubject   : Subject: FAMINE OF THE WORLD (2-19-21)\nfrom      : Pastor Sather <pastor.sather5@gmail.com>\nto        : undisclosed-recipients:;\ndate      : Thu, 18 Feb 2021 18:07:23 -0600\n===================================================================\nBody (clean, unformatted):\n===================================================================\n*Today’s Verse:*\n\n*“The time is surely coming,” says the Sovereign Lord, “when I will send a\nfamine*\n\n*on the land—**not a famine of bread or water but of hearing the Word of\nthe Lord.”* (Amos 8:11)\n\n\n\n*Today’s Reflection:*\n\nThe people had no appetite for God’s Word when prophets like Amos brought\nit. Because of their apathy, God said He would take away even the\nopportunity to hear His word. We have His Word, the Bible. But many still\nlook everywhere for answers to life’s problems except in scriptures. You\ncan help them by directing them to the Bible, showing them\n\nthe parts that speak to their special needs and questions. God’s Word is\navailable to us. *Let us help people know it* *before a time comes when\nthey can not find it.*\n\n* Pastor Sather*\n\n\n\n*Let us ask God to grant us the continual *\n\n*use of His Word and the sacraments, that through them we may be nurtured\nand strengthened. *\n",
@@ -235,7 +315,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Psalm 119:105 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177c15f8a0083e82",
@@ -249,7 +334,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "James 5:14-15 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177c6816d94bebef",
@@ -263,7 +353,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Isaiah 35:1-2 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177cc1e6120d3bdd",
@@ -277,7 +372,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Luke 19:10 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177d0f0cc262c43a",
@@ -291,7 +391,12 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Revelation 21:23 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   },
   {
     "message_id": "177d65520abeec81",
@@ -305,6 +410,11 @@
     "found_reflection": true,
     "found_prayer": true,
     "reading": "Romans 6:4 AI",
-    "found_reading": true
+    "found_reading": true,
+    "ai_subject": false,
+    "ai_verse": false,
+    "ai_reading": false,
+    "ai_prayer": false,
+    "ai_reflection_corrected": false
   }
 ]
