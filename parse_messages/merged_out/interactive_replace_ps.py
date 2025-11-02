@@ -20,8 +20,10 @@ ABBR_TO_FULL = {
     "Isa": "Isaiah",
     "Mt": "Matthew",
     "Mat": "Matthew",
+    "Matt": "Matthew",
     "Pet": "Peter",
     "Cor": "Corinthians",
+    "COR": "Corinthians",
     "Pro": "Proverbs",
     "Jn": "John",
     "Dan": "Daniel",
@@ -51,6 +53,8 @@ ABBR_TO_FULL = {
     "Hab": "Habakkuk",
     "Tim": "Timothy",
     "Lev": "Leviticus",
+    "Jos": "Joshua",
+    "Mal": "Malachi",
 }
 
 # Build combined regex: whole-word abbr with optional dot and optional space
