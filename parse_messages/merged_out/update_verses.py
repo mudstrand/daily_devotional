@@ -1,1 +1,0 @@
-sandbox/update_verses.py
