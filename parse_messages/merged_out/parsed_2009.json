@@ -1,6 +1,6 @@
 [
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -18,7 +18,7 @@
     "original_verse": "Jeremiah 31:26",
     "original_verse_source": "",
     "original_verse_text": "At this, I woke up and looked around. My sleep had been very sweet.",
-    "prayer": "Merciful God, fill our weary souls with Your perfect peace and replenish our energy as we come to You. Refocus our minds and hearts, that we may wake feeling comforted and loved by Your boundless grace. (AI)",
+    "prayer": "Merciful God, fill our weary souls with Your perfect peace and replenish our energy as we come to You. Refocus our minds and hearts, that we may wake feeling comforted and loved by Your boundless grace.",
     "reading": "Psalm 23:1-3",
     "reflection": "God Invites You to come to Him and He will restore and replenish your energy. He will refocus your mind and heart. He will supply your weary soul and you will wake feeling comforted and loved. Dear Lord, fill my weary soul with Your perfect peace.",
     "subject": "Rest Your Weary Soul",
@@ -27,7 +27,7 @@
     "verse_text": "At this, I woke up and looked around. My sleep had been very sweet."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -45,7 +45,7 @@
     "original_verse": "Hebrews 12:2",
     "original_verse_source": "",
     "original_verse_text": "“Has the Lord spoken only through Moses?” they asked. “Hasn’t He also spoken through us?” and the Lord heard this.",
-    "prayer": "Gracious God, help us to overcome jealousy and truly celebrate the gifts and achievements of others, recognizing that each person's relationship with You is unique and valuable. May we find contentment in our own spiritual journey and support one another with genuine joy and appreciation. (AI)",
+    "prayer": "Gracious God, help us to overcome jealousy and truly celebrate the gifts and achievements of others, recognizing that each person's relationship with You is unique and valuable. May we find contentment in our own spiritual journey and support one another with genuine joy and appreciation.",
     "reading": "Numbers 12:2",
     "reflection": "IN THE ABOVE verse, when Mariam and\nAaron witnessed God using Moses, they\nwere jealous. Praising others and being\nhappy for other’s spiritual or natural gifts\ncan be difficult. But when you recognize\nthat your work and your relationship with\nGod is equally important, you can truly appreciate the blessings of others and be positive about their achievements.",
     "subject": "Be an Encourage",
@@ -54,7 +54,7 @@
     "verse_text": "“Has the Lord spoken only through Moses?” they asked. “Hasn’t He also spoken through us?” and the Lord heard this."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -72,7 +72,7 @@
     "original_verse": "Proverbs 13:6",
     "original_verse_source": "",
     "original_verse_text": "Godliness helps people all through life, while the evil are\ndestroyed by their wickedness.",
-    "prayer": "Lord, anchor my heart in Your wisdom so that each choice I\nmake moves me toward goodness, order, and integrity. Train\nmy will to obey You quickly, guard me from paths that lead\nto confusion and harm, and strengthen me to walk securely in\nYour ways. May my daily decisions reflect a life safeguarded\nby Your truth. Amen. (AI)",
+    "prayer": "Lord, anchor my heart in Your wisdom so that each choice I\nmake moves me toward goodness, order, and integrity. Train\nmy will to obey You quickly, guard me from paths that lead\nto confusion and harm, and strengthen me to walk securely in\nYour ways. May my daily decisions reflect a life safeguarded\nby Your truth. Amen.",
     "reading": "Galatians 6:7-8",
     "reflection": "Godly living safeguards your life. Every choice for good\nsets into motion other opportunities for good. Evil choices\nfollow the same patter, but in an opposite direction. Each\ndecision you make to obey God will bring a greater sense of\norder to your life, while each decision to disobey will\nbring confusion and destruction. The right choices you make\nreflect your integrity. Obedience brings the greatest\nsafeguard and security.",
     "subject": "Right Your Wrongs",
@@ -81,7 +81,7 @@
     "verse_text": "Godliness helps people all through life, while the evil are\ndestroyed by their wickedness."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -99,7 +99,7 @@
     "original_verse": "John 10:10",
     "original_verse_source": "",
     "original_verse_text": "The thief’s purpose is to steal and kill and  destroy. My purpose is to give life in all its  fullness.",
-    "prayer": "Lord of Life, thank you for the abundant and eternal life you offer through Jesus Christ, filled with forgiveness, love, and guidance. May we gratefully accept and fully embrace this rich, overflowing life that begins now and continues forever. (AI)",
+    "prayer": "Lord of Life, thank you for the abundant and eternal life you offer through Jesus Christ, filled with forgiveness, love, and guidance. May we gratefully accept and fully embrace this rich, overflowing life that begins now and continues forever.",
     "reading": "John 15:11",
     "reflection": "In contrast to the thief who takes life, Jesus gives life.\nThe life He gives right now is abundantly rich and full. It is eternal, yet it begins immediately. Life in Christ is lived on a higher plain because of his overflowing forgiveness, love, and guidance\nHave you taken Christ’s offer of life?",
     "subject": "The Secret to Abundant Life",
@@ -108,7 +108,7 @@
     "verse_text": "The thief’s purpose is to steal and kill and  destroy. My purpose is to give life in all its  fullness."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -126,7 +126,7 @@
     "original_verse": "Acts 5:3",
     "original_verse_source": "",
     "original_verse_text": "Peter said, Ananias, why has Satan filled your heart? You lied to the Holy Spirit and you kept some of the money for yourself.",
-    "prayer": "Almighty God, protect us from the schemes of the enemy and strengthen our faith to resist temptation. Help us to stand firm in the knowledge of Christ's ultimate victory, eagerly awaiting His return. (AI)",
+    "prayer": "Almighty God, protect us from the schemes of the enemy and strengthen our faith to resist temptation. Help us to stand firm in the knowledge of Christ's ultimate victory, eagerly awaiting His return.",
     "reading": "Ephesians 6:11-12",
     "reflection": "Even though the Holy Spirit had come, the believers\nwere not immune to Satan’s temptations. Although\nSatan was defeated by Christ at the cross he was\nactively trying to make believers stumble-just as he\nis still at it today (Ephesians 6:12; I Peter 5:8) Thank the Lord\nSatan’s overthrow is inevitable, but it will not occur until the last days, when Jesus returns to judge the world (Revelation 20:10).",
     "subject": "Keeping Your Eyes Fixed on Jesus",
@@ -135,7 +135,7 @@
     "verse_text": "Peter said, Ananias, why has Satan filled your heart? You lied to the Holy Spirit and you kept some of the money for yourself."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -153,7 +153,7 @@
     "original_verse": "Colossians 4:2",
     "original_verse_source": "",
     "original_verse_text": "Devote yourself to prayer with an alert mind and a thankful heart.",
-    "prayer": "Faithful God, strengthen our resolve to persist in prayer, even when answers seem delayed, and help us trust that You are always listening and working for our good. Grant us the patience and alertness to discern Your will through our prayers and the faith to accept Your perfect timing. (AI)",
+    "prayer": "Faithful God, strengthen our resolve to persist in prayer, even when answers seem delayed, and help us trust that You are always listening and working for our good. Grant us the patience and alertness to discern Your will through our prayers and the faith to accept Your perfect timing.",
     "reading": "Ephesians 6:18",
     "reflection": "Have you ever grown tired of praying for something\nor someone? Paul says we should “devote” ourselves\nto prayer and be “alert” in prayer. Our persistence is\nan expression of our faith that God answers prayers.\nFaith should’t die if the answers come slowly, for\nthe delay may be God’s way of working His will in\nour life. When you feel tired of praying, know that\nGod is present, always listening always answering maybe not in ways you hoped, but in ways that He knows are best.",
     "subject": "Pray Persistently Believing",
@@ -162,7 +162,7 @@
     "verse_text": "Devote yourself to prayer with an alert mind and a thankful heart."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -180,7 +180,7 @@
     "original_verse": "Psalm 27:14",
     "original_verse_source": "",
     "original_verse_text": "Wait for the Lord: be strong and take heart and wait  for  the Lord.",
-    "prayer": "Gracious God, grant us the patience and trust to wait upon Your perfect timing, even when the path ahead seems uncertain or delayed. Help us surrender our will to Yours, knowing that You hold every moment of our lives in Your loving hands. (AI)",
+    "prayer": "Gracious God, grant us the patience and trust to wait upon Your perfect timing, even when the path ahead seems uncertain or delayed. Help us surrender our will to Yours, knowing that You hold every moment of our lives in Your loving hands.",
     "reading": "Psalm 37:7",
     "reflection": "David knew from experience what it meant to wait for\nthe Lord. He had been anointed king at the age of 16\nbut didn’t become king until he was 30. During the interim, he was chased through the wilderness by jealous king Saul. Davie had to wait on God for the fulfillment of his promise to reign. Later, after becoming king he was chased by his rebellious son. Some Times God Calls us to wait and not act.\nOur job is to continue to trust Him along the way. To surrender our will to His, to exchange our timing for His KNOWING that He holds every moment in His hands.",
     "subject": "The Hardest Part",
@@ -189,7 +189,7 @@
     "verse_text": "Wait for the Lord: be strong and take heart and wait  for  the Lord."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": false,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -207,7 +207,7 @@
     "original_verse": "Psalm 19:7",
     "original_verse_source": "",
     "original_verse_text": "The law of the Lord is perfect, reviving the soul. The decrees of the Lord are trustworthy, making wise the simple.",
-    "prayer": "Holy God, help us to see Your laws as a source of wisdom, joy, and guidance in our lives, rather than as burdensome restrictions. May we embrace Your commandments as a light for our path, warning us of dangers and leading us toward true fulfillment and success. (AI)",
+    "prayer": "Holy God, help us to see Your laws as a source of wisdom, joy, and guidance in our lives, rather than as burdensome restrictions. May we embrace Your commandments as a light for our path, warning us of dangers and leading us toward true fulfillment and success.",
     "reading": "Psalm 19:8-11",
     "reflection": "When we think of the law, we often think of\nsomething that keeps us from having fun. But\nhere we see the opposite. God’s laws revive us,\nmake us wise, bring joy to the heart, give us\ninsight, warn us, and reward us. God’s laws\nare guidelines and lights for our path, rather\nthan chains to our feet and hands. They point at danger to warn us, then point at success to guide us.",
     "subject": "God's Words are Flawless",
@@ -216,7 +216,7 @@
     "verse_text": "The law of the Lord is perfect, reviving the soul. The decrees of the Lord are trustworthy, making wise the simple."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -234,7 +234,7 @@
     "original_verse": "Colossians 1:28-29",
     "original_verse_source": "",
     "original_verse_text": "So everywhere we go we tell everyone about Christ. We warn them and teach them with all the wisdom God has given us, for we want to present them to God, perfect in their relationship to Christ. I work very hard at this, as I depend on Christ’s mighty power that works within us.",
-    "prayer": "Lord of Life, inspire us to share the Good News of salvation through Christ with everyone we encounter, warning them lovingly of the consequences of separation from You and teaching them about the hope found in faith. Guide us to those who need to hear this message, and give us the courage and wisdom to speak Your truth with compassion and clarity. (AI)",
+    "prayer": "Lord of Life, inspire us to share the Good News of salvation through Christ with everyone we encounter, warning them lovingly of the consequences of separation from You and teaching them about the hope found in faith. Guide us to those who need to hear this message, and give us the courage and wisdom to speak Your truth with compassion and clarity.",
     "reading": "Ephesians 4:15",
     "reflection": "Christ’s message is for everyone; so everywhere Paul and Timothy went, they brought the Good News to all who would listen. An effective presentation of the Good News includes warning and teaching.\nThe warning is that without Christ, people are doomed to eternal separation from God. The teaching is that salvation is available through faith in Christ. As Christ works in you, tell others about Him, warning and teaching\nthem in love. Whom do you know who needs to hear this message.",
     "subject": "Depend on Christ's Power",
@@ -243,7 +243,7 @@
     "verse_text": "So everywhere we go we tell everyone about Christ. We warn them and teach them with all the wisdom God has given us, for we want to present them to God, perfect in their relationship to Christ. I work very hard at this, as I depend on Christ’s mighty power that works within us."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -261,7 +261,7 @@
     "original_verse": "Romans 8:26, 27",
     "original_verse_source": "",
     "original_verse_text": "The Holy Spirit helps us in our distress. For we don’t even know what we should pray for, nor how we should pray. But the Holy Spirit prays for us with groaning that cannot be expressed in words.-And the Father who knows all hearts knows what the Spirit is saying, for the Spirit pleads for us believers  in harmony with God’s own will.",
-    "prayer": "Faithful God, we thank You for the gift of the Holy Spirit who intercedes for us when we struggle to find the right words to pray. Help us to trust in Your perfect will and to approach You without fear, knowing that You always hear us and do what is best. (AI)",
+    "prayer": "Faithful God, we thank You for the gift of the Holy Spirit who intercedes for us when we struggle to find the right words to pray. Help us to trust in Your perfect will and to approach You without fear, knowing that You always hear us and do what is best.",
     "reading": "Ephesians 6:18",
     "reflection": "As a believer, you are not left to your own\nresources to cope with your problems. Even\nwhen you don’t know the right words to pray,\nthe Holy Spirit prays with and for you, and\nGod answers. With God helping you pray,\nyou don’t need to be afraid to come before\nHim.\nAsk the Holy Spirit to intercede for\nyou,” in harmony with God’s will.” Then, when you bring your request to God trust that He will always do what is best.",
     "subject": "Our Needed Help",
@@ -270,7 +270,7 @@
     "verse_text": "The Holy Spirit helps us in our distress. For we don’t even know what we should pray for, nor how we should pray. But the Holy Spirit prays for us with groaning that cannot be expressed in words.-And the Father who knows all hearts knows what the Spirit is saying, for the Spirit pleads for us believers  in harmony with God’s own will."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -288,7 +288,7 @@
     "original_verse": "Job 36:26",
     "original_verse_source": "",
     "original_verse_text": "How great is God-beyond our understanding! The  number of His years is past finding out.",
-    "prayer": "Eternal God, as we ponder Your incomprehensible nature, grant us the humility to seek You continually for wisdom and guidance in life's uncertainties. May we find peace in knowing You, even as we acknowledge the vastness of what remains unknown to us. (AI)",
+    "prayer": "Eternal God, as we ponder Your incomprehensible nature, grant us the humility to seek You continually for wisdom and guidance in life's uncertainties. May we find peace in knowing You, even as we acknowledge the vastness of what remains unknown to us.",
     "reading": "Psalm 145:3",
     "reflection": "It goes without saying that God is incomprehensible; we cannot know Him completely. We can have some knowledge about Him, for the Bible is full of details about who God is, how can we know Him, and how we have an eternal relationship with Him. But we can never know enough to answer all of life’s questions (Ecclesiastes 3:11), to predict our future, or to manipulate God for our own ends. Life always creates more questions than we have answers, and we must constantly go to God for fresh insights into life’s dilemmas. (See Job 37:19-24)",
     "subject": "Beyond Comprehension",
@@ -297,7 +297,7 @@
     "verse_text": "How great is God-beyond our understanding! The  number of His years is past finding out."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -315,7 +315,7 @@
     "original_verse": "1 Corinthians 15:58",
     "original_verse_source": "",
     "original_verse_text": "So, my dear brothers and sisters, be strong and steady, always enthusiastic about the Lord’s  work, for you know that nothing you do for the Lord is ever useless.",
-    "prayer": "Gracious God, help us to serve you with enthusiasm and perseverance, trusting that our efforts are never in vain because of Christ's victory. May we be encouraged to seize every opportunity to do your work, knowing that the resurrection gives eternal significance to all we do in your name. (AI)",
+    "prayer": "Gracious God, help us to serve you with enthusiasm and perseverance, trusting that our efforts are never in vain because of Christ's victory. May we be encouraged to seize every opportunity to do your work, knowing that the resurrection gives eternal significance to all we do in your name.",
     "reading": "Galatians 6:9",
     "reflection": "Paul says because of the resurrection, nothing we\ndo is useless. Sometimes we become apathetic\nabout serving the Lord because we don’t see any\nresults. Knowing that Christ has won the ultimate victory should affect the way we live right now. Don’t let discouragement over an apparent lack of results keep you from doing the work of the Lord enthusiastically as you have an opportunity.",
     "subject": "Grasp the Opportunity",
@@ -324,7 +324,7 @@
     "verse_text": "So, my dear brothers and sisters, be strong and steady, always enthusiastic about the Lord’s  work, for you know that nothing you do for the Lord is ever useless."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -342,7 +342,7 @@
     "original_verse": "Acts 16:25",
     "original_verse_source": "",
     "original_verse_text": "About midnight Paul and Silas were praying and singing hymns to God, and the other prisoners  were listening to them.",
-    "prayer": "Almighty God, grant us the strength to praise You even in our darkest hours, following the example of Paul and Silas who worshiped You despite their suffering. Help us to remain faithful witnesses to Your glory, inspiring others through our unwavering trust in You, no matter the circumstances we face. (AI)",
+    "prayer": "Almighty God, grant us the strength to praise You even in our darkest hours, following the example of Paul and Silas who worshiped You despite their suffering. Help us to remain faithful witnesses to Your glory, inspiring others through our unwavering trust in You, no matter the circumstances we face.",
     "reading": "Philippians 4:4-6",
     "reflection": "It is easy to be happy when everything is going your way, but how you respond to dark and difficult times is a test of true character. In our verse today despite their suffering, Paul and Silas praise God. They worship in the worst of circumstances and inspire others by their actions. Dear Lord help me to hold on to faith when suffering pain or encountering other difficulties, so that I maybe a testimony to your glory.",
     "subject": "Praising on Dark Days",
@@ -351,7 +351,7 @@
     "verse_text": "About midnight Paul and Silas were praying and singing hymns to God, and the other prisoners  were listening to them."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -369,7 +369,7 @@
     "original_verse": "Romans 15:5-6",
     "original_verse_source": "",
     "original_verse_text": "May God who gives patience and encouragement, help you live in complete harmony with each other-each  with the attitude of Christ Jesus toward the other- Then all of you can join together with one voice, giving praise and glory to God, the Father of our Lord Jesus Christ.",
-    "prayer": "Loving God, help us to grow in our faith and knowledge of Jesus, so that we may better embody His attitude of love toward all our fellow Christians. May we cultivate a spirit of unity and compassion in our daily lives, reflecting the love You have shown us. (AI)",
+    "prayer": "Loving God, help us to grow in our faith and knowledge of Jesus, so that we may better embody His attitude of love toward all our fellow Christians. May we cultivate a spirit of unity and compassion in our daily lives, reflecting the love You have shown us.",
     "reading": "Philippians 2:5-7",
     "reflection": "Just as we take Jesus’ view on the authority of Scripture,\nthe nature of heaven, and the resurrection, we are to have His attitude of love toward other Christians as well. As we grow in faith and come to know Jesus better, we will become more capable of maintaining this attitude of loving unity throughout each day.",
     "subject": "Living with a Christ-Like Attitude",
@@ -432,7 +432,7 @@
     "verse_text": "The one siting on the throne said, \"I am making all things new!\" And He also said, \"write this down for what I tell you is trustworthy and true.\""
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -450,7 +450,7 @@
     "original_verse": "Matthew 7:1-2",
     "original_verse_source": "",
     "original_verse_text": "Stop judging others, and you will not be judged.for others will treat you as you treat them. Whatever measure you use in judging others, it will be used to measure how you are judged.",
-    "prayer": "Holy God, help us to examine our own hearts and actions before passing judgment on others, and grant us the humility to recognize our own faults and the grace to forgive those around us. May we strive to embody the love and compassion of Christ in all our interactions, seeking to uplift and support one another rather than criticize. (AI)",
+    "prayer": "Holy God, help us to examine our own hearts and actions before passing judgment on others, and grant us the humility to recognize our own faults and the grace to forgive those around us. May we strive to embody the love and compassion of Christ in all our interactions, seeking to uplift and support one another rather than criticize.",
     "reading": "Luke 6:41-42",
     "reflection": "Jesus tells us to examine our own motives and conduct instead of judging others. The traits that bother us in others are often the habits we have ourselves. Our bad habits and behavior patterns are the very ones that we most want to change in others. Do you find it easy to magnify other’s faults while excusing your own? If you are ready to criticize someone, check to see if you deserve the same criticism.\nJudge yourself first, and then lovingly forgive and help your neighbor.",
     "subject": "Lets Examine Our Motives",
@@ -459,7 +459,7 @@
     "verse_text": "Stop judging others, and you will not be judged.for others will treat you as you treat them. Whatever measure you use in judging others, it will be used to measure how you are judged."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -477,7 +477,7 @@
     "original_verse": "John 14:1-3",
     "original_verse_source": "",
     "original_verse_text": "Don’t be troubled. You trust in God, now trust in Me , there are many rooms in My Father’s home, and I am going to prepare a place for you .If this were not so, I would tell you plainly. When everything is ready, I will come and get you.",
-    "prayer": "Faithful God, strengthen our trust in Your Son's promise of eternal life, and help us to embrace the assurance of our heavenly home with unwavering faith. (AI)",
+    "prayer": "Faithful God, strengthen our trust in Your Son's promise of eternal life, and help us to embrace the assurance of our heavenly home with unwavering faith.",
     "reading": "John 14:6",
     "reflection": "Jesus’\nwords show that the way to eternal life, though unseen, is secure-as secure as your faith in Jesus. He has already prepared the way to eternal life. The only issue that may still be unsettled is your willingness to believe. Yes we can look forward to eternal life because Jesus has promised it to all who believe in Him. Although the details of eternity are unknown, we need not fear because Jesus is preparing it for us and will spend eternity with us.",
     "subject": "The Way is Prepared",
@@ -486,7 +486,7 @@
     "verse_text": "Don’t be troubled. You trust in God, now trust in Me , there are many rooms in My Father’s home, and I am going to prepare a place for you .If this were not so, I would tell you plainly. When everything is ready, I will come and get you."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -504,7 +504,7 @@
     "original_verse": "Mark 9:23",
     "original_verse_source": "",
     "original_verse_text": "What do you mean, “If I can?” Jesus asked. Anything is possible if a person believes.",
-    "prayer": "Almighty God, help us to trust in Your limitless power and align our desires with Your will, knowing that through faith in You, we can accomplish all that You call us to do. Grant us the humility to recognize our dependence on You and the wisdom to seek Your guidance in all our endeavors. (AI)",
+    "prayer": "Almighty God, help us to trust in Your limitless power and align our desires with Your will, knowing that through faith in You, we can accomplish all that You call us to do. Grant us the humility to recognize our dependence on You and the wisdom to seek Your guidance in all our endeavors.",
     "reading": "Matthew 17:20",
     "reflection": "Take note here, Jesus’ words do not mean that we can\nautomatically obtain anything we want if we just think\npositively.\nJesus really meant that anything is possible\nif we believe, because nothing is to difficult for God. We cannot have everything we pray for as if by magic, but with faith, we can have everything we need to serve Him. No matter how much faith we have, we never reach the point of being self-sufficient.",
     "subject": "Using Faith for the Right Reason",
@@ -513,7 +513,7 @@
     "verse_text": "What do you mean, “If I can?” Jesus asked. Anything is possible if a person believes."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -531,7 +531,7 @@
     "original_verse": "Matthew 14:16-19",
     "original_verse_source": "",
     "original_verse_text": "But Jesus replied,” ”That isn’t necessary-you feed them.” “Impossible!” they exclaimed. “We have only five loafs and two fish!” “Bring them here,” He said.  Then He told the people to sit down on the grass. And He took the five loafs and two fish, looked toward heaven, and asked God’s blessing on the food.",
-    "prayer": "Gracious God, help us to surrender our small gifts and resources to Your service, trusting that Your blessing will make them sufficient for great purposes. May we have the faith to place all we have in Your hands, knowing that You can multiply our offerings beyond our imagination. (AI)",
+    "prayer": "Gracious God, help us to surrender our small gifts and resources to Your service, trusting that Your blessing will make them sufficient for great purposes. May we have the faith to place all we have in Your hands, knowing that You can multiply our offerings beyond our imagination.",
     "reading": "Matthew 14:19-20",
     "reflection": "Jesus desires that we should surrender to is service the little we have, our small gifts and strengths and resources. The rest He will look after. His blessing will make the little suffice. Unbelief says that it is insufficient to come with the little we have for an enterprise so great! Faith says, Jesus asks for the little we have, and He will take it into His service. He will bless it until there is more than enough. When we lay our gift in the Lord’s hand (and not in any man’s) it will stretch as far as the Lord wills.",
     "subject": "The Lord Will Stretch Our Measly Gifts",
@@ -540,7 +540,7 @@
     "verse_text": "But Jesus replied,” ”That isn’t necessary-you feed them.” “Impossible!” they exclaimed. “We have only five loafs and two fish!” “Bring them here,” He said.  Then He told the people to sit down on the grass. And He took the five loafs and two fish, looked toward heaven, and asked God’s blessing on the food."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -558,7 +558,7 @@
     "original_verse": "Genesis 15:6",
     "original_verse_source": "",
     "original_verse_text": "And Abraham believed the Lord, and the Lord declared him righteous because of his faith.",
-    "prayer": "Holy God, help us to trust in You fully, knowing that it is our faith, not our deeds alone, that makes us right with You. May our actions flow naturally from a heart that believes in Your promises and Your character. (AI)",
+    "prayer": "Holy God, help us to trust in You fully, knowing that it is our faith, not our deeds alone, that makes us right with You. May our actions flow naturally from a heart that believes in Your promises and Your character.",
     "reading": "Romans 4:3",
     "reflection": "Although Abram had been demonstrating his faith\nThrough his actions, it was his belief in the Lord,\nnot his actions, that made Abram right with God\n(Romans 41:5). YES, we too, can have a right relation ship with God by trusting Him. Our outward actions,\nchurch attendance, prayer, good deeds-will not by\nthemselves make us right will Good. A right relationship is based on faith-the heartfelt inner confidence that God is who He says He is and does what He says He will do. Right actions will follow naturally as by products.",
     "subject": "A Right Relationship is a Heat-Felt Trust",
@@ -567,7 +567,7 @@
     "verse_text": "And Abraham believed the Lord, and the Lord declared him righteous because of his faith."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -585,7 +585,7 @@
     "original_verse": "Genesis 22:1-3a",
     "original_verse_source": "",
     "original_verse_text": "Later on God tested Abram’s faith and obedience. “Abraham!” God called. “Yes” he replied. “He I am.” “Take your son, your only son-yes, Isaac, whom you love so much-and go to the land of Moriah.\nSacrifice him there as a burn offering on  one of the mountains, which I will point out to you.” The next morning Abraham got up early. He saddled his donkey and took two of his servants with him, along with his son Isaac,",
-    "prayer": "Faithful God, as You refine our character through trials and challenges, grant us the strength to obey Your will even when it means surrendering our own desires. Help us to see Your purpose in our struggles and to grow in faith and obedience through every test we face. (AI)",
+    "prayer": "Faithful God, as You refine our character through trials and challenges, grant us the strength to obey Your will even when it means surrendering our own desires. Help us to see Your purpose in our struggles and to grow in faith and obedience through every test we face.",
     "reading": "Hebrews 11:17-19",
     "reflection": "God tested Abraham, not to trip him up and watch him fall, but to deepen his capacity to obey God and thus to develop his character. Just as fire refines ore to extract precious metals. I believe you will agree that God has refined us a time or two through diffi cult circumstance. When we are tested we can complain, or we can try to see how God is stretching us, to develop our character. Obeying God is often a struggle because it may mean giving up something we truly want. We should not expect our obedience to God to be easy or to come naturally.",
     "subject": "Perfecting Ones Faith",
@@ -594,7 +594,7 @@
     "verse_text": "Later on God tested Abram’s faith and obedience. “Abraham!” God called. “Yes” he replied. “He I am.” “Take your son, your only son-yes, Isaac, whom you love so much-and go to the land of Moriah.\nSacrifice him there as a burn offering on  one of the mountains, which I will point out to you.” The next morning Abraham got up early. He saddled his donkey and took two of his servants with him, along with his son Isaac,"
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -612,7 +612,7 @@
     "original_verse": "Habakkuk 2:4",
     "original_verse_source": "",
     "original_verse_text": "Look at the proud! They trust in themselves, and their lives are crooked.; but the righteous will live by their faith.",
-    "prayer": "Almighty God, grant us unwavering faith to trust in Your divine plan, even when we cannot see signs of hope in difficult times. Help us to live righteously, drawing strength from Your promises and guidance, as we navigate the challenges of this world. (AI)",
+    "prayer": "Almighty God, grant us unwavering faith to trust in Your divine plan, even when we cannot see signs of hope in difficult times. Help us to live righteously, drawing strength from Your promises and guidance, as we navigate the challenges of this world.",
     "reading": "Hebrews 11:1",
     "reflection": "The wicked Babylonians trusted in themselves and would fall, but the righteous live by their faith and trust in God. This verse has inspired countless Christ ians. Paul quotes It in Romans 1:17, and in Galatians, 3:11. The writer of Hebrewsquotes it in 10:38, just before the chap ter on faith.\nAnd it is helpful to all Christians who must live through difficult times without seeing signs of hope. Christians must trust that God is directing all things according to His purpose.",
     "subject": "Patiently Live by Faith",
@@ -621,7 +621,7 @@
     "verse_text": "Look at the proud! They trust in themselves, and their lives are crooked.; but the righteous will live by their faith."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -639,7 +639,7 @@
     "original_verse": "Matthew 6:30",
     "original_verse_source": "",
     "original_verse_text": "But if God so clothes the grass of the field, which  today is alive and tomorrow is thrown into the  oven, will He not much more clothe you? O you  of little faith!",
-    "prayer": "Gracious God, help us to trust in Your abundant provision and care for all Your creation, especially for us whom You have made in Your image. Increase our faith, that we may fully rely on Your goodness and generosity in every aspect of our lives. (AI)",
+    "prayer": "Gracious God, help us to trust in Your abundant provision and care for all Your creation, especially for us whom You have made in Your image. Increase our faith, that we may fully rely on Your goodness and generosity in every aspect of our lives.",
     "reading": "Matthew 6:25-26",
     "reflection": "God so clothes. Here we have an argument from the\nlesser to the greater. If God adorns common plants\nwith such beauty, how much more will He lavish\ngood things on the crown of His creation? Little faith! This criticism typically comes after people\nunderestimate God or His Son. How great is your faith.",
     "subject": "Anxiety is a Lack of True Faith",
@@ -648,7 +648,7 @@
     "verse_text": "But if God so clothes the grass of the field, which  today is alive and tomorrow is thrown into the  oven, will He not much more clothe you? O you  of little faith!"
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -666,7 +666,7 @@
     "original_verse": "Proverbs 29:2",
     "original_verse_source": "",
     "original_verse_text": "When the righteous are in authority, the people rejoice: but\nwhen the wicked beareth rule, the people mourn.",
-    "prayer": "Lord, grant us wisdom and discernment to honor You in how we\nsteward our vote. Raise up leaders of integrity, justice,\nand truth, and give Your people unity, courage, and peace as\nwe engage faithfully. Help us trust Your sovereignty while\nacting responsibly for the good of our communities and\nnation. Amen. (AI)",
+    "prayer": "Lord, grant us wisdom and discernment to honor You in how we\nsteward our vote. Raise up leaders of integrity, justice,\nand truth, and give Your people unity, courage, and peace as\nwe engage faithfully. Help us trust Your sovereignty while\nacting responsibly for the good of our communities and\nnation. Amen.",
     "reading": "Proverbs 14:34",
     "reflection": "What am I talking about? All we need to do is\nlisten to the news and see that Christians need\nto vote for people with Christian values or we\nwill no longer have a say in who will lead the\ncountry in the future. Our vote will no longer\nbe counted. The leader will be decided before\nhand.",
     "subject": "Christians Need to Stand Up and be Heard",
@@ -675,7 +675,7 @@
     "verse_text": "When the righteous are in authority, the people rejoice: but\nwhen the wicked beareth rule, the people mourn."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -693,7 +693,7 @@
     "original_verse": "Matthew 8:10",
     "original_verse_source": "",
     "original_verse_text": "Jesus was amazed, turning to the crowd He said, \"I tell you the truth, I haven’t seen faith life this in all the land of Israel!\"",
-    "prayer": "Lord of Life, open our hearts to recognize Your limitless power and unexpected ways of working in our lives, and strengthen our faith to trust in Your plans beyond our understanding. Help us to break free from rigid religious habits and embrace a dynamic, living relationship with You. (AI)",
+    "prayer": "Lord of Life, open our hearts to recognize Your limitless power and unexpected ways of working in our lives, and strengthen our faith to trust in Your plans beyond our understanding. Help us to break free from rigid religious habits and embrace a dynamic, living relationship with You.",
     "reading": "Matthew 15:8-9",
     "reflection": "Jesus told the crowd that many religious Jews who\nshould be in the Kingdom would be excluded be cause of their lack of faith. What would Jesus say\nabout your faith?\nWe must be careful not to become\nso set in our religious habits that we expect God to\nwork only in specific ways. Don’t limit God by your mindset and lack of faith. . .",
     "subject": "Be Careful Not to Limit God",
@@ -702,7 +702,7 @@
     "verse_text": "Jesus was amazed, turning to the crowd He said, \"I tell you the truth, I haven’t seen faith life this in all the land of Israel!\""
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -720,7 +720,7 @@
     "original_verse": "Matthew 21:21",
     "original_verse_source": "",
     "original_verse_text": "Then Jesus told them, \"I assure you that if you have  faith and do not doubt, you can do things like this and much more. You can even say to this mountain, ‘may  God lift you up and throw you into the sea,’ and it will happen.\"",
-    "prayer": "Faithful God, strengthen our trust in You so that we may approach the mountains in our lives with unwavering faith, bringing our challenges before You in earnest prayer. Help us to grow in confidence, knowing that with You, all things are possible. (AI)",
+    "prayer": "Faithful God, strengthen our trust in You so that we may approach the mountains in our lives with unwavering faith, bringing our challenges before You in earnest prayer. Help us to grow in confidence, knowing that with You, all things are possible.",
     "reading": "Matthew 17:20",
     "reflection": "Many have wondered about Jesus’ statement that if we have faith and do not doubt, we can move moun tains. Jesus of course, was not suggesting that His followers use prayer as some “magic” act. Instead, He was making a strong point about the disciples’ (and our) lack of faith.\nWhat kinds of mountains do you face? Have you really talked to God about them? How strong is your faith?",
     "subject": "Follow Up, of the Withered",
@@ -729,7 +729,7 @@
     "verse_text": "Then Jesus told them, \"I assure you that if you have  faith and do not doubt, you can do things like this and much more. You can even say to this mountain, ‘may  God lift you up and throw you into the sea,’ and it will happen.\""
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -747,7 +747,7 @@
     "original_verse": "Mark 5:38b-40",
     "original_verse_source": "",
     "original_verse_text": "(The disciples fear of the storm) \"Teacher, don’t you even care that we are going to drown?\" When He woke up, He rebuked the wind and said to the water, \"Quiet down.\" Suddenly the wind stopped, and there was a great calm. And He asked them, \"why are you so afraid? Do you still have no faith in Me?\"",
-    "prayer": "Almighty God, calm the storms that rage within us and grant us the faith to trust in Your unfailing care, even when we feel overwhelmed. Help us to resist fear and anxiety, turning instead to You for strength and peace in every circumstance. (AI)",
+    "prayer": "Almighty God, calm the storms that rage within us and grant us the faith to trust in Your unfailing care, even when we feel overwhelmed. Help us to resist fear and anxiety, turning instead to You for strength and peace in every circumstance.",
     "reading": "Matthew 6:25-27",
     "reflection": ":\nThe disciples panicked because the storm threatened to destroy them all, and Jesus seemed unaware and unconcerned. Theirs was a physical storm, but storms also come in other forms. Think about the storms in your life-the situations that cause you great anxiety.\nWhatever your difficulty, you have two options; you can worry and assume that Jesus no longer cares, or you can resist fear putting your trust in Him. When you feel like panicking. confess your need for God andthen trust Him to care for you.",
     "subject": "Calming Storms",
@@ -756,7 +756,7 @@
     "verse_text": "(The disciples fear of the storm) \"Teacher, don’t you even care that we are going to drown?\" When He woke up, He rebuked the wind and said to the water, \"Quiet down.\" Suddenly the wind stopped, and there was a great calm. And He asked them, \"why are you so afraid? Do you still have no faith in Me?\""
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -774,7 +774,7 @@
     "original_verse": "Luke 7:50",
     "original_verse_source": "",
     "original_verse_text": "(To the woman who anointed Jesus’ feet) Jesus said to the woman, \"Your faith has saved you; go in peace.\"",
-    "prayer": "Merciful God, help us to fully grasp the depth of Your forgiveness and the vastness of Your love, that we may respond with overflowing gratitude and extend that same mercy to others. (AI)",
+    "prayer": "Merciful God, help us to fully grasp the depth of Your forgiveness and the vastness of Your love, that we may respond with overflowing gratitude and extend that same mercy to others.",
     "reading": "Ephesians 2:4-5",
     "reflection": "Overflowing love is the natural response to forgive ness and the appropriate consequence of faith. But only those who realize the depth of their sin can appre ciate the complete forgiveness God offers them. Jesus has rescued all of His followers, whether they were once extremely wicked or conventionally good from\neternal death. But the Pharisees believed that only God could forgive sins, so they wondered why this man Jesus was saying that the woman’s sins were forgiven. They did not grasp the fact that Jesus was indeed God. Do you appreciate the wideness of God’s mercy? Are you grateful for His forgiveness?",
     "subject": "The Power to Forgive",
@@ -783,7 +783,7 @@
     "verse_text": "(To the woman who anointed Jesus’ feet) Jesus said to the woman, \"Your faith has saved you; go in peace.\""
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -801,7 +801,7 @@
     "original_verse": "Luke 17:5-6",
     "original_verse_source": "",
     "original_verse_text": "One day the apostles said to the Lord, \"We need more faith; tell us how to get it.\" Even if you had faith as small as a mustard seed, the Lord answered, \"you could say to the mulberry tree, may God uproot you  and throw you into the sea,’ and it would obey you.\"",
-    "prayer": "Gracious God, help us cultivate a genuine faith that leads to complete trust and humble obedience to Your will. May we focus not on the quantity of our faith, but on its quality, rooted in Your all-powerful nature and expressed through our willingness to follow Your guidance in all things. (AI)",
+    "prayer": "Gracious God, help us cultivate a genuine faith that leads to complete trust and humble obedience to Your will. May we focus not on the quantity of our faith, but on its quality, rooted in Your all-powerful nature and expressed through our willingness to follow Your guidance in all things.",
     "reading": "Matthew 17:20",
     "reflection": "The disciples’ request was genuine, they wanted the faith necessary for such radical forgiveness. But Jesus did not directly answer their question because the amount of faith is not as important as its genuineness. What is faith?\nIt is complete trust and loyalty to God that results in a willingness to do His will.\nFaith is not something we use to put on a show for others. It is a complete and humble obedience to God’s will, readiness to do what ever He calls us to do. This amount of faith is not as important as the right kind of faith-Faith in our all-powerful God.",
     "subject": "Questioning Our Faith",
@@ -810,7 +810,7 @@
     "verse_text": "One day the apostles said to the Lord, \"We need more faith; tell us how to get it.\" Even if you had faith as small as a mustard seed, the Lord answered, \"you could say to the mulberry tree, may God uproot you  and throw you into the sea,’ and it would obey you.\""
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -828,7 +828,7 @@
     "original_verse": "Acts 3:16",
     "original_verse_source": "",
     "original_verse_text": "Peter says to the crowd, \"the name of Jesus has healed this man-and you know how lame he was before. Faith in Jesus’ name has caused the healing before your very eyes.\"",
-    "prayer": "Lord Jesus, we humbly acknowledge that all power and authority belong to You alone, and we pray for the faith to use Your name with reverence and trust. Help us to remember that it is Your presence, not just the invocation of Your name, that gives our prayers their true power. (AI)",
+    "prayer": "Lord Jesus, we humbly acknowledge that all power and authority belong to You alone, and we pray for the faith to use Your name with reverence and trust. Help us to remember that it is Your presence, not just the invocation of Your name, that gives our prayers their true power.",
     "reading": "James 5:14-15",
     "reflection": "Jesus not the apostles, received the glory for the healing of the lame man. In those days a man’s name represented his character. it stood for his authority and power. By using Jesus’ name, Peter showed who gave him the authority and power to heal, the apostles did not emphasize what they could do but what God could do through them. Jesus’ name is not to be used as magic-it must be used in faith. When we pray in Jesus name, we must remember that it is Christ himself not merely the sound of His name, that gives our prayers their power.",
     "subject": "Faith That Causes Healing",
@@ -837,7 +837,7 @@
     "verse_text": "Peter says to the crowd, \"the name of Jesus has healed this man-and you know how lame he was before. Faith in Jesus’ name has caused the healing before your very eyes.\""
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -855,7 +855,7 @@
     "original_verse": "1 Thessalonians 5:17",
     "original_verse_source": "",
     "original_verse_text": "Pray without ceasing.",
-    "prayer": "Father, thank You for the astonishing privilege and gracious\ncommand to pray. Teach me to live in continual conversation\nwith You—bringing every anxiety, request, and gratitude into\nYour presence. Form in me a watchful, thankful heart that\ntrusts Your nearness and obeys Your call to pray in all\nthings. Amen. (AI)",
+    "prayer": "Father, thank You for the astonishing privilege and gracious\ncommand to pray. Teach me to live in continual conversation\nwith You—bringing every anxiety, request, and gratitude into\nYour presence. Form in me a watchful, thankful heart that\ntrusts Your nearness and obeys Your call to pray in all\nthings. Amen.",
     "reading": "Philippians 4:6-7",
     "reflection": "In I Thessalonians 5:17 we are told, “Pray without ceasing.” In\nColossians 4:2 it says, Continue in prayer and watch in the same\nwith thanks giving In Philippians 4:6 we are told to, “Be anx ious for nothing, but in everything by prayer and\nsupplication with thanksgiving, let your requests be known\nto God.” What we see here is, the greatest of all privileges\nwhich is not only allowed, but we are directed to do it. To\nlet us pray would be marvelous, but He commands us. This is\ntruly amazing!",
     "subject": "Call to Pray",

@@ -1,6 +1,6 @@
 [
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -18,7 +18,7 @@
     "original_verse": "Hebrews 11:1",
     "original_verse_source": "",
     "original_verse_text": "What is faith? It is the confident assurance that what  we hope for is going to happen. It is the evidence of things we cannot yet see.",
-    "prayer": "Loving God, fill us with the childlike excitement and trust that comes from knowing Your goodness, and help us anticipate with joy the fresh surprises You have in store for us each day. May our faith grow ever stronger as we remember Your faithfulness and look forward to Your continued blessings in our lives. (AI)",
+    "prayer": "Loving God, fill us with the childlike excitement and trust that comes from knowing Your goodness, and help us anticipate with joy the fresh surprises You have in store for us each day. May our faith grow ever stronger as we remember Your faithfulness and look forward to Your continued blessings in our lives.",
     "reading": "Hebrews 11:6",
     "reflection": "Do you remember how you felt when you were very young and your birthday approached? You were ex cited and anxious.You knew you would certainly receive gifts and other special treats.\nBut somethings would be a surprise. Birthdays combine assurance and anticipation and so does faith! Faith is the conviction based on past experiences that God’s new and fresh surprises will surely be ours.",
     "subject": "True Faith = Assurance",
@@ -27,7 +27,7 @@
     "verse_text": "What is faith? It is the confident assurance that what  we hope for is going to happen. It is the evidence of things we cannot yet see."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -45,7 +45,7 @@
     "original_verse": "James 1:13, 14",
     "original_verse_source": "",
     "original_verse_text": "Let no one say when he is tempted, “I am tempted  by God,”f or God cannot be tempted by evil, nor  does He Himself tempt anyone. Temptation come  from the lure of our own evil desires.",
-    "prayer": "Holy God, grant us the strength to resist temptation and the wisdom to turn to You in times of trial. Help us grow in our faith and dependence on Christ as we face life's challenges, always choosing to obey Your Word. (AI)",
+    "prayer": "Holy God, grant us the strength to resist temptation and the wisdom to turn to You in times of trial. Help us grow in our faith and dependence on Christ as we face life's challenges, always choosing to obey Your Word.",
     "reading": "James 4:7",
     "reflection": "People who live for God often wonder why they still have temptations.\nDoes God still tempt them? God tests people, but He does not tempt them by trying to seduce them to sin.\nGod allows Satan to tempt people, however, in order to refine their faith. And to help them grow in their dependence on Christ. We can resist the temptation to sin by turning to God for strength and choosing to obey His Word.",
     "subject": "Not God's Fault",
@@ -54,7 +54,7 @@
     "verse_text": "Let no one say when he is tempted, “I am tempted  by God,”f or God cannot be tempted by evil, nor  does He Himself tempt anyone. Temptation come  from the lure of our own evil desires."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -72,7 +72,7 @@
     "original_verse": "Psalm 27:14",
     "original_verse_source": "",
     "original_verse_text": "Wait patiently for the Lord. Be brave and  courageous.  Yes, wait patiently for the Lord.",
-    "prayer": "Gracious God, help us to trust in Your perfect timing and to use periods of waiting as opportunities for growth and renewal. Teach us patience and perseverance as we seek Your will, knowing that You are always working for our good. (AI)",
+    "prayer": "Gracious God, help us to trust in Your perfect timing and to use periods of waiting as opportunities for growth and renewal. Teach us patience and perseverance as we seek Your will, knowing that You are always working for our good.",
     "reading": "Lamentations 3:25-26",
     "reflection": "David knew from experience what it meant to wait for the Lord. He had been anointed king at age 16 but didn’t become king until he was 30. During the interim, he was chased through the wilderness by jealous king Saul.\nDavid had to wait on God for the fulfillment of his promise to reign. Later, after becoming king, He was chased by his rebellious son, Absalom. Waiting for God is not easy Often it seems that He isn’t answering our prayers or doesn’t understand the urgency of our situation. That kind of thinking implies that God is not in control or is not fair. But God IS worth waiting for (Lamentations 3:24-26 calls us to hope in and wait for the Lord because often God uses times of waiting to refresh, renew, and teach us. Make good use of your waiting times by discov ering what God may be trying to teach you in them.",
     "subject": "Can You Wait",
@@ -81,7 +81,7 @@
     "verse_text": "Wait patiently for the Lord. Be brave and  courageous.  Yes, wait patiently for the Lord."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -99,7 +99,7 @@
     "original_verse": "Exodus 14:15",
     "original_verse_source": "",
     "original_verse_text": "The Lord said to Moses, “Why are you crying out to Me! Use your shepherd’s staff-hold it over the water, and a path will open before you through the sea. Then all the people of Israel will pass through on dry ground.",
-    "prayer": "Almighty God, grant us the courage to act decisively when we know Your will, and help us discern when it's time to move forward in faith rather than lingering in prayer. Guide our steps as we seek to balance contemplation with action in our daily walk with You. (AI)",
+    "prayer": "Almighty God, grant us the courage to act decisively when we know Your will, and help us discern when it's time to move forward in faith rather than lingering in prayer. Guide our steps as we seek to balance contemplation with action in our daily walk with You.",
     "reading": "Joshua 1:9",
     "reflection": "The Lord told Moses to stop praying and get moving!\nPrayer must have a vital place in our lives, but there\nis also a place for action. Sometimes we know what\nto do but we pray for more guidance as an excuse to\npostpone doing it. If we know what we should do, then it's time to get moving,",
     "subject": "A Time to Pray a Time to Act",
@@ -108,7 +108,7 @@
     "verse_text": "The Lord said to Moses, “Why are you crying out to Me! Use your shepherd’s staff-hold it over the water, and a path will open before you through the sea. Then all the people of Israel will pass through on dry ground."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -126,7 +126,7 @@
     "original_verse": "Joshua 1:9",
     "original_verse_source": "",
     "original_verse_text": "I hereby command you, be strong and courageous;  do not be frightened or dismayed, for the Lord your God is with you wherever you go.",
-    "prayer": "Faithful God, grant us the courage to face the challenges and uncertainties in our nation, remembering Your promise to be with us always. Help us to rely on Your power and promises daily, finding strength and hope in Your unfailing presence. (AI)",
+    "prayer": "Faithful God, grant us the courage to face the challenges and uncertainties in our nation, remembering Your promise to be with us always. Help us to rely on Your power and promises daily, finding strength and hope in Your unfailing presence.",
     "reading": "Psalm 46:1-2",
     "reflection": "Since Covig took over our country-and the chall enges about the election being a farse the country has been in turmoil, and we even hear that our democracy is being threatened. Let us put to\nmemory . . . “The Lord your God will be with you wherever you go.” Only He can give us the courage to face life and death. May we be moved to call up on His power and promises daily.",
     "subject": "Never Alone",
@@ -135,7 +135,7 @@
     "verse_text": "I hereby command you, be strong and courageous;  do not be frightened or dismayed, for the Lord your God is with you wherever you go."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -153,7 +153,7 @@
     "original_verse": "Psalm 149:3-5",
     "original_verse_source": "",
     "original_verse_text": "Praise His name with dancing, accompanied by tambourine and harp. The Lord delights in His  people; He crowns the humble with salvation.  Let the faithful rejoice in this honor. Let them  sing for joy as they lie on their beds.",
-    "prayer": "Holy God, inspire us to praise You with joyful hearts through song, dance, and music, and help us to delight in worshiping You as much as You delight in us. May our expressions of praise draw us closer to You and bring glory to Your name. (AI)",
+    "prayer": "Holy God, inspire us to praise You with joyful hearts through song, dance, and music, and help us to delight in worshiping You as much as You delight in us. May our expressions of praise draw us closer to You and bring glory to Your name.",
     "reading": "Psalm 150:3-5",
     "reflection": "Even through the Bible invites us to praise God, we often are not sure how to go about it. Here several ways are suggested: singing, dancing, or playing musical instruments. God enjoys His people, AND We should enjoy praising Him.",
     "subject": "True Praise Should Come from the Heart",
@@ -162,7 +162,7 @@
     "verse_text": "Praise His name with dancing, accompanied by tambourine and harp. The Lord delights in His  people; He crowns the humble with salvation.  Let the faithful rejoice in this honor. Let them  sing for joy as they lie on their beds."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -180,7 +180,7 @@
     "original_verse": "1 Kings 8:27-28",
     "original_verse_source": "",
     "original_verse_text": "His question is-Will God really live on earth?  Why, even the highest heavens cannot contain You.  How much less this temple that I have built.! Listen  to my prayer and my request, O Lord my God. Hear  the cry and prayer that Your servant is making to You today.",
-    "prayer": "Eternal God, as we strive to create beautiful spaces for worship, remind us that Your presence extends far beyond any structure we could build, and help us to focus our hearts and minds on praising You above all else. (AI)",
+    "prayer": "Eternal God, as we strive to create beautiful spaces for worship, remind us that Your presence extends far beyond any structure we could build, and help us to focus our hearts and minds on praising You above all else.",
     "reading": "Psalm 139:7-10",
     "reflection": "We should try our best to build a beautiful and help ful place of worship to be a testimony and credit to God. In so doing, however, we must remember that God cannot be contained in our buildings or beautiful settings. He is far greater than any building, so we must focus our praise on Him and not merely on the place of worship.",
     "subject": "The Author is Unknown to the Text I am About to Share",
@@ -189,7 +189,7 @@
     "verse_text": "His question is-Will God really live on earth?  Why, even the highest heavens cannot contain You.  How much less this temple that I have built.! Listen  to my prayer and my request, O Lord my God. Hear  the cry and prayer that Your servant is making to You today."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -207,7 +207,7 @@
     "original_verse": "Proverbs 15:3",
     "original_verse_source": "",
     "original_verse_text": "The Lord is watching everywhere, keeping His  eyes on both the evil and the good.",
-    "prayer": "Almighty God, we trust that You see all the evil in this world and are not indifferent to it. Help us to persevere in faith, knowing that You will ultimately establish justice and righteousness according to Your perfect will. (AI)",
+    "prayer": "Almighty God, we trust that You see all the evil in this world and are not indifferent to it. Help us to persevere in faith, knowing that You will ultimately establish justice and righteousness according to Your perfect will.",
     "reading": "Psalm 33:13-15",
     "reflection": "At times it seems like God has let sin run rampant in the world, and we wonder if He really notices it. But God sees everything clearly-but the evil actions and the evil intentions lying beneath them (15:11). He is not an indifferent observer. He cares and is active in the world. Right now His work may be unseen and unfelt, but don’t give up. One day He will wipe out evil and punish the evil doers, just as He will establish the good and reward those who do His will.",
     "subject": "God Silently at Work",
@@ -216,7 +216,7 @@
     "verse_text": "The Lord is watching everywhere, keeping His  eyes on both the evil and the good."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -234,7 +234,7 @@
     "original_verse": "1 Kings 20:40",
     "original_verse_source": "",
     "original_verse_text": "While your servant was busy here and  there, the man disappeared.",
-    "prayer": "Gracious God, help us to focus on the treasures of Your Word and the joy of serving in Your Kingdom, rather than being distracted by the trivial things of this world. Keep us always near to Jesus, our priceless Treasure and truest Friend. (AI)",
+    "prayer": "Gracious God, help us to focus on the treasures of Your Word and the joy of serving in Your Kingdom, rather than being distracted by the trivial things of this world. Keep us always near to Jesus, our priceless Treasure and truest Friend.",
     "reading": "Matthew 6:33",
     "reflection": "According to the account in I Kings, a prophet told King Ahab a fictitious story. He said he had been guarding a prisoner, but he had been negligent “busy here and there” and the prisoner had escaped. The lesson was meant to get Ahab’s attention because he had let his enemy, King Ben-Hadad of Syria, escape. Many people leave the important tasks of life undone\nbecause they are preoccupied with the trivial things of life, thus the big picture escapes them. Jesus Christ came into the world and into our hearts on the bridge of faith built by the Holy Spirit, through the Gospel, for the purpose of saving us from sin and death.The Redeemer took our attention away from the trifles of the world, from man’s gaudy lights which keep us from seeing God’s Sun, in our pursuit of selfish interests and from being “busy here and there.” Instead, He wants us to focus our attention on the treasures of His Word and the joy of serving Him in His Kingdom. Ask Jesus, your priceless Treasure, your truest Friend, to keep you always near Him.",
     "subject": "From Trivia to Treasure",
@@ -243,7 +243,7 @@
     "verse_text": "While your servant was busy here and  there, the man disappeared."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -261,7 +261,7 @@
     "original_verse": "Proverbs 15:30",
     "original_verse_source": "",
     "original_verse_text": "A cheerful look brings joy to the heart, and good news gives health to the bones.",
-    "prayer": "Lord Jesus, we thank You for being the great Physician who has healed our souls and brought us peace with God through Your sacrifice. May we always feel the joy of Your forgiveness deep within our hearts and live in gratitude for the reconciliation You have accomplished. (AI)",
+    "prayer": "Lord Jesus, we thank You for being the great Physician who has healed our souls and brought us peace with God through Your sacrifice. May we always feel the joy of Your forgiveness deep within our hearts and live in gratitude for the reconciliation You have accomplished.",
     "reading": "Romans 5:1-2",
     "reflection": "The best medicine is the Gospel of Jesus Christ. It is the good news that the Lamb of God has taken away our sin and has reconciled us to God. This says it all: “Since we have been justified through faith, we have peace with God through our Lord Jesus Christ” (Romans 5:1). We can feel it in our bones!\nLet us give thanks to the Lord Jesus, the great Physician, for bringing joy into our life by taking away our sins.",
     "subject": "Good Health for Soul and Body",
@@ -270,7 +270,7 @@
     "verse_text": "A cheerful look brings joy to the heart, and good news gives health to the bones."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -288,7 +288,7 @@
     "original_verse": "Isaiah 22:22",
     "original_verse_source": "",
     "original_verse_text": "I will place on His shoulder the key to the house  of David; what He opens no one can shut, and  what He shuts no one can open.",
-    "prayer": "Holy God, we thank You for entrusting Your church with the power to forgive sins and share Your grace with the world. Guide our leaders, both in the church and in government, to use their authority wisely and in accordance with Your will. (AI)",
+    "prayer": "Holy God, we thank You for entrusting Your church with the power to forgive sins and share Your grace with the world. Guide our leaders, both in the church and in government, to use their authority wisely and in accordance with Your will.",
     "reading": "Matthew 16:19",
     "reflection": "You will find this verse quoted in Revelation 3:7 by John.\nAs the one who possesses all power in heaven and\non earth Jesus exercises His power to delegate autho rity by entrusting to His disciples the office of the\nKeys:\nthe authority to retain the sins of the impenit ent and to remit the sins of those who repent and\nbelieve in Jesus as Savior. This is the power the\nchurch exercises through the public ministry: it is\nthe power to close and to open heaven. Let us thank the Lord Jesus, the head of the church for having given His followers the power to forgive. Let us also remem ber to pray for our Government Officials.",
     "subject": "Symbol of Christ's Authority",
@@ -297,7 +297,7 @@
     "verse_text": "I will place on His shoulder the key to the house  of David; what He opens no one can shut, and  what He shuts no one can open."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -315,7 +315,7 @@
     "original_verse": "Luke 10:18-20",
     "original_verse_source": "",
     "original_verse_text": "He told them, \"I saw Satan falling from heaven as a flash of lightening! And I have given you all the power of the enemy, and you can walk among snakes and scorpions and crush them. Nothing will injure you. But don’t rejoice just because evil spirits obey you; rejoice because your names are registered as citizens of heaven.\"",
-    "prayer": "Almighty God, we thank You for the victory over evil that You have given us through Your Son Jesus Christ, and we humbly ask for Your guidance to remain vigilant against pride in our own lives. (AI)",
+    "prayer": "Almighty God, we thank You for the victory over evil that You have given us through Your Son Jesus Christ, and we humbly ask for Your guidance to remain vigilant against pride in our own lives.",
     "reading": "Ephesians 6:11-12",
     "reflection": "Jesus may have been looking ahead to his victory over Satan at the cross. John 12:31, 32, indicates\nthat Satan would be judged and driven out at the time of Jesus’ death. On the other hand, Jesus may have been warning His disciples against pride. Perhaps He was referring to Isaiah 14:12-17, which begins, “How you are fallen from heaven, O shin ning star, son of the morning!” Some interpreters identify this verse with Satan and explain that\nSatan’s pride led to all evil we see on earth today.\nTo Jesus’ disciples, who were thrilled with their power over evil spirits (“snakes and scorpions”), He may have been giving this stern warning; “Yours is the kind of pride that led to Satan’s downfall. Be careful!” Pastor Saher Let us thank God for giving us the victory over Satan through Jesus Christ our Lord.",
     "subject": "How to Overcome Satan",
@@ -324,7 +324,7 @@
     "verse_text": "He told them, \"I saw Satan falling from heaven as a flash of lightening! And I have given you all the power of the enemy, and you can walk among snakes and scorpions and crush them. Nothing will injure you. But don’t rejoice just because evil spirits obey you; rejoice because your names are registered as citizens of heaven.\""
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -342,7 +342,7 @@
     "original_verse": "Genesis 3:15",
     "original_verse_source": "",
     "original_verse_text": "I will put enmity between you and the woman, and between your offspring and hers; He will crush your head., and you will strike His heel.",
-    "prayer": "Faithful God, we thank you for fulfilling your promise of salvation through Jesus Christ, who crushed Satan's power and overcame death, assuring us of your unfailing love for all people, great and small. (AI)",
+    "prayer": "Faithful God, we thank you for fulfilling your promise of salvation through Jesus Christ, who crushed Satan's power and overcame death, assuring us of your unfailing love for all people, great and small.",
     "reading": "Romans 16:20",
     "reflection": "Let us thank God for frustrating the Devil’s plan by faithfully keeping His promise to provide us with a Savior, who in the Gospel is called the woman’s Seed or Offspring. A great battle was to take place between Satan and the Son of God, and in this deadly duel Satan’s power would be crushed, but not without wounds suffered by Jesus. However, these were mere mortal wounds. After His human death, Jesus rose again to life and proclaimed His victory. Our Lord, “The Lion of the tribe of Judah” (Revelation 5:5),once and for all overcame him who like a roaring lion tried to devour Christians, large and small. Since no one is too small for Satan to pursue, no one is too insignificant for the Savior to seek and to save. Jesus Christ died for all.\nLet us thank God that we can rest assured that Jesus loves us, for the Bible tells us so!",
     "subject": "Jesus Wounded but a Winner",
@@ -351,7 +351,7 @@
     "verse_text": "I will put enmity between you and the woman, and between your offspring and hers; He will crush your head., and you will strike His heel."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -369,7 +369,7 @@
     "original_verse": "Revelation 21:2",
     "original_verse_source": "",
     "original_verse_text": "I saw the Holy City, the new Jerusalem, coming  down out of heaven from God, prepared  as a bride beautifully dressed for her husband.",
-    "prayer": "Lord Jesus, as we await Your glorious return, clothe us in Your righteousness and keep our hearts filled with joyful anticipation. May the Holy Spirit sustain our faith and prepare us to meet You, our heavenly Bridegroom, with hearts overflowing with love and gratitude. (AI)",
+    "prayer": "Lord Jesus, as we await Your glorious return, clothe us in Your righteousness and keep our hearts filled with joyful anticipation. May the Holy Spirit sustain our faith and prepare us to meet You, our heavenly Bridegroom, with hearts overflowing with love and gratitude.",
     "reading": "Ephesians 5:25-27",
     "reflection": "Through-out Scripture we are made aware of Christ’s love, because of His love He died for the church. But that isn’t the end of the story. The heavenly Bridegroom will come again in glory. St. John had a highly symbolic vision of the forthcom ing reunion of Christ with His church. We are pictured as coming to meet Him “prepared as a bride beautifully dressed for her husband.” The dress is the righteousness of Christ in which we are clad through faith in the Savior. Once again we need to pray that the Holy Spirit may sustain in us the great expectation of Jesus' return in glory.",
     "subject": "The Heavenly Bridegroom and Bride",
@@ -378,7 +378,7 @@
     "verse_text": "I saw the Holy City, the new Jerusalem, coming  down out of heaven from God, prepared  as a bride beautifully dressed for her husband."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -396,7 +396,7 @@
     "original_verse": "2 Corinthians 8:9",
     "original_verse_source": "",
     "original_verse_text": "You know the grace of your Lord Jesus  Christ, that though He was rich, yet for  your sakes He became pour, so that you through His poverty might become rich.",
-    "prayer": "Gracious God, help us to overcome greed by fixing our eyes on Jesus, who sacrificed everything for our eternal welfare. May we find contentment in the incomparable riches of Your grace and forgiveness, rather than in the temporary things of this world. (AI)",
+    "prayer": "Gracious God, help us to overcome greed by fixing our eyes on Jesus, who sacrificed everything for our eternal welfare. May we find contentment in the incomparable riches of Your grace and forgiveness, rather than in the temporary things of this world.",
     "reading": "Philippians 2:5-8",
     "reflection": "The Bible has much to say about greed as being morally wrong. In the first Commandment, God declares:” You\nshall have no other gods before me” (Deuteronomy 5:7). He tells us to fear, love and trust in Him above all things. It is a trans gression of God’s Law to be greedy, to make an idol of wealth of any kind. How do we overcome greed? We need to look to Jesus Christ. He the Son of God gave up everything when He Became incarnate and was born into poverty. He came to atone for all our sins, greed included, and to bring us the incomparable riches of\nheaven. His poverty resulted in great spiritual wealth for us: peace with God, the full and free forgiveness of sins as His children and heirs of eternal life. The temp orary things of this world lose their appeal; greed vanishes, for we have the riches of Christ’s grace. Let us thank Jesus for His grace in sacrificing everything, even His very life, for our eternal welfare.",
     "subject": "Man's Greed, God's Grace",
@@ -405,7 +405,7 @@
     "verse_text": "You know the grace of your Lord Jesus  Christ, that though He was rich, yet for  your sakes He became pour, so that you through His poverty might become rich."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -423,7 +423,7 @@
     "original_verse": "Matthew 28:12-13",
     "original_verse_source": "",
     "original_verse_text": "The chief priests gave the soldiers a large sum of money, telling them, \"You are to say, ‘His disciples came during the night and stole Him away while we were asleep.\"",
-    "prayer": "Almighty God, we stand in awe of Your power to overcome even death itself, and we thank You for the undeniable truth of Christ's resurrection. May this truth strengthen our faith and embolden us to live as witnesses to Your victory over sin and death. (AI)",
+    "prayer": "Almighty God, we stand in awe of Your power to overcome even death itself, and we thank You for the undeniable truth of Christ's resurrection. May this truth strengthen our faith and embolden us to live as witnesses to Your victory over sin and death.",
     "reading": "1 Corinthians 15:3-4",
     "reflection": "The government had taken extra measures to seal the tomb Jesus had been placed in. A government seal had been placed on the entrance, and guards were stationed at the tomb. But these precautions backfired. They were in and of themselves, proof that\nthe circulated story of the theft of Jesus’ body was a lie.\nNow the soldiers had said the body had been stolen by the disciples while they slept, if they were asleep how did they know it was the disciples. Further, when we consider how frightened the disciples were, we would have to believe they were the least likely candidates for grave rob bery.\nThe truth is simply this: “Christ has indeed been raised from the dead” (I Corinthians 15:20) AND, He was delivered over to death for our sins and was raised to life for our justification.” (Romans 4:25) THE TRUTH PREVAILS.",
     "subject": "A Lie That Would't Fly",
@@ -432,7 +432,7 @@
     "verse_text": "The chief priests gave the soldiers a large sum of money, telling them, \"You are to say, ‘His disciples came during the night and stole Him away while we were asleep.\""
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -450,7 +450,7 @@
     "original_verse": "1 Corinthians 16:13, 14",
     "original_verse_source": "",
     "original_verse_text": "Be on your guard, stand true to what you believe in. Be courageous. Be strong. And everything you do must be done in love.",
-    "prayer": "Faithful God, help us stand firm in our faith, be courageous and strong, and do everything with kindness and love as we await Christ's return. May we remember that love involves unselfish service to others, and guide us to make love our highest goal in all we do. (AI)",
+    "prayer": "Faithful God, help us stand firm in our faith, be courageous and strong, and do everything with kindness and love as we await Christ's return. May we remember that love involves unselfish service to others, and guide us to make love our highest goal in all we do.",
     "reading": "1 Peter 5:8-9",
     "reflection": "As the Corinthians awaited Paul’s next visit, they were directed to (1)\nbe on their guard against spiritual dangers, (2) stand firm in the faith (3) be courageous, (4) be strong and, (5) do everything with kindness\nand in love. Today as we wait for the return of Christ, we should follow the same instructions. We need to remember love involves unselfish service to others; to show it gives evidence that you care. Remember to let love be your highest goal.",
     "subject": "God's Perspective",
@@ -513,7 +513,7 @@
     "verse_text": "God knew His people in advance, and He chose them to become like His Son, so  that His Son would be the first born, with many brothers and sisters."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -531,7 +531,7 @@
     "original_verse": "Isaiah 9:2",
     "original_verse_source": "",
     "original_verse_text": "The People who walk in darkness will see a great light-a light that will shine on all who live in the land where death casts its shadow.",
-    "prayer": "Lord Jesus, Light of the world, shine Your truth and love into the darkness of our lives and guide us along Your path of righteousness. Help us to embrace Your eternal Kingdom and find freedom from the shadows of sin that surround us. (AI)",
+    "prayer": "Lord Jesus, Light of the world, shine Your truth and love into the darkness of our lives and guide us along Your path of righteousness. Help us to embrace Your eternal Kingdom and find freedom from the shadows of sin that surround us.",
     "reading": "John 1:4-5",
     "reflection": "Here Isaiah refers to Jesus as Great Light the apostle John also referred to Jesus as the “Light” (JohnI:9) Jesus referred to Him self as the “Light of the world” (John 8:12. When I read the fact that this was considered as a time of ‘great darkness, on the 6th I thought we were heading into a similar time, the fact of the matter is we live in such a time. That ‘darkness” is sin. Then I remembered\nGod’s promise that He would send a light who would shine on everyone living in the shadow of death. He would be both\n“Wonderful Counselor” and “Mighty God.” This message of hope was fulfilled in the birth of Christ and the establishment of His eternal Kingdom. He came to deliver (all) people from their slavery to sin, the darkness we live in today.",
     "subject": "Our True Hope",
@@ -648,7 +648,7 @@
     "verse_text": "Your attitude should be the same that Christ Jesus had. Though He was God, He did not demand and cling to His rights as God."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -666,7 +666,7 @@
     "original_verse": "Galatians 3:13",
     "original_verse_source": "",
     "original_verse_text": "Christ has rescued us from the curse pronounced by the law. When He was  hung on the cross, He took upon Himself the curse of our wrong doing. For it is written in the Scriptures, \"Cursed is everyone who is hung on a tree.\"",
-    "prayer": "Gracious God, we thank You for sending Your Son to overcome sin and death through His sacrifice on the cross. May our faith in Jesus as our Savior grow stronger each day, drawing us closer to You and the eternal life You promise. (AI)",
+    "prayer": "Gracious God, we thank You for sending Your Son to overcome sin and death through His sacrifice on the cross. May our faith in Jesus as our Savior grow stronger each day, drawing us closer to You and the eternal life You promise.",
     "reading": "Romans 5:8",
     "reflection": "I came across this saying about Satan, “That he by a tree once overcame, might likewise by a tree be overcome.” That tree\nwas the cross on which Jesus defeated the devil. In overcoming Satan, God’s Son overcame sin and death. He bore the curse of sin in our place. Through faith In Him as our Savior we are redeemed and given eternal life.\n“Without faith it is impossible to please God.” (Hebrews 11:6)",
     "subject": "The Two Trees",
@@ -729,7 +729,7 @@
     "verse_text": "And since we are His children, we will share His treasures-for everything God gives to  His Son, Christ, is ours, too. But if we are  to share His glory, we must also share His suffering."
   },
   {
-    "ai_prayer": false,
+    "ai_prayer": true,
     "ai_reading": true,
     "ai_reflection_corrected": false,
     "ai_subject": false,
@@ -747,7 +747,7 @@
     "original_verse": "Isaiah 21:11-12",
     "original_verse_source": "",
     "original_verse_text": "Someone calls to me from Seir, \"Watchman, what is left of the night?\" The watchman replies, \"Morning is coming, but also the night.\"",
-    "prayer": "Holy God, we thank You for sending Jesus Christ as the light of the world, rescuing us from darkness and bringing us into Your kingdom of love and forgiveness. Shine Your glorious Good News throughout the world, dispelling spiritual darkness and drawing all people to Your redeeming grace. (AI)",
+    "prayer": "Holy God, we thank You for sending Jesus Christ as the light of the world, rescuing us from darkness and bringing us into Your kingdom of love and forgiveness. Shine Your glorious Good News throughout the world, dispelling spiritual darkness and drawing all people to Your redeeming grace.",
     "reading": "Colossians 1:13-14",
     "reflection": "It is night in many parts of the world; there is dense spiritual darkness-witchcraft, sorcery, Satanism. There are the primitive religions of voodoo, paganism, and occult ism that even in our so-called enlightened times and places are practiced. But Christ ians have ample reason to thank God for the coming of Jesus Christ the light of the world. This is what God did through His Son: “He has rescued us from the dominion of dark ness and brought us into the kingdom of the Son He loves, in whom we have redemption, the forgiveness of sins” (Colossians 1:13-14). What glorious Good News to shine throughout the world!",
     "subject": "The Day of Hope Has Dawned",

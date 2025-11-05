@@ -26,20 +26,48 @@ def load_records(data: Any, filename: Path) -> Tuple[List[Dict[str, Any]], Any, 
     raise ValueError(f"{filename}: unsupported JSON structure")
 
 
-def field_empty(val: Any) -> bool:
+def normalize_single_line(s: str) -> str:
+    # Collapse whitespace to a single line for compact output
+    return " ".join(s.split()).strip()
+
+
+def prayer_empty(val: Any) -> Tuple[bool, str]:
     """
-    True if val is missing/not a string or empty after strip.
+    True if prayer is missing/not a string or empty after strip.
+    Returns (is_empty, normalized_preview_or_type).
     """
     if not isinstance(val, str):
-        return True
-    return val.strip() == ""
+        return True, f"(type={type(val).__name__})"
+    s = normalize_single_line(val)
+    return (s == "", s)
 
 
-def scan_file_prayer_only(path: Path) -> int:
+def prayer_too_short(val: Any, min_chars: int) -> Tuple[bool, str]:
     """
-    Scan one file and print only records where 'prayer' is empty after trimming.
-    Output format (one line per failure):
-        filename:record_index<TAB>PRAYER<TAB>content
+    True if prayer exists but is shorter than min_chars after trimming.
+    Returns (is_short, normalized_preview_or_type).
+    """
+    if not isinstance(val, str):
+        return True, f"(type={type(val).__name__})"
+    s = normalize_single_line(val)
+    if s == "":
+        return False, s  # handled by prayer_empty
+    return (len(s) < min_chars, s)
+
+
+def scan_file_prayer(path: Path, min_chars: int, check_size_only: bool) -> int:
+    """
+    Scan one file and print failing records.
+
+    Output (one line per failure):
+        filename:record_index<TAB>PRAYER_EMPTY<TAB>content
+        filename:record_index<TAB>PRAYER_SHORT<TAB>content
+
+    Behavior:
+      - If --check-size is False (default):
+          Report both empty prayers and prayers with content shorter than min_chars.
+      - If --check-size is True:
+          Only check size for existing, non-empty string prayers (skip empties and non-strings).
     Returns number of failures in this file.
     """
     try:
@@ -53,25 +81,52 @@ def scan_file_prayer_only(path: Path) -> int:
     for idx, rec in enumerate(records, start=1):
         if not isinstance(rec, dict):
             continue
-        prayer = rec.get("prayer")
-        if field_empty(prayer):
+
+        prayer_val = rec.get("prayer")
+
+        if check_size_only:
+            # Only evaluate minimum length for existing string prayers; skip empties and non-strings
+            if isinstance(prayer_val, str) and prayer_val.strip() != "":
+                is_short, preview = prayer_too_short(prayer_val, min_chars=min_chars)
+                if is_short:
+                    failures += 1
+                    print(f"{path}:{idx}\tPRAYER_SHORT\t{preview}")
+            # else: skip (either empty or not a string)
+            continue
+
+        # Default mode: report empties and short prayers
+        is_empty, preview_empty = prayer_empty(prayer_val)
+        if is_empty:
             failures += 1
-            content = (
-                " ".join(prayer.split())
-                if isinstance(prayer, str)
-                else f"(type={type(prayer).__name__})"
-            )
-            print(f"{path}:{idx}\tPRAYER\t{content}")
+            print(f"{path}:{idx}\tPRAYER_EMPTY\t{preview_empty}")
+            continue  # don't also report as short
+
+        is_short, preview_short = prayer_too_short(prayer_val, min_chars=min_chars)
+        if is_short:
+            failures += 1
+            print(f"{path}:{idx}\tPRAYER_SHORT\t{preview_short}")
+
     return failures
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Report records where "prayer" is empty after trimming. '
-        "Output: filename:record_number<TAB>PRAYER<TAB>content"
+        description="Report prayer issues. By default, lists empty prayers and prayers shorter than a minimum length. "
+        "With --check-size, only check size for existing non-empty prayers."
     )
     parser.add_argument(
         "files", nargs="+", help="One or more JSON files (e.g., *.json)"
+    )
+    parser.add_argument(
+        "--min-chars",
+        type=int,
+        default=20,
+        help="Minimum characters for prayer (default: 20)",
+    )
+    parser.add_argument(
+        "--check-size",
+        action="store_true",
+        help="Only check size for existing non-empty prayers; do not report empty or non-string prayers",
     )
     args = parser.parse_args()
 
@@ -81,7 +136,9 @@ def main():
         if not path.exists():
             print(f"[ERROR] {path}: not found", file=sys.stderr)
             continue
-        total_failures += scan_file_prayer_only(path)
+        total_failures += scan_file_prayer(
+            path, min_chars=args.min_chars, check_size_only=args.check_size
+        )
 
     # Exit non-zero if any failures found
     sys.exit(1 if total_failures > 0 else 0)
