@@ -4,14 +4,11 @@ import json
 import re
 import sys
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Tuple
 
 # --------------- Configuration ---------------
 
-# Field names
 VERSE_FIELD = "verse"
-BACKUP_FIELD = "original_verse_raw"  # where to store the pre-normalized value
-PRESERVED_ABC_FIELD = "verse_with_abc"  # only used when --preserve-abc is set
 
 # Known book name fixes (case-insensitive keys)
 BOOK_FIXES = {
@@ -52,7 +49,6 @@ BOOK_FIXES = {
     "deut": "Deuteronomy",
     "eccl": "Ecclesiastes",
     "lam": "Lamentations",
-    # Add more as needed
 }
 
 # --------------- Regex helpers ---------------
@@ -75,26 +71,15 @@ def fix_book_name(raw_book: str) -> str:
     return BOOK_FIXES.get(key, s)
 
 
-def strip_part_suffix(token: str) -> Tuple[str, Optional[str]]:
-    """
-    Strip trailing a/b/c from a verse token if present.
-    Returns (numeric_part, suffix or None)
-    """
+def strip_part_suffix(token: str) -> str:
     token = token.strip()
     m = PART_SUFFIX_RE.match(token)
     if m:
-        return m.group(1), m.group(2).lower()
-    return token, None
+        return m.group(1)
+    return token
 
 
 def clean_token_strip_abc(token: str) -> str:
-    """
-    Clean a verse token for normalized output (strips a/b/c):
-      - Remove trailing quotes/periods/spaces
-      - Strip partial suffix (a/b/c)
-      - Validate numeric or range
-    Returns cleaned token, raises ValueError if invalid.
-    """
     t = TRAILING_JUNK_RE.sub("", token.strip())
     if not t:
         raise ValueError(f"Empty verse token after cleaning from {token!r}")
@@ -102,57 +87,21 @@ def clean_token_strip_abc(token: str) -> str:
         if t.count("-") != 1:
             raise ValueError(f"Invalid range (multiple hyphens) in token {token!r}")
         a, b = t.split("-", 1)
-        a_num, _ = strip_part_suffix(a)
-        b_num, _ = strip_part_suffix(b)
+        a_num = strip_part_suffix(a)
+        b_num = strip_part_suffix(b)
         if not a_num.isdigit() or not b_num.isdigit():
             raise ValueError(f"Range endpoints must be numeric in token {token!r}")
         if int(a_num) > int(b_num):
             raise ValueError(f"Range start > end in token {token!r}")
         return f"{int(a_num)}-{int(b_num)}"
     else:
-        v, _ = strip_part_suffix(t)
+        v = strip_part_suffix(t)
         if not v.isdigit():
             raise ValueError(f"Verse number must be numeric in token {token!r}")
         return str(int(v))
 
 
-def clean_token_keep_abc(token: str) -> str:
-    """
-    Clean a verse token but keep a/b/c suffix if present.
-    """
-    t = TRAILING_JUNK_RE.sub("", token.strip())
-    if not t:
-        raise ValueError(f"Empty verse token after cleaning from {token!r}")
-    if "-" in t:
-        if t.count("-") != 1:
-            raise ValueError(f"Invalid range (multiple hyphens) in token {token!r}")
-        a, b = t.split("-", 1)
-        a_num, a_suf = strip_part_suffix(a)
-        b_num, b_suf = strip_part_suffix(b)
-        if not a_num.isdigit() or not b_num.isdigit():
-            raise ValueError(f"Range endpoints must be numeric in token {token!r}")
-        if int(a_num) > int(b_num):
-            raise ValueError(f"Range start > end in token {token!r}")
-        # Keep suffix on right endpoint only (conventional)
-        right = f"{int(b_num)}{b_suf or ''}"
-        return f"{int(a_num)}-{right}"
-    else:
-        v, suf = strip_part_suffix(t)
-        if not v.isdigit():
-            raise ValueError(f"Verse number must be numeric in token {token!r}")
-        return f"{int(v)}{suf or ''}"
-
-
-def normalize_reference(ref_line: str, keep_abc: bool = False) -> str:
-    """
-    Normalize to: 'Book Chapter:verses'
-    - Fix book name using BOOK_FIXES
-    - Collapse spaces
-    - Support comma-separated tokens and hyphenated ranges
-    - Clean trailing quotes/dots inside tokens
-    - Either strip a/b/c (default) or keep them (keep_abc=True)
-    Raises ValueError on errors.
-    """
+def normalize_reference(ref_line: str) -> str:
     if ref_line is None:
         raise ValueError("Reference is None")
     s = ref_line.strip().strip('"').strip("'").strip()
@@ -173,20 +122,14 @@ def normalize_reference(ref_line: str, keep_abc: bool = False) -> str:
     if not parts:
         raise ValueError(f"No verse parts detected in: {ref_line!r}")
 
-    if keep_abc:
-        cleaned_parts: List[str] = [clean_token_keep_abc(p) for p in parts]
-    else:
-        cleaned_parts = [clean_token_strip_abc(p) for p in parts]
-
+    cleaned_parts: List[str] = [clean_token_strip_abc(p) for p in parts]
     return f"{book} {int(chapter)}:{','.join(cleaned_parts)}"
 
 
 # --------------- File processing ---------------
 
 
-def load_json_records(
-    data: Any, filename: Path
-) -> Tuple[List[Dict[str, Any]], Optional[Dict[str, Any]], Optional[str]]:
+def load_json_records(data: Any, filename: Path):
     if isinstance(data, list):
         return data, None, None
     if isinstance(data, dict):
@@ -216,16 +159,6 @@ def main():
         action="store_true",
         help="In preview, log errors but continue.",
     )
-    parser.add_argument(
-        "--preserve-abc",
-        action="store_true",
-        help=f"Also write a {PRESERVED_ABC_FIELD} that keeps a/b/c specifiers.",
-    )
-    parser.add_argument(
-        "--backup-field",
-        default=BACKUP_FIELD,
-        help=f"Backup field name (default: {BACKUP_FIELD})",
-    )
     args = parser.parse_args()
 
     for file_arg in args.files:
@@ -241,29 +174,20 @@ def main():
             print(f"[ERROR] {path}: cannot read/parse JSON: {e}")
             sys.exit(2)
 
-        changes: List[Dict[str, str]] = []
+        preview_items: List[Tuple[int, Dict[str, str]]] = []
         updated_records: List[Dict[str, Any]] = []
 
         for idx, rec in enumerate(records, start=1):
             if not isinstance(rec, dict):
-                changes.append({"_note": "skipped non-object"})
                 updated_records.append(rec)
                 continue
 
             rec_copy = dict(rec)
-            change: Dict[str, str] = {}
-
             value = rec_copy.get(VERSE_FIELD)
             if isinstance(value, str) and value.strip():
-                original = value
+                before = value
                 try:
-                    normalized = normalize_reference(original, keep_abc=False)
-                    if args.preserve - abc:
-                        normalized_with_abc = normalize_reference(
-                            original, keep_abc=True
-                        )
-                    else:
-                        normalized_with_abc = None
+                    after = normalize_reference(before)
                 except ValueError as e:
                     msg = f"{path}:{idx} invalid {VERSE_FIELD}: {e}"
                     if args.preview and not args.continue_on_error:
@@ -271,44 +195,44 @@ def main():
                         sys.exit(2)
                     else:
                         print(f"[ERROR] {msg}")
-                        changes.append({"error": str(e)})
+                        if args.preview:
+                            preview_items.append(
+                                (idx, {"error": str(e), "before": before})
+                            )
                         updated_records.append(rec_copy)
                         continue
 
-                # Backup original if not already present
-                if args.backup_field not in rec_copy:
-                    rec_copy[args.backup_field] = original
-                    change[args.backup_field] = original
-
-                # Overwrite verse with normalized (no a/b/c)
-                if rec_copy.get(VERSE_FIELD) != normalized:
-                    rec_copy[VERSE_FIELD] = normalized
-                    change[VERSE_FIELD] = normalized
-
-                # Optionally store preserved-abc version
-                if args.preserve - abc and normalized_with_abc:
-                    rec_copy[PRESERVED_ABC_FIELD] = normalized_with_abc
-                    change[PRESERVED_ABC_FIELD] = normalized_with_abc
-
+                if before != after:
+                    rec_copy[VERSE_FIELD] = after
+                    if args.preview:
+                        preview_items.append((idx, {"before": before, "after": after}))
+                # else: already normalized — do not add to preview
             else:
-                # No verse or empty; skip
-                change["_note"] = "no verse field or empty"
+                # no verse or empty; keep silent in preview
+                pass
 
             updated_records.append(rec_copy)
-            changes.append(change if change else {"_note": "no changes"})
 
         if args.preview:
-            print(f"\n=== Preview: {path} ===")
-            sep = "=" * 50
-            for i, change in enumerate(changes, start=1):
+            if preview_items:
+                print(f"\n=== Preview: {path} ===")
+                sep = "=" * 50
+                for idx, info in preview_items:
+                    print(sep)
+                    print(f"Record {idx}:")
+                    # show before/after or error
+                    if "error" in info:
+                        print(f"- error: {info['error']}")
+                        if "before" in info:
+                            print(f"- before: {info['before']}")
+                    else:
+                        print(f"- before: {info['before']}")
+                        print(f"- after : {info['after']}")
                 print(sep)
-                print(f"Record {i}:")
-                for k, v in change.items():
-                    print(f"- {k}: {v}")
-            print(sep)
+            # If nothing to change and no errors, print nothing
             continue
 
-        # Write back
+        # Write back (non-preview)
         try:
             if container is None:
                 out = updated_records
