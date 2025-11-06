@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
 # Validate presence (non-empty strings) for:
-REQUIRED_TEXT_FIELDS = ["subject", "reflection", "prayer"]
+REQUIRED_TEXT_FIELDS = ["subject", "reflection", "prayer", "verse_text"]
 # Verse-like fields that must be present and valid normalized references:
 REQUIRED_REFERENCE_FIELDS = ["verse", "reading"]
 
