@@ -1,0 +1,1 @@
+f="bible_verse_$(date +%Y%m%d).sqlite"; sqlite3 ~/shared/bible_verse.db ".backup '$f'"; sqlite3 "$f" "PRAGMA integrity_check;";
