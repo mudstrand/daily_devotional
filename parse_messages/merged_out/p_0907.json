@@ -25,7 +25,8 @@
     "verse": "1 John 3:16",
     "verse_source": "",
     "verse_text": "This is how we know what love is: Jesus Christ laid down His life for us, and we ought to lay down our lives for our brothers. (Christian brothers and sisters).",
-    "ai_prayer_corrected": false
+    "ai_prayer_corrected": false,
+    "msg_date": "2009-07-01"
   },
   {
     "ai_prayer": true,
@@ -53,7 +54,8 @@
     "verse": "John 8:36",
     "verse_source": "",
     "verse_text": "If the Son sets you free, you will be free indeed.",
-    "ai_prayer_corrected": false
+    "ai_prayer_corrected": false,
+    "msg_date": "2009-07-03"
   },
   {
     "ai_prayer": true,
@@ -81,7 +83,9 @@
     "verse": "Galatians 6:14",
     "verse_source": "",
     "verse_text": "May I never boast except in the cross of our Lord Jesus Christ, through which the world has been crucified to me, and I to the world.",
-    "ai_prayer_corrected": false
+    "ai_prayer_corrected": false,
+    "msg_date": "2009-07-04",
+    "holiday": "independence_day"
   },
   {
     "ai_prayer": true,
@@ -109,7 +113,8 @@
     "verse": "Matthew 28:20",
     "verse_source": "",
     "verse_text": "“And surely I am with you always to the very end of the age.”",
-    "ai_prayer_corrected": false
+    "ai_prayer_corrected": false,
+    "msg_date": "2009-07-05"
   },
   {
     "ai_prayer": true,
@@ -137,7 +142,8 @@
     "verse": "Matthew 28:18",
     "verse_source": "",
     "verse_text": "Jesus came and told His disciples, “I have been given complete authority in heaven and on earth.”",
-    "ai_prayer_corrected": false
+    "ai_prayer_corrected": false,
+    "msg_date": "2009-07-06"
   },
   {
     "ai_prayer": true,
@@ -165,7 +171,8 @@
     "verse": "Exodus 3:12",
     "verse_source": "",
     "verse_text": "God assured Moses that: “I will be with you.”",
-    "ai_prayer_corrected": false
+    "ai_prayer_corrected": false,
+    "msg_date": "2009-07-07"
   },
   {
     "ai_prayer": true,
@@ -193,7 +200,8 @@
     "verse": "John 4:42",
     "verse_source": "",
     "verse_text": "This is indeed the Christ, the Savior of the world.",
-    "ai_prayer_corrected": false
+    "ai_prayer_corrected": false,
+    "msg_date": "2009-07-08"
   },
   {
     "ai_prayer": true,
@@ -221,7 +229,8 @@
     "verse": "Galatians 6:14",
     "verse_source": "",
     "verse_text": "“God forbid that I should glory, save in the cross of our Lord Jesus Christ, through which the world hath been crucified unto me, and I unto the world.”",
-    "ai_prayer_corrected": false
+    "ai_prayer_corrected": false,
+    "msg_date": "2009-07-09"
   },
   {
     "ai_prayer": true,
@@ -249,7 +258,8 @@
     "verse": "Galatians 1:15-16",
     "verse_source": "",
     "verse_text": "Paul says' “But when God, who set me apart from birth and called me by His grace, was pleased ~ to reveal His Son to me that I might preach Him among the Gentiles, I did not consult any man.",
-    "ai_prayer_corrected": false
+    "ai_prayer_corrected": false,
+    "msg_date": "2009-07-19"
   },
   {
     "ai_prayer": true,
@@ -277,6 +287,7 @@
     "verse": "Colossians 4:2",
     "verse_source": "",
     "verse_text": "Devote yourself to prayer with an alert mind and a thankful heart.",
-    "ai_prayer_corrected": true
+    "ai_prayer_corrected": true,
+    "msg_date": "2009-07-26"
   }
 ]

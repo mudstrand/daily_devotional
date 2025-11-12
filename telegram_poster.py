@@ -21,6 +21,9 @@ class TelegramPoster:
         message_id: str,
         subject: str,
         verse: str,
+        verse_text: str,
+        holiday_name: str,
+        holiday_emoticon: str,
         reading: str,
         reflection: str,
         prayer: str,
@@ -36,14 +39,14 @@ class TelegramPoster:
         parts = []
         parts.append("✝️ <b>Pastor Al's Daily Devotional</b> ✝️")
         if subject:
-            parts.append(f"<b>{subject.title()}</b>")
-            parts.append("━━━━━━━━━━━━━━━")
+            parts.append(f"<b>{subject}</b>")
+        if holiday_name and holiday_emoticon:
+            parts.append(f"{holiday_emoticon} <b>{holiday_name}</b> {holiday_emoticon}")
+        parts.append("━━━━━━━━━━━━━━━")
         if verse:
             parts.append("💒 <b>Verse:</b>")
-            if reading:
-                parts.append(f"<i>{verse}</i>   📙 <i>({reading})</i>")
-            else:
-                parts.append(f"<i>{verse}</i>")
+            parts.append(verse_text)
+            parts.append(f" <i>{verse}</i> 📙 <i>{reading}</i>")
         if reflection:
             parts.append("💭 <b>Reflection:</b>")
             parts.append(f"{reflection}")
