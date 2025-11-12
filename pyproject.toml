@@ -12,6 +12,13 @@ dependencies = [
     "google-auth>=2.41.1",
     "google-auth-httplib2>=0.2.0",
     "google-auth-oauthlib>=1.2.2",
+<<<<<<< Updated upstream
     "language-tool-python>=2.9.4",
     "pyenchant>=3.3.0",
+=======
+    "python-levenshtein>=0.27.1",
+    "rich>=14.2.0",
+    "telebot>=0.0.5",
+    "telethon>=1.41.2",
+>>>>>>> Stashed changes
 ]
