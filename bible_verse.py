@@ -8,10 +8,9 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional, Sequence, Tuple
 import sys
+import os
 
-DEFAULT_DB = Path(
-    "/Users/mark/shared/bible_verse.db"
-)  # adjust or pass via CLI/function
+BIBLE_VERSE_DB = os.getenv("BIBLE_VERSE_DB")
 TABLE_VERSES = "verses"  # change if your table name differs
 
 
@@ -148,7 +147,7 @@ def get_verse_text(
     chapter: int,
     verse_spec: str,
     translation: str,
-    db_path: Path = DEFAULT_DB,
+    db_path: Path = BIBLE_VERSE_DB,
     include_refs: bool = True,
     add_refs_if_missing: bool = True,
     sep: str = " ",
@@ -198,7 +197,7 @@ def get_verse_text(
 # ---------------- CLI for quick testing ----------------
 def _cli():
     ap = argparse.ArgumentParser(description="Fetch verse text from bible_verse.db")
-    ap.add_argument("--db", default=str(DEFAULT_DB), help="Path to bible_verse.db")
+    ap.add_argument("--db", default=str(BIBLE_VERSE_DB), help="Path to bible_verse.db")
     ap.add_argument("--book", required=True, help="Book name, e.g., 'John' or '1 John'")
     ap.add_argument(
         "--chapter", required=True, type=int, help="Chapter number, e.g., 15"

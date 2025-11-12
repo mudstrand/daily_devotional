@@ -8,6 +8,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import List, Optional, Tuple
 from telegram_poster import TelegramPoster
+import os
 
 # import your holiday module
 try:
@@ -23,10 +24,8 @@ except Exception as e:
     print(f"Failed to import bible_verse.py: {e}")
     sys.exit(1)
 
-DEV_DB_PATH = Path("/Users/mark/shared/daily_devotional_v2.db")
-BIBLE_DB_PATH = Path(
-    "/Users/mark/shared/bible_verse.db"
-)  # default; override with --bibledb
+BIBLE_VERSE_DB = os.getenv("BIBLE_VERSE_DB")
+DEVOTIONAL_DB = os.getenv("DEVOTIONAL_DB")
 TABLE_DEVOS = "devotionals"
 TABLE_USED = "used_devotionals"
 DEFAULT_TRANSLATION = "NIV"
@@ -622,10 +621,10 @@ def main():
         help=f"Bible translation code (default: {DEFAULT_TRANSLATION})",
     )
     ap.add_argument(
-        "--devdb", default=str(DEV_DB_PATH), help="Path to daily_devotional_v2.db"
+        "--devdb", default=str(DEVOTIONAL_DB), help="Path to daily_devotional_v2.db"
     )
     ap.add_argument(
-        "--bibledb", default=str(BIBLE_DB_PATH), help="Path to bible_verse.db"
+        "--bibledb", default=str(BIBLE_VERSE_DB), help="Path to bible_verse.db"
     )
     ap.add_argument(
         "--dry-run", action="store_true", help="Preview without marking used"
