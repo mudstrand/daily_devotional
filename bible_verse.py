@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
+# bible_verse.py
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import sqlite3
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional, Sequence, Tuple
-import sys
-import os
 
 BIBLE_VERSE_DB = os.getenv("BIBLE_VERSE_DB")
 TABLE_VERSES = "verses"  # change if your table name differs
