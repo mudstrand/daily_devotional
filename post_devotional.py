@@ -1,80 +1,82 @@
 #!/usr/bin/env python3
-# post_devotional_v2.py
+# post_devotional.py (Postgres via SQLAlchemy)
 import argparse
 import os
 import random
 import re
-import sqlite3
 import sys
 from datetime import datetime, timedelta, timezone
-from pathlib import Path
 from typing import List, Optional, Tuple
 
-from telegram_poster import TelegramPoster
+from sqlalchemy import (
+    create_engine,
+    select,
+    func,
+    text,
+    Table,
+    Column,
+    Text,
+    Date,
+    MetaData,
+    Boolean,
+)
+from sqlalchemy.engine import Engine, Connection
+from sqlalchemy.sql import and_
 
-# import your holiday module
+from telegram_poster import TelegramPoster
+from bible_verse import get_verse_text
+
+# import holiday module
 try:
     from holiday import Holiday, holiday_info  # noqa: F401
 except Exception as e:
     print(f"Failed to import holiday.py: {e}")
     sys.exit(1)
 
-# import bible verse module
-try:
-    from bible_verse import get_verse_text  # uses include_refs + auto-decorate behavior
-except Exception as e:
-    print(f"Failed to import bible_verse.py: {e}")
-    sys.exit(1)
+DEVOTIONAL_DATABASE_URL = os.getenv("DEVOTIONAL_DATABASE_URL")
+if not DEVOTIONAL_DATABASE_URL:
+    print(
+        "DEVOTIONAL_DATABASE_URL is not set. Example: postgresql+psycopg://devotional:devotional@127.0.0.1:5432/devotional"
+    )
+    sys.exit(2)
 
-BIBLE_VERSE_DB = os.getenv("BIBLE_VERSE_DB")
-DEVOTIONAL_DB = os.getenv("DEVOTIONAL_DB")
-TABLE_DEVOS = "devotionals"
-TABLE_USED = "used_devotionals"
 DEFAULT_TRANSLATION = "NIV"
 
+# ---------- SQLAlchemy setup ----------
+engine: Engine = create_engine(DEVOTIONAL_DATABASE_URL, future=True)
 
-# ------------- DB connection -------------
-def connect_sqlite(path: Path) -> sqlite3.Connection:
-    conn = sqlite3.connect(str(path))
-    conn.row_factory = sqlite3.Row
-    conn.execute("PRAGMA foreign_keys=ON;")
-    conn.execute("PRAGMA journal_mode=DELETE;")
-    conn.execute("PRAGMA synchronous=FULL;")
-    return conn
+metadata = MetaData()
 
+devotionals = Table(
+    "devotionals",
+    metadata,
+    Column("message_id", Text, primary_key=True),
+    Column("msg_date", Text),  # kept as TEXT; substring works
+    Column("subject", Text),
+    Column("verse", Text),
+    Column("reading", Text),
+    Column("reflection", Text),
+    Column("prayer", Text),
+    Column("holiday", Text),
+    Column("ai_subject", Boolean),
+    Column("ai_prayer", Boolean),
+    Column("ai_verse", Boolean),
+    Column("ai_reading", Boolean),
+    schema="devotional",
+)
 
-# ------------- Schema -------------
-CREATE_USED_SQL = f"""
-CREATE TABLE IF NOT EXISTS {TABLE_USED} (
-    message_id     TEXT NOT NULL,
-    used_key_type  TEXT NOT NULL,   -- 'HOLIDAY' or 'MMDD'
-    used_key_value TEXT NOT NULL,   -- holiday enum string OR 'MM-DD'
-    used_date      TEXT NOT NULL,   -- 'YYYY-MM-DD' actual posting date
-    PRIMARY KEY (message_id, used_key_type, used_key_value),
-    FOREIGN KEY (message_id) REFERENCES {TABLE_DEVOS}(message_id)
-);
-"""
-
-CREATE_USED_IDX_SQL = f"""
-CREATE INDEX IF NOT EXISTS idx_used_type_value ON {TABLE_USED}(used_key_type, used_key_value);
-"""
-
-
-def ensure_used_schema(conn: sqlite3.Connection) -> None:
-    conn.execute(CREATE_USED_SQL)
-    conn.execute(CREATE_USED_IDX_SQL)
-
-
-def ensure_perf_indexes(conn: sqlite3.Connection) -> None:
-    conn.execute(
-        f"CREATE INDEX IF NOT EXISTS idx_devos_mmdd ON {TABLE_DEVOS}(substr(msg_date, 6, 5));"
-    )
-    conn.execute(
-        f"CREATE INDEX IF NOT EXISTS idx_devos_holiday ON {TABLE_DEVOS}(holiday);"
-    )
+used_devotionals = Table(
+    "used_devotionals",
+    metadata,
+    Column("message_id", Text, nullable=False),
+    Column("used_key_type", Text, nullable=False),  # 'HOLIDAY' or 'MMDD'
+    Column("used_key_value", Text, nullable=False),
+    Column("used_date", Date, nullable=False),
+    schema="devotional",
+)
 
 
-# ------------- Helpers -------------
+# ---------- Helpers ----------
 def today_utc_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
@@ -93,16 +95,12 @@ def norm_bool(v) -> bool:
     return str(v).strip().lower() in {"1", "true", "t", "yes", "y"}
 
 
-def row_val(r: sqlite3.Row, col: str, default=None):
-    try:
-        v = r[col]
-    except (KeyError, IndexError):
-        return default
+def row_val(row, col: str, default=None):
+    v = row.get(col) if isinstance(row, dict) else getattr(row, col, None)
     return v if v is not None else default
 
 
-# Scripture reference parsing with comma support:
-# "John 3:16", "John 3:16-18", "Ephesians 4:1,2", "Colossians 3:12-14,17"
+# Scripture reference parsing with comma support
 REF_HEAD_RE = re.compile(
     r"^\s*(?P<book>(?:[1-3]\s+)?[A-Za-z]+(?:\s+[A-Za-z]+)*)\s+(?P<chapter>\d+)\s*:\s*(?P<trail>.+?)\s*$"
 )
@@ -113,10 +111,6 @@ def _split_verse_trail(trail: str) -> List[str]:
 
 
 def parse_reference_str(ref: str) -> Optional[List[Tuple[str, int, str]]]:
-    """
-    Return a list of (book, chapter, verse_spec) where verse_spec is 'n' or 'n-m'.
-    Handles comma lists like '1,2' or '12-14,17'.
-    """
     if not ref:
         return None
     m = REF_HEAD_RE.match(ref)
@@ -138,25 +132,16 @@ def parse_reference_str(ref: str) -> Optional[List[Tuple[str, int, str]]]:
 
 
 def format_ref_suffix(ref_str: str, translation: str, is_ai: bool) -> str:
-    """
-    Return '(Malachi 3:6 NIV)', '(Malachi 3:6 NIV AI)',
-    or '(Malachi 3:6 NIV • Christmas AI)' if holiday is present.
-    """
     pieces: List[str] = (
         [ref_str.strip(), translation.strip()] if ref_str else [translation.strip()]
     )
-    # if holiday_val:
-    #     pretty = holiday_val.replace("_", " ").title()
-    #     pieces.append(f"• {pretty}")
     if is_ai:
         pieces.append("AI")
     inner = " ".join(pieces).strip()
     return f"({inner})" if inner else ""
 
 
-def fetch_assembled_text_for_ref(
-    ref_str: str, translation: str, bible_db: Path
-) -> Optional[str]:
+def fetch_assembled_text_for_ref(ref_str: str, translation: str) -> Optional[str]:
     parts = parse_reference_str(ref_str)
     if not parts:
         return None
@@ -165,11 +150,10 @@ def fetch_assembled_text_for_ref(
         t = get_verse_text(
             book=book,
             chapter=chapter,
-            verse_spec=verse_spec,  # single 'n' or range 'n-m'
+            verse_spec=verse_spec,  # 'n' or 'n-m'
             translation=translation,
-            db_path=bible_db,
             include_refs=True,
-            add_refs_if_missing=True,  # auto-add [n] for NIV
+            add_refs_if_missing=True,
         )
         if t:
             texts.append(t)
@@ -178,21 +162,20 @@ def fetch_assembled_text_for_ref(
     return " ".join(texts)
 
 
-# ------------- Message builder (with bible_verse integration) -------------
-def build_message_parts(dev: sqlite3.Row, translation: str, bible_db: Path):
+# ---------- Message builder ----------
+def build_message_parts(dev_row: dict, translation: str):
     """
     Returns tuple: (subject, verse_line, reading_line, reflection, prayer, verse_text)
     """
-    subject = row_val(dev, "subject", "") or ""
-    prayer = row_val(dev, "prayer", "") or ""
-    verse_ref_str = (row_val(dev, "verse", "") or "").strip()
-    reading_ref_str = (row_val(dev, "reading", "") or "").strip()
-    # holiday_val = row_val(dev, "holiday", None)
+    subject = row_val(dev_row, "subject", "") or ""
+    prayer = row_val(dev_row, "prayer", "") or ""
+    verse_ref_str = (row_val(dev_row, "verse", "") or "").strip()
+    reading_ref_str = (row_val(dev_row, "reading", "") or "").strip()
 
-    ai_subject = norm_bool(row_val(dev, "ai_subject", False))
-    ai_prayer = norm_bool(row_val(dev, "ai_prayer", False))
-    ai_verse = norm_bool(row_val(dev, "ai_verse", False))
-    ai_reading = norm_bool(row_val(dev, "ai_reading", False))
+    ai_subject = norm_bool(row_val(dev_row, "ai_subject", False))
+    ai_prayer = norm_bool(row_val(dev_row, "ai_prayer", False))
+    ai_verse = norm_bool(row_val(dev_row, "ai_verse", False))
+    ai_reading = norm_bool(row_val(dev_row, "ai_reading", False))
 
     if ai_subject and subject:
         subject = f"{subject} (AI)"
@@ -209,203 +192,221 @@ def build_message_parts(dev: sqlite3.Row, translation: str, bible_db: Path):
     )
 
     verse_text = (
-        fetch_assembled_text_for_ref(verse_ref_str, translation, bible_db)
+        fetch_assembled_text_for_ref(verse_ref_str, translation)
         if verse_ref_str
         else None
     )
 
     reflection = (
-        row_val(dev, "reflection", "")
-        or row_val(dev, "ai_reflection_corrected", "")
-        or row_val(dev, "original_content", "")
+        row_val(dev_row, "reflection", "")
+        or row_val(dev_row, "ai_reflection_corrected", "")
+        or row_val(dev_row, "original_content", "")
         or ""
     )
-
-    # (holiday_name, holiday_emoticon) = holiday_vals
-    # print(f"holiday_name: {holiday_name}")
-    # print(f"holiday_emoticon: {holiday_emoticon}")
 
     return subject, verse_line, reading_line, reflection, prayer, verse_text
 
 
 def build_preview_text(parts) -> str:
     subject, verse_line, reading_line, reflection, prayer, verse_text = parts
-
     lines: List[str] = []
     if subject:
         lines.append(subject)
         lines.append("")
-
     if reflection:
         lines.append(reflection)
         lines.append("")
-
     if verse_line:
         lines.append(verse_line)
     if verse_text:
         lines.append(verse_text)
     if verse_line or verse_text:
         lines.append("")
-
     if reading_line:
         lines.append(reading_line)
         lines.append("")
-
     if prayer:
         lines.append("Prayer")
         lines.append(prayer)
-
     return "\n".join(lines).strip()
 
 
-# ------------- Generic small helper: random pick from candidate IDs -------------
-def pick_one_by_ids(
-    conn: sqlite3.Connection, id_rows: List[sqlite3.Row]
-) -> Optional[sqlite3.Row]:
+# ---------- DB query helpers (SQLAlchemy Core) ----------
+def pick_one_by_ids(conn: Connection, id_rows: List[dict]) -> Optional[dict]:
     if not id_rows:
         return None
     chosen_id = random.choice([r["message_id"] for r in id_rows])
-    return conn.execute(
-        f"SELECT * FROM {TABLE_DEVOS} WHERE message_id = ?", (chosen_id,)
-    ).fetchone()
+    row = (
+        conn.execute(select(devotionals).where(devotionals.c.message_id == chosen_id))
+        .mappings()
+        .first()
+    )
+    return dict(row) if row else None
 
 
-# ------------- Queries (holiday pools) -------------
-def count_catalog_for_holiday(conn: sqlite3.Connection, holiday_value: str) -> int:
-    row = conn.execute(
-        f"SELECT COUNT(*) AS cnt FROM {TABLE_DEVOS} WHERE holiday = ?", (holiday_value,)
-    ).fetchone()
-    return int(row["cnt"])
+def count_catalog_for_holiday(conn: Connection, holiday_value: str) -> int:
+    stmt = select(func.count().label("cnt")).where(
+        devotionals.c.holiday == holiday_value
+    )
+    return int(conn.execute(stmt).scalar_one())
 
 
-def count_remaining_for_holiday(conn: sqlite3.Connection, holiday_value: str) -> int:
-    sql = f"""
-        WITH used AS (
-            SELECT message_id FROM {TABLE_USED}
-            WHERE used_key_type = 'HOLIDAY' AND used_key_value = ?
+def count_remaining_for_holiday(conn: Connection, holiday_value: str) -> int:
+    used_subq = (
+        select(used_devotionals.c.message_id)
+        .where(
+            and_(
+                used_devotionals.c.used_key_type == "HOLIDAY",
+                used_devotionals.c.used_key_value == holiday_value,
+            )
         )
-        SELECT COUNT(*) AS cnt
-        FROM {TABLE_DEVOS}
-        WHERE holiday = ?
-          AND message_id NOT IN used
-    """
-    row = conn.execute(sql, (holiday_value, holiday_value)).fetchone()
-    return int(row["cnt"])
+        .subquery()
+    )
+    stmt = select(func.count().label("cnt")).where(
+        and_(
+            devotionals.c.holiday == holiday_value,
+            ~devotionals.c.message_id.in_(select(used_subq.c.message_id)),
+        )
+    )
+    return int(conn.execute(stmt).scalar_one())
 
 
 def pick_random_unused_for_holiday(
-    conn: sqlite3.Connection, holiday_value: str, limit: int = 200
-) -> Optional[sqlite3.Row]:
-    sql_ids = f"""
-        WITH used AS (
-            SELECT message_id FROM {TABLE_USED}
-            WHERE used_key_type = 'HOLIDAY' AND used_key_value = ?
+    conn: Connection, holiday_value: str, limit: int = 200
+) -> Optional[dict]:
+    used_subq = (
+        select(used_devotionals.c.message_id)
+        .where(
+            and_(
+                used_devotionals.c.used_key_type == "HOLIDAY",
+                used_devotionals.c.used_key_value == holiday_value,
+            )
         )
-        SELECT message_id
-        FROM {TABLE_DEVOS}
-        WHERE holiday = ?
-          AND message_id NOT IN used
-        LIMIT {limit}
-    """
-    id_rows = conn.execute(sql_ids, (holiday_value, holiday_value)).fetchall()
+        .subquery()
+    )
+    ids_stmt = (
+        select(devotionals.c.message_id)
+        .where(
+            and_(
+                devotionals.c.holiday == holiday_value,
+                ~devotionals.c.message_id.in_(select(used_subq.c.message_id)),
+            )
+        )
+        .limit(limit)
+    )
+    id_rows = [dict(r) for r in conn.execute(ids_stmt).mappings().all()]
     return pick_one_by_ids(conn, id_rows)
 
 
 def pick_random_any_for_holiday(
-    conn: sqlite3.Connection, holiday_value: str, limit: int = 200
-) -> Optional[sqlite3.Row]:
-    sql_ids = f"""
-        SELECT message_id
-        FROM {TABLE_DEVOS}
-        WHERE holiday = ?
-        LIMIT {limit}
-    """
-    id_rows = conn.execute(sql_ids, (holiday_value,)).fetchall()
+    conn: Connection, holiday_value: str, limit: int = 200
+) -> Optional[dict]:
+    ids_stmt = (
+        select(devotionals.c.message_id)
+        .where(devotionals.c.holiday == holiday_value)
+        .limit(limit)
+    )
+    id_rows = [dict(r) for r in conn.execute(ids_stmt).mappings().all()]
     return pick_one_by_ids(conn, id_rows)
 
 
-def reset_usage_for_holiday(conn: sqlite3.Connection, holiday_value: str) -> None:
+def reset_usage_for_holiday(conn: Connection, holiday_value: str) -> None:
     conn.execute(
-        f"DELETE FROM {TABLE_USED} WHERE used_key_type = 'HOLIDAY' AND used_key_value = ?",
-        (holiday_value,),
+        used_devotionals.delete().where(
+            and_(
+                used_devotionals.c.used_key_type == "HOLIDAY",
+                used_devotionals.c.used_key_value == holiday_value,
+            )
+        )
     )
 
 
-# ------------- Queries (MM-DD pools, all) -------------
-def count_catalog_for_mmdd(conn: sqlite3.Connection, mmdd: str) -> int:
-    row = conn.execute(
-        f"SELECT COUNT(*) AS cnt FROM {TABLE_DEVOS} WHERE substr(msg_date, 6, 5) = ?",
-        (mmdd,),
-    ).fetchone()
-    return int(row["cnt"])
+def count_catalog_for_mmdd(conn: Connection, mmdd: str) -> int:
+    expr = func.substring(devotionals.c.msg_date, 6, 5)
+    stmt = select(func.count().label("cnt")).where(expr == mmdd)
+    return int(conn.execute(stmt).scalar_one())
 
 
-def count_remaining_for_mmdd(conn: sqlite3.Connection, mmdd: str) -> int:
-    sql = f"""
-        WITH used AS (
-            SELECT message_id FROM {TABLE_USED}
-            WHERE used_key_type = 'MMDD' AND used_key_value = ?
+def count_remaining_for_mmdd(conn: Connection, mmdd: str) -> int:
+    expr = func.substring(devotionals.c.msg_date, 6, 5)
+    used_subq = (
+        select(used_devotionals.c.message_id)
+        .where(
+            and_(
+                used_devotionals.c.used_key_type == "MMDD",
+                used_devotionals.c.used_key_value == mmdd,
+            )
         )
-        SELECT COUNT(*) AS cnt
-        FROM {TABLE_DEVOS}
-        WHERE substr(msg_date, 6, 5) = ?
-          AND message_id NOT IN used
-    """
-    row = conn.execute(sql, (mmdd, mmdd)).fetchone()
-    return int(row["cnt"])
+        .subquery()
+    )
+    stmt = select(func.count().label("cnt")).where(
+        and_(
+            expr == mmdd, ~devotionals.c.message_id.in_(select(used_subq.c.message_id))
+        )
+    )
+    return int(conn.execute(stmt).scalar_one())
 
 
 def pick_random_unused_for_mmdd(
-    conn: sqlite3.Connection, mmdd: str, limit: int = 200
-) -> Optional[sqlite3.Row]:
-    sql_ids = f"""
-        WITH used AS (
-            SELECT message_id FROM {TABLE_USED}
-            WHERE used_key_type = 'MMDD' AND used_key_value = ?
+    conn: Connection, mmdd: str, limit: int = 200
+) -> Optional[dict]:
+    expr = func.substring(devotionals.c.msg_date, 6, 5)
+    used_subq = (
+        select(used_devotionals.c.message_id)
+        .where(
+            and_(
+                used_devotionals.c.used_key_type == "MMDD",
+                used_devotionals.c.used_key_value == mmdd,
+            )
         )
-        SELECT message_id
-        FROM {TABLE_DEVOS}
-        WHERE substr(msg_date, 6, 5) = ?
-          AND message_id NOT IN used
-        LIMIT {limit}
-    """
-    id_rows = conn.execute(sql_ids, (mmdd, mmdd)).fetchall()
+        .subquery()
+    )
+    ids_stmt = (
+        select(devotionals.c.message_id)
+        .where(
+            and_(
+                expr == mmdd,
+                ~devotionals.c.message_id.in_(select(used_subq.c.message_id)),
+            )
+        )
+        .limit(limit)
+    )
+    id_rows = [dict(r) for r in conn.execute(ids_stmt).mappings().all()]
     return pick_one_by_ids(conn, id_rows)
 
 
 def pick_random_any_for_mmdd(
-    conn: sqlite3.Connection, mmdd: str, limit: int = 200
-) -> Optional[sqlite3.Row]:
-    sql_ids = f"""
-        SELECT message_id
-        FROM {TABLE_DEVOS}
-        WHERE substr(msg_date, 6, 5) = ?
-        LIMIT {limit}
-    """
-    id_rows = conn.execute(sql_ids, (mmdd,)).fetchall()
+    conn: Connection, mmdd: str, limit: int = 200
+) -> Optional[dict]:
+    expr = func.substring(devotionals.c.msg_date, 6, 5)
+    ids_stmt = select(devotionals.c.message_id).where(expr == mmdd).limit(limit)
+    id_rows = [dict(r) for r in conn.execute(ids_stmt).mappings().all()]
     return pick_one_by_ids(conn, id_rows)
 
 
-def reset_usage_for_mmdd(conn: sqlite3.Connection, mmdd: str) -> None:
+def reset_usage_for_mmdd(conn: Connection, mmdd: str) -> None:
     conn.execute(
-        f"DELETE FROM {TABLE_USED} WHERE used_key_type = 'MMDD' AND used_key_value = ?",
-        (mmdd,),
+        used_devotionals.delete().where(
+            and_(
+                used_devotionals.c.used_key_type == "MMDD",
+                used_devotionals.c.used_key_value == mmdd,
+            )
+        )
     )
 
 
-# ------------- Non-holiday-only helpers -------------
-def all_mmdd_remaining_counts_nonholiday(
-    conn: sqlite3.Connection,
-) -> List[Tuple[str, int]]:
-    sql = f"""
+def all_mmdd_remaining_counts_nonholiday(conn: Connection) -> List[Tuple[str, int]]:
+    expr = func.substring(devotionals.c.msg_date, 6, 5)
+    # Build counts with a manual SQL for FILTER syntax
+    sql = text("""
         WITH devos AS (
-            SELECT substr(msg_date, 6, 5) AS mmdd, message_id
-            FROM {TABLE_DEVOS}
+            SELECT substring(msg_date from 6 for 5) AS mmdd, message_id
+            FROM devotional.devotionals
             WHERE holiday IS NULL
         ),
         used AS (
             SELECT used_key_value AS mmdd, message_id
-            FROM {TABLE_USED}
+            FROM devotional.used_devotionals
             WHERE used_key_type = 'MMDD'
         )
         SELECT d.mmdd,
@@ -417,88 +418,115 @@ def all_mmdd_remaining_counts_nonholiday(
         FROM devos d
         GROUP BY d.mmdd
         ORDER BY remaining_count DESC, d.mmdd
-    """
-    rows = conn.execute(sql).fetchall()
+    """)
+    rows = conn.execute(sql).mappings().all()
     return [(r["mmdd"], int(r["remaining_count"])) for r in rows]
 
 
 def pick_random_unused_for_mmdd_nonholiday(
-    conn: sqlite3.Connection, mmdd: str, limit: int = 200
-) -> Optional[sqlite3.Row]:
-    sql_ids = f"""
+    conn: Connection, mmdd: str, limit: int = 200
+) -> Optional[dict]:
+    sql = text("""
         WITH used AS (
             SELECT message_id
-            FROM {TABLE_USED}
-            WHERE used_key_type = 'MMDD' AND used_key_value = ?
+            FROM devotional.used_devotionals
+            WHERE used_key_type = 'MMDD' AND used_key_value = :mmdd
         )
         SELECT message_id
-        FROM {TABLE_DEVOS}
-        WHERE substr(msg_date, 6, 5) = ?
+        FROM devotional.devotionals
+        WHERE substring(msg_date from 6 for 5) = :mmdd
           AND holiday IS NULL
-          AND message_id NOT IN used
-        LIMIT {limit}
-    """
-    id_rows = conn.execute(sql_ids, (mmdd, mmdd)).fetchall()
+          AND message_id NOT IN (SELECT message_id FROM used)
+        LIMIT :limit
+    """)
+    id_rows = [
+        dict(r)
+        for r in conn.execute(sql, {"mmdd": mmdd, "limit": limit}).mappings().all()
+    ]
     return pick_one_by_ids(conn, id_rows)
 
 
 def pick_random_any_for_mmdd_nonholiday(
-    conn: sqlite3.Connection, mmdd: str, limit: int = 200
-) -> Optional[sqlite3.Row]:
-    sql_ids = f"""
+    conn: Connection, mmdd: str, limit: int = 200
+) -> Optional[dict]:
+    sql = text("""
         SELECT message_id
-        FROM {TABLE_DEVOS}
-        WHERE substr(msg_date, 6, 5) = ?
+        FROM devotional.devotionals
+        WHERE substring(msg_date from 6 for 5) = :mmdd
           AND holiday IS NULL
-        LIMIT {limit}
-    """
-    id_rows = conn.execute(sql_ids, (mmdd,)).fetchall()
+        LIMIT :limit
+    """)
+    id_rows = [
+        dict(r)
+        for r in conn.execute(sql, {"mmdd": mmdd, "limit": limit}).mappings().all()
+    ]
     return pick_one_by_ids(conn, id_rows)
 
 
-def mmdd_in_window(center_mmdd: str, days: int = 14) -> List[str]:
-    ref_year = 2021
-    center_date = datetime.strptime(f"{ref_year}-{center_mmdd}", "%Y-%m-%d").date()
-    mmdd_set = set()
-    for delta in range(-days, days + 1):
-        d = center_date + timedelta(days=delta)
-        mmdd_set.add(d.strftime("%m-%d"))
-    return sorted(mmdd_set)
+def _all_mmdd_remaining_counts_any(conn: Connection) -> List[Tuple[str, int]]:
+    sql = text("""
+        WITH devos AS (
+            SELECT substring(msg_date from 6 for 5) AS mmdd, message_id
+            FROM devotional.devotionals
+        ),
+        used AS (
+            SELECT used_key_value AS mmdd, message_id
+            FROM devotional.used_devotionals
+            WHERE used_key_type = 'MMDD'
+        )
+        SELECT d.mmdd,
+               COUNT(*) FILTER (
+                   WHERE d.message_id NOT IN (
+                       SELECT u.message_id FROM used u WHERE u.mmdd = d.mmdd
+                   )
+               ) AS remaining_count
+        FROM devos d
+        GROUP BY d.mmdd
+        ORDER BY remaining_count DESC, d.mmdd
+    """)
+    rows = conn.execute(sql).mappings().all()
+    return [(r["mmdd"], int(r["remaining_count"])) for r in rows]
 
 
-def best_mmdd_in_window_by_remaining_nonholiday(
-    conn: sqlite3.Connection, center_mmdd: str, days: int = 14
-) -> List[str]:
-    window = set(mmdd_in_window(center_mmdd, days))
-    counts = all_mmdd_remaining_counts_nonholiday(conn)
-    candidates = [(mmdd, cnt) for (mmdd, cnt) in counts if mmdd in window]
-    candidates.sort(key=lambda x: (-x[1], x[0]))
-    return [mm for mm, _cnt in candidates]
+def fetch_by_message_id(conn: Connection, message_id: str) -> Optional[dict]:
+    row = (
+        conn.execute(select(devotionals).where(devotionals.c.message_id == message_id))
+        .mappings()
+        .first()
+    )
+    return dict(row) if row else None
 
 
-# ------------- Mark used -------------
 def mark_used_holiday(
-    conn: sqlite3.Connection, message_id: str, used_date_iso: str, holiday_value: str
+    conn: Connection, message_id: str, used_date_iso: str, holiday_value: str
 ) -> None:
     conn.execute(
-        f"INSERT INTO {TABLE_USED} (message_id, used_key_type, used_key_value, used_date) VALUES (?, 'HOLIDAY', ?, ?)",
-        (message_id, holiday_value, used_date_iso),
+        used_devotionals.insert().values(
+            message_id=message_id,
+            used_key_type="HOLIDAY",
+            used_key_value=holiday_value,
+            used_date=used_date_iso,
+        )
     )
 
 
 def mark_used_mmdd(
-    conn: sqlite3.Connection, message_id: str, used_date_iso: str, mmdd: str
+    conn: Connection, message_id: str, used_date_iso: str, mmdd: str
 ) -> None:
     conn.execute(
-        f"INSERT INTO {TABLE_USED} (message_id, used_key_type, used_key_value, used_date) VALUES (?, 'MMDD', ?, ?)",
-        (message_id, mmdd, used_date_iso),
+        used_devotionals.insert().values(
+            message_id=message_id,
+            used_key_type="MMDD",
+            used_key_value=mmdd,
+            used_date=used_date_iso,
+        )
     )
 
 
-# ------------- Selection orchestration -------------
+# ---------- Selection orchestration ----------
 def select_for_holiday(
-    conn: sqlite3.Connection, target_date: str, holiday_value: str
-) -> Optional[Tuple[sqlite3.Row, str, str]]:
+    conn: Connection, target_date: str, holiday_value: str
+) -> Optional[Tuple[dict, str, str]]:
     total = count_catalog_for_holiday(conn, holiday_value)
     if total <= 0:
         return None
@@ -515,8 +543,8 @@ def select_for_holiday(
 
 
 def select_for_mmdd(
-    conn: sqlite3.Connection, target_date: str
-) -> Optional[Tuple[sqlite3.Row, str, str]]:
+    conn: Connection, target_date: str
+) -> Optional[Tuple[dict, str, str]]:
     mmdd = to_mmdd(target_date)
     total = count_catalog_for_mmdd(conn, mmdd)
     if total > 0:
@@ -568,50 +596,22 @@ def select_for_mmdd(
     return None
 
 
-def _all_mmdd_remaining_counts_any(conn: sqlite3.Connection) -> List[Tuple[str, int]]:
-    sql = f"""
-        WITH devos AS (
-            SELECT substr(msg_date, 6, 5) AS mmdd, message_id
-            FROM {TABLE_DEVOS}
-        ),
-        used AS (
-            SELECT used_key_value AS mmdd, message_id
-            FROM {TABLE_USED}
-            WHERE used_key_type = 'MMDD'
-        )
-        SELECT d.mmdd,
-               COUNT(*) FILTER (
-                   WHERE d.message_id NOT IN (
-                       SELECT u.message_id FROM used u WHERE u.mmdd = d.mmdd
-                   )
-               ) AS remaining_count
-        FROM devos d
-        GROUP BY d.mmdd
-        ORDER BY remaining_count DESC, d.mmdd
-    """
-    rows = conn.execute(sql).fetchall()
-    return [(r["mmdd"], int(r["remaining_count"])) for r in rows]
+def mmdd_in_window(center_mmdd: str, days: int = 14) -> List[str]:
+    ref_year = 2021
+    center_date = datetime.strptime(f"{ref_year}-{center_mmdd}", "%Y-%m-%d").date()
+    mmdd_set = set()
+    for delta in range(-days, days + 1):
+        d = center_date + timedelta(days=delta)
+        mmdd_set.add(d.strftime("%m-%d"))
+    return sorted(mmdd_set)
 
 
-# ------------- Fetch by message_id -------------
-def fetch_by_message_id(
-    conn: sqlite3.Connection, message_id: str
-) -> Optional[sqlite3.Row]:
-    return conn.execute(
-        f"SELECT * FROM {TABLE_DEVOS} WHERE message_id = ?", (message_id,)
-    ).fetchone()
-
-
-def show(v):
-    return "None" if v is None else str(v)
-
-
-# ------------- CLI main -------------
+# ---------- CLI main ----------
 def main():
-    # Defaults so they are always defined
     h_enum = None
     holiday_name = None
     holiday_emoticon = None
+
     ap = argparse.ArgumentParser(
         description="Select and mark a devotional (no posting)."
     )
@@ -619,14 +619,8 @@ def main():
     ap.add_argument("--message-id", help="Force use of a specific message_id")
     ap.add_argument(
         "--translation",
-        default=DEFAULT_TRANSLATION,  # ensures NIV by default
+        default=DEFAULT_TRANSLATION,
         help=f"Bible translation code (default: {DEFAULT_TRANSLATION})",
-    )
-    ap.add_argument(
-        "--devdb", default=str(DEVOTIONAL_DB), help="Path to daily_devotional_v2.db"
-    )
-    ap.add_argument(
-        "--bibledb", default=str(BIBLE_VERSE_DB), help="Path to bible_verse.db"
     )
     ap.add_argument(
         "--test",
@@ -638,7 +632,6 @@ def main():
     )
     args = ap.parse_args()
 
-    # Make --test imply --dry-run
     if args.test:
         args.dry_run = True
 
@@ -647,105 +640,82 @@ def main():
         print("Invalid --date format. Use YYYY-MM-DD.")
         sys.exit(2)
 
-    dev_db_path = Path(args.devdb)
-    if not dev_db_path.exists():
-        print(f"Devotional DB not found: {dev_db_path}")
-        sys.exit(1)
-
-    bible_db_path = Path(args.bibledb)
-    if not bible_db_path.exists():
-        print(
-            f"[WARN] bible_verse.db not found at {bible_db_path}. Verse text may be missing."
-        )
-
-    with connect_sqlite(dev_db_path) as conn:
-        with conn:
-            ensure_used_schema(conn)
-            ensure_perf_indexes(conn)
-
-        with conn:
-            if args.message_id:
-                row = fetch_by_message_id(conn, args.message_id)
-                if not row:
-                    print(f"No devotional found with message_id={args.message_id}")
-                    sys.exit(1)
-                # Determine pool key for marking: prefer holiday if present, else MMDD by msg_date
-                holiday_val = row_val(row, "holiday")
-                if holiday_val:
-                    key_type, key_value = "HOLIDAY", holiday_val
-                else:
-                    md = row_val(row, "msg_date")
-                    if not md or len(md) < 10:
-                        print(
-                            "Selected row missing or invalid msg_date; cannot determine MMDD pool."
-                        )
-                        sys.exit(1)
-                    key_type, key_value = "MMDD", md[5:10]
+    with engine.begin() as conn:
+        if args.message_id:
+            row = fetch_by_message_id(conn, args.message_id)
+            if not row:
+                print(f"No devotional found with message_id={args.message_id}")
+                sys.exit(1)
+            holiday_val = row_val(row, "holiday")
+            if holiday_val:
+                key_type, key_value = "HOLIDAY", holiday_val
             else:
-                # date-driven selection (holiday/MMDD ±14-day logic)
-                info = holiday_info(target_date)
-                if info is None:
-                    h_enum = None
-                    holiday_name = None
-                    holiday_emoticon = None
-                else:
-                    h_enum, holiday_name, holiday_emoticon = info
-                holiday_value = h_enum.value if h_enum is not None else None
-                if holiday_value:
-                    sel = select_for_holiday(conn, target_date, holiday_value)
-                    if not sel:
-                        sel = select_for_mmdd(conn, target_date)
-                else:
-                    sel = select_for_mmdd(conn, target_date)
-                if not sel:
-                    print("No eligible devotional found under current rules.")
-                    sys.exit(1)
-                row, key_type, key_value = sel
-
-            parts = build_message_parts(row, args.translation, bible_db_path)
-            message_id = row["message_id"]
-            subj, verse_line, reading_line, reflection, prayer, verse_text = parts
-
-            # Test mode: print message to stdout and skip posting/marking
-            if args.test:
-                print("=== TEST MODE PREVIEW ===")
-                print(build_preview_text(parts))
-                # Optionally show holiday line
-                if holiday_name or holiday_emoticon:
-                    print("")
+                md = row_val(row, "msg_date")
+                if not md or len(md) < 10:
                     print(
-                        f"Holiday: {holiday_name or ''} {holiday_emoticon or ''}".strip()
+                        "Selected row missing or invalid msg_date; cannot determine MMDD pool."
                     )
-                print("")
-                print(f"# {message_id}")
-                return
-
-            # Non-test flow:
-            if not args.dry_run:
-                if key_type == "HOLIDAY":
-                    mark_used_holiday(conn, message_id, target_date, key_value)
-                else:
-                    mark_used_mmdd(conn, message_id, target_date, key_value)
-                print(
-                    f"Marked used: message_id={message_id} on {target_date} for {key_type}={key_value}"
-                )
-
-            poster = TelegramPoster()
-            if poster.is_configured():
-                poster.post_devotion(
-                    message_id=message_id,
-                    subject=subj,
-                    verse=verse_line,
-                    verse_text=verse_text,
-                    holiday_name=holiday_name,
-                    holiday_emoticon=holiday_emoticon,
-                    reading=reading_line,
-                    reflection=reflection,
-                    prayer=prayer,
-                    silent=False,
-                )
+                    sys.exit(1)
+                key_type, key_value = "MMDD", md[5:10]
+        else:
+            info = holiday_info(target_date)
+            if info is None:
+                h_enum = None
+                holiday_name = None
+                holiday_emoticon = None
             else:
-                print("[INFO] Telegram not configured; nothing posted.")
+                h_enum, holiday_name, holiday_emoticon = info
+            holiday_value = h_enum.value if h_enum is not None else None
+            if holiday_value:
+                sel = select_for_holiday(conn, target_date, holiday_value)
+                if not sel:
+                    sel = select_for_mmdd(conn, target_date)
+            else:
+                sel = select_for_mmdd(conn, target_date)
+            if not sel:
+                print("No eligible devotional found under current rules.")
+                sys.exit(1)
+            row, key_type, key_value = sel
+
+        parts = build_message_parts(row, args.translation)
+        message_id = row["message_id"]
+        subj, verse_line, reading_line, reflection, prayer, verse_text = parts
+
+        if args.test:
+            print("=== TEST MODE PREVIEW ===")
+            print(build_preview_text(parts))
+            if holiday_name or holiday_emoticon:
+                print("")
+                print(f"Holiday: {holiday_name or ''} {holiday_emoticon or ''}".strip())
+            print("")
+            print(f"# {message_id}")
+            return
+
+        if not args.dry_run:
+            if key_type == "HOLIDAY":
+                mark_used_holiday(conn, message_id, target_date, key_value)
+            else:
+                mark_used_mmdd(conn, message_id, target_date, key_value)
+            print(
+                f"Marked used: message_id={message_id} on {target_date} for {key_type}={key_value}"
+            )
+
+        poster = TelegramPoster()
+        if poster.is_configured():
+            poster.post_devotion(
+                message_id=message_id,
+                subject=subj,
+                verse=verse_line,
+                verse_text=verse_text,
+                holiday_name=holiday_name,
+                holiday_emoticon=holiday_emoticon,
+                reading=reading_line,
+                reflection=reflection,
+                prayer=prayer,
+                silent=False,
+            )
+        else:
+            print("[INFO] Telegram not configured; nothing posted.")
 
 
 if __name__ == "__main__":

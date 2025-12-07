@@ -1,0 +1,42 @@
+# 1) Create role + database
+psql "postgresql://postgres@HOST:PORT/postgres" -f scripts/setup_bible_db.sql || true
+
+# 2) Create schema + grants (connect to the new DB)
+psql "postgresql://postgres@HOST:PORT/bible" -f scripts/setup_bible_schema.sql
+
+
+
+export BIBLE_VERSE_DATABASE_URL="postgresql+psycopg://bible:bible@HOST:PORT/bible"
+alembic -c alembic.ini upgrade head
+
+
+export BIBLE_VERSE_DB="/path/to/bible_verse.db"
+export BIBLE_VERSE_DATABASE_URL="postgresql+psycopg://bible:bible@HOST:PORT/bible"
+python scripts/migrate_bible_sqlite_to_pg.py
+
+
+psql "postgresql://bible:bible@HOST:PORT/bible" -c "\dt bible.*"
+psql "postgresql://bible:bible@HOST:PORT/bible" -c "SELECT COUNT(*) FROM bible.verses;"
+
+# SETUP FOR BIBLE
+export DB_TARGET=bible
+export BIBLE_VERSE_DATABASE_URL="postgresql+psycopg://bible:bible@127.0.0.1:5432/bible"
+
+# Create a migration when you change models in schema=bible
+alembic -c alembic.ini revision --autogenerate -m "bible changes"
+
+# Apply to the bible DB
+alembic -c alembic.ini upgrade head
+
+
+# SETUP FOR DEVOTIONAL
+export DB_TARGET=devotional
+export DEVOTIONAL_DATABASE_URL="postgresql+psycopg://devotional:devotional@127.0.0.1:5432/devotional"
+
+# Create a migration for devotional schema
+alembic -c alembic.ini revision --autogenerate -m "devotional changes"
+
+# Apply to the devotional DB
+alembic -c alembic.ini upgrade head
+
+

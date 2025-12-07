@@ -5,20 +5,22 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "anthropic>=0.71.0",
-    "beautifulsoup4>=4.14.2",
+    "anthropic>=0.75.0",
+    "beautifulsoup4>=4.14.3",
     "fuzzywuzzy>=0.18.0",
-    "google-api-python-client>=2.185.0",
-    "google-auth>=2.41.1",
-    "google-auth-httplib2>=0.2.0",
+    "google-api-python-client>=2.187.0",
+    "google-auth>=2.43.0",
+    "google-auth-httplib2>=0.2.1",
     "google-auth-oauthlib>=1.2.2",
-<<<<<<< Updated upstream
-    "language-tool-python>=2.9.4",
-    "pyenchant>=3.3.0",
-=======
-    "python-levenshtein>=0.27.1",
-    "rich>=14.2.0",
-    "telebot>=0.0.5",
-    "telethon>=1.41.2",
->>>>>>> Stashed changes
+    "psycopg>=3.3.2",
+    "sqlalchemy>=2.0.44",
+]
+
+[dependency-groups]
+dev = [
+    "alembic>=1.17.2",
+    "black>=25.11.0",
+    "mypy>=1.19.0",
+    "pytest>=9.0.2",
+    "ruff>=0.14.8",
 ]
