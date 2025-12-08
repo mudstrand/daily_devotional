@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="daily-devotional (localhost)" uuid="d80e0d56-e8a8-43b7-8255-16c426e396b3">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="bible (raptor)" uuid="613efb56-a658-48be-8843-c98a5e5bdb7a">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$USER_HOME$/shared/daily_devotional.db</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/bible</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="daily-devotional (shared)" uuid="34299d4f-ad1c-4573-83c8-a9972eacb06c">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="devotional (raptor)" uuid="d148b099-816e-4eef-a140-9aa5f76643f7">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$USER_HOME$/shared/daily_devotional.db</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/devotional</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="bible database (sandbox)" uuid="c1935c99-7236-4b40-8c95-92f971d1e280">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="devotional (tit.lan)" uuid="b8a74ec6-65a4-4083-8cdc-7ac8650c6129">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$USER_HOME$/shared/bible_verse.db</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://tit.lan:5432/devotional</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="daily-devotional-v2 (shared)" uuid="2c9c606b-ba8a-4fb0-a712-28a7c1aa17b6">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="bible (tit.lan)" uuid="6af67fbc-ca4e-47c2-88c3-b81130ea47c0">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$USER_HOME$/shared/daily_devotional_v2.db</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://tit.lan:5432/bible</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
