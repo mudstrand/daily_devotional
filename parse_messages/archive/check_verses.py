@@ -7,14 +7,14 @@ import unicodedata
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
 
-TARGET_FIELD = "verse"
+TARGET_FIELD = 'verse'
 
 # ---------------------------
 # Patterns: support verse ranges/lists (e.g., 5-6, 7, 9-11) and suffixes (21a, 21b)
 # ---------------------------
 
 # Trailing punctuation/boundary class including common Unicode colon lookalikes
-TRAIL_PUNCT = r"\s\)\]\}\.,;:\uFE55\u2236\uFF1A\u00B7\u2019\u201D"
+TRAIL_PUNCT = r'\s\)\]\}\.,;:\uFE55\u2236\uFF1A\u00B7\u2019\u201D'
 
 # Book + Chapter:Verse(s) — supports ranges/lists and verse letter suffixes (e.g., 21a, 21b)
 BOOK_REF_WITH_VERSES = re.compile(
@@ -58,25 +58,25 @@ BOOK_REF_CHAPTER_ONLY = re.compile(
 # ---------------------------
 
 # Zero-width / BOMs to remove
-ZERO_WIDTHS = "".join(
+ZERO_WIDTHS = ''.join(
     [
-        "\u200b",  # zero width space
-        "\u200c",  # zero width non-joiner
-        "\u200d",  # zero width joiner
-        "\u2060",  # word joiner
-        "\ufeff",  # BOM
+        '\u200b',  # zero width space
+        '\u200c',  # zero width non-joiner
+        '\u200d',  # zero width joiner
+        '\u2060',  # word joiner
+        '\ufeff',  # BOM
     ]
 )
 
 # NBSP-like spaces
-NBSP_LIKE = "".join(
+NBSP_LIKE = ''.join(
     [
-        "\u00a0",  # no-break space
-        "\u202f",  # narrow no-break space
-        "\u2007",  # figure space
-        "\u2008",  # punctuation space
-        "\u2009",  # thin space
-        "\u200a",  # hair space
+        '\u00a0',  # no-break space
+        '\u202f',  # narrow no-break space
+        '\u2007',  # figure space
+        '\u2008',  # punctuation space
+        '\u2009',  # thin space
+        '\u200a',  # hair space
     ]
 )
 
@@ -89,19 +89,17 @@ except Exception:
     HAS_REGEX = False
 
 if HAS_REGEX:
-    ZW_AND_FORMATS = regex_mod.compile(
-        r"[" + re.escape(ZERO_WIDTHS + NBSP_LIKE) + r"]|(\p{Cf})"
-    )
+    ZW_AND_FORMATS = regex_mod.compile(r'[' + re.escape(ZERO_WIDTHS + NBSP_LIKE) + r']|(\p{Cf})')
 else:
-    ZW_AND_FORMATS = re.compile(f"[{re.escape(ZERO_WIDTHS + NBSP_LIKE)}]")
+    ZW_AND_FORMATS = re.compile(f'[{re.escape(ZERO_WIDTHS + NBSP_LIKE)}]')
 
 PARENS_NORMALIZE = {
-    "（": "(",
-    "）": ")",
-    "﹙": "(",
-    "﹚": ")",
-    "❨": "(",
-    "❩": ")",
+    '（': '(',
+    '）': ')',
+    '﹙': '(',
+    '﹚': ')',
+    '❨': '(',
+    '❩': ')',
 }
 
 # ---------------------------
@@ -119,10 +117,10 @@ def read_json_file(path: str) -> Optional[Tuple[Any, str]]:
     Return (parsed_object, original_text_without_bom).
     """
     try:
-        with open(path, "r", encoding="utf-8") as f:
+        with open(path, 'r', encoding='utf-8') as f:
             content = f.read()
-        if content.startswith("\ufeff"):
-            content = content.lstrip("\ufeff")
+        if content.startswith('\ufeff'):
+            content = content.lstrip('\ufeff')
         return json.loads(content), content
     except Exception:
         return None
@@ -133,44 +131,44 @@ def write_json_file(path: str, data: Any, original_text: str) -> bool:
     Write JSON back to the same path, creating a .bak once per file.
     Supports list or dict (top-level). Preserves UTF-8.
     """
-    backup = f"{path}.bak"
+    backup = f'{path}.bak'
     try:
         if not os.path.exists(backup):
-            with open(backup, "w", encoding="utf-8") as bf:
+            with open(backup, 'w', encoding='utf-8') as bf:
                 bf.write(original_text)
     except Exception as e:
-        print(f"[ERROR] Cannot create backup {backup}: {e}", file=sys.stderr)
+        print(f'[ERROR] Cannot create backup {backup}: {e}', file=sys.stderr)
         return False
 
     try:
-        with open(path, "w", encoding="utf-8") as f:
+        with open(path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
-            f.write("\n")
+            f.write('\n')
         return True
     except Exception as e:
-        print(f"[ERROR] Cannot write {path}: {e}", file=sys.stderr)
+        print(f'[ERROR] Cannot write {path}: {e}', file=sys.stderr)
         return False
 
 
 def utc_date_only_now() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    return datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
 
 def parse_date_only_from_record(rec: Dict[str, Any]) -> Optional[str]:
-    raw = rec.get("dateutc") or rec.get("date_utc")
+    raw = rec.get('dateutc') or rec.get('date_utc')
     if not isinstance(raw, str) or not raw.strip():
         return None
     fmts = [
-        "%a, %d %b %Y %H:%M:%S %z",
-        "%a, %d %b %Y %H:%M %z",
-        "%d %b %Y %H:%M:%S %z",
-        "%Y-%m-%d",
+        '%a, %d %b %Y %H:%M:%S %z',
+        '%a, %d %b %Y %H:%M %z',
+        '%d %b %Y %H:%M:%S %z',
+        '%Y-%m-%d',
     ]
     s = raw.strip()
     for fmt in fmts:
         try:
             dt = datetime.strptime(s, fmt)
-            return dt.astimezone(timezone.utc).strftime("%Y-%m-%d")
+            return dt.astimezone(timezone.utc).strftime('%Y-%m-%d')
         except Exception:
             continue
     try:
@@ -180,7 +178,7 @@ def parse_date_only_from_record(rec: Dict[str, Any]) -> Optional[str]:
         if dt is not None:
             if dt.tzinfo is None:
                 dt = dt.replace(tzinfo=timezone.utc)
-            return dt.astimezone(timezone.utc).strftime("%Y-%m-%d")
+            return dt.astimezone(timezone.utc).strftime('%Y-%m-%d')
     except Exception:
         pass
     return None
@@ -195,11 +193,11 @@ def sanitize_verse(text: str) -> str:
     - normalize exotic parentheses to ASCII
     - strip
     """
-    s = unicodedata.normalize("NFKC", text)
-    s = ZW_AND_FORMATS.sub("", s)
+    s = unicodedata.normalize('NFKC', text)
+    s = ZW_AND_FORMATS.sub('', s)
     if any(ch in s for ch in PARENS_NORMALIZE):
-        s = "".join(PARENS_NORMALIZE.get(ch, ch) for ch in s)
-    s = re.sub(r"\s+", " ", s)
+        s = ''.join(PARENS_NORMALIZE.get(ch, ch) for ch in s)
+    s = re.sub(r'\s+', ' ', s)
     return s.strip()
 
 
@@ -210,15 +208,13 @@ def _normalize_verses(first: str, tail: Optional[str]) -> str:
     - Remove spaces around '-' and ','
     - Lowercase any letter suffixes (e.g., 21B -> 21b)
     """
-    first = re.sub(
-        r"^(\d+)([A-Ca-c])$", lambda m: m.group(1) + m.group(2).lower(), first
-    )
+    first = re.sub(r'^(\d+)([A-Ca-c])$', lambda m: m.group(1) + m.group(2).lower(), first)
     if not tail:
         return first
-    t = tail.replace("–", "-").replace("—", "-")
-    t = re.sub(r"\s*-\s*", "-", t)
-    t = re.sub(r"\s*,\s*", ",", t)
-    t = re.sub(r"(\d+)([A-Ca-c])", lambda m: m.group(1) + m.group(2).lower(), t)
+    t = tail.replace('–', '-').replace('—', '-')
+    t = re.sub(r'\s*-\s*', '-', t)
+    t = re.sub(r'\s*,\s*', ',', t)
+    t = re.sub(r'(\d+)([A-Ca-c])', lambda m: m.group(1) + m.group(2).lower(), t)
     return first + t
 
 
@@ -230,9 +226,9 @@ def _find_last_book_ch_vers(s: str) -> Optional[str]:
         book = sanitize_verse(last.group(1))
         ch = last.group(2)
         v1 = last.group(3)
-        tail = last.group(4) or ""
+        tail = last.group(4) or ''
         verses = _normalize_verses(v1, tail)
-        return f"{book} {ch}:{verses}"
+        return f'{book} {ch}:{verses}'
     return None
 
 
@@ -243,7 +239,7 @@ def _find_last_book_ch_only(s: str) -> Optional[str]:
     if last:
         book = sanitize_verse(last.group(1))
         ch = last.group(2)
-        return f"{book} {ch}"
+        return f'{book} {ch}'
     return None
 
 
@@ -267,30 +263,26 @@ def is_chapter_reference(ref: str) -> bool:
     """
     True if ref is 'Book Chapter' (no colon).
     """
-    return isinstance(ref, str) and ":" not in ref and bool(ref.strip())
+    return isinstance(ref, str) and ':' not in ref and bool(ref.strip())
 
 
-def emit_found(
-    filename: str, date_only: str, reference: str, print_only_misses: bool
-) -> None:
+def emit_found(filename: str, date_only: str, reference: str, print_only_misses: bool) -> None:
     if not print_only_misses:
-        print(f"{filename}, {date_only}: {reference}")
+        print(f'{filename}, {date_only}: {reference}')
 
 
 def emit_miss(filename: str, date_only: str, line: int, line_text: str) -> None:
-    print(f"{filename}, {date_only}, {line}:DNL")
-    print(f"code -g {filename}:{line}")
+    print(f'{filename}, {date_only}, {line}:DNL')
+    print(f'code -g {filename}:{line}')
     print(line_text)
 
 
-def emit_chapter(
-    filename: str, date_only: str, line: int, line_text: str, reference: str
-) -> None:
+def emit_chapter(filename: str, date_only: str, line: int, line_text: str, reference: str) -> None:
     """
     Emit a chapter-only reference finding with a distinctive tag.
     """
-    print(f"{filename}, {date_only}, {line}:DNL-CHAPTER {reference}")
-    print(f"code -g {filename}:{line}")
+    print(f'{filename}, {date_only}, {line}:DNL-CHAPTER {reference}')
+    print(f'code -g {filename}:{line}')
     print(line_text)
 
 
@@ -303,19 +295,19 @@ def find_top_level_object_spans(content: str) -> List[Tuple[int, int]]:
     Simple scanner that assumes the top-level is a JSON array of objects.
     """
     spans: List[Tuple[int, int]] = []
-    start_arr = content.find("[")
-    end_arr = content.rfind("]")
+    start_arr = content.find('[')
+    end_arr = content.rfind(']')
     if start_arr == -1 or end_arr == -1 or end_arr <= start_arr:
         return spans
 
     i = start_arr + 1
     n = end_arr
     while i < n:
-        while i < n and content[i] in " \t\r\n,":
+        while i < n and content[i] in ' \t\r\n,':
             i += 1
         if i >= n:
             break
-        if content[i] != "{":
+        if content[i] != '{':
             i += 1  # skip until next object
             continue
 
@@ -328,16 +320,16 @@ def find_top_level_object_spans(content: str) -> List[Tuple[int, int]]:
             if in_string:
                 if escape:
                     escape = False
-                elif ch == "\\":
+                elif ch == '\\':
                     escape = True
                 elif ch == '"':
                     in_string = False
             else:
                 if ch == '"':
                     in_string = True
-                elif ch == "{":
+                elif ch == '{':
                     depth += 1
-                elif ch == "}":
+                elif ch == '}':
                     depth -= 1
                     if depth == 0:
                         spans.append((i, j + 1))
@@ -354,25 +346,21 @@ def count_lines_up_to(content: str, idx: int) -> int:
     """
     Count lines (1-based) up to idx (exclusive).
     """
-    return content.count("\n", 0, idx) + 1
+    return content.count('\n', 0, idx) + 1
 
 
-def best_line_for_verse_in_object(
-    obj_text: str, verse_value: str, object_start_line: int
-) -> Tuple[int, str]:
+def best_line_for_verse_in_object(obj_text: str, verse_value: str, object_start_line: int) -> Tuple[int, str]:
     """
     Try to find the exact verse line within the object text slice.
     If found, return that line number and text; otherwise return the object's first line.
     """
     lines = obj_text.splitlines()
     rel_line = None
-    escaped_val = re.escape(verse_value if isinstance(verse_value, str) else "")
-    pat = re.compile(
-        r'^\s*"verse"\s*:\s*"' + escaped_val + r'"\s*(?:,|})', re.MULTILINE
-    )
+    escaped_val = re.escape(verse_value if isinstance(verse_value, str) else '')
+    pat = re.compile(r'^\s*"verse"\s*:\s*"' + escaped_val + r'"\s*(?:,|})', re.MULTILINE)
     m = pat.search(obj_text)
     if m:
-        rel_line = obj_text.count("\n", 0, m.start()) + 1
+        rel_line = obj_text.count('\n', 0, m.start()) + 1
     else:
         for i, line in enumerate(lines, start=1):
             if '"verse"' in line:
@@ -381,7 +369,7 @@ def best_line_for_verse_in_object(
     if rel_line is None:
         rel_line = 1
     abs_line = object_start_line + (rel_line - 1)
-    line_text = lines[rel_line - 1] if 1 <= rel_line <= len(lines) else ""
+    line_text = lines[rel_line - 1] if 1 <= rel_line <= len(lines) else ''
     return abs_line, line_text
 
 
@@ -389,7 +377,7 @@ def best_line_for_verse_in_object(
 # Verse-only normalization (I/II/III -> 1/2/3 in book names)
 # ------------------------------------------------------------
 
-ROMAN_TO_ARABIC = {"I": "1", "II": "2", "III": "3"}
+ROMAN_TO_ARABIC = {'I': '1', 'II': '2', 'III': '3'}
 
 # whole-field roman-led reference (after sanitation)
 ROMAN_LEAD_FULL = re.compile(
@@ -441,14 +429,14 @@ def normalize_roman_in_verse_value(
     s = sanitize_verse(verse_val)
     m = ROMAN_LEAD_FULL.match(s)
     if m:
-        arabic = _norm_roman_to_arabic(m.group("num"))
-        updated_core = f"{arabic} {m.group('book')} {m.group('chapvers')}"
+        arabic = _norm_roman_to_arabic(m.group('num'))
+        updated_core = f'{arabic} {m.group("book")} {m.group("chapvers")}'
         # Preserve original leading/trailing whitespace
         leading_ws = verse_val[: len(verse_val) - len(verse_val.lstrip())]
         trailing_ws = verse_val[len(verse_val.rstrip()) :]
-        updated = f"{leading_ws}{updated_core}{trailing_ws}"
+        updated = f'{leading_ws}{updated_core}{trailing_ws}'
         if updated != verse_val:
-            return updated, {"from": verse_val, "to": updated}
+            return updated, {'from': verse_val, 'to': updated}
         return verse_val, None
 
     # Fallback: in-text replacement within verse (keeps surrounding prose)
@@ -456,16 +444,16 @@ def normalize_roman_in_verse_value(
 
     def repl(m: re.Match) -> str:
         nonlocal changed
-        prefix = m.group("prefix") or ""
-        arabic = _norm_roman_to_arabic(m.group("num"))
-        out = f"{prefix}{arabic} {m.group('book')} {m.group('chapvers')}"
+        prefix = m.group('prefix') or ''
+        arabic = _norm_roman_to_arabic(m.group('num'))
+        out = f'{prefix}{arabic} {m.group("book")} {m.group("chapvers")}'
         if m.group(0) != out:
             changed = True
         return out
 
     updated = ROMAN_LEAD_IN_TEXT.sub(repl, verse_val)
     if changed and updated != verse_val:
-        return updated, {"from": verse_val, "to": updated}
+        return updated, {'from': verse_val, 'to': updated}
     return verse_val, None
 
 
@@ -500,36 +488,34 @@ def normalize_hyphen_ref_at_end(verse_val: str) -> Tuple[str, Optional[Dict[str,
         return verse_val, None
 
     # Fast path: if verse already ends with ')', don't touch it
-    if verse_val.rstrip().endswith(")"):
+    if verse_val.rstrip().endswith(')'):
         return verse_val, None
 
     # NFKC + normalize exotic parentheses just for matching; output uses original text
-    s = unicodedata.normalize("NFKC", verse_val)
-    s = "".join(PARENS_NORMALIZE.get(ch, ch) for ch in s)
+    s = unicodedata.normalize('NFKC', verse_val)
+    s = ''.join(PARENS_NORMALIZE.get(ch, ch) for ch in s)
 
     m = HYPHEN_REF_AT_END.match(s)
     if not m:
         return verse_val, None
 
     # Rebuild using original prefix exactly
-    prefix_len = len(m.group("prefix"))
+    prefix_len = len(m.group('prefix'))
     prefix_orig = verse_val[:prefix_len]
 
-    book = sanitize_verse(m.group("book"))
-    ch = m.group("ch")
-    vers = m.group("vers").replace("–", "-").replace("—", "-")
-    vers = re.sub(r"\s*-\s*", "-", vers)
-    vers = re.sub(r"\s*,\s*", ",", vers)
+    book = sanitize_verse(m.group('book'))
+    ch = m.group('ch')
+    vers = m.group('vers').replace('–', '-').replace('—', '-')
+    vers = re.sub(r'\s*-\s*', '-', vers)
+    vers = re.sub(r'\s*,\s*', ',', vers)
 
     # Trim trailing spaces before the hyphen segment to avoid double spaces
-    new_core = f"{prefix_orig.rstrip()} ({book} {ch}:{vers})"
-    trailing_ws = verse_val[
-        len(verse_val.rstrip()) :
-    ]  # preserve original trailing whitespace
+    new_core = f'{prefix_orig.rstrip()} ({book} {ch}:{vers})'
+    trailing_ws = verse_val[len(verse_val.rstrip()) :]  # preserve original trailing whitespace
     updated = new_core + trailing_ws
 
     if updated != verse_val:
-        return updated, {"from": verse_val, "to": updated}
+        return updated, {'from': verse_val, 'to': updated}
     return verse_val, None
 
 
@@ -540,7 +526,7 @@ def normalize_record_refs(rec: Dict[str, Any]) -> Optional[Dict[str, Dict[str, s
     - Then, IF a hyphen fix happened, normalize roman I/II/III inside that new parenthetical.
     Returns dict of changes (keys: verse-hyphen, verse-roman) or None.
     """
-    verse_val = rec.get("verse")
+    verse_val = rec.get('verse')
     if not isinstance(verse_val, str):
         return None
 
@@ -549,21 +535,19 @@ def normalize_record_refs(rec: Dict[str, Any]) -> Optional[Dict[str, Dict[str, s
     # First: apply hyphen-trailing normalization (strict)
     v_after_hyphen, ch1 = normalize_hyphen_ref_at_end(verse_val)
     if ch1:
-        rec["verse"] = v_after_hyphen
-        changes["verse-hyphen"] = ch1
+        rec['verse'] = v_after_hyphen
+        changes['verse-hyphen'] = ch1
 
         # Only then do roman normalization (to avoid touching unrelated verses)
-        v_after_roman, ch2 = normalize_roman_in_verse_value(rec.get("verse", ""))
+        v_after_roman, ch2 = normalize_roman_in_verse_value(rec.get('verse', ''))
         if ch2:
-            rec["verse"] = v_after_roman
-            changes["verse-roman"] = ch2
+            rec['verse'] = v_after_roman
+            changes['verse-roman'] = ch2
 
     return changes if changes else None
 
 
-def normalize_file(
-    path: str, name: str, preview: bool
-) -> Tuple[int, int, List[Dict[str, str]]]:
+def normalize_file(path: str, name: str, preview: bool) -> Tuple[int, int, List[Dict[str, str]]]:
     """
     Normalize references for a single JSON file (verse-only).
     Returns (total_records, changed_records, change_entries)
@@ -580,11 +564,11 @@ def normalize_file(
     def record_change(idx: int, key: str, ch: Dict[str, str]) -> None:
         entries.append(
             {
-                "file": name,
-                "index": str(idx),
-                "field": key,
-                "from": ch["from"],
-                "to": ch["to"],
+                'file': name,
+                'index': str(idx),
+                'field': key,
+                'from': ch['from'],
+                'to': ch['to'],
             }
         )
 
@@ -595,10 +579,10 @@ def normalize_file(
                 ch = normalize_record_refs(item)
                 if ch:
                     changed += 1
-                    if "verse-hyphen" in ch:
-                        record_change(i, "verse", ch["verse-hyphen"])
-                    if "verse-roman" in ch:
-                        record_change(i, "verse", ch["verse-roman"])
+                    if 'verse-hyphen' in ch:
+                        record_change(i, 'verse', ch['verse-hyphen'])
+                    if 'verse-roman' in ch:
+                        record_change(i, 'verse', ch['verse-roman'])
         if not preview and changed > 0:
             write_json_file(path, data, original_text)
     elif isinstance(data, dict):
@@ -606,10 +590,10 @@ def normalize_file(
         ch = normalize_record_refs(data)
         if ch:
             changed = 1
-            if "verse-hyphen" in ch:
-                record_change(1, "verse", ch["verse-hyphen"])
-            if "verse-roman" in ch:
-                record_change(1, "verse", ch["verse-roman"])
+            if 'verse-hyphen' in ch:
+                record_change(1, 'verse', ch['verse-hyphen'])
+            if 'verse-roman' in ch:
+                record_change(1, 'verse', ch['verse-roman'])
         if not preview and changed > 0:
             write_json_file(path, data, original_text)
     return total, changed, entries
@@ -642,11 +626,9 @@ def process_record(
                 if is_chapter_reference(ref):
                     # Find a good line to point the editor to
                     if object_text is not None and object_start_line is not None:
-                        line_no, line_text = best_line_for_verse_in_object(
-                            object_text, verse, object_start_line
-                        )
+                        line_no, line_text = best_line_for_verse_in_object(object_text, verse, object_start_line)
                     else:
-                        line_no, line_text = 1, ""
+                        line_no, line_text = 1, ''
                     emit_chapter(filename, date_only, line_no, line_text, ref)
                 # When reporting chapters, suppress normal found output
                 return
@@ -656,11 +638,9 @@ def process_record(
 
         # Miss: pick the best line from the object slice if available
         if object_text is not None and object_start_line is not None:
-            line_no, line_text = best_line_for_verse_in_object(
-                object_text, verse, object_start_line
-            )
+            line_no, line_text = best_line_for_verse_in_object(object_text, verse, object_start_line)
         else:
-            line_no, line_text = 1, ""
+            line_no, line_text = 1, ''
         # In chapter-report mode, only chapters are reported; other misses are ignored
         if not report_chapters:
             emit_miss(filename, date_only, line_no, line_text)
@@ -669,10 +649,10 @@ def process_record(
     # Missing or non-string verse
     if object_text is not None and object_start_line is not None:
         line_no, line_text = best_line_for_verse_in_object(
-            object_text, verse if isinstance(verse, str) else "", object_start_line
+            object_text, verse if isinstance(verse, str) else '', object_start_line
         )
     else:
-        line_no, line_text = 1, ""
+        line_no, line_text = 1, ''
     if not report_chapters:
         emit_miss(filename, date_only, line_no, line_text)
 
@@ -687,8 +667,8 @@ def process_file(
     loaded = read_json_file(path)
     if not loaded:
         if not report_chapters:
-            print(f"{name}, {default_date_only}, 1:DNL")
-            print("")
+            print(f'{name}, {default_date_only}, 1:DNL')
+            print('')
         return
 
     data, content = loaded
@@ -716,8 +696,8 @@ def process_file(
                 )
             else:
                 if not report_chapters:
-                    print(f"{name}, {default_date_only}, 1:DNL")
-                    print("")
+                    print(f'{name}, {default_date_only}, 1:DNL')
+                    print('')
             first = False
     elif isinstance(data, dict):
         process_record(
@@ -733,8 +713,8 @@ def process_file(
         )
     else:
         if not report_chapters:
-            print(f"{name}, {default_date_only}, 1:DNL")
-            print("")
+            print(f'{name}, {default_date_only}, 1:DNL')
+            print('')
 
 
 # ------------------------------------------------------------
@@ -744,8 +724,8 @@ def process_file(
 
 def _oneline(s: str) -> str:
     if s is None:
-        return ""
-    return s.replace("\r\n", "\n").replace("\r", "\n").replace("\n", "\\n")
+        return ''
+    return s.replace('\r\n', '\n').replace('\r', '\n').replace('\n', '\\n')
 
 
 def main():
@@ -755,35 +735,35 @@ def main():
         description="Extract Bible references from the 'verse' field. Supports verse ranges/lists (e.g., 5-6, 7, 9-11) and suffixes (21a/b/c). Robust unicode sanitation. --chapters reports full-chapter references with file and line info. Optional --normalize_refs converts only trailing '- Book ch:verses' to '(Book ch:verses)' and then normalizes roman book numerals if changed."
     )
     ap.add_argument(
-        "--dir",
+        '--dir',
         default=None,
-        help="Directory to scan for JSON files (default: script directory). Ignored if filenames are provided.",
+        help='Directory to scan for JSON files (default: script directory). Ignored if filenames are provided.',
     )
     ap.add_argument(
-        "--print-only-misses",
-        action="store_true",
-        help="Print only unparsable lines (DNL) and the source line; suppress successful extractions.",
+        '--print-only-misses',
+        action='store_true',
+        help='Print only unparsable lines (DNL) and the source line; suppress successful extractions.',
     )
     ap.add_argument(
-        "--chapters",
-        action="store_true",
-        help="Report only references that are full chapters (Book Chapter), printing filename, date, line, a code -g jump, and the line text.",
+        '--chapters',
+        action='store_true',
+        help='Report only references that are full chapters (Book Chapter), printing filename, date, line, a code -g jump, and the line text.',
     )
     # NEW flags
     ap.add_argument(
-        "--normalize_refs",
-        action="store_true",
+        '--normalize_refs',
+        action='store_true',
         help="Normalize ONLY verse values: convert trailing '- Book ch:verses' to '(Book ch:verses)'; if changed, also convert book prefixes I/II/III to 1/2/3 inside the verse.",
     )
     ap.add_argument(
-        "--preview",
-        action="store_true",
-        help="With --normalize_refs, preview changes (cur/upd) but do not modify files.",
+        '--preview',
+        action='store_true',
+        help='With --normalize_refs, preview changes (cur/upd) but do not modify files.',
     )
     ap.add_argument(
-        "filenames",
-        nargs="*",
-        help="One or more JSON file paths to process. If provided, directory scanning is skipped.",
+        'filenames',
+        nargs='*',
+        help='One or more JSON file paths to process. If provided, directory scanning is skipped.',
     )
     args = ap.parse_args()
 
@@ -797,12 +777,10 @@ def main():
         for path in args.filenames:
             name = os.path.basename(path)
             if not os.path.isfile(path):
-                print(f"Error: not a file or not found: {path}", file=sys.stderr)
+                print(f'Error: not a file or not found: {path}', file=sys.stderr)
                 exit_code = 1
                 continue
-            process_file(
-                path, name, default_date_only, print_only_misses, report_chapters
-            )
+            process_file(path, name, default_date_only, print_only_misses, report_chapters)
         if not args.normalize_refs:
             sys.exit(exit_code)
     else:
@@ -810,12 +788,12 @@ def main():
         try:
             entries = sorted(os.listdir(base))
         except Exception as e:
-            print(f"Error reading directory {base}: {e}", file=sys.stderr)
+            print(f'Error reading directory {base}: {e}', file=sys.stderr)
             sys.exit(1)
 
         files_seen = 0
         for name in entries:
-            if not name.endswith(".json"):
+            if not name.endswith('.json'):
                 continue
             files_seen += 1
             process_file(
@@ -826,7 +804,7 @@ def main():
                 report_chapters,
             )
         if files_seen == 0:
-            print("No JSON files found", file=sys.stderr)
+            print('No JSON files found', file=sys.stderr)
             if not args.normalize_refs:
                 sys.exit(1)
 
@@ -837,13 +815,9 @@ def main():
         else:
             base = args.dir or script_dir()
             try:
-                targets = [
-                    os.path.join(base, n)
-                    for n in sorted(os.listdir(base))
-                    if n.endswith(".json")
-                ]
+                targets = [os.path.join(base, n) for n in sorted(os.listdir(base)) if n.endswith('.json')]
             except Exception as e:
-                print(f"Error reading directory {base}: {e}", file=sys.stderr)
+                print(f'Error reading directory {base}: {e}', file=sys.stderr)
                 sys.exit(1)
 
         grand_total = 0
@@ -858,19 +832,15 @@ def main():
             all_entries.extend(ents)
 
         if args.preview:
-            print(
-                f"Preview mode: {grand_changed} of {grand_total} records would change.\n"
-            )
+            print(f'Preview mode: {grand_changed} of {grand_total} records would change.\n')
             for e in all_entries:
-                print(f"- {e['file']} record #{e['index']} ({e['field']}):")
+                print(f'- {e["file"]} record #{e["index"]} ({e["field"]}):')
                 print(f'cur: "{_oneline(e["from"])}"')
                 print(f'upd: "{_oneline(e["to"])}"')
         else:
-            print(
-                f"Normalization complete. Updated {grand_changed} of {grand_total} records."
-            )
-            print("Backups created as .bak for files that changed.")
+            print(f'Normalization complete. Updated {grand_changed} of {grand_total} records.')
+            print('Backups created as .bak for files that changed.')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

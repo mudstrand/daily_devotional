@@ -1,8 +1,8 @@
-
 import json
 import os
 import re
 import sys
+
 
 def clean_text(text):
     # 1. Remove HTML tags
@@ -22,20 +22,21 @@ def clean_text(text):
 
     # 5. Remove repeated words
     text = re.sub(r'\b(\w+)\s+\1\b', r'\1', text, flags=re.IGNORECASE)
-    
+
     return text
+
 
 def fix_json_file(filepath):
     """
     Fixes a single JSON file by cleaning the content of the specified fields.
     """
-    fields_to_check = ["subject", "verse", "reflection", "prayer"]
-    
+    fields_to_check = ['subject', 'verse', 'reflection', 'prayer']
+
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             data = json.load(f)
     except (json.JSONDecodeError, UnicodeDecodeError) as e:
-        print(f"Error reading {filepath}: {e}")
+        print(f'Error reading {filepath}: {e}')
         return
 
     if isinstance(data, list):
@@ -51,9 +52,10 @@ def fix_json_file(filepath):
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2)
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     if len(sys.argv) > 1:
         filepath = sys.argv[1]
         fix_json_file(filepath)
     else:
-        print("Please provide a file path.")
+        print('Please provide a file path.')

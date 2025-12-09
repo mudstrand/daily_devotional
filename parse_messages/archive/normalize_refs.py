@@ -13,12 +13,12 @@ from typing import Tuple, Optional
 #   "III John 1:2"         -> ("III", " John 1:2")
 #   "I Kings. 17:4"        -> ("I", " Kings. 17:4")
 #   "I Thessalonians 4:16" -> ("I", " Thessalonians 4:16")
-ROMAN_PREFIX_RE = re.compile(r"^\s*(I{1,3})\s*([A-Za-z][A-Za-z.\s-]*\S.*)$")
+ROMAN_PREFIX_RE = re.compile(r'^\s*(I{1,3})\s*([A-Za-z][A-Za-z.\s-]*\S.*)$')
 
 ROMAN_TO_ARABIC = {
-    "I": "1",
-    "II": "2",
-    "III": "3",
+    'I': '1',
+    'II': '2',
+    'III': '3',
 }
 
 
@@ -37,7 +37,7 @@ def normalize_book_numeral(ref: str) -> str:
     arabic = ROMAN_TO_ARABIC.get(roman)
     if not arabic:
         return ref
-    return f"{arabic} {rest.lstrip()}"
+    return f'{arabic} {rest.lstrip()}'
 
 
 def process_record(rec: dict) -> Tuple[dict, Optional[dict]]:
@@ -49,40 +49,38 @@ def process_record(rec: dict) -> Tuple[dict, Optional[dict]]:
     change_info = {}
 
     # Normalize 'verse'
-    if "verse" in rec:
-        original_verse = rec["verse"]
+    if 'verse' in rec:
+        original_verse = rec['verse']
         normalized_verse = normalize_book_numeral(original_verse)
         if normalized_verse != original_verse:
             changed = True
-            rec["verse"] = normalized_verse
-            change_info["verse"] = {"from": original_verse, "to": normalized_verse}
+            rec['verse'] = normalized_verse
+            change_info['verse'] = {'from': original_verse, 'to': normalized_verse}
 
     # Optionally normalize references inside 'reading' at line/sentence starts
-    if "reading" in rec and isinstance(rec["reading"], str):
-        original_reading = rec["reading"]
+    if 'reading' in rec and isinstance(rec['reading'], str):
+        original_reading = rec['reading']
 
         def repl_line_start(match):
             roman = match.group(1)
             rest = match.group(2)
             arabic = ROMAN_TO_ARABIC.get(roman, roman)
-            return f"{arabic} {rest}"
+            return f'{arabic} {rest}'
 
         # At line starts (multiline)
-        reading_updated = re.sub(
-            r"(?m)^(I{1,3})\s+([A-Za-z].*)", repl_line_start, original_reading
-        )
+        reading_updated = re.sub(r'(?m)^(I{1,3})\s+([A-Za-z].*)', repl_line_start, original_reading)
 
         # After sentence/start boundaries if followed by a verse-like pattern
         reading_updated = re.sub(
-            r"(?<!\w)(I{1,3})\s+([A-Za-z][A-Za-z.\s-]*\d+:\d.*)",
+            r'(?<!\w)(I{1,3})\s+([A-Za-z][A-Za-z.\s-]*\d+:\d.*)',
             repl_line_start,
             reading_updated,
         )
 
         if reading_updated != original_reading:
             changed = True
-            rec["reading"] = reading_updated
-            change_info["reading"] = {"from": original_reading, "to": reading_updated}
+            rec['reading'] = reading_updated
+            change_info['reading'] = {'from': original_reading, 'to': reading_updated}
 
     return rec, (change_info if changed else None)
 
@@ -102,7 +100,7 @@ def load_records(content: str, path: str):
             return data, True
         if isinstance(data, dict):
             return [data], True
-        raise ValueError("Root is neither list nor dict")
+        raise ValueError('Root is neither list nor dict')
     except Exception:
         # Try JSON Lines
         records = []
@@ -114,7 +112,7 @@ def load_records(content: str, path: str):
                 obj = json.loads(line)
                 records.append(obj)
             except Exception as e:
-                print(f"[WARN] {path}: line {i} not valid JSON: {e}", file=sys.stderr)
+                print(f'[WARN] {path}: line {i} not valid JSON: {e}', file=sys.stderr)
         return records, False
 
 
@@ -122,27 +120,27 @@ def save_records(path: str, original_content: str, records: list, is_json_array:
     """
     Write back records to file. Creates a .bak backup if not present.
     """
-    backup_path = f"{path}.bak"
+    backup_path = f'{path}.bak'
     try:
         if not os.path.exists(backup_path):
-            with open(backup_path, "w", encoding="utf-8") as bf:
+            with open(backup_path, 'w', encoding='utf-8') as bf:
                 bf.write(original_content)
     except Exception as e:
-        print(f"[ERROR] Cannot write backup {backup_path}: {e}", file=sys.stderr)
+        print(f'[ERROR] Cannot write backup {backup_path}: {e}', file=sys.stderr)
         return False
 
     try:
-        with open(path, "w", encoding="utf-8") as wf:
+        with open(path, 'w', encoding='utf-8') as wf:
             if is_json_array:
                 json.dump(records, wf, ensure_ascii=False, indent=2)
-                wf.write("\n")
+                wf.write('\n')
             else:
                 for obj in records:
                     wf.write(json.dumps(obj, ensure_ascii=False))
-                    wf.write("\n")
+                    wf.write('\n')
         return True
     except Exception as e:
-        print(f"[ERROR] Cannot write updated {path}: {e}", file=sys.stderr)
+        print(f'[ERROR] Cannot write updated {path}: {e}', file=sys.stderr)
         return False
 
 
@@ -151,10 +149,10 @@ def process_file(path: str, preview: bool):
     Process one file. Returns (total_records, changed_records, changes_list)
     """
     try:
-        with open(path, "r", encoding="utf-8") as f:
+        with open(path, 'r', encoding='utf-8') as f:
             content = f.read()
     except Exception as e:
-        print(f"[ERROR] Cannot read {path}: {e}", file=sys.stderr)
+        print(f'[ERROR] Cannot read {path}: {e}', file=sys.stderr)
         return 0, 0, []
 
     records, is_json_array = load_records(content, path)
@@ -172,7 +170,7 @@ def process_file(path: str, preview: bool):
         updated_records.append(new_rec)
         if change_info:
             changed += 1
-            changes.append({"file": path, "record_index": idx, **change_info})
+            changes.append({'file': path, 'record_index': idx, **change_info})
 
     if not preview and changed > 0:
         save_records(path, content, updated_records, is_json_array)
@@ -183,20 +181,16 @@ def process_file(path: str, preview: bool):
 def _oneline(s: str) -> str:
     """Render potentially multi-line text as a single line for preview."""
     if s is None:
-        return ""
-    return s.replace("\r\n", "\n").replace("\r", "\n").replace("\n", "\\n")
+        return ''
+    return s.replace('\r\n', '\n').replace('\r', '\n').replace('\n', '\\n')
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Normalize leading Roman numerals (I/II/III) in Bible references within verse and reading fields."
+        description='Normalize leading Roman numerals (I/II/III) in Bible references within verse and reading fields.'
     )
-    parser.add_argument(
-        "files", nargs="+", help="Input JSON files (use shell globs like *.json)"
-    )
-    parser.add_argument(
-        "--preview", action="store_true", help="Preview changes without modifying files"
-    )
+    parser.add_argument('files', nargs='+', help='Input JSON files (use shell globs like *.json)')
+    parser.add_argument('--preview', action='store_true', help='Preview changes without modifying files')
     args = parser.parse_args()
 
     grand_total = 0
@@ -210,26 +204,26 @@ def main():
         grand_changes.extend(changes)
 
     if args.preview:
-        print(f"Preview mode: {grand_changed} of {grand_total} records would change.\n")
+        print(f'Preview mode: {grand_changed} of {grand_total} records would change.\n')
         if grand_changes:
             for ch in grand_changes:
-                print(f"- {ch['file']} record #{ch['record_index']}:")
-                if "verse" in ch:
-                    cur = ch["verse"]["from"]
-                    upd = ch["verse"]["to"]
+                print(f'- {ch["file"]} record #{ch["record_index"]}:')
+                if 'verse' in ch:
+                    cur = ch['verse']['from']
+                    upd = ch['verse']['to']
                     print(f'cur: "{_oneline(cur)}"')
                     print(f'upd: "{(_oneline(upd))}"')
-                if "reading" in ch:
-                    cur = ch["reading"]["from"]
-                    upd = ch["reading"]["to"]
+                if 'reading' in ch:
+                    cur = ch['reading']['from']
+                    upd = ch['reading']['to']
                     print(f'cur: "{_oneline(cur)}"')
                     print(f'upd: "{_oneline(upd)}"')
         else:
-            print("No changes detected.")
+            print('No changes detected.')
     else:
-        print(f"Completed. Updated {grand_changed} of {grand_total} records.")
-        print("Backups created as .bak for files that changed.")
+        print(f'Completed. Updated {grand_changed} of {grand_total} records.')
+        print('Backups created as .bak for files that changed.')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

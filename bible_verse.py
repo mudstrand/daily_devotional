@@ -21,22 +21,22 @@ class VerseQuery:
     translation: str
 
 
-_SINGLE_OR_RANGE_RE = re.compile(r"^\s*(\d+)\s*(?:-\s*(\d+))?\s*$")
+_SINGLE_OR_RANGE_RE = re.compile(r'^\s*(\d+)\s*(?:-\s*(\d+))?\s*$')
 
 
 def parse_single_or_range(spec: str) -> Tuple[int, Optional[int]]:
     m = _SINGLE_OR_RANGE_RE.fullmatch(spec)
     if not m:
-        raise ValueError(f"Invalid verse specification segment: {spec!r}")
+        raise ValueError(f'Invalid verse specification segment: {spec!r}')
     start = int(m.group(1))
     end = int(m.group(2)) if m.group(2) else None
     if end is not None and end < start:
-        raise ValueError(f"Verse range end < start: {spec!r}")
+        raise ValueError(f'Verse range end < start: {spec!r}')
     return start, end
 
 
 def split_comma_list(verse_spec: str) -> List[str]:
-    parts = [p.strip() for p in verse_spec.split(",")]
+    parts = [p.strip() for p in verse_spec.split(',')]
     return [p for p in parts if p]
 
 
@@ -59,26 +59,26 @@ def _select_rows(conn, q: VerseQuery) -> List[dict]:
 
 
 def _strip_square_refs(text: str) -> str:
-    return re.sub(r"\[(\d+)\]\s*", "", text)
+    return re.sub(r'\[(\d+)\]\s*', '', text)
 
 
 def _normalize_whitespace(s: str) -> str:
-    return re.sub(r"[ \t\r\f\v]+", " ", s).strip()
+    return re.sub(r'[ \t\r\f\v]+', ' ', s).strip()
 
 
 def _looks_like_has_refs(s: str) -> bool:
-    return bool(re.search(r"\[\d+\]", s))
+    return bool(re.search(r'\[\d+\]', s))
 
 
 def assemble_text(
     rows: Sequence[dict],
     include_refs: bool = True,
     add_refs_if_missing: bool = True,
-    sep: str = " ",
+    sep: str = ' ',
 ) -> Optional[str]:
     if not rows:
         return None
-    pieces: List[str] = [(r.get("text") or "").strip() for r in rows]
+    pieces: List[str] = [(r.get('text') or '').strip() for r in rows]
     combined = _normalize_whitespace(sep.join(pieces))
 
     if not include_refs:
@@ -93,9 +93,9 @@ def assemble_text(
 
     decorated: List[str] = []
     for r in rows:
-        vnum = int(r["verse"])
-        t_clean = _strip_square_refs((r.get("text") or "").strip())
-        decorated.append(f"[{vnum}] {t_clean}")
+        vnum = int(r['verse'])
+        t_clean = _strip_square_refs((r.get('text') or '').strip())
+        decorated.append(f'[{vnum}] {t_clean}')
     return _normalize_whitespace(sep.join(decorated))
 
 
@@ -106,11 +106,11 @@ def get_verse_text(
     translation: str,
     include_refs: bool = True,
     add_refs_if_missing: bool = True,
-    sep: str = " ",
+    sep: str = ' ',
 ) -> Optional[str]:
     segments = split_comma_list(verse_spec)
     if not segments:
-        raise ValueError("verse_spec must contain at least one verse or range")
+        raise ValueError('verse_spec must contain at least one verse or range')
     texts: List[str] = []
     with engine.begin() as conn:
         for seg in segments:
@@ -127,19 +127,17 @@ def get_verse_text(
                 texts.append(part)
     if not texts:
         return None
-    return _normalize_whitespace(" ".join(texts))
+    return _normalize_whitespace(' '.join(texts))
 
 
 def _cli():
-    ap = argparse.ArgumentParser(
-        description="Fetch verse text via SQLAlchemy (Postgres)"
-    )
-    ap.add_argument("--book", required=True)
-    ap.add_argument("--chapter", required=True, type=int)
-    ap.add_argument("--verse", required=True)
-    ap.add_argument("--translation", required=True)
-    ap.add_argument("--no-refs", action="store_true")
-    ap.add_argument("--no-autodecorate", action="store_true")
+    ap = argparse.ArgumentParser(description='Fetch verse text via SQLAlchemy (Postgres)')
+    ap.add_argument('--book', required=True)
+    ap.add_argument('--chapter', required=True, type=int)
+    ap.add_argument('--verse', required=True)
+    ap.add_argument('--translation', required=True)
+    ap.add_argument('--no-refs', action='store_true')
+    ap.add_argument('--no-autodecorate', action='store_true')
     args = ap.parse_args()
 
     text = get_verse_text(
@@ -151,10 +149,10 @@ def _cli():
         add_refs_if_missing=not args.no_autodecorate,
     )
     if text is None:
-        print("Not found")
+        print('Not found')
         sys.exit(1)
     print(text)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     _cli()

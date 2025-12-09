@@ -30,21 +30,21 @@ from typing import Dict, List, Optional, Tuple
 @dataclass
 class BatchConfig:
     # I/O
-    input_dir: str = "1810"
-    out_json: str = "parsed_1810.json"
+    input_dir: str = '1810'
+    out_json: str = 'parsed_1810.json'
 
     # Header/body separator string in the files
-    header_body_sep: str = "=" * 67
+    header_body_sep: str = '=' * 67
 
     # Month name variants used in dates (kept for robustness)
-    month_abbr: str = r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?"
-    month_full: str = r"(?:January|February|March|April|May|June|July|August|September|October|November|December)"
+    month_abbr: str = r'(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?'
+    month_full: str = r'(?:January|February|March|April|May|June|July|August|September|October|November|December)'
 
     # Labels and signatures appearing in this batch
     verse_labels: List[str] = None  # patterns for verse header
     thought_labels: List[str] = None  # patterns for thought header
     prayer_labels: List[str] = None  # patterns for prayer header
-    signature_phrase: str = r"PASTOR\s+AL"
+    signature_phrase: str = r'PASTOR\s+AL'
 
     # Reading extraction window
     reading_lookahead: int = 6
@@ -53,24 +53,24 @@ class BatchConfig:
 def default_verse_labels() -> List[str]:
     # This batch uses "VERSE FOR TODAY" and sometimes starts with "THE VERSE FOR ..."
     return [
-        r"(?:THE\s+)?VERSE\s+FOR\s+TODAY",
-        r"(?:THE\s+)?VERSE\s+FOR",  # keep generic fallback to allow dates/titles
+        r'(?:THE\s+)?VERSE\s+FOR\s+TODAY',
+        r'(?:THE\s+)?VERSE\s+FOR',  # keep generic fallback to allow dates/titles
     ]
 
 
 def default_thought_labels() -> List[str]:
     # Includes underscored variants as content, so we just match the words
     return [
-        r"(?:THE\s+)?THOUGHT\s+FOR\s+TODAY",
+        r'(?:THE\s+)?THOUGHT\s+FOR\s+TODAY',
         # allow "THOUGHT FOR <Month Day>" pattern (not seen here but harmless)
-        r"(?:THE\s+)?THOUGHT\s+FOR\s+[A-Z][A-Za-z\.]+\s+\d{1,2}(?:\s*,\s*(?:\d{2}|\d{4}))?",
+        r'(?:THE\s+)?THOUGHT\s+FOR\s+[A-Z][A-Za-z\.]+\s+\d{1,2}(?:\s*,\s*(?:\d{2}|\d{4}))?',
     ]
 
 
 def default_prayer_labels() -> List[str]:
     return [
-        r"PRAYER\s+FOR\s+TODAY",
-        r"PRAYER",  # generic fallback; appears as "PRAYER FOR TODAY:"
+        r'PRAYER\s+FOR\s+TODAY',
+        r'PRAYER',  # generic fallback; appears as "PRAYER FOR TODAY:"
     ]
 
 
@@ -90,32 +90,23 @@ if CFG.prayer_labels is None:
 
 def build_body_header_re(sep: str) -> re.Pattern:
     return re.compile(
-        rf"^{re.escape(sep)}\s*Body \(clean, unformatted\):\s*{re.escape(sep)}\s*",
+        rf'^{re.escape(sep)}\s*Body \(clean, unformatted\):\s*{re.escape(sep)}\s*',
         re.MULTILINE,
     )
 
 
 def build_date_patterns(cfg: BatchConfig) -> Tuple[str, str]:
     # Month name variants (kept available; this batch mainly uses TODAY not dates)
-    MONTH_NAME = rf"(?:{cfg.month_abbr}|{cfg.month_full})"
-    DATE_NUM = r"\d{1,2}"
-    DATE_YEAR = r"(?:\d{2}|\d{4})"
-    DATE_SEP = r"[:/\.\-]"
+    MONTH_NAME = rf'(?:{cfg.month_abbr}|{cfg.month_full})'
+    DATE_NUM = r'\d{1,2}'
+    DATE_YEAR = r'(?:\d{2}|\d{4})'
+    DATE_SEP = r'[:/\.\-]'
 
-    DATE_NUMERIC = (
-        DATE_NUM
-        + r"\s*"
-        + DATE_SEP
-        + r"\s*"
-        + DATE_NUM
-        + r"(?:\s*(?:[.\-/:])?\s*"
-        + DATE_YEAR
-        + r")?"
-    )
+    DATE_NUMERIC = DATE_NUM + r'\s*' + DATE_SEP + r'\s*' + DATE_NUM + r'(?:\s*(?:[.\-/:])?\s*' + DATE_YEAR + r')?'
 
-    DATE_MONTHDAY = MONTH_NAME + r"\s+" + DATE_NUM + r"(?:\s*,\s*" + DATE_YEAR + r")?"
+    DATE_MONTHDAY = MONTH_NAME + r'\s+' + DATE_NUM + r'(?:\s*,\s*' + DATE_YEAR + r')?'
 
-    DATE_VARIANT = rf"(?:{DATE_MONTHDAY}|{DATE_NUMERIC})"
+    DATE_VARIANT = rf'(?:{DATE_MONTHDAY}|{DATE_NUMERIC})'
     return DATE_VARIANT, MONTH_NAME
 
 
@@ -124,13 +115,10 @@ def build_detection_patterns(cfg: BatchConfig) -> Dict[str, object]:
 
     # Build multi-header detectors (lists), tolerant to underscores and optional colons
     def compile_lines(patterns: List[str]) -> List[re.Pattern]:
-        return [
-            re.compile(rf"^\s*_*\s*{pat}\s*:?\s*\??\s*_*\s*$", re.IGNORECASE)
-            for pat in patterns
-        ]
+        return [re.compile(rf'^\s*_*\s*{pat}\s*:?\s*\??\s*_*\s*$', re.IGNORECASE) for pat in patterns]
 
     def compile_joins(patterns: List[str]) -> List[re.Pattern]:
-        return [re.compile(rf"{pat}\s*:\s*", re.IGNORECASE) for pat in patterns]
+        return [re.compile(rf'{pat}\s*:\s*', re.IGNORECASE) for pat in patterns]
 
     verse_line_re_list = compile_lines(cfg.verse_labels)
     verse_join_re_list = compile_joins(cfg.verse_labels)
@@ -143,7 +131,7 @@ def build_detection_patterns(cfg: BatchConfig) -> Dict[str, object]:
 
     # Fallback single-pattern for explicit "VERSE FOR <DATE|TODAY>" on one line
     verse_for_line_re = re.compile(
-        rf"^\s*_*\s*(?:THE\s+)?VERSE\s+FOR\s*(?:{DATE_VARIANT}|TODAY)\s*:?\s*_*\s*(?P<after>.*)$",
+        rf'^\s*_*\s*(?:THE\s+)?VERSE\s+FOR\s*(?:{DATE_VARIANT}|TODAY)\s*:?\s*_*\s*(?P<after>.*)$',
         re.IGNORECASE,
     )
 
@@ -154,7 +142,7 @@ def build_detection_patterns(cfg: BatchConfig) -> Dict[str, object]:
     )
 
     # Parentheses + reading detectors
-    paren_dotall_re = re.compile(r"\((.*?)\)", re.DOTALL)
+    paren_dotall_re = re.compile(r'\((.*?)\)', re.DOTALL)
     read_inline_re = re.compile(
         r"""\bread\b\s*\(?\s*([A-Za-z0-9\.\:\-\;\s,]+?)\s*\)?\b""",
         re.IGNORECASE,
@@ -165,17 +153,17 @@ def build_detection_patterns(cfg: BatchConfig) -> Dict[str, object]:
     )
 
     return {
-        "VERSE_LINE_RE_LIST": verse_line_re_list,
-        "VERSE_JOIN_RE_LIST": verse_join_re_list,
-        "VERSE_FOR_LINE_RE": verse_for_line_re,
-        "THOUGHT_LINE_RE_LIST": thought_line_re_list,
-        "THOUGHT_JOIN_RE_LIST": thought_join_re_list,
-        "PRAYER_LINE_RE_LIST": prayer_line_re_list,
-        "PRAYER_JOIN_RE_LIST": prayer_join_re_list,
-        "PRAYER_SIGNATURE_ANY_RE": prayer_signature_any_re,
-        "PAREN_DOTALL_RE": paren_dotall_re,
-        "READ_INLINE_RE": read_inline_re,
-        "READ_LINE_RE": read_line_re,
+        'VERSE_LINE_RE_LIST': verse_line_re_list,
+        'VERSE_JOIN_RE_LIST': verse_join_re_list,
+        'VERSE_FOR_LINE_RE': verse_for_line_re,
+        'THOUGHT_LINE_RE_LIST': thought_line_re_list,
+        'THOUGHT_JOIN_RE_LIST': thought_join_re_list,
+        'PRAYER_LINE_RE_LIST': prayer_line_re_list,
+        'PRAYER_JOIN_RE_LIST': prayer_join_re_list,
+        'PRAYER_SIGNATURE_ANY_RE': prayer_signature_any_re,
+        'PAREN_DOTALL_RE': paren_dotall_re,
+        'READ_INLINE_RE': read_inline_re,
+        'READ_LINE_RE': read_line_re,
     }
 
 
@@ -183,13 +171,13 @@ def build_detection_patterns(cfg: BatchConfig) -> Dict[str, object]:
 # Normalization utilities
 # =========================
 
-HYPHEN_LINEBREAK_RE = re.compile(r"-\s*(?:\r?\n)+\s*")
+HYPHEN_LINEBREAK_RE = re.compile(r'-\s*(?:\r?\n)+\s*')
 
 
 def repair_linebreak_hyphenation(s: str) -> str:
     if not s:
-        return ""
-    return HYPHEN_LINEBREAK_RE.sub("", s)
+        return ''
+    return HYPHEN_LINEBREAK_RE.sub('', s)
 
 
 def normalize_keep_newlines(s: str) -> str:
@@ -198,20 +186,20 @@ def normalize_keep_newlines(s: str) -> str:
     Do NOT remove underscores here. Also repair hyphenation.
     """
     if s is None:
-        return ""
-    s = unicodedata.normalize("NFKC", s)
+        return ''
+    s = unicodedata.normalize('NFKC', s)
     s = (
-        s.replace("’", "'")
-        .replace("‘", "'")
-        .replace("`", "'")
-        .replace("´", "'")
-        .replace("\u00a0", " ")
-        .replace("\u2007", " ")
-        .replace("\u202f", " ")
-        .replace("\u00ad", "")  # soft hyphen
+        s.replace('’', "'")
+        .replace('‘', "'")
+        .replace('`', "'")
+        .replace('´', "'")
+        .replace('\u00a0', ' ')
+        .replace('\u2007', ' ')
+        .replace('\u202f', ' ')
+        .replace('\u00ad', '')  # soft hyphen
     )
     s = repair_linebreak_hyphenation(s)
-    s = re.sub(r"[ \t]+", " ", s)  # collapse spaces but keep newlines
+    s = re.sub(r'[ \t]+', ' ', s)  # collapse spaces but keep newlines
     return s.strip()
 
 
@@ -224,29 +212,29 @@ def scrub_inline(s: str) -> str:
     - normalize punctuation spacing without mangling scripture refs
     """
     if s is None:
-        return ""
-    s = s.replace("*", "").replace("_", "")
-    s = s.replace("\\n", " ")
-    s = re.sub(r"(?:\r?\n)+", " ", s)
-    s = re.sub(r"\s+", " ", s).strip()
+        return ''
+    s = s.replace('*', '').replace('_', '')
+    s = s.replace('\\n', ' ')
+    s = re.sub(r'(?:\r?\n)+', ' ', s)
+    s = re.sub(r'\s+', ' ', s).strip()
     # Fix duplicated punctuation
-    s = re.sub(r"\.{2,}", ".", s)
-    s = re.sub(r"__+", "_", s)
+    s = re.sub(r'\.{2,}', '.', s)
+    s = re.sub(r'__+', '_', s)
     # Tighten spaces before punctuation
-    s = re.sub(r"\s+([,.;:])", r"\1", s)
+    s = re.sub(r'\s+([,.;:])', r'\1', s)
     # Add a single space after punctuation (except colon inside chapter:verse)
-    s = re.sub(r"([,.;])\s*", r"\1 ", s)
-    s = re.sub(r"(\b\d+):\s+(\d+\b)", r"\1:\2", s)  # 20: 7 -> 20:7
-    s = re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r'([,.;])\s*', r'\1 ', s)
+    s = re.sub(r'(\b\d+):\s+(\d+\b)', r'\1:\2', s)  # 20: 7 -> 20:7
+    s = re.sub(r'\s+', ' ', s).strip()
     return s
 
 
 def clean_reading(val: str) -> str:
     if not val:
-        return ""
-    val = val.replace("\n", " ")
-    val = re.sub(r"^[\s\(\[]+|[\s\)\]\.;,]+$", "", val)
-    val = re.sub(r"\s+", " ", val).strip()
+        return ''
+    val = val.replace('\n', ' ')
+    val = re.sub(r'^[\s\(\[]+|[\s\)\]\.;,]+$', '', val)
+    val = re.sub(r'\s+', ' ', val).strip()
     return val
 
 
@@ -256,18 +244,18 @@ def clean_reading(val: str) -> str:
 
 
 def extract_header_fields(full_text: str, cfg: BatchConfig) -> Dict[str, str]:
-    hdr = {"message_id": "", "subject": "", "from": "", "to": "", "date": ""}
+    hdr = {'message_id': '', 'subject': '', 'from': '', 'to': '', 'date': ''}
     for line in full_text.splitlines():
-        if line.startswith("message_id: "):
-            hdr["message_id"] = line.split("message_id: ", 1)[1].strip()
-        elif line.startswith("subject   : "):
-            hdr["subject"] = line.split("subject   : ", 1)[1].strip()
-        elif line.startswith("from      : "):
-            hdr["from"] = line.split("from      : ", 1)[1].strip()
-        elif line.startswith("to        : "):
-            hdr["to"] = line.split("to        : ", 1)[1].strip()
-        elif line.startswith("date      : "):
-            hdr["date"] = line.split("date      : ", 1)[1].strip()
+        if line.startswith('message_id: '):
+            hdr['message_id'] = line.split('message_id: ', 1)[1].strip()
+        elif line.startswith('subject   : '):
+            hdr['subject'] = line.split('subject   : ', 1)[1].strip()
+        elif line.startswith('from      : '):
+            hdr['from'] = line.split('from      : ', 1)[1].strip()
+        elif line.startswith('to        : '):
+            hdr['to'] = line.split('to        : ', 1)[1].strip()
+        elif line.startswith('date      : '):
+            hdr['date'] = line.split('date      : ', 1)[1].strip()
         if line.strip() == cfg.header_body_sep:
             break
     return hdr
@@ -290,18 +278,16 @@ def parse_subject_and_reading(subject_raw: str) -> tuple[str, Optional[str]]:
     Returns (clean_subject, reading or None).
     """
     if not subject_raw:
-        return "", None
-    m = re.match(r"^\s*Subject\s*:\s*(.*)$", subject_raw, flags=re.IGNORECASE)
+        return '', None
+    m = re.match(r'^\s*Subject\s*:\s*(.*)$', subject_raw, flags=re.IGNORECASE)
     s = m.group(1) if m else subject_raw
 
     reading = None
-    matches = list(re.finditer(r"\(([^)]*read[^)]*)\)", s, flags=re.IGNORECASE))
+    matches = list(re.finditer(r'\(([^)]*read[^)]*)\)', s, flags=re.IGNORECASE))
     if matches:
         pm = matches[-1]
         inside = pm.group(1)
-        mread = re.search(
-            r"\bread\b\s*\(?\s*(.+?)\s*\)?\s*$", inside, flags=re.IGNORECASE
-        )
+        mread = re.search(r'\bread\b\s*\(?\s*(.+?)\s*\)?\s*$', inside, flags=re.IGNORECASE)
         if mread:
             reading = clean_reading(mread.group(1))
         s = (s[: pm.start()] + s[pm.end() :]).strip()
@@ -319,9 +305,7 @@ def line_matches_any(line: str, patterns: List[re.Pattern]) -> bool:
     return any(p.match(line) for p in patterns)
 
 
-def line_has_any_header_with_colon(
-    line: str, patterns: List[re.Pattern]
-) -> Optional[re.Match]:
+def line_has_any_header_with_colon(line: str, patterns: List[re.Pattern]) -> Optional[re.Match]:
     for p in patterns:
         m = p.search(line)
         if m:
@@ -340,17 +324,15 @@ def extract_reading_after_verse_header(
     window_lines = []
     for j in range(i, min(i + lookahead, len(lines))):
         window_lines.append(lines[j])
-    window = "\n".join(window_lines)
+    window = '\n'.join(window_lines)
 
-    parens = list(pats["PAREN_DOTALL_RE"].finditer(window))
+    parens = list(pats['PAREN_DOTALL_RE'].finditer(window))
 
     # Prefer any parenthetical that contains READ
     for m in parens:
         inside = m.group(1)
-        if re.search(r"\bread\b", inside, flags=re.IGNORECASE):
-            mread = re.search(
-                r"\bread\b\s*\(?\s*(.+?)\s*\)?\s*$", inside, flags=re.IGNORECASE
-            )
+        if re.search(r'\bread\b', inside, flags=re.IGNORECASE):
+            mread = re.search(r'\bread\b\s*\(?\s*(.+?)\s*\)?\s*$', inside, flags=re.IGNORECASE)
             if mread:
                 return clean_reading(mread.group(1))
 
@@ -360,13 +342,13 @@ def extract_reading_after_verse_header(
 
     # Standalone READ line
     for j in range(i, min(i + lookahead, len(lines))):
-        mm = pats["READ_LINE_RE"].match(lines[j])
+        mm = pats['READ_LINE_RE'].match(lines[j])
         if mm:
             return clean_reading(mm.group(1))
 
     # Inline READ without parentheses
     for j in range(i, min(i + lookahead, len(lines))):
-        mread = pats["READ_INLINE_RE"].search(lines[j])
+        mread = pats['READ_INLINE_RE'].search(lines[j])
         if mread:
             return clean_reading(mread.group(1))
 
@@ -393,24 +375,20 @@ def find_positions_and_reading(
     for i, ln in enumerate(lines):
         # Verse header detection
         if verse_line is None:
-            if line_matches_any(ln, pats["VERSE_LINE_RE_LIST"]) or pats[
-                "VERSE_FOR_LINE_RE"
-            ].match(ln):
+            if line_matches_any(ln, pats['VERSE_LINE_RE_LIST']) or pats['VERSE_FOR_LINE_RE'].match(ln):
                 verse_line = i
-                reading = extract_reading_after_verse_header(
-                    lines, i, pats, cfg.reading_lookahead
-                )
+                reading = extract_reading_after_verse_header(lines, i, pats, cfg.reading_lookahead)
 
         # Thought header detection
-        if thought_line is None and line_matches_any(ln, pats["THOUGHT_LINE_RE_LIST"]):
+        if thought_line is None and line_matches_any(ln, pats['THOUGHT_LINE_RE_LIST']):
             thought_line = i
 
         # Prayer header detection
-        if prayer_line is None and line_matches_any(ln, pats["PRAYER_LINE_RE_LIST"]):
+        if prayer_line is None and line_matches_any(ln, pats['PRAYER_LINE_RE_LIST']):
             prayer_line = i
 
         # Signature
-        if signature_line is None and pats["PRAYER_SIGNATURE_ANY_RE"].search(ln):
+        if signature_line is None and pats['PRAYER_SIGNATURE_ANY_RE'].search(ln):
             signature_line = i
 
     return verse_line, thought_line, prayer_line, signature_line, reading
@@ -431,12 +409,10 @@ def slice_sections(
       - Prayer: from prayer header content to signature/end. If no prayer header but signature exists,
                 prayer will be empty (signature-only signoff).
     """
-    verse_text = reflection_text = prayer_text = ""
+    verse_text = reflection_text = prayer_text = ''
 
     # Compute cutoffs
-    stops = [
-        idx for idx in [thought_line, prayer_line, signature_line] if idx is not None
-    ]
+    stops = [idx for idx in [thought_line, prayer_line, signature_line] if idx is not None]
 
     # Verse slice
     if verse_line is not None:
@@ -444,16 +420,16 @@ def slice_sections(
         chunks: List[str] = []
 
         # Try to capture inline after the header when "VERSE FOR ..." includes content on same line
-        m_inline = pats["VERSE_FOR_LINE_RE"].match(lines[verse_line])
+        m_inline = pats['VERSE_FOR_LINE_RE'].match(lines[verse_line])
         if m_inline:
-            after = m_inline.groupdict().get("after") or ""
+            after = m_inline.groupdict().get('after') or ''
             after = after.strip()
             if after:
                 chunks.append(after)
 
         # Otherwise, if the header line has a colon later, capture the tail after the first recognized header token
         if not chunks:
-            for p in pats["VERSE_JOIN_RE_LIST"]:
+            for p in pats['VERSE_JOIN_RE_LIST']:
                 m = p.search(lines[verse_line])
                 if m:
                     tail = lines[verse_line][m.end() :].strip()
@@ -464,15 +440,15 @@ def slice_sections(
         # Add the lines between verse header and next section header
         nxt = verse_line + 1
         if nxt < stop_line:
-            chunks.append("\n".join(lines[nxt:stop_line]).strip())
+            chunks.append('\n'.join(lines[nxt:stop_line]).strip())
 
-        verse_text = "\n".join([c for c in chunks if c]).strip()
+        verse_text = '\n'.join([c for c in chunks if c]).strip()
 
     # Reflection slice
     if thought_line is not None:
         # Inline content after colon on same line
-        inline_after = ""
-        for p in pats["THOUGHT_JOIN_RE_LIST"]:
+        inline_after = ''
+        for p in pats['THOUGHT_JOIN_RE_LIST']:
             m_inline_th = p.search(lines[thought_line])
             if m_inline_th:
                 inline_after = lines[thought_line][m_inline_th.end() :].strip()
@@ -490,14 +466,14 @@ def slice_sections(
 
         start_idx = thought_line + 1
         if start_idx < stop_line:
-            chunks.append("\n".join(lines[start_idx:stop_line]).strip())
+            chunks.append('\n'.join(lines[start_idx:stop_line]).strip())
 
-        reflection_text = "\n".join([c for c in chunks if c]).strip()
+        reflection_text = '\n'.join([c for c in chunks if c]).strip()
 
         # Strip accidental trailing header lines
         reflection_text = re.sub(
-            r"(?:^|\n)\s*_*\s*(?:THE\s+)?THOUGHT\s+FOR\s+(?:TODAY|[A-Z][A-Za-z\.]+\s+\d{1,2}(?:\s*,\s*(?:\d{2}|\d{4}))?)\s*:?\s*_*\s*$",
-            "",
+            r'(?:^|\n)\s*_*\s*(?:THE\s+)?THOUGHT\s+FOR\s+(?:TODAY|[A-Z][A-Za-z\.]+\s+\d{1,2}(?:\s*,\s*(?:\d{2}|\d{4}))?)\s*:?\s*_*\s*$',
+            '',
             reflection_text,
             flags=re.IGNORECASE,
         ).strip()
@@ -505,7 +481,7 @@ def slice_sections(
         # Strip signature if leaked
         reflection_text = re.sub(
             r'\s*[*"_\s]*PASTOR\s+AL\s*[*"_]*\s*[,:\-]?\s*$',
-            "",
+            '',
             reflection_text,
             flags=re.IGNORECASE,
         ).strip()
@@ -513,8 +489,8 @@ def slice_sections(
     # Prayer slice
     if prayer_line is not None:
         # Prayer header may have inline start on the same line
-        inline_after = ""
-        for p in pats["PRAYER_JOIN_RE_LIST"]:
+        inline_after = ''
+        for p in pats['PRAYER_JOIN_RE_LIST']:
             m_inline_pr = p.search(lines[prayer_line])
             if m_inline_pr:
                 inline_after = lines[prayer_line][m_inline_pr.end() :].strip()
@@ -527,16 +503,16 @@ def slice_sections(
 
         start_idx = prayer_line + 1
         if start_idx < stop_line:
-            chunks.append("\n".join(lines[start_idx:stop_line]).strip())
+            chunks.append('\n'.join(lines[start_idx:stop_line]).strip())
 
-        prayer_text = "\n".join([c for c in chunks if c]).strip()
+        prayer_text = '\n'.join([c for c in chunks if c]).strip()
 
         # Remove trailing 'Amen.' punctuation normalization is left as-is; keep the user's casing
         # No signature inside prayer text after slicing; signature is the stop line
 
     else:
         # If there is a signature but no prayer header, we output empty prayer (signoff only)
-        prayer_text = ""
+        prayer_text = ''
 
     return verse_text, reflection_text, prayer_text
 
@@ -553,33 +529,31 @@ def parse_one(full_text: str, cfg: BatchConfig) -> Dict[str, object]:
     body = normalize_keep_newlines(extract_body(full_text, cfg))
     lines = body.splitlines()
 
-    verse_line, thought_line, prayer_line, signature_line, reading_from_body = (
-        find_positions_and_reading(lines, pats, cfg)
+    verse_line, thought_line, prayer_line, signature_line, reading_from_body = find_positions_and_reading(
+        lines, pats, cfg
     )
     verse_raw, reflection_raw, prayer_raw = slice_sections(
         lines, verse_line, thought_line, prayer_line, signature_line, pats
     )
 
-    subject_clean, reading_from_subject = parse_subject_and_reading(
-        hdr.get("subject", "")
-    )
+    subject_clean, reading_from_subject = parse_subject_and_reading(hdr.get('subject', ''))
 
     # Priority: subject -> body (second-parenthesis / READ) -> ""
-    reading_val = reading_from_subject or reading_from_body or ""
+    reading_val = reading_from_subject or reading_from_body or ''
 
     record: Dict[str, object] = {
-        "message_id": hdr.get("message_id", ""),
-        "date_utc": hdr.get("date", ""),
-        "subject": subject_clean,
-        "verse": scrub_inline(verse_raw),
-        "reflection": scrub_inline(reflection_raw),
-        "prayer": scrub_inline(prayer_raw),
-        "reading": reading_val,
-        "original_content": body,
-        "found_verse": bool(verse_raw),
-        "found_reflection": bool(reflection_raw),
-        "found_prayer": bool(prayer_raw),
-        "found_reading": bool(reading_val),
+        'message_id': hdr.get('message_id', ''),
+        'date_utc': hdr.get('date', ''),
+        'subject': subject_clean,
+        'verse': scrub_inline(verse_raw),
+        'reflection': scrub_inline(reflection_raw),
+        'prayer': scrub_inline(prayer_raw),
+        'reading': reading_val,
+        'original_content': body,
+        'found_verse': bool(verse_raw),
+        'found_reflection': bool(reflection_raw),
+        'found_prayer': bool(prayer_raw),
+        'found_reading': bool(reading_val),
     }
     return record
 
@@ -593,17 +567,17 @@ def main() -> None:
     import argparse
 
     ap = argparse.ArgumentParser(
-        description="Parse devotionals (batch-configurable headers, date parsing, and signature/prayer handling)"
+        description='Parse devotionals (batch-configurable headers, date parsing, and signature/prayer handling)'
     )
     ap.add_argument(
-        "--input-dir",
+        '--input-dir',
         default=BatchConfig().input_dir,
-        help="Directory containing .txt messages (default: 1810)",
+        help='Directory containing .txt messages (default: 1810)',
     )
     ap.add_argument(
-        "--out",
+        '--out',
         default=BatchConfig().out_json,
-        help="Output JSON file (default: parsed_1810.json)",
+        help='Output JSON file (default: parsed_1810.json)',
     )
     args = ap.parse_args()
 
@@ -622,23 +596,23 @@ def main() -> None:
     )
 
     src = Path(cfg.input_dir)
-    files = sorted(src.glob("*.txt"))
+    files = sorted(src.glob('*.txt'))
     if not files:
-        print(f"No files found in {src.resolve()}")
-        Path(cfg.out_json).write_text("[]", encoding="utf-8")
+        print(f'No files found in {src.resolve()}')
+        Path(cfg.out_json).write_text('[]', encoding='utf-8')
         return
 
     rows: List[Dict[str, object]] = []
     for fp in files:
-        txt = fp.read_text(encoding="utf-8", errors="replace")
+        txt = fp.read_text(encoding='utf-8', errors='replace')
         rows.append(parse_one(txt, cfg))
 
     Path(cfg.out_json).write_text(
         json.dumps(rows, indent=2, ensure_ascii=False),
-        encoding="utf-8",
+        encoding='utf-8',
     )
-    print(f"Wrote {len(rows)} records to {Path(cfg.out_json).resolve()}")
+    print(f'Wrote {len(rows)} records to {Path(cfg.out_json).resolve()}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

@@ -4,10 +4,10 @@ import sqlite3
 from typing import Optional
 import os
 
-DEFAULT_TABLE = "devotionals"
-DEFAULT_COLUMN = "prayer"
+DEFAULT_TABLE = 'devotionals'
+DEFAULT_COLUMN = 'prayer'
 
-devotional_db = os.getenv("DEVOTIONAL_DB")
+devotional_db = os.getenv('DEVOTIONAL_DB')
 
 
 def clean_text(text: Optional[str]) -> Optional[str]:
@@ -16,14 +16,14 @@ def clean_text(text: Optional[str]) -> Optional[str]:
     """
     if text is None:
         return None
-    cleaned = text.replace("*", "").replace("_", "")
+    cleaned = text.replace('*', '').replace('_', '')
 
     # Collapse multiple spaces
-    while "  " in cleaned:
-        cleaned = cleaned.replace("  ", " ")
+    while '  ' in cleaned:
+        cleaned = cleaned.replace('  ', ' ')
 
     # Trim spaces around line breaks (one logical line per DB line)
-    cleaned = "\n".join(part.strip() for part in cleaned.splitlines())
+    cleaned = '\n'.join(part.strip() for part in cleaned.splitlines())
 
     # Final trim
     cleaned = cleaned.strip()
@@ -35,41 +35,33 @@ def main():
         description="Interactively remove '*' and '_' from a chosen text column of your SQLite table (per-row commit)."
     )
     ap.add_argument(
-        "--db",
+        '--db',
         default=devotional_db,
-        help="Path to SQLite DB",
+        help='Path to SQLite DB',
     )
+    ap.add_argument('--table', default=DEFAULT_TABLE, help='Table name (default: devotionals)')
+    ap.add_argument('--column', default=DEFAULT_COLUMN, help='Column to clean (default: prayer)')
     ap.add_argument(
-        "--table", default=DEFAULT_TABLE, help="Table name (default: devotionals)"
+        '--id-column',
+        default='message_id',
+        help='Primary key column (default: message_id)',
     )
-    ap.add_argument(
-        "--column", default=DEFAULT_COLUMN, help="Column to clean (default: prayer)"
-    )
-    ap.add_argument(
-        "--id-column",
-        default="message_id",
-        help="Primary key column (default: message_id)",
-    )
-    ap.add_argument(
-        "--limit", type=int, default=0, help="Preview at most N rows (0 = all)"
-    )
-    ap.add_argument(
-        "--dry-run", action="store_true", help="Preview only, do not write any changes"
-    )
+    ap.add_argument('--limit', type=int, default=0, help='Preview at most N rows (0 = all)')
+    ap.add_argument('--dry-run', action='store_true', help='Preview only, do not write any changes')
     args = ap.parse_args()
 
     # Basic validation for the column name to avoid SQL injection via identifiers
     # Only allow simple identifiers: letters, digits, underscore
     import re
 
-    ident_re = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+    ident_re = re.compile(r'^[A-Za-z_][A-Za-z0-9_]*$')
     for ident, label in [
-        (args.table, "table"),
-        (args.column, "column"),
-        (args.id_column, "id-column"),
+        (args.table, 'table'),
+        (args.column, 'column'),
+        (args.id_column, 'id-column'),
     ]:
         if not ident_re.match(ident):
-            raise ValueError(f"Invalid {label} name: {ident}")
+            raise ValueError(f'Invalid {label} name: {ident}')
 
     conn = sqlite3.connect(args.db)
     conn.row_factory = sqlite3.Row
@@ -84,7 +76,7 @@ def main():
         ORDER BY {args.id_column}
     """
     if args.limit > 0:
-        sql += f" LIMIT {args.limit}"
+        sql += f' LIMIT {args.limit}'
 
     rows = cur.execute(sql).fetchall()
     if not rows:
@@ -92,7 +84,7 @@ def main():
         conn.close()
         return
 
-    print(f"Found {len(rows)} candidate rows in {args.table}.{args.column}.\n")
+    print(f'Found {len(rows)} candidate rows in {args.table}.{args.column}.\n')
 
     updated = 0
     skipped = 0
@@ -100,23 +92,23 @@ def main():
 
     try:
         for i, r in enumerate(rows, start=1):
-            pk = r["pk"]
-            subject = r.get("subject") if isinstance(r, dict) else r["subject"]
-            old = r["col_value"] or ""
+            pk = r['pk']
+            subject = r.get('subject') if isinstance(r, dict) else r['subject']
+            old = r['col_value'] or ''
             new = clean_text(old)
 
             if new == old:
                 continue
 
-            sep = "=" * 80
+            sep = '=' * 80
             print(sep)
-            print(f"[{i}/{len(rows)}] {args.id_column}: {pk}")
+            print(f'[{i}/{len(rows)}] {args.id_column}: {pk}')
             if subject:
-                print(f"Subject: {subject}")
-            print(f"Column : {args.column}")
-            print("- Old value:")
+                print(f'Subject: {subject}')
+            print(f'Column : {args.column}')
+            print('- Old value:')
             print(old)
-            print("- New value (cleaned):")
+            print('- New value (cleaned):')
             print(new)
             print(sep)
 
@@ -126,26 +118,22 @@ def main():
 
             if not apply_all:
                 while True:
-                    resp = (
-                        input("Apply change? [y]es / [n]o / [a]ll / [q]uit: ")
-                        .strip()
-                        .lower()
-                    )
-                    if resp in {"y", "n", "a", "q"}:
+                    resp = input('Apply change? [y]es / [n]o / [a]ll / [q]uit: ').strip().lower()
+                    if resp in {'y', 'n', 'a', 'q'}:
                         break
-                    print("Please enter y, n, a, or q.")
-                if resp == "q":
-                    print("Quitting. Already-applied changes remain committed.")
+                    print('Please enter y, n, a, or q.')
+                if resp == 'q':
+                    print('Quitting. Already-applied changes remain committed.')
                     break
-                elif resp == "a":
+                elif resp == 'a':
                     apply_all = True
-                elif resp == "n":
+                elif resp == 'n':
                     skipped += 1
                     continue
 
             # Apply and commit this single row
             cur.execute(
-                f"UPDATE {args.table} SET {args.column} = ? WHERE {args.id_column} = ?",
+                f'UPDATE {args.table} SET {args.column} = ? WHERE {args.id_column} = ?',
                 (new, pk),
             )
             conn.commit()  # per-row commit
@@ -153,10 +141,10 @@ def main():
 
     finally:
         conn.close()
-        print(f"\nDone. Updated {updated} rows. Skipped {skipped} rows.")
+        print(f'\nDone. Updated {updated} rows. Skipped {skipped} rows.')
         if args.dry_run:
-            print("(Dry run: no changes were written.)")
+            print('(Dry run: no changes were written.)')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

@@ -13,32 +13,32 @@ def fix_text(s: str) -> str:
     i = 0
     n = len(s)
     while i < n:
-        if s[i] == ".":
+        if s[i] == '.':
             # Count repeats of ". "
             j = i
             reps = 0
             while True:
-                if j + 2 <= n and s[j : j + 2] == ". ":
+                if j + 2 <= n and s[j : j + 2] == '. ':
                     reps += 1
                     j += 2
                 else:
                     break
             if reps >= 2:
                 # Collapse to a single ". "
-                out.append(". ")
+                out.append('. ')
                 i = j
                 continue
         out.append(s[i])
         i += 1
-    return "".join(out)
+    return ''.join(out)
 
 
 def process_file(path: str, create_backup: bool) -> bool:
     try:
-        with open(path, "r", encoding="utf-8") as f:
+        with open(path, 'r', encoding='utf-8') as f:
             original = f.read()
     except Exception as e:
-        print(f"Error reading {path}: {e}", file=sys.stderr)
+        print(f'Error reading {path}: {e}', file=sys.stderr)
         return False
 
     fixed = fix_text(original)
@@ -47,30 +47,28 @@ def process_file(path: str, create_backup: bool) -> bool:
 
     try:
         if create_backup:
-            bak = path + ".bak"
-            with open(bak, "w", encoding="utf-8", newline="") as bf:
+            bak = path + '.bak'
+            with open(bak, 'w', encoding='utf-8', newline='') as bf:
                 bf.write(original)
-        with open(path, "w", encoding="utf-8", newline="") as f:
+        with open(path, 'w', encoding='utf-8', newline='') as f:
             f.write(fixed)
         return True
     except Exception as e:
-        print(f"Error writing {path}: {e}", file=sys.stderr)
+        print(f'Error writing {path}: {e}', file=sys.stderr)
         return False
 
 
 def main():
-    ap = argparse.ArgumentParser(
-        description="Collapse spaced ellipses '. . . ' into a single '. ' across JSON files."
-    )
+    ap = argparse.ArgumentParser(description="Collapse spaced ellipses '. . . ' into a single '. ' across JSON files.")
     ap.add_argument(
-        "paths",
-        nargs="+",
+        'paths',
+        nargs='+',
         help="Files or glob patterns, e.g., '*.json' or 'data/**/*.json'",
     )
     ap.add_argument(
-        "--no-backup",
-        action="store_true",
-        help="Do not write .bak backup files.",
+        '--no-backup',
+        action='store_true',
+        help='Do not write .bak backup files.',
     )
     args = ap.parse_args()
 
@@ -86,12 +84,12 @@ def main():
                 files.append(p)
 
     if not files:
-        print("No files found.", file=sys.stderr)
+        print('No files found.', file=sys.stderr)
         sys.exit(1)
 
     ok = True
     for path in sorted(set(files)):
-        if not path.lower().endswith(".json"):
+        if not path.lower().endswith('.json'):
             continue
         if not process_file(path, create_backup=not args.no_backup):
             ok = False
@@ -99,5 +97,5 @@ def main():
     sys.exit(0 if ok else 1)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

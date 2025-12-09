@@ -9,7 +9,7 @@ from pathlib import Path
 from email.utils import parsedate_to_datetime
 
 # DB path can come from ENV or CLI
-DEFAULT_DB_PATH = os.getenv("DEVOTIONAL_DB", "devotionals.sqlite3")
+DEFAULT_DB_PATH = os.getenv('DEVOTIONAL_DB', 'devotionals.sqlite3')
 
 
 def connect(db_path: str) -> sqlite3.Connection:
@@ -37,12 +37,8 @@ def safe_parse_date(date_str: Optional[str]) -> Optional[datetime]:
 
     # ISO-ish
     try:
-        cleaned = (
-            date_str.replace(" ", "T")
-            if " " in date_str and "T" not in date_str
-            else date_str
-        )
-        cleaned = cleaned.rstrip("Z")
+        cleaned = date_str.replace(' ', 'T') if ' ' in date_str and 'T' not in date_str else date_str
+        cleaned = cleaned.rstrip('Z')
         return datetime.fromisoformat(cleaned)
     except Exception:
         pass
@@ -53,7 +49,7 @@ def safe_parse_date(date_str: Optional[str]) -> Optional[datetime]:
 def yymm_from_dt(dt: Optional[datetime]) -> Optional[str]:
     if not dt:
         return None
-    return f"{dt.year % 100:02d}{dt.month:02d}"
+    return f'{dt.year % 100:02d}{dt.month:02d}'
 
 
 def truthy(s: Optional[str]) -> bool:
@@ -61,24 +57,24 @@ def truthy(s: Optional[str]) -> bool:
 
 
 def row_to_export(row: sqlite3.Row) -> Dict[str, Any]:
-    verse = row["verse"]
-    reflection = row["reflection"]
-    prayer = row["prayer"]
-    reading = row["reading"]
+    verse = row['verse']
+    reflection = row['reflection']
+    prayer = row['prayer']
+    reading = row['reading']
 
     return {
-        "message_id": row["message_id"],
-        "date_utc": row["date_utc"],
-        "subject": row["subject"],
-        "verse": verse or "",
-        "reflection": reflection or "",
-        "prayer": prayer or "",
-        "original_content": row["original_content"] or "",
-        "found_verse": truthy(verse),
-        "found_reflection": truthy(reflection),
-        "found_prayer": truthy(prayer),
-        "reading": reading or "",
-        "found_reading": truthy(reading),
+        'message_id': row['message_id'],
+        'date_utc': row['date_utc'],
+        'subject': row['subject'],
+        'verse': verse or '',
+        'reflection': reflection or '',
+        'prayer': prayer or '',
+        'original_content': row['original_content'] or '',
+        'found_verse': truthy(verse),
+        'found_reflection': truthy(reflection),
+        'found_prayer': truthy(prayer),
+        'reading': reading or '',
+        'found_reading': truthy(reading),
     }
 
 
@@ -101,8 +97,8 @@ def bucket_records(records: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, An
     """
     buckets: Dict[str, List[Dict[str, Any]]] = {}
     for rec in records:
-        dt = safe_parse_date(rec.get("date_utc"))
-        key = yymm_from_dt(dt) or "unknown"
+        dt = safe_parse_date(rec.get('date_utc'))
+        key = yymm_from_dt(dt) or 'unknown'
         buckets.setdefault(key, []).append(rec)
     return buckets
 
@@ -120,9 +116,9 @@ def write_buckets_flat(
     cwd = Path.cwd()
 
     for key, items in buckets.items():
-        filename = f"parsed_{key}.json" if key != "unknown" else "parsed_unknown.json"
+        filename = f'parsed_{key}.json' if key != 'unknown' else 'parsed_unknown.json'
         out_path = cwd / filename
-        with out_path.open("w", encoding="utf-8") as f:
+        with out_path.open('w', encoding='utf-8') as f:
             json.dump(items, f, ensure_ascii=False, indent=2)
         results.append((key, str(out_path), len(items)))
 
@@ -136,21 +132,19 @@ def export_devotionals(db_path: str = DEFAULT_DB_PATH) -> None:
         buckets = bucket_records(records)
         results = write_buckets_flat(buckets)
 
-    print("Export complete:")
+    print('Export complete:')
     for key, path, count in sorted(results):
-        print(f"* {key}: wrote {count:,} records to {path}")
+        print(f'* {key}: wrote {count:,} records to {path}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     import argparse
 
-    parser = argparse.ArgumentParser(
-        description="Export devotionals to JSON grouped by YYMM (flat files in cwd)."
-    )
+    parser = argparse.ArgumentParser(description='Export devotionals to JSON grouped by YYMM (flat files in cwd).')
     parser.add_argument(
-        "--db",
+        '--db',
         default=DEFAULT_DB_PATH,
-        help="Path to SQLite DB (default: env DEVOTIONAL_DB or devotionals.sqlite3)",
+        help='Path to SQLite DB (default: env DEVOTIONAL_DB or devotionals.sqlite3)',
     )
     args = parser.parse_args()
 

@@ -10,67 +10,67 @@ from typing import Dict, Optional, Tuple
 
 
 class Holiday(str, Enum):
-    new_years_day = "new_years_day"
-    mlk_day = "mlk_day"
-    presidents_day = "presidents_day"
-    valentines_day = "valentines_day"
-    st_patricks_day = "st_patricks_day"
-    independence_day = "independence_day"
-    halloween = "halloween"
-    veterans_day = "veterans_day"
-    christmas_eve = "christmas_eve"
-    christmas = "christmas"
-    mothers_day = "mothers_day"
-    fathers_day = "fathers_day"
-    election_day = "election_day"
-    easter = "easter"
-    good_friday = "good_friday"
-    ash_wednesday = "ash_wednesday"
-    palm_sunday = "palm_sunday"
-    pentecost = "pentecost"
-    all_saints_day = "all_saints_day"
-    memorial_day = "memorial_day"
-    labor_day = "labor_day"
-    columbus_day = "columbus_day"
-    thanksgiving = "thanksgiving"
+    new_years_day = 'new_years_day'
+    mlk_day = 'mlk_day'
+    presidents_day = 'presidents_day'
+    valentines_day = 'valentines_day'
+    st_patricks_day = 'st_patricks_day'
+    independence_day = 'independence_day'
+    halloween = 'halloween'
+    veterans_day = 'veterans_day'
+    christmas_eve = 'christmas_eve'
+    christmas = 'christmas'
+    mothers_day = 'mothers_day'
+    fathers_day = 'fathers_day'
+    election_day = 'election_day'
+    easter = 'easter'
+    good_friday = 'good_friday'
+    ash_wednesday = 'ash_wednesday'
+    palm_sunday = 'palm_sunday'
+    pentecost = 'pentecost'
+    all_saints_day = 'all_saints_day'
+    memorial_day = 'memorial_day'
+    labor_day = 'labor_day'
+    columbus_day = 'columbus_day'
+    thanksgiving = 'thanksgiving'
 
 
 # Maps Holiday enum -> (emoji, human-readable label)
 # Sacred days use a “gentle” set by default: 🕯️ candle (Easter/Good Friday/Ash Wednesday/All Saints’/Christmas Eve),
 # 🌿 Palm Sunday, 🕊️ Pentecost.
 HOLIDAY_META: Dict[Holiday, Tuple[str, str]] = {
-    Holiday.new_years_day: ("🎆", "New Year's Day"),
-    Holiday.mlk_day: ("🕊️", "Martin Luther King Jr. Day"),
-    Holiday.presidents_day: ("🇺🇸", "Presidents Day"),
-    Holiday.valentines_day: ("❤️", "Valentine's Day"),
-    Holiday.st_patricks_day: ("🍀", "St. Patrick's Day"),
-    Holiday.independence_day: ("🎇", "Independence Day"),
-    Holiday.halloween: ("🎃", "Halloween"),
-    Holiday.veterans_day: ("🎖️", "Veterans Day"),
-    Holiday.christmas_eve: ("🕯️", "Christmas Eve"),
-    Holiday.christmas: ("🎄", "Christmas"),
-    Holiday.mothers_day: ("🌷", "Mother's Day"),
-    Holiday.fathers_day: ("🛠️", "Father's Day"),
-    Holiday.election_day: ("🗳️", "Election Day"),
-    Holiday.easter: ("🕯️", "Easter"),
-    Holiday.good_friday: ("🕯️", "Good Friday"),
-    Holiday.ash_wednesday: ("🕯️", "Ash Wednesday"),
-    Holiday.palm_sunday: ("🌿", "Palm Sunday"),
-    Holiday.pentecost: ("🕊️", "Pentecost"),
-    Holiday.all_saints_day: ("🕯️", "All Saints' Day"),
-    Holiday.memorial_day: ("🇺🇸", "Memorial Day"),
-    Holiday.labor_day: ("🧰", "Labor Day"),
-    Holiday.columbus_day: ("🧭", "Columbus Day"),
-    Holiday.thanksgiving: ("🦃", "Thanksgiving"),
+    Holiday.new_years_day: ('🎆', "New Year's Day"),
+    Holiday.mlk_day: ('🕊️', 'Martin Luther King Jr. Day'),
+    Holiday.presidents_day: ('🇺🇸', 'Presidents Day'),
+    Holiday.valentines_day: ('❤️', "Valentine's Day"),
+    Holiday.st_patricks_day: ('🍀', "St. Patrick's Day"),
+    Holiday.independence_day: ('🎇', 'Independence Day'),
+    Holiday.halloween: ('🎃', 'Halloween'),
+    Holiday.veterans_day: ('🎖️', 'Veterans Day'),
+    Holiday.christmas_eve: ('🕯️', 'Christmas Eve'),
+    Holiday.christmas: ('🎄', 'Christmas'),
+    Holiday.mothers_day: ('🌷', "Mother's Day"),
+    Holiday.fathers_day: ('🛠️', "Father's Day"),
+    Holiday.election_day: ('🗳️', 'Election Day'),
+    Holiday.easter: ('🕯️', 'Easter'),
+    Holiday.good_friday: ('🕯️', 'Good Friday'),
+    Holiday.ash_wednesday: ('🕯️', 'Ash Wednesday'),
+    Holiday.palm_sunday: ('🌿', 'Palm Sunday'),
+    Holiday.pentecost: ('🕊️', 'Pentecost'),
+    Holiday.all_saints_day: ('🕯️', "All Saints' Day"),
+    Holiday.memorial_day: ('🇺🇸', 'Memorial Day'),
+    Holiday.labor_day: ('🧰', 'Labor Day'),
+    Holiday.columbus_day: ('🧭', 'Columbus Day'),
+    Holiday.thanksgiving: ('🦃', 'Thanksgiving'),
 }
 
 
 def holiday_emoji(h: Holiday) -> str:
-    return HOLIDAY_META.get(h, ("", ""))[0]
+    return HOLIDAY_META.get(h, ('', ''))[0]
 
 
 def holiday_label(h: Holiday) -> str:
-    return HOLIDAY_META.get(h, ("", h.value.replace("_", " ").title()))[1]
+    return HOLIDAY_META.get(h, ('', h.value.replace('_', ' ').title()))[1]
 
 
 # -----------------------------
@@ -116,9 +116,7 @@ def _easter_sunday(year: int) -> date:
 # -----------------------------
 # Holiday calculators
 # -----------------------------
-def _fixed_holiday(
-    y: int, m: int, d: int, target: date, enum_val: Holiday
-) -> Optional[Holiday]:
+def _fixed_holiday(y: int, m: int, d: int, target: date, enum_val: Holiday) -> Optional[Holiday]:
     return enum_val if target == date(y, m, d) else None
 
 
@@ -201,9 +199,9 @@ def holiday_name_or_none(date_iso: str) -> Optional[Holiday]:
     Return the Holiday enum for a given YYYY-MM-DD, or None if not a listed holiday.
     """
     try:
-        y, m, d = map(int, date_iso.split("-"))
+        y, m, d = map(int, date_iso.split('-'))
     except Exception:
-        raise ValueError("date_iso must be in YYYY-MM-DD format")
+        raise ValueError('date_iso must be in YYYY-MM-DD format')
     dt = date(y, m, d)
 
     # Fixed-date holidays
@@ -251,7 +249,7 @@ def holiday_name_or_none(date_iso: str) -> Optional[Holiday]:
 # -----------------------------
 def _main():
     if len(sys.argv) != 2:
-        print("Usage: python3 holiday.py YYYY-MM-DD")
+        print('Usage: python3 holiday.py YYYY-MM-DD')
         sys.exit(2)
     date_iso = sys.argv[1]
     try:
@@ -262,9 +260,9 @@ def _main():
     if info is None:
         sys.exit(1)
     h_enum, label, emoji = info
-    print(f"{label} {emoji}".strip())
+    print(f'{label} {emoji}'.strip())
     sys.exit(0)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     _main()

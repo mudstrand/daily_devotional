@@ -6,10 +6,10 @@ import sys
 from typing import Dict, List, Optional, Tuple
 
 # Fields to check
-FIELDS = ["subject", "verse", "reflection", "prayer", "reading"]
+FIELDS = ['subject', 'verse', 'reflection', 'prayer', 'reading']
 
 # Config
-LANG_CODE = "en-US"
+LANG_CODE = 'en-US'
 USE_GRAMMAR = True
 USE_SPELL = True  # now enabled
 
@@ -39,7 +39,7 @@ def init_tools():
                 lt = lt_mod.LanguageToolPublicAPI(LANG_CODE)
         except Exception as e:
             print(
-                f"Warning: language_tool_python unavailable ({e}); grammar checks disabled.",
+                f'Warning: language_tool_python unavailable ({e}); grammar checks disabled.',
                 file=sys.stderr,
             )
             lt = None
@@ -50,20 +50,20 @@ def init_tools():
             import enchant as enchant_mod
 
             try:
-                speller = enchant_mod.Dict("en_US")
+                speller = enchant_mod.Dict('en_US')
             except enchant_mod.errors.DictNotFoundError:
                 # Try en_US-large if available
                 try:
-                    speller = enchant_mod.Dict("en_US-large")
+                    speller = enchant_mod.Dict('en_US-large')
                 except Exception:
                     print(
-                        "Warning: pyenchant en_US dictionary not found; spell checks disabled.",
+                        'Warning: pyenchant en_US dictionary not found; spell checks disabled.',
                         file=sys.stderr,
                     )
                     speller = None
         except Exception as e:
             print(
-                f"Warning: pyenchant unavailable ({e}); spell checks disabled.",
+                f'Warning: pyenchant unavailable ({e}); spell checks disabled.',
                 file=sys.stderr,
             )
             speller = None
@@ -75,7 +75,7 @@ def script_dir() -> str:
 
 def read_json_file(path: str) -> Optional[Tuple[object, str]]:
     try:
-        with open(path, "r", encoding="utf-8") as f:
+        with open(path, 'r', encoding='utf-8') as f:
             content = f.read()
         return json.loads(content), content
     except Exception:
@@ -96,7 +96,7 @@ def find_line_number_for_field(content: str, key: str, value: str) -> int:
     )
     m = pattern.search(content)
     if m:
-        return content.count("\n", 0, m.start()) + 1
+        return content.count('\n', 0, m.start()) + 1
 
     exact = f'"{key}": "{value}"'
     for i, line in enumerate(content.splitlines(), start=1):
@@ -104,7 +104,7 @@ def find_line_number_for_field(content: str, key: str, value: str) -> int:
             return i
 
     # Fallback: line containing the key and a fragment of the value
-    frag = value[:30] if isinstance(value, str) else ""
+    frag = value[:30] if isinstance(value, str) else ''
     if frag:
         for i, line in enumerate(content.splitlines(), start=1):
             if f'"{key}"' in line and frag in line:
@@ -130,7 +130,7 @@ def check_spelling(text: str) -> List[Tuple[str, int]]:
         if w.isupper() and len(w) <= 5:
             continue
         # Skip single-letter words except a, I
-        if len(w) == 1 and wl not in ("a", "i"):
+        if len(w) == 1 and wl not in ('a', 'i'):
             continue
         if not speller.check(w):
             issues.append((w, m.start()))
@@ -150,15 +150,15 @@ def match_span(m) -> Tuple[int, int]:
     """
     Return (offset, length) for a LanguageTool match, robust across versions.
     """
-    offset = getattr(m, "offset", None)
-    length = getattr(m, "errorLength", None)
+    offset = getattr(m, 'offset', None)
+    length = getattr(m, 'errorLength', None)
 
     if offset is None:
-        offset = getattr(m, "offsetInContext", 0)
+        offset = getattr(m, 'offsetInContext', 0)
     if length is None:
         # If exact length missing, attempt to derive from 'context' field
         try:
-            ctx = getattr(m, "context", None) or getattr(m, "contextForSureMatch", None)
+            ctx = getattr(m, 'context', None) or getattr(m, 'contextForSureMatch', None)
             length = len(str(ctx)) if ctx else 0
         except Exception:
             length = 0
@@ -175,15 +175,15 @@ def match_span(m) -> Tuple[int, int]:
 
 
 def match_message(m) -> str:
-    rid = getattr(m, "ruleId", None) or getattr(m, "rule", None) or "RULE"
-    msg = getattr(m, "message", None) or "Issue"
+    rid = getattr(m, 'ruleId', None) or getattr(m, 'rule', None) or 'RULE'
+    msg = getattr(m, 'message', None) or 'Issue'
     # Prefer concise output
-    return f"Grammar ({rid}): {msg}"
+    return f'Grammar ({rid}): {msg}'
 
 
 def report_issue(field: str, msg: str, filename: str, line: int):
     line = 1 if line == -1 else line
-    print(f"{field}: {msg} -> code -g {filename}:{line}")
+    print(f'{field}: {msg} -> code -g {filename}:{line}')
 
 
 def inspect_record(obj: Dict, file_content: str, filename: str):
@@ -204,8 +204,8 @@ def inspect_record(obj: Dict, file_content: str, filename: str):
             offset, length = match_span(m)
             start = max(0, offset - 20)
             end = min(len(text), offset + max(1, length) + 20)
-            context = text[start:end].replace("\n", " ")
-            msg = f"{match_message(m)} | ...{context}..."
+            context = text[start:end].replace('\n', ' ')
+            msg = f'{match_message(m)} | ...{context}...'
             line = find_line_number_for_field(file_content, field, text)
             report_issue(field, msg, filename, line)
 
@@ -217,12 +217,12 @@ def main():
     try:
         entries = os.listdir(base)
     except FileNotFoundError:
-        print("Cannot list script directory", file=sys.stderr)
+        print('Cannot list script directory', file=sys.stderr)
         sys.exit(1)
 
     any_json = False
     for name in sorted(entries):
-        if not name.endswith(".json"):
+        if not name.endswith('.json'):
             continue
         path = os.path.join(base, name)
         loaded = read_json_file(path)
@@ -239,9 +239,9 @@ def main():
             inspect_record(data, content, name)
 
     if not any_json:
-        print("No JSON files found", file=sys.stderr)
+        print('No JSON files found', file=sys.stderr)
         sys.exit(1)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

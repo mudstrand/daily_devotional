@@ -45,30 +45,30 @@ def clean_newlines_and_spacing(text: str) -> str:
     changes_made = []
 
     # Remove literal \n sequences (escaped newlines)
-    if "\\n" in text:
-        text = re.sub(r"\\n", " ", text)
-        changes_made.append("literal \\n")
+    if '\\n' in text:
+        text = re.sub(r'\\n', ' ', text)
+        changes_made.append('literal \\n')
 
     # Remove actual newline characters
-    if "\n" in text:
-        text = re.sub(r"\n", " ", text)
-        changes_made.append("newlines")
+    if '\n' in text:
+        text = re.sub(r'\n', ' ', text)
+        changes_made.append('newlines')
 
     # Remove carriage returns too
-    if "\r" in text:
-        text = re.sub(r"\r", " ", text)
-        changes_made.append("carriage returns")
+    if '\r' in text:
+        text = re.sub(r'\r', ' ', text)
+        changes_made.append('carriage returns')
 
     # Clean up multiple spaces that might result from newline removal
-    if re.search(r"\s{2,}", text):
-        text = re.sub(r"\s+", " ", text)
-        changes_made.append("multiple spaces")
+    if re.search(r'\s{2,}', text):
+        text = re.sub(r'\s+', ' ', text)
+        changes_made.append('multiple spaces')
 
     # Strip leading/trailing whitespace
     text = text.strip()
 
     if changes_made:
-        print(f"    → Cleaned: {', '.join(changes_made)}")
+        print(f'    → Cleaned: {", ".join(changes_made)}')
 
     return text
 
@@ -78,37 +78,37 @@ def remove_errant_prefixes(text: str) -> str:
 
     # Comprehensive list of prefixes that Claude might add
     unwanted_prefixes = [
-        "YES_CHANGES_NEEDED",
-        "NO_CHANGES_NEEDED",
-        "CHANGES_NEEDED",
-        "CORRECTIONS_NEEDED",
-        "CORRECTIONS NEEDED",
-        "IMPORTANT: Corrections needed.",
-        "IMPORTANT: Corrections needed",
-        "IMPORTANT:",
-        "Corrections needed:",
-        "Corrections needed",
-        "CORRECTED:",
-        "CORRECTED VERSION:",
-        "CORRECTED TEXT:",
-        "Corrected text:",
-        "Corrected:",
-        "Here is the corrected text:",
+        'YES_CHANGES_NEEDED',
+        'NO_CHANGES_NEEDED',
+        'CHANGES_NEEDED',
+        'CORRECTIONS_NEEDED',
+        'CORRECTIONS NEEDED',
+        'IMPORTANT: Corrections needed.',
+        'IMPORTANT: Corrections needed',
+        'IMPORTANT:',
+        'Corrections needed:',
+        'Corrections needed',
+        'CORRECTED:',
+        'CORRECTED VERSION:',
+        'CORRECTED TEXT:',
+        'Corrected text:',
+        'Corrected:',
+        'Here is the corrected text:',
         "Here's the corrected text:",
-        "Here is the corrected version:",
+        'Here is the corrected version:',
         "Here's the corrected version:",
-        "Fixed version:",
-        "Fixed text:",
-        "Fixed:",
-        "FIXED:",
-        "REVISED:",
-        "Revised:",
-        "UPDATED:",
-        "Updated:",
-        "REFLECTION:",
-        "Reflection:",
-        "TEXT:",
-        "Text:",
+        'Fixed version:',
+        'Fixed text:',
+        'Fixed:',
+        'FIXED:',
+        'REVISED:',
+        'Revised:',
+        'UPDATED:',
+        'Updated:',
+        'REFLECTION:',
+        'Reflection:',
+        'TEXT:',
+        'Text:',
     ]
 
     original = text
@@ -117,7 +117,7 @@ def remove_errant_prefixes(text: str) -> str:
     # First pass - remove prefixes that might be followed by newlines/spaces
     for prefix in unwanted_prefixes:
         # Check for prefix followed by optional whitespace/newlines
-        pattern = re.escape(prefix) + r"[\s\n\r]*"
+        pattern = re.escape(prefix) + r'[\s\n\r]*'
         if re.match(pattern, cleaned, re.IGNORECASE):
             # Find the actual match to see what we're removing
             match = re.match(pattern, cleaned, re.IGNORECASE)
@@ -143,7 +143,7 @@ def remove_errant_prefixes(text: str) -> str:
 
     # Remove any leading colons, dashes, or other punctuation that might be left
     before_punctuation = cleaned
-    cleaned = re.sub(r"^[:~\-\s]+", "", cleaned)
+    cleaned = re.sub(r'^[:~\-\s]+', '', cleaned)
     if cleaned != before_punctuation:
         removed = before_punctuation[: len(before_punctuation) - len(cleaned)]
         print(f"    → Removed leading punctuation: '{removed}'")
@@ -165,7 +165,7 @@ def process_reflection(text: str) -> Tuple[str, bool]:
     quotes_before = cleaned
     cleaned = standardize_quotes(cleaned)
     if cleaned != quotes_before:
-        print("    → Standardized quotes")
+        print('    → Standardized quotes')
 
     was_changed = cleaned != original
 
@@ -174,7 +174,7 @@ def process_reflection(text: str) -> Tuple[str, bool]:
 
 def load_json_file(file_path: str) -> List[Dict[str, Any]]:
     """Load JSON file and return list of records."""
-    with open(file_path, "r", encoding="utf-8") as f:
+    with open(file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
     # Handle both single objects and arrays
@@ -187,7 +187,7 @@ def load_json_file(file_path: str) -> List[Dict[str, Any]]:
 def save_json_file(file_path: str, records: List[Dict[str, Any]]):
     """Save records back to JSON file."""
     # Determine if original was a single object or array
-    with open(file_path, "r", encoding="utf-8") as f:
+    with open(file_path, 'r', encoding='utf-8') as f:
         original_data = json.load(f)
 
     if isinstance(original_data, list):
@@ -195,18 +195,14 @@ def save_json_file(file_path: str, records: List[Dict[str, Any]]):
     else:
         data_to_save = records[0] if records else {}
 
-    with open(file_path, "w", encoding="utf-8") as f:
+    with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(data_to_save, f, indent=2, ensure_ascii=False)
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Clean up reflection fields in JSON files"
-    )
-    parser.add_argument("files", nargs="+", help="JSON files to process")
-    parser.add_argument(
-        "--preview", action="store_true", help="Preview changes without making them"
-    )
+    parser = argparse.ArgumentParser(description='Clean up reflection fields in JSON files')
+    parser.add_argument('files', nargs='+', help='JSON files to process')
+    parser.add_argument('--preview', action='store_true', help='Preview changes without making them')
 
     args = parser.parse_args()
 
@@ -214,16 +210,12 @@ def main():
     total_records = 0
     total_cleaned = 0
 
-    print(
-        f"\n🧹 Cleaning {len(args.files)} file(s) in {'PREVIEW' if args.preview else 'UPDATE'} mode..."
-    )
-    print(
-        "📝 Applying: Prefix removal + \\n cleanup + Quote standardization + Spacing fixes"
-    )
+    print(f'\n🧹 Cleaning {len(args.files)} file(s) in {"PREVIEW" if args.preview else "UPDATE"} mode...')
+    print('📝 Applying: Prefix removal + \\n cleanup + Quote standardization + Spacing fixes')
 
     for file_path in args.files:
         if not os.path.exists(file_path):
-            print(f"Warning: File {file_path} not found, skipping...")
+            print(f'Warning: File {file_path} not found, skipping...')
             continue
 
         try:
@@ -236,18 +228,16 @@ def main():
             records_with_changes = []
 
             for i, record in enumerate(records, 1):
-                if "reflection" not in record:
+                if 'reflection' not in record:
                     updated_records.append(record)
                     continue
 
-                original_reflection = record["reflection"]
-                cleaned_reflection, was_changed = process_reflection(
-                    original_reflection
-                )
+                original_reflection = record['reflection']
+                cleaned_reflection, was_changed = process_reflection(original_reflection)
 
                 if was_changed:
                     updated_record = record.copy()
-                    updated_record["reflection"] = cleaned_reflection
+                    updated_record['reflection'] = cleaned_reflection
                     updated_records.append(updated_record)
                     file_changes += 1
                     total_cleaned += 1
@@ -255,9 +245,9 @@ def main():
                     # Store for display
                     records_with_changes.append(
                         {
-                            "index": i,
-                            "original": original_reflection,
-                            "cleaned": cleaned_reflection,
+                            'index': i,
+                            'original': original_reflection,
+                            'cleaned': cleaned_reflection,
                         }
                     )
 
@@ -268,32 +258,26 @@ def main():
 
             # Only show file header if there are changes to display
             if file_changes > 0:
-                print(f"\n{'=' * 70}")
-                print(f"PROCESSING: {file_path}")
-                print(f"{'=' * 70}")
+                print(f'\n{"=" * 70}')
+                print(f'PROCESSING: {file_path}')
+                print(f'{"=" * 70}')
 
                 # Show all records with changes
                 for change_info in records_with_changes:
-                    print(
-                        f"\n--- Record {change_info['index']}/{len(records)} [NEEDS CLEANING] ---"
-                    )
-                    print("📝 Changes detected:")
-                    print(f"{'=' * 60}")
-                    print("ORIGINAL:")
+                    print(f'\n--- Record {change_info["index"]}/{len(records)} [NEEDS CLEANING] ---')
+                    print('📝 Changes detected:')
+                    print(f'{"=" * 60}')
+                    print('ORIGINAL:')
                     print(f'"{change_info["original"]}"')
-                    print("\nCLEANED:")
+                    print('\nCLEANED:')
                     print(f'"{change_info["cleaned"]}"')
-                    print(f"{'=' * 60}")
+                    print(f'{"=" * 60}')
 
-                print(f"\n{'=' * 70}")
+                print(f'\n{"=" * 70}')
                 if args.preview:
-                    print(
-                        f"📋 WOULD CLEAN {file_changes}/{processed_count} records in {os.path.basename(file_path)}"
-                    )
+                    print(f'📋 WOULD CLEAN {file_changes}/{processed_count} records in {os.path.basename(file_path)}')
                 else:
-                    print(
-                        f"✅ CLEANED {file_changes}/{processed_count} records in {os.path.basename(file_path)}"
-                    )
+                    print(f'✅ CLEANED {file_changes}/{processed_count} records in {os.path.basename(file_path)}')
 
             # Save the file if changes were made (non-preview mode)
             if not args.preview and file_changes > 0:
@@ -303,24 +287,24 @@ def main():
             total_records += processed_count
 
         except Exception as e:
-            print(f"❌ Error processing {file_path}: {e}")
+            print(f'❌ Error processing {file_path}: {e}')
 
-    print(f"\n{'=' * 70}")
-    print("📊 SUMMARY")
-    print(f"{'=' * 70}")
-    print(f"Files processed: {total_files}")
-    print(f"Total records: {total_records}")
-    print(f"Records cleaned: {total_cleaned}")
+    print(f'\n{"=" * 70}')
+    print('📊 SUMMARY')
+    print(f'{"=" * 70}')
+    print(f'Files processed: {total_files}')
+    print(f'Total records: {total_records}')
+    print(f'Records cleaned: {total_cleaned}')
 
     if args.preview and total_cleaned > 0:
-        print("\n💡 Run without --preview to apply changes")
+        print('\n💡 Run without --preview to apply changes')
     elif total_cleaned > 0:
-        print("✨ Cleanup complete!")
+        print('✨ Cleanup complete!')
     elif args.preview:
-        print("✨ All files are already clean!")
+        print('✨ All files are already clean!')
     else:
-        print("✨ No changes needed!")
+        print('✨ No changes needed!')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

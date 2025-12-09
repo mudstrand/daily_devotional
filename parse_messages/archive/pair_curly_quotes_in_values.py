@@ -25,9 +25,9 @@ import os
 import re
 from typing import Tuple
 
-TARGET_FIELDS = ("verse_text", "prayer", "reflection")
-LEFT = "“"  # U+201C
-RIGHT = "”"  # U+201D
+TARGET_FIELDS = ('verse_text', 'prayer', 'reflection')
+LEFT = '“'  # U+201C
+RIGHT = '”'  # U+201D
 
 
 def build_field_regex(field: str) -> re.Pattern:
@@ -65,7 +65,7 @@ def normalize_quotes_in_literal(literal: str) -> Tuple[str, int]:
         ch = inner[i]
 
         # Preserve JSON escape sequences untouched (e.g., \" \\ \n \uXXXX)
-        if ch == "\\":
+        if ch == '\\':
             # Copy backslash and the next char (if any) verbatim
             if i + 1 < len(inner):
                 out.append(inner[i])
@@ -102,12 +102,12 @@ def normalize_quotes_in_literal(literal: str) -> Tuple[str, int]:
         out.append(ch)
         i += 1
 
-    new_literal = '"' + "".join(out) + '"'
+    new_literal = '"' + ''.join(out) + '"'
     return new_literal, replacements
 
 
 def process_file(path: str, preview: bool) -> int:
-    raw = open(path, "r", encoding="utf-8").read()
+    raw = open(path, 'r', encoding='utf-8').read()
     total_repl = 0
     header_printed = False
 
@@ -122,25 +122,25 @@ def process_file(path: str, preview: bool) -> int:
             if cnt > 0:
                 total_repl += cnt
                 if preview and not header_printed:
-                    print("\n" + "=" * 70)
-                    print(f"FILE: {path}")
-                    print("=" * 70)
+                    print('\n' + '=' * 70)
+                    print(f'FILE: {path}')
+                    print('=' * 70)
                     header_printed = True
                 if preview:
-                    before_snip = value[:120].replace("\n", " ")
-                    after_snip = new_value[:120].replace("\n", " ")
-                    b_more = "…" if len(value) > 120 else ""
-                    a_more = "…" if len(new_value) > 120 else ""
-                    print(f"* {field}:")
-                    print(f"    BEFORE: {before_snip}{b_more}")
-                    print(f"    AFTER : {after_snip}{a_more}")
-                return f"{key}: {new_value}"
+                    before_snip = value[:120].replace('\n', ' ')
+                    after_snip = new_value[:120].replace('\n', ' ')
+                    b_more = '…' if len(value) > 120 else ''
+                    a_more = '…' if len(new_value) > 120 else ''
+                    print(f'* {field}:')
+                    print(f'    BEFORE: {before_snip}{b_more}')
+                    print(f'    AFTER : {after_snip}{a_more}')
+                return f'{key}: {new_value}'
             return m.group(0)
 
         raw = pattern.sub(repl, raw)
 
     if total_repl > 0 and not preview:
-        with open(path, "w", encoding="utf-8") as f:
+        with open(path, 'w', encoding='utf-8') as f:
             f.write(raw)
 
     return total_repl
@@ -148,12 +148,10 @@ def process_file(path: str, preview: bool) -> int:
 
 def main():
     ap = argparse.ArgumentParser(
-        description="Normalize curly quotes in verse_text, prayer, reflection to “opening”/”closing” pairs."
+        description='Normalize curly quotes in verse_text, prayer, reflection to “opening”/”closing” pairs.'
     )
-    ap.add_argument(
-        "--preview", action="store_true", help="Preview changes without writing files"
-    )
-    ap.add_argument("files", nargs="+", help="JSON files to process (e.g., *.json)")
+    ap.add_argument('--preview', action='store_true', help='Preview changes without writing files')
+    ap.add_argument('files', nargs='+', help='JSON files to process (e.g., *.json)')
     args = ap.parse_args()
 
     total_files = 0
@@ -161,24 +159,24 @@ def main():
 
     for path in args.files:
         if not os.path.exists(path):
-            print(f"Warning: not found: {path}")
+            print(f'Warning: not found: {path}')
             continue
         try:
             cnt = process_file(path, args.preview)
             if not args.preview and cnt > 0:
-                print(f"✔ Updated {path} ({cnt} closing quote fix(es))")
+                print(f'✔ Updated {path} ({cnt} closing quote fix(es))')
             total_changes += cnt
             total_files += 1
         except Exception as e:
-            print(f"❌ Error processing {path}: {e}")
+            print(f'❌ Error processing {path}: {e}')
 
-    print("\n" + "=" * 70)
-    print("SUMMARY")
-    print("=" * 70)
-    print(f"* Files processed: {total_files}")
-    print(f"* Closing quotes fixed: {total_changes}")
-    print(f"* Mode: {'PREVIEW' if args.preview else 'UPDATE'}")
+    print('\n' + '=' * 70)
+    print('SUMMARY')
+    print('=' * 70)
+    print(f'* Files processed: {total_files}')
+    print(f'* Closing quotes fixed: {total_changes}')
+    print(f'* Mode: {"PREVIEW" if args.preview else "UPDATE"}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

@@ -3,16 +3,17 @@ import os
 import re
 from collections import defaultdict
 
+
 def fix_data():
     """
     Fixes the issues reported in edit.txt.
     """
-    with open("edit.txt", 'r', encoding='utf-8') as f:
+    with open('edit.txt', 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
     files_to_fix = defaultdict(list)
     for line in lines:
-        if ":" in line:
+        if ':' in line:
             parts = line.split(':')
             if len(parts) > 2:
                 filepath = parts[1].strip()
@@ -24,7 +25,7 @@ def fix_data():
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read()
         except FileNotFoundError:
-            print(f"File not found: {filepath}")
+            print(f'File not found: {filepath}')
             continue
 
         original_content = content
@@ -48,9 +49,10 @@ def fix_data():
         content = re.sub(r'\b(\w+)\s+\1\b', r'\1', content, flags=re.IGNORECASE)
 
         if content != original_content:
-            print(f"Fixing {filepath}...")
+            print(f'Fixing {filepath}...')
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(content)
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     fix_data()

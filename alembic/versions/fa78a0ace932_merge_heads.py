@@ -5,6 +5,7 @@ Revises: 6_manual_create_verses, 7_create_bible_schema_and_verses
 Create Date: 2025-12-07 03:21:34.395700
 
 """
+
 from typing import Sequence, Union
 
 from alembic import op

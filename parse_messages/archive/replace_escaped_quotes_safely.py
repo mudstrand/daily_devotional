@@ -18,8 +18,8 @@ import re
 from typing import Tuple
 
 # Target fields
-TARGET_FIELDS = ("verse_text", "prayer", "reflection")
-LEFT_SMART_QUOTE = "“"
+TARGET_FIELDS = ('verse_text', 'prayer', 'reflection')
+LEFT_SMART_QUOTE = '“'
 
 
 # Regex that finds a JSON string field by name and captures the raw quoted value (with escapes)
@@ -61,15 +61,15 @@ def replace_escaped_quotes_in_json_string_literal(literal: str) -> Tuple[str, in
     replacements = 0
     while i < len(inner):
         c = inner[i]
-        if c == "\\":
+        if c == '\\':
             # Count preceding consecutive backslashes including this one
             # If we see a backslash and the next char is ", and the number of consecutive backslashes before the quote is odd,
             # then this backslash escapes the quote.
             j = i
-            while j < len(inner) and inner[j] == "\\":
+            while j < len(inner) and inner[j] == '\\':
                 j += 1
             backslashes_count = j - i
-            next_char = inner[j] if j < len(inner) else ""
+            next_char = inner[j] if j < len(inner) else ''
             if next_char == '"' and backslashes_count % 2 == 1:
                 # Replace the pair (a single escaping backslash + ") with the smart quote,
                 # and keep any additional preceding backslashes beyond the escaping one.
@@ -78,26 +78,26 @@ def replace_escaped_quotes_in_json_string_literal(literal: str) -> Tuple[str, in
                 # If it's 3, it's \\\" where two backslashes produce a literal \ and one escapes the quote.
                 # We keep backslashes_count - 1 literal backslashes, then emit the smart quote.
                 literal_bslashes_to_keep = backslashes_count - 1
-                chars.extend("\\" * literal_bslashes_to_keep)
+                chars.extend('\\' * literal_bslashes_to_keep)
                 chars.append(LEFT_SMART_QUOTE)
                 replacements += 1
                 i = j + 1  # skip the quote too
                 continue
             else:
                 # Not an escaping backslash for a quote; copy the backslashes
-                chars.extend("\\" * backslashes_count)
+                chars.extend('\\' * backslashes_count)
                 i = j
                 continue
         # Normal char path
         chars.append(c)
         i += 1
 
-    new_inner = "".join(chars)
+    new_inner = ''.join(chars)
     return f'"{new_inner}"', replacements
 
 
 def process_file(path: str, preview: bool) -> int:
-    with open(path, "r", encoding="utf-8") as f:
+    with open(path, 'r', encoding='utf-8') as f:
         raw = f.read()
 
     total_changes = 0
@@ -113,48 +113,44 @@ def process_file(path: str, preview: bool) -> int:
             key = m.group(1)  # "field"
             value_lit = m.group(2)  # "...." (raw JSON string with escapes)
 
-            new_value_lit, count = replace_escaped_quotes_in_json_string_literal(
-                value_lit
-            )
+            new_value_lit, count = replace_escaped_quotes_in_json_string_literal(value_lit)
             if count > 0:
                 total_changes += count
                 if preview and not any_header_printed:
-                    print("\n" + "=" * 70)
-                    print(f"FILE: {path}")
-                    print("=" * 70)
+                    print('\n' + '=' * 70)
+                    print(f'FILE: {path}')
+                    print('=' * 70)
                     any_header_printed = True
                 if preview:
                     # Print a short diff-like view
-                    before_snip = value_lit[:80].replace("\n", " ")
-                    after_snip = new_value_lit[:80].replace("\n", " ")
-                    suffix_b = "…" if len(value_lit) > 80 else ""
-                    suffix_a = "…" if len(new_value_lit) > 80 else ""
-                    print(f"* {field}:")
-                    print(f"    BEFORE: {before_snip}{suffix_b}")
-                    print(f"    AFTER : {after_snip}{suffix_a}")
-                return f"{key}: {new_value_lit}"
+                    before_snip = value_lit[:80].replace('\n', ' ')
+                    after_snip = new_value_lit[:80].replace('\n', ' ')
+                    suffix_b = '…' if len(value_lit) > 80 else ''
+                    suffix_a = '…' if len(new_value_lit) > 80 else ''
+                    print(f'* {field}:')
+                    print(f'    BEFORE: {before_snip}{suffix_b}')
+                    print(f'    AFTER : {after_snip}{suffix_a}')
+                return f'{key}: {new_value_lit}'
             else:
                 return m.group(0)
 
         raw = pattern.sub(repl, raw)
 
     if total_changes > 0 and not preview:
-        with open(path, "w", encoding="utf-8") as f:
+        with open(path, 'w', encoding='utf-8') as f:
             f.write(raw)
 
     return total_changes
 
 
 def main():
-    ap = argparse.ArgumentParser(
-        description='Safely replace \\" with “ in verse_text, prayer, reflection values.'
-    )
+    ap = argparse.ArgumentParser(description='Safely replace \\" with “ in verse_text, prayer, reflection values.')
     ap.add_argument(
-        "--preview",
-        action="store_true",
-        help="Show only what would change; do not write files",
+        '--preview',
+        action='store_true',
+        help='Show only what would change; do not write files',
     )
-    ap.add_argument("files", nargs="+", help="JSON files to process (e.g., *.json)")
+    ap.add_argument('files', nargs='+', help='JSON files to process (e.g., *.json)')
     args = ap.parse_args()
 
     total_files = 0
@@ -162,24 +158,24 @@ def main():
 
     for path in args.files:
         if not os.path.exists(path):
-            print(f"Warning: not found: {path}")
+            print(f'Warning: not found: {path}')
             continue
         try:
             changes = process_file(path, args.preview)
             if not args.preview and changes > 0:
-                print(f"✔ Updated {path} ({changes} replacement(s))")
+                print(f'✔ Updated {path} ({changes} replacement(s))')
             total_changes += changes
             total_files += 1
         except Exception as e:
-            print(f"❌ Error processing {path}: {e}")
+            print(f'❌ Error processing {path}: {e}')
 
-    print("\n" + "=" * 70)
-    print("SUMMARY")
-    print("=" * 70)
-    print(f"* Files processed: {total_files}")
-    print(f"* Replacements  : {total_changes}")
-    print(f"* Mode          : {'PREVIEW' if args.preview else 'UPDATE'}")
+    print('\n' + '=' * 70)
+    print('SUMMARY')
+    print('=' * 70)
+    print(f'* Files processed: {total_files}')
+    print(f'* Replacements  : {total_changes}')
+    print(f'* Mode          : {"PREVIEW" if args.preview else "UPDATE"}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

@@ -5,24 +5,24 @@ import unicodedata
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 
-DEFAULT_INPUT_DIR = "1902"
-OUT_JSON = "parsed_1902.json"
+DEFAULT_INPUT_DIR = '1902'
+OUT_JSON = 'parsed_1902.json'
 
-HDR_BODY_SEP = "=" * 67
+HDR_BODY_SEP = '=' * 67
 BODY_HEADER_RE = re.compile(
-    rf"^{re.escape(HDR_BODY_SEP)}\s*Body \(clean, unformatted\):\s*{re.escape(HDR_BODY_SEP)}\s*",
+    rf'^{re.escape(HDR_BODY_SEP)}\s*Body \(clean, unformatted\):\s*{re.escape(HDR_BODY_SEP)}\s*',
     re.MULTILINE,
 )
 
 # Repairs words that were hyphenated across line breaks:
 #   "re-\njoin" -> "rejoin"
-HYPHEN_LINEBREAK_RE = re.compile(r"-\s*(?:\r?\n)+\s*")
+HYPHEN_LINEBREAK_RE = re.compile(r'-\s*(?:\r?\n)+\s*')
 
 
 def repair_linebreak_hyphenation(s: str) -> str:
     if not s:
-        return ""
-    return HYPHEN_LINEBREAK_RE.sub("", s)
+        return ''
+    return HYPHEN_LINEBREAK_RE.sub('', s)
 
 
 def normalize_keep_newlines(s: str) -> str:
@@ -31,22 +31,22 @@ def normalize_keep_newlines(s: str) -> str:
     Also: repair hyphenations at line breaks before detection.
     """
     if s is None:
-        return ""
-    s = unicodedata.normalize("NFKC", s)
+        return ''
+    s = unicodedata.normalize('NFKC', s)
     s = (
-        s.replace("’", "'")
-        .replace("‘", "'")
-        .replace("`", "'")
-        .replace("´", "'")
-        .replace("\u00a0", " ")
-        .replace("\u2007", " ")
-        .replace("\u202f", " ")
-        .replace("\u00ad", "")  # soft hyphen
+        s.replace('’', "'")
+        .replace('‘', "'")
+        .replace('`', "'")
+        .replace('´', "'")
+        .replace('\u00a0', ' ')
+        .replace('\u2007', ' ')
+        .replace('\u202f', ' ')
+        .replace('\u00ad', '')  # soft hyphen
     )
     # Rejoin words split across line breaks by hyphen
     s = repair_linebreak_hyphenation(s)
     # Preserve newlines; collapse only spaces/tabs
-    s = re.sub(r"[ \t]+", " ", s)
+    s = re.sub(r'[ \t]+', ' ', s)
     return s.strip()
 
 
@@ -59,23 +59,23 @@ def scrub_inline(s: str) -> str:
     - normalize stray punctuation spacing without destroying refs
     """
     if s is None:
-        return ""
-    s = s.replace("*", "").replace("_", "")
-    s = s.replace("\\n", " ")
-    s = re.sub(r"(?:\r?\n)+", " ", s)
+        return ''
+    s = s.replace('*', '').replace('_', '')
+    s = s.replace('\\n', ' ')
+    s = re.sub(r'(?:\r?\n)+', ' ', s)
     # Collapse spaces
-    s = re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r'\s+', ' ', s).strip()
     # Fix doubled periods
-    s = re.sub(r"\.{2,}", ".", s)
+    s = re.sub(r'\.{2,}', '.', s)
     # Normalize spaces around ,.;: but avoid breaking scripture refs like "Ps. 20: 7"
     # First tighten spaces before punctuation
-    s = re.sub(r"\s+([,.;:])", r"\1", s)
+    s = re.sub(r'\s+([,.;:])', r'\1', s)
     # Then ensure a single space after punctuation when followed by a letter/number, except colons within chapter:verse
-    s = re.sub(r"([,.;])\s*", r"\1 ", s)
+    s = re.sub(r'([,.;])\s*', r'\1 ', s)
     # For colon, keep as-is; then fix common "Book n: m" by removing space after colon only if it's digit-digit
-    s = re.sub(r"(\b\d+):\s+(\d+\b)", r"\1:\2", s)
+    s = re.sub(r'(\b\d+):\s+(\d+\b)', r'\1:\2', s)
     # Final space collapse
-    s = re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r'\s+', ' ', s).strip()
     return s
 
 
@@ -87,10 +87,10 @@ def clean_reading(val: str) -> str:
     - collapse spaces
     """
     if not val:
-        return ""
-    val = val.replace("\n", " ")
-    val = re.sub(r"^[\s\(\[]+|[\s\)\]\.;,]+$", "", val)
-    val = re.sub(r"\s+", " ", val).strip()
+        return ''
+    val = val.replace('\n', ' ')
+    val = re.sub(r'^[\s\(\[]+|[\s\)\]\.;,]+$', '', val)
+    val = re.sub(r'\s+', ' ', val).strip()
     return val
 
 
@@ -100,18 +100,16 @@ def parse_subject_and_reading(subject_raw: str) -> tuple[str, Optional[str]]:
     Returns (clean_subject, reading or None).
     """
     if not subject_raw:
-        return "", None
-    m = re.match(r"^\s*Subject\s*:\s*(.*)$", subject_raw, flags=re.IGNORECASE)
+        return '', None
+    m = re.match(r'^\s*Subject\s*:\s*(.*)$', subject_raw, flags=re.IGNORECASE)
     s = m.group(1) if m else subject_raw
 
     reading = None
-    matches = list(re.finditer(r"\(([^)]*read[^)]*)\)", s, flags=re.IGNORECASE))
+    matches = list(re.finditer(r'\(([^)]*read[^)]*)\)', s, flags=re.IGNORECASE))
     if matches:
         pm = matches[-1]
         inside = pm.group(1)
-        mread = re.search(
-            r"\bread\b\s*\(?\s*(.+?)\s*\)?\s*$", inside, flags=re.IGNORECASE
-        )
+        mread = re.search(r'\bread\b\s*\(?\s*(.+?)\s*\)?\s*$', inside, flags=re.IGNORECASE)
         if mread:
             reading = clean_reading(mread.group(1))
         s = (s[: pm.start()] + s[pm.end() :]).strip()
@@ -121,18 +119,18 @@ def parse_subject_and_reading(subject_raw: str) -> tuple[str, Optional[str]]:
 
 
 def extract_header_fields(full_text: str) -> Dict[str, str]:
-    hdr = {"message_id": "", "subject": "", "from": "", "to": "", "date": ""}
+    hdr = {'message_id': '', 'subject': '', 'from': '', 'to': '', 'date': ''}
     for line in full_text.splitlines():
-        if line.startswith("message_id: "):
-            hdr["message_id"] = line.split("message_id: ", 1)[1].strip()
-        elif line.startswith("subject   : "):
-            hdr["subject"] = line.split("subject   : ", 1)[1].strip()
-        elif line.startswith("from      : "):
-            hdr["from"] = line.split("from      : ", 1)[1].strip()
-        elif line.startswith("to        : "):
-            hdr["to"] = line.split("to        : ", 1)[1].strip()
-        elif line.startswith("date      : "):
-            hdr["date"] = line.split("date      : ", 1)[1].strip()
+        if line.startswith('message_id: '):
+            hdr['message_id'] = line.split('message_id: ', 1)[1].strip()
+        elif line.startswith('subject   : '):
+            hdr['subject'] = line.split('subject   : ', 1)[1].strip()
+        elif line.startswith('from      : '):
+            hdr['from'] = line.split('from      : ', 1)[1].strip()
+        elif line.startswith('to        : '):
+            hdr['to'] = line.split('to        : ', 1)[1].strip()
+        elif line.startswith('date      : '):
+            hdr['date'] = line.split('date      : ', 1)[1].strip()
         if line.strip() == HDR_BODY_SEP:
             break
     return hdr
@@ -156,24 +154,15 @@ def extract_body(full_text: str) -> str:
 # - Month name + day (e.g., MAY 29)
 # - M/D, M/D/YY, M/D/YYYY with optional stray dot between D and year (e.g., 2/21.2019)
 # - M-D, M-D-YY, M-D-YYYY
-DATE_NUM = r"\d{1,2}"
-DATE_YEAR = r"(?:\d{2}|\d{4})"
-DATE_SEP = r"[:/\.\-]"
+DATE_NUM = r'\d{1,2}'
+DATE_YEAR = r'(?:\d{2}|\d{4})'
+DATE_SEP = r'[:/\.\-]'
 
 # Build the numeric date part: M SEP D [optional SEP/stray-dot YEAR]
-DATE_NUMERIC = (
-    DATE_NUM
-    + r"\s*"
-    + DATE_SEP
-    + r"\s*"
-    + DATE_NUM
-    + r"(?:\s*(?:[.\-/:])?\s*"
-    + DATE_YEAR
-    + r")?"
-)
+DATE_NUMERIC = DATE_NUM + r'\s*' + DATE_SEP + r'\s*' + DATE_NUM + r'(?:\s*(?:[.\-/:])?\s*' + DATE_YEAR + r')?'
 
 # Full DATE variant: either "Monthname D" or numeric form
-DATE_VARIANT = r"(?:[A-Z][a-z]+\s+" + DATE_NUM + r"|" + DATE_NUMERIC + r")"
+DATE_VARIANT = r'(?:[A-Z][a-z]+\s+' + DATE_NUM + r'|' + DATE_NUMERIC + r')'
 
 # Verse header may appear as:
 # - "VERSE FOR <date>:" with content optionally on same line
@@ -181,17 +170,13 @@ DATE_VARIANT = r"(?:[A-Z][a-z]+\s+" + DATE_NUM + r"|" + DATE_NUMERIC + r")"
 # - "THE VERSE FOR <date>:" typo variant
 # - Optional missing space between FOR and date: "VERSE FOR2/27/2019"
 VERSE_LINE_RE = re.compile(
-    r"^\s*(?P<hdr>(?:THE\s+)?VERSE\s+FOR)\s*(?:"
-    + DATE_VARIANT
-    + r"|TODAY)\s*:?\s*(?P<after>.*)$",
+    r'^\s*(?P<hdr>(?:THE\s+)?VERSE\s+FOR)\s*(?:' + DATE_VARIANT + r'|TODAY)\s*:?\s*(?P<after>.*)$',
     re.IGNORECASE,
 )
 
 # Inline-only form (kept for convenience when searching tail on same line)
 VERSE_INLINE_RE = re.compile(
-    r"(?P<verse_hdr>\b(?:THE\s+)?VERSE\s+FOR)\s*(?:"
-    + DATE_VARIANT
-    + r"|TODAY)\s*:\s*(?P<after>.*)",
+    r'(?P<verse_hdr>\b(?:THE\s+)?VERSE\s+FOR)\s*(?:' + DATE_VARIANT + r'|TODAY)\s*:\s*(?P<after>.*)',
     re.IGNORECASE,
 )
 # Thought header can be "THOUGHT FOR TODAY:" or "THOUGHT FOR TODAY" alone
@@ -213,7 +198,7 @@ PRAYER_SIGNATURE_ANY_RE = re.compile(
 )
 
 # General parenthetical capture (DOTALL for cross-line parentheses)
-PAREN_DOTALL_RE = re.compile(r"\((.*?)\)", re.DOTALL)
+PAREN_DOTALL_RE = re.compile(r'\((.*?)\)', re.DOTALL)
 
 # Flexible reading detectors
 READ_INLINE_RE = re.compile(
@@ -239,7 +224,7 @@ def extract_reading_after_verse_header(lines: List[str], i: int) -> Optional[str
     window_lines = []
     for j in range(i, min(i + 6, len(lines))):
         window_lines.append(lines[j])
-    window = "\n".join(window_lines)
+    window = '\n'.join(window_lines)
 
     # Collect all parentheses in order across the window
     parens = list(PAREN_DOTALL_RE.finditer(window))
@@ -247,10 +232,8 @@ def extract_reading_after_verse_header(lines: List[str], i: int) -> Optional[str
     # Prefer any parenthetical that contains READ first (covers: "(READ HEB. 9:11-15)")
     for m in parens:
         inside = m.group(1)
-        if re.search(r"\bread\b", inside, flags=re.IGNORECASE):
-            mread = re.search(
-                r"\bread\b\s*\(?\s*(.+?)\s*\)?\s*$", inside, flags=re.IGNORECASE
-            )
+        if re.search(r'\bread\b', inside, flags=re.IGNORECASE):
+            mread = re.search(r'\bread\b\s*\(?\s*(.+?)\s*\)?\s*$', inside, flags=re.IGNORECASE)
             if mread:
                 return clean_reading(mread.group(1))
 
@@ -317,7 +300,7 @@ def slice_sections(
     - Reflection: from first THOUGHT header's content/next line to prayer signature or end.
     - Prayer: from signature line onward (usually just signature, stripped).
     """
-    verse_text = reflection_text = prayer_text = ""
+    verse_text = reflection_text = prayer_text = ''
 
     # Determine first thought header line if present
     first_thought_line = thought_lines[0] if thought_lines else None
@@ -329,11 +312,11 @@ def slice_sections(
         m_line = VERSE_LINE_RE.match(lines[verse_line])
 
         if m_inline:
-            after = m_inline.group("after").strip()
+            after = m_inline.group('after').strip()
             if after:
                 chunks.append(after)
         elif m_line:
-            after = m_line.group("after").strip()
+            after = m_line.group('after').strip()
             if after:
                 chunks.append(after)
 
@@ -341,13 +324,13 @@ def slice_sections(
         if verse_line + 1 < stop_line:
             between = lines[verse_line + 1 : stop_line]
             if between:
-                chunks.append("\n".join(between).strip())
-        verse_text = "\n".join([c for c in chunks if c]).strip()
+                chunks.append('\n'.join(between).strip())
+        verse_text = '\n'.join([c for c in chunks if c]).strip()
 
     # Reflection slice: from first THOUGHT header onward
     if first_thought_line is not None:
         # Inline content after colon on the same line, if any
-        inline_after = ""
+        inline_after = ''
         m_inline_th = THOUGHT_JOIN_RE.search(lines[first_thought_line])
         if m_inline_th:
             inline_after = lines[first_thought_line][m_inline_th.end() :].strip()
@@ -359,13 +342,13 @@ def slice_sections(
         start_idx = first_thought_line + 1
         stop_line = prayer_line if prayer_line is not None else len(lines)
         if start_idx < stop_line:
-            chunks.append("\n".join(lines[start_idx:stop_line]).strip())
-        reflection_text = "\n".join([c for c in chunks if c]).strip()
+            chunks.append('\n'.join(lines[start_idx:stop_line]).strip())
+        reflection_text = '\n'.join([c for c in chunks if c]).strip()
 
         # Remove any trailing standalone thought header that might repeat with no content
         reflection_text = re.sub(
-            r"(?:^|\n)\s*THOUGHT\s+FOR\s+TODAY\s*:?\s*$",
-            "",
+            r'(?:^|\n)\s*THOUGHT\s+FOR\s+TODAY\s*:?\s*$',
+            '',
             reflection_text,
             flags=re.IGNORECASE,
         ).strip()
@@ -373,24 +356,24 @@ def slice_sections(
         # Strip trailing "PASTOR AL" that may have leaked in
         reflection_text = re.sub(
             r'\s*[*"_]*\s*PASTOR\s+AL\s*[*"_]*\s*[,:\-]?\s*$',
-            "",
+            '',
             reflection_text,
             flags=re.IGNORECASE,
         ).strip()
 
     # Prayer slice
     if prayer_line is not None:
-        prayer_block = "\n".join(lines[prayer_line:]).strip()
+        prayer_block = '\n'.join(lines[prayer_line:]).strip()
         # remove leading "PASTOR AL"
         prayer_block = re.sub(
             r'^\s*[*"_]*\s*PASTOR\s+AL\s*[*"_]*\s*[,:\-]?\s*',
-            "",
+            '',
             prayer_block,
             flags=re.IGNORECASE,
         )
         prayer_text = prayer_block.strip()
     else:
-        prayer_text = ""
+        prayer_text = ''
 
     return verse_text, reflection_text, prayer_text
 
@@ -400,33 +383,27 @@ def parse_one(full_text: str) -> Dict[str, object]:
     body = normalize_keep_newlines(extract_body(full_text))
     lines = body.splitlines()
 
-    verse_line, thought_lines, prayer_line, reading_from_body = (
-        find_positions_and_reading(lines)
-    )
-    verse_raw, reflection_raw, prayer_raw = slice_sections(
-        lines, verse_line, thought_lines, prayer_line
-    )
+    verse_line, thought_lines, prayer_line, reading_from_body = find_positions_and_reading(lines)
+    verse_raw, reflection_raw, prayer_raw = slice_sections(lines, verse_line, thought_lines, prayer_line)
 
-    subject_clean, reading_from_subject = parse_subject_and_reading(
-        hdr.get("subject", "")
-    )
+    subject_clean, reading_from_subject = parse_subject_and_reading(hdr.get('subject', ''))
 
     # Priority: subject -> body (second parentheses or READ) -> ""
-    reading_val = reading_from_subject or reading_from_body or ""
+    reading_val = reading_from_subject or reading_from_body or ''
 
     record: Dict[str, object] = {
-        "message_id": hdr.get("message_id", ""),
-        "date_utc": hdr.get("date", ""),
-        "subject": subject_clean,
-        "verse": scrub_inline(verse_raw),
-        "reflection": scrub_inline(reflection_raw),
-        "prayer": scrub_inline(prayer_raw),
-        "reading": reading_val,  # always present
-        "original_content": body,
-        "found_verse": bool(verse_raw),
-        "found_reflection": bool(reflection_raw),
-        "found_prayer": bool(prayer_raw),
-        "found_reading": bool(reading_val),
+        'message_id': hdr.get('message_id', ''),
+        'date_utc': hdr.get('date', ''),
+        'subject': subject_clean,
+        'verse': scrub_inline(verse_raw),
+        'reflection': scrub_inline(reflection_raw),
+        'prayer': scrub_inline(prayer_raw),
+        'reading': reading_val,  # always present
+        'original_content': body,
+        'found_verse': bool(verse_raw),
+        'found_reflection': bool(reflection_raw),
+        'found_prayer': bool(prayer_raw),
+        'found_reading': bool(reading_val),
     }
 
     return record
@@ -436,35 +413,31 @@ def main():
     import argparse
 
     ap = argparse.ArgumentParser(
-        description="Parse 1902 devotionals (robust VERSE/THOUGHT headers, signature handling, flexible date parsing)"
+        description='Parse 1902 devotionals (robust VERSE/THOUGHT headers, signature handling, flexible date parsing)'
     )
     ap.add_argument(
-        "--input-dir",
+        '--input-dir',
         default=DEFAULT_INPUT_DIR,
-        help="Directory containing .txt messages (default: 1902)",
+        help='Directory containing .txt messages (default: 1902)',
     )
-    ap.add_argument(
-        "--out", default=OUT_JSON, help="Output JSON file (default: parsed_1902.json)"
-    )
+    ap.add_argument('--out', default=OUT_JSON, help='Output JSON file (default: parsed_1902.json)')
     args = ap.parse_args()
 
     src = Path(args.input_dir)
-    files = sorted(src.glob("*.txt"))
+    files = sorted(src.glob('*.txt'))
     if not files:
-        print(f"No files found in {src.resolve()}")
-        Path(args.out).write_text("[]", encoding="utf-8")
+        print(f'No files found in {src.resolve()}')
+        Path(args.out).write_text('[]', encoding='utf-8')
         return
 
     rows: List[Dict[str, object]] = []
     for fp in files:
-        txt = fp.read_text(encoding="utf-8", errors="replace")
+        txt = fp.read_text(encoding='utf-8', errors='replace')
         rows.append(parse_one(txt))
 
-    Path(args.out).write_text(
-        json.dumps(rows, indent=2, ensure_ascii=False), encoding="utf-8"
-    )
-    print(f"Wrote {len(rows)} records to {Path(args.out).resolve()}")
+    Path(args.out).write_text(json.dumps(rows, indent=2, ensure_ascii=False), encoding='utf-8')
+    print(f'Wrote {len(rows)} records to {Path(args.out).resolve()}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

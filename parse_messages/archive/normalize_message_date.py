@@ -18,14 +18,14 @@ def try_parse_iso(s: str) -> Optional[datetime]:
     - 2021-10-22 21:24:26+00:00
     """
     ss = s.strip()
-    ss = ss.replace("Z", "+00:00")  # fromisoformat doesn't accept 'Z'
+    ss = ss.replace('Z', '+00:00')  # fromisoformat doesn't accept 'Z'
     try:
         return datetime.fromisoformat(ss)
     except Exception:
         # Try replacing space ' ' with 'T' if needed
-        if " " in ss and "T" not in ss:
+        if ' ' in ss and 'T' not in ss:
             try:
-                return datetime.fromisoformat(ss.replace(" ", "T"))
+                return datetime.fromisoformat(ss.replace(' ', 'T'))
             except Exception:
                 pass
     return None
@@ -48,9 +48,9 @@ def try_parse_common_patterns(s: str) -> Optional[datetime]:
     A few extra common patterns without timezone letters.
     """
     patterns = [
-        "%Y-%m-%d",
-        "%Y-%m-%d %H:%M",
-        "%Y-%m-%d %H:%M:%S",
+        '%Y-%m-%d',
+        '%Y-%m-%d %H:%M',
+        '%Y-%m-%d %H:%M:%S',
     ]
     for fmt in patterns:
         try:
@@ -74,10 +74,10 @@ def parse_to_yyyy_mm_dd(value: Any) -> Optional[str]:
         return None
 
     # Fast path: if it already looks like YYYY-MM-DD at the start, validate and return
-    if len(s) >= 10 and s[4] == "-" and s[7] == "-":
+    if len(s) >= 10 and s[4] == '-' and s[7] == '-':
         ymd = s[:10]
         try:
-            datetime.strptime(ymd, "%Y-%m-%d")
+            datetime.strptime(ymd, '%Y-%m-%d')
             return ymd
         except Exception:
             pass
@@ -98,7 +98,7 @@ def parse_to_yyyy_mm_dd(value: Any) -> Optional[str]:
         return dt.date().isoformat()
 
     # Last-resort: if first 10 chars look like YYYY-MM-DD, return them
-    if len(s) >= 10 and s[4] == "-" and s[7] == "-":
+    if len(s) >= 10 and s[4] == '-' and s[7] == '-':
         return s[:10]
 
     return None
@@ -106,20 +106,20 @@ def parse_to_yyyy_mm_dd(value: Any) -> Optional[str]:
 
 def load_records(path: Path) -> Optional[Union[Record, List[Record]]]:
     try:
-        with path.open("r", encoding="utf-8") as f:
+        with path.open('r', encoding='utf-8') as f:
             return json.load(f)
     except json.JSONDecodeError as e:
-        print(f"[WARN] Skipping invalid JSON: {path} ({e})")
+        print(f'[WARN] Skipping invalid JSON: {path} ({e})')
         return None
 
 
 def write_records(path: Path, data: Union[Record, List[Record]]) -> None:
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    bak = path.with_suffix(path.suffix + ".bak")
+    tmp = path.with_suffix(path.suffix + '.tmp')
+    bak = path.with_suffix(path.suffix + '.bak')
 
-    with tmp.open("w", encoding="utf-8") as f:
+    with tmp.open('w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-        f.write("\n")
+        f.write('\n')
 
     if not bak.exists():
         path.replace(bak)
@@ -140,34 +140,34 @@ def process_file(path: Path, preview: bool) -> int:
         recs = [r for r in data if isinstance(r, dict)]
         is_list = True
     else:
-        print(f"[WARN] Unsupported JSON structure in {path}; expected object or list.")
+        print(f'[WARN] Unsupported JSON structure in {path}; expected object or list.')
         return 0
 
     updates = 0
     changes: List[str] = []
 
     for idx, rec in enumerate(recs):
-        raw = rec.get("date_utc")
+        raw = rec.get('date_utc')
         ymd = parse_to_yyyy_mm_dd(raw)
         if ymd:
-            old = rec.get("msg_date")
+            old = rec.get('msg_date')
             if old != ymd:
                 updates += 1
                 if preview:
-                    changes.append(f"  record[{idx}]: msg_date {old!r} -> {ymd!r}")
+                    changes.append(f'  record[{idx}]: msg_date {old!r} -> {ymd!r}')
                 else:
-                    rec["msg_date"] = ymd
+                    rec['msg_date'] = ymd
         else:
             if preview:
-                changes.append(f"  record[{idx}]: could not parse date_utc {raw!r}")
+                changes.append(f'  record[{idx}]: could not parse date_utc {raw!r}')
             else:
-                if "msg_date" in rec:
-                    del rec["msg_date"]
-                print(f"[WARN] Could not parse date_utc to msg_date in {path}: {raw!r}")
+                if 'msg_date' in rec:
+                    del rec['msg_date']
+                print(f'[WARN] Could not parse date_utc to msg_date in {path}: {raw!r}')
 
     if preview:
         if updates > 0 or changes:
-            print(f"[PREVIEW] {path}: {updates} update(s)")
+            print(f'[PREVIEW] {path}: {updates} update(s)')
             for line in changes:
                 print(line)
     else:
@@ -186,7 +186,7 @@ def expand_globs(patterns: List[str]) -> List[Path]:
     seen = set()
     for f in files:
         p = Path(f)
-        if p.is_file() and p.suffix.lower() == ".json":
+        if p.is_file() and p.suffix.lower() == '.json':
             rp = p.resolve()
             if rp not in seen:
                 seen.add(rp)
@@ -195,24 +195,22 @@ def expand_globs(patterns: List[str]) -> List[Path]:
 
 
 def main():
-    ap = argparse.ArgumentParser(
-        description="Normalize date_utc to msg_date (YYYY-MM-DD) in JSON files."
+    ap = argparse.ArgumentParser(description='Normalize date_utc to msg_date (YYYY-MM-DD) in JSON files.')
+    ap.add_argument(
+        '--preview',
+        action='store_true',
+        help='Show what would change without writing files',
     )
     ap.add_argument(
-        "--preview",
-        action="store_true",
-        help="Show what would change without writing files",
-    )
-    ap.add_argument(
-        "globs",
-        nargs="+",
+        'globs',
+        nargs='+',
         help="Glob patterns, e.g., './data/*.json' './data/**/*.json'",
     )
     args = ap.parse_args()
 
     paths = expand_globs(args.globs)
     if not paths:
-        print("No JSON files matched the given patterns.")
+        print('No JSON files matched the given patterns.')
         return
 
     total_files = 0
@@ -222,14 +220,10 @@ def main():
         total_updates += process_file(path, preview=args.preview)
 
     if args.preview:
-        print(
-            f"Preview complete. Files examined: {total_files}, records needing update: {total_updates}"
-        )
+        print(f'Preview complete. Files examined: {total_files}, records needing update: {total_updates}')
     else:
-        print(
-            f"Completed. Files processed: {total_files}, records updated: {total_updates}"
-        )
+        print(f'Completed. Files processed: {total_files}, records updated: {total_updates}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

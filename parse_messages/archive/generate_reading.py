@@ -38,7 +38,7 @@ from typing import Any, Dict, List, Optional
 try:
     import database
 except Exception as e:
-    print(f"ERROR: Could not import database.py: {e}", file=sys.stderr)
+    print(f'ERROR: Could not import database.py: {e}', file=sys.stderr)
     sys.exit(1)
 
 try:
@@ -73,37 +73,35 @@ Given:
 
 def build_prompt(main_verse: str, reflection: str) -> str:
     return BASE_READING_PROMPT.format(
-        main_verse=(main_verse or "").strip(),
-        reflection=(reflection or "").strip(),
+        main_verse=(main_verse or '').strip(),
+        reflection=(reflection or '').strip(),
     )
 
 
 def postprocess_ai_output(s: str) -> str:
     # Normalize whitespace, ensure it ends with " AI"
-    t = " ".join((s or "").strip().split())
+    t = ' '.join((s or '').strip().split())
     if not t:
         return t
     # Remove trailing punctuation just in case
-    while t and t[-1] in ".;:,!?)":
+    while t and t[-1] in '.;:,!?)':
         t = t[:-1].rstrip()
-    if not t.endswith(" AI"):
+    if not t.endswith(' AI'):
         # Avoid duplicating AI if already present in another casing/format
-        if t.lower().endswith(" ai"):
-            t = t[:-3] + " AI"
+        if t.lower().endswith(' ai'):
+            t = t[:-3] + ' AI'
         else:
-            t = f"{t} AI"
+            t = f'{t} AI'
     return t
 
 
 def call_claude(prompt: str, model: str, temperature: float, max_tokens: int) -> str:
     if anthropic is None:
-        raise RuntimeError(
-            "anthropic package not installed. Run: pip install anthropic"
-        )
+        raise RuntimeError('anthropic package not installed. Run: pip install anthropic')
 
-    api_key = os.getenv("CLAUDE_API_KEY")
+    api_key = os.getenv('CLAUDE_API_KEY')
     if not api_key:
-        raise RuntimeError("CLAUDE_API_KEY environment variable not set")
+        raise RuntimeError('CLAUDE_API_KEY environment variable not set')
 
     client = anthropic.Anthropic(api_key=api_key)
 
@@ -111,14 +109,14 @@ def call_claude(prompt: str, model: str, temperature: float, max_tokens: int) ->
         model=model,
         max_tokens=max_tokens,
         temperature=temperature,
-        messages=[{"role": "user", "content": prompt}],
+        messages=[{'role': 'user', 'content': prompt}],
     )
 
-    content = ""
+    content = ''
     try:
-        if resp and hasattr(resp, "content") and resp.content:
+        if resp and hasattr(resp, 'content') and resp.content:
             for block in resp.content:
-                if hasattr(block, "text") and block.text:
+                if hasattr(block, 'text') and block.text:
                     content = block.text.strip()
                     if content:
                         break
@@ -126,7 +124,7 @@ def call_claude(prompt: str, model: str, temperature: float, max_tokens: int) ->
         content = str(resp)
 
     if not content:
-        raise RuntimeError("Empty response from Claude API")
+        raise RuntimeError('Empty response from Claude API')
 
     return postprocess_ai_output(content)
 
@@ -139,7 +137,7 @@ def call_claude(prompt: str, model: str, temperature: float, max_tokens: int) ->
 def override_db_path(db_path: Optional[str]) -> None:
     if db_path:
         database.DB_PATH = db_path
-        os.environ["DEVOTIONAL_DB"] = db_path
+        os.environ['DEVOTIONAL_DB'] = db_path
 
 
 def select_rows_missing_reading(
@@ -148,7 +146,7 @@ def select_rows_missing_reading(
     id_col: str,
     limit: Optional[int],
 ) -> List[Dict[str, Any]]:
-    limit_clause = " LIMIT ? " if limit else ""
+    limit_clause = ' LIMIT ? ' if limit else ''
     sql = f"""
         SELECT {id_col} AS _id,
                verse AS _verse,
@@ -210,31 +208,31 @@ def print_row_preview(
     current_reading: Optional[str],
     ai_suggestion: str,
 ):
-    print("\n" + "=" * 72)
-    print(f"Row #{idx}  ID: {row_id}")
-    print("- Verse:")
-    print(textwrap.indent(textwrap.fill((verse or "").strip(), width=80), "  "))
-    print("- Reflection:")
+    print('\n' + '=' * 72)
+    print(f'Row #{idx}  ID: {row_id}')
+    print('- Verse:')
+    print(textwrap.indent(textwrap.fill((verse or '').strip(), width=80), '  '))
+    print('- Reflection:')
     if reflection and reflection.strip():
-        print(textwrap.indent(textwrap.fill(reflection.strip(), width=80), "  "))
+        print(textwrap.indent(textwrap.fill(reflection.strip(), width=80), '  '))
     else:
-        print("  <empty>")
-    print("- Current reading:")
+        print('  <empty>')
+    print('- Current reading:')
     if current_reading and current_reading.strip():
-        print(textwrap.indent(textwrap.fill(current_reading.strip(), width=80), "  "))
+        print(textwrap.indent(textwrap.fill(current_reading.strip(), width=80), '  '))
     else:
-        print("  <empty>")
-    print("- AI suggestion:")
-    print(textwrap.indent(textwrap.fill(ai_suggestion.strip(), width=80), "  "))
-    print("- Choice: [y]es apply, [n]o skip, [a]ll apply to all remaining, [q]uit")
+        print('  <empty>')
+    print('- AI suggestion:')
+    print(textwrap.indent(textwrap.fill(ai_suggestion.strip(), width=80), '  '))
+    print('- Choice: [y]es apply, [n]o skip, [a]ll apply to all remaining, [q]uit')
 
 
 def ask_choice() -> str:
     while True:
-        choice = input("Apply? [y/n/a/q]: ").strip().lower()
-        if choice in ("y", "n", "a", "q"):
+        choice = input('Apply? [y/n/a/q]: ').strip().lower()
+        if choice in ('y', 'n', 'a', 'q'):
             return choice
-        print("Please enter one of: y, n, a, q")
+        print('Please enter one of: y, n, a, q')
 
 
 # --------------------------
@@ -246,54 +244,48 @@ def main():
     parser = argparse.ArgumentParser(
         description="Generate compact Bible reading recommendations (appends ' AI') for devotionals with empty 'reading'."
     )
+    parser.add_argument('--table', default='devotionals', help='Table name (default: devotionals)')
     parser.add_argument(
-        "--table", default="devotionals", help="Table name (default: devotionals)"
-    )
-    parser.add_argument(
-        "--id",
-        dest="id_value",
+        '--id',
+        dest='id_value',
         default=None,
-        help="Specific primary key value to process",
+        help='Specific primary key value to process',
     )
     parser.add_argument(
-        "--id-column",
-        default="message_id",
-        help="Primary key column name (default: message_id)",
+        '--id-column',
+        default='message_id',
+        help='Primary key column name (default: message_id)',
     )
     parser.add_argument(
-        "--db",
-        dest="db_path",
+        '--db',
+        dest='db_path',
         default=None,
-        help="Path to SQLite DB (overrides DEVOTIONAL_DB)",
+        help='Path to SQLite DB (overrides DEVOTIONAL_DB)',
     )
     parser.add_argument(
-        "--limit",
+        '--limit',
         type=int,
         default=None,
-        help="Limit number of rows to process (ignored with --id)",
+        help='Limit number of rows to process (ignored with --id)',
+    )
+    parser.add_argument('--dry-run', action='store_true', help='Preview only, no writes')
+    parser.add_argument('--non-interactive', action='store_true', help='Apply without prompts')
+    parser.add_argument(
+        '--model',
+        default=os.getenv('CLAUDE_MODEL', 'claude-3-5-sonnet-20240620'),
+        help='Anthropic model name',
     )
     parser.add_argument(
-        "--dry-run", action="store_true", help="Preview only, no writes"
-    )
-    parser.add_argument(
-        "--non-interactive", action="store_true", help="Apply without prompts"
-    )
-    parser.add_argument(
-        "--model",
-        default=os.getenv("CLAUDE_MODEL", "claude-3-5-sonnet-20240620"),
-        help="Anthropic model name",
-    )
-    parser.add_argument(
-        "--temperature",
+        '--temperature',
         type=float,
         default=0.2,
-        help="Lower temperature for precision (default: 0.2)",
+        help='Lower temperature for precision (default: 0.2)',
     )
     parser.add_argument(
-        "--max-tokens",
+        '--max-tokens',
         type=int,
         default=40,
-        help="Small cap since output is short (default: 40)",
+        help='Small cap since output is short (default: 40)',
     )
 
     args = parser.parse_args()
@@ -305,16 +297,14 @@ def main():
         if args.id_value:
             row = select_row_by_id(conn, args.table, args.id_column, args.id_value)
             if not row:
-                print(f"No row found with {args.id_column} = {args.id_value}")
+                print(f'No row found with {args.id_column} = {args.id_value}')
                 return
             rows = [row]
         else:
-            rows = select_rows_missing_reading(
-                conn, args.table, args.id_column, args.limit
-            )
+            rows = select_rows_missing_reading(conn, args.table, args.id_column, args.limit)
 
         if not rows:
-            print("No rows found with missing/empty reading.")
+            print('No rows found with missing/empty reading.')
             return
 
         apply_all = False
@@ -322,10 +312,10 @@ def main():
         updated = 0
 
         for idx, row in enumerate(rows, start=1):
-            row_id = row["_id"]
-            verse = (row.get("_verse") or "").strip()
-            reflection = (row.get("_reflection") or "").strip()
-            current_reading = (row.get("_reading") or "").strip()
+            row_id = row['_id']
+            verse = (row.get('_verse') or '').strip()
+            reflection = (row.get('_reflection') or '').strip()
+            current_reading = (row.get('_reading') or '').strip()
 
             # If this row already has reading text and user targeted via --id, still proceed
             if not args.id_value and current_reading:
@@ -350,11 +340,9 @@ def main():
                 except Exception as e:
                     attempt += 1
                     if attempt >= 3:
-                        print(f"ERROR: AI generation failed for ID={row_id}: {e}")
+                        print(f'ERROR: AI generation failed for ID={row_id}: {e}')
                         break
-                    print(
-                        f"Warn: AI error for ID={row_id}: {e} — retrying in {backoff}s..."
-                    )
+                    print(f'Warn: AI error for ID={row_id}: {e} — retrying in {backoff}s...')
                     time.sleep(backoff)
                     backoff *= 2
 
@@ -365,9 +353,7 @@ def main():
             # Non-interactive path
             if args.non_interactive:
                 if args.dry_run:
-                    print_row_preview(
-                        idx, row_id, verse, reflection, current_reading, suggestion
-                    )
+                    print_row_preview(idx, row_id, verse, reflection, current_reading, suggestion)
                     processed += 1
                     continue
                 update_reading(conn, args.table, args.id_column, row_id, suggestion)
@@ -376,39 +362,37 @@ def main():
                 continue
 
             # Interactive preview
-            print_row_preview(
-                idx, row_id, verse, reflection, current_reading, suggestion
-            )
+            print_row_preview(idx, row_id, verse, reflection, current_reading, suggestion)
 
             if apply_all:
-                choice = "y"
+                choice = 'y'
             else:
                 choice = ask_choice()
 
-            if choice == "q":
-                print("Quitting...")
+            if choice == 'q':
+                print('Quitting...')
                 break
-            elif choice == "n":
+            elif choice == 'n':
                 processed += 1
                 continue
-            elif choice == "a":
+            elif choice == 'a':
                 apply_all = True
-                choice = "y"
+                choice = 'y'
 
-            if choice == "y":
+            if choice == 'y':
                 if args.dry_run:
-                    print(f"[DRY-RUN] Would update ID={row_id}")
+                    print(f'[DRY-RUN] Would update ID={row_id}')
                 else:
                     update_reading(conn, args.table, args.id_column, row_id, suggestion)
                     updated += 1
                 processed += 1
 
-        print("\nSummary:")
-        print(f"- Processed: {processed}")
-        print(f"- Updated:   {updated}")
+        print('\nSummary:')
+        print(f'- Processed: {processed}')
+        print(f'- Updated:   {updated}')
         if args.dry_run:
-            print("- Mode:      DRY RUN (no changes written)")
+            print('- Mode:      DRY RUN (no changes written)')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

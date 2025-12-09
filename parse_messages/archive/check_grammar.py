@@ -6,11 +6,11 @@ import sys
 from typing import Dict, Optional, Tuple, List
 
 # Defaults (override via CLI)
-DEFAULT_FIELDS = ["verse", "reflection", "prayer"]
-DEFAULT_LANG_CODE = "en-US"
-DEFAULT_SERVER_URL = "http://localhost:8010"
+DEFAULT_FIELDS = ['verse', 'reflection', 'prayer']
+DEFAULT_LANG_CODE = 'en-US'
+DEFAULT_SERVER_URL = 'http://localhost:8010'
 
-SEPARATOR = "=" * 72
+SEPARATOR = '=' * 72
 
 
 def script_dir() -> str:
@@ -19,7 +19,7 @@ def script_dir() -> str:
 
 def read_json_file(path: str) -> Optional[Tuple[object, str]]:
     try:
-        with open(path, "r", encoding="utf-8") as f:
+        with open(path, 'r', encoding='utf-8') as f:
             content = f.read()
         return json.loads(content), content
     except Exception:
@@ -39,7 +39,7 @@ def find_line_number_for_field(content: str, key: str, value: str) -> int:
     )
     m = pattern.search(content)
     if m:
-        return content.count("\n", 0, m.start()) + 1
+        return content.count('\n', 0, m.start()) + 1
     exact = f'"{key}": "{value}"'
     for i, line in enumerate(content.splitlines(), start=1):
         if exact in line:
@@ -55,17 +55,15 @@ def init_grammar(lang_code: str, server_url: str):
         import language_tool_python as lt_mod
 
         tool = lt_mod.LanguageTool(lang_code, remote_server=server_url)
-        print(f"LT client: {type(tool).__name__}")
-        print(f"LT server: {server_url}")
+        print(f'LT client: {type(tool).__name__}')
+        print(f'LT server: {server_url}')
         return tool
     except Exception as e:
         print(
-            f"Error: language_tool_python unavailable or server not reachable ({e}).",
+            f'Error: language_tool_python unavailable or server not reachable ({e}).',
             file=sys.stderr,
         )
-        print(
-            "Tip: ensure the Docker LT server is running and the port matches --server."
-        )
+        print('Tip: ensure the Docker LT server is running and the port matches --server.')
         return None
 
 
@@ -73,13 +71,13 @@ def match_span(m):
     """
     Return (offset, length) robustly across language_tool_python versions.
     """
-    offset = getattr(m, "offset", None)
-    length = getattr(m, "errorLength", None)
+    offset = getattr(m, 'offset', None)
+    length = getattr(m, 'errorLength', None)
     if offset is None:
-        offset = getattr(m, "offsetInContext", 0)
+        offset = getattr(m, 'offsetInContext', 0)
     if length is None:
         try:
-            ctx = getattr(m, "context", None) or getattr(m, "contextForSureMatch", None)
+            ctx = getattr(m, 'context', None) or getattr(m, 'contextForSureMatch', None)
             length = len(str(ctx)) if ctx else 0
         except Exception:
             length = 0
@@ -90,41 +88,41 @@ def match_span(m):
 
 
 def match_rule_id(m) -> str:
-    return getattr(m, "ruleId", None) or getattr(m, "rule", None) or ""
+    return getattr(m, 'ruleId', None) or getattr(m, 'rule', None) or ''
 
 
 def match_category_name(m) -> str:
     """
     Try to get human-friendly category (Grammar, Punctuation, etc.).
     """
-    cat = getattr(m, "ruleCategory", None)
-    name = getattr(cat, "name", None) if cat else None
+    cat = getattr(m, 'ruleCategory', None)
+    name = getattr(cat, 'name', None) if cat else None
     if not name:
-        name = getattr(m, "category", None)
-    return (name or "").strip()
+        name = getattr(m, 'category', None)
+    return (name or '').strip()
 
 
 def match_issue_type(m) -> str:
     """
     Try to fetch the issue type (e.g., TYPO). Not always available.
     """
-    it = getattr(m, "ruleIssueType", None)
-    return str(it or "").strip()
+    it = getattr(m, 'ruleIssueType', None)
+    return str(it or '').strip()
 
 
 def match_message(m) -> str:
-    rid = match_rule_id(m) or "RULE"
-    msg = getattr(m, "message", None) or "Issue"
-    return f"Grammar ({rid}): {msg}"
+    rid = match_rule_id(m) or 'RULE'
+    msg = getattr(m, 'message', None) or 'Issue'
+    return f'Grammar ({rid}): {msg}'
 
 
 def match_replacements(m, max_n: int = 3) -> str:
-    reps = getattr(m, "replacements", None) or []
+    reps = getattr(m, 'replacements', None) or []
     if not reps:
-        return ""
-    shown = ", ".join(reps[:max_n])
-    more = "" if len(reps) <= max_n else f" (+{len(reps) - max_n} more)"
-    return f"suggest: {shown}{more}"
+        return ''
+    shown = ', '.join(reps[:max_n])
+    more = '' if len(reps) <= max_n else f' (+{len(reps) - max_n} more)'
+    return f'suggest: {shown}{more}'
 
 
 def normalize_list(strs: Optional[List[str]]) -> List[str]:
@@ -146,9 +144,9 @@ def match_rule_filters(
       - categories: substring match over category name
       - type_filter: substring match over ruleId, category, or issue type
     """
-    rid = (match_rule_id(m) or "").lower()
-    cat = (match_category_name(m) or "").lower()
-    itype = (match_issue_type(m) or "").lower()
+    rid = (match_rule_id(m) or '').lower()
+    cat = (match_category_name(m) or '').lower()
+    itype = (match_issue_type(m) or '').lower()
 
     # rules_exact (if provided, must match exactly)
     if rules_exact:
@@ -188,11 +186,11 @@ def inspect_record(
     limit: Optional[int],
     counter: Dict[str, int],
 ) -> None:
-    if limit is not None and counter["total"] >= limit:
+    if limit is not None and counter['total'] >= limit:
         return
 
     for field in fields_to_check:
-        if limit is not None and counter["total"] >= limit:
+        if limit is not None and counter['total'] >= limit:
             return
         val = obj.get(field)
         if not isinstance(val, str):
@@ -203,7 +201,7 @@ def inspect_record(
         except Exception:
             matches = []
         for m in matches:
-            if limit is not None and counter["total"] >= limit:
+            if limit is not None and counter['total'] >= limit:
                 return
 
             if not match_rule_filters(
@@ -218,7 +216,7 @@ def inspect_record(
             offset, length = match_span(m)
             start = max(0, offset - 20)
             end = min(len(text), offset + max(1, length) + 20)
-            context = text[start:end].replace("\n", " ")
+            context = text[start:end].replace('\n', ' ')
 
             msg = match_message(m)
             cat = match_category_name(m)
@@ -228,81 +226,79 @@ def inspect_record(
             print(SEPARATOR)
             extras = []
             if cat:
-                extras.append(f"category: {cat}")
+                extras.append(f'category: {cat}')
             if itype:
-                extras.append(f"type: {itype}")
-            extras_str = f" [{'; '.join(extras)}]" if extras else ""
-            print(f"{msg}{extras_str}")
+                extras.append(f'type: {itype}')
+            extras_str = f' [{"; ".join(extras)}]' if extras else ''
+            print(f'{msg}{extras_str}')
 
             if show_all_suggestions:
-                reps = getattr(m, "replacements", None) or []
+                reps = getattr(m, 'replacements', None) or []
                 if reps:
-                    print(f"suggest (all): {', '.join(reps)}")
+                    print(f'suggest (all): {", ".join(reps)}')
             else:
                 s = match_replacements(m, max_n=3)
                 if s:
                     print(s)
 
-            print(f"snippet: ...{context}...")
-            print(f"field  : {field}")
-            print(f"code   : code -g {filename}:{line}")
+            print(f'snippet: ...{context}...')
+            print(f'field  : {field}')
+            print(f'code   : code -g {filename}:{line}')
 
-            counter["total"] += 1
+            counter['total'] += 1
 
 
 def main():
     import argparse
 
     ap = argparse.ArgumentParser(
-        description="Grammar check JSON fields via local LanguageTool server (Docker). Filters by rules, categories; shows suggestions; supports limiting output."
+        description='Grammar check JSON fields via local LanguageTool server (Docker). Filters by rules, categories; shows suggestions; supports limiting output.'
     )
     ap.add_argument(
-        "--type",
-        dest="type_filter",
+        '--type',
+        dest='type_filter',
         default=None,
         help="Broad substring filter over ruleId/category/issue type (e.g., 'punctuation', 'typo', 'EN_QUOTES')",
     )
     ap.add_argument(
-        "--rules",
-        nargs="*",
+        '--rules',
+        nargs='*',
         default=None,
-        help="Exact ruleIds to include (case-insensitive exact match). Example: EN_QUOTES EN_UNPAIRED_QUOTES",
+        help='Exact ruleIds to include (case-insensitive exact match). Example: EN_QUOTES EN_UNPAIRED_QUOTES',
     )
     ap.add_argument(
-        "--rules-like",
-        nargs="*",
+        '--rules-like',
+        nargs='*',
         default=None,
-        help="Substring filters for ruleIds (case-insensitive). Example: QUOTES APOSTROPHE",
+        help='Substring filters for ruleIds (case-insensitive). Example: QUOTES APOSTROPHE',
     )
     ap.add_argument(
-        "--categories",
-        nargs="*",
+        '--categories',
+        nargs='*',
         default=None,
-        help="Substring filters for category names (case-insensitive). Example: punctuation grammar typography",
+        help='Substring filters for category names (case-insensitive). Example: punctuation grammar typography',
     )
     ap.add_argument(
-        "--show-all-suggestions",
-        action="store_true",
-        help="Print all suggested replacements (default prints top 3)",
+        '--show-all-suggestions',
+        action='store_true',
+        help='Print all suggested replacements (default prints top 3)',
     )
+    ap.add_argument('--limit', type=int, default=None, help='Stop after printing this many issues')
     ap.add_argument(
-        "--limit", type=int, default=None, help="Stop after printing this many issues"
-    )
-    ap.add_argument(
-        "--fields",
-        nargs="*",
+        '--fields',
+        nargs='*',
         default=DEFAULT_FIELDS,
-        help="Fields to check (default: verse reflection prayer)",
+        help='Fields to check (default: verse reflection prayer)',
     )
     ap.add_argument(
-        "--server",
+        '--server',
         default=DEFAULT_SERVER_URL,
-        help=f"LanguageTool server URL (default: {DEFAULT_SERVER_URL})",
+        help=f'LanguageTool server URL (default: {DEFAULT_SERVER_URL})',
     )
     ap.add_argument(
-        "--lang",
+        '--lang',
         default=DEFAULT_LANG_CODE,
-        help=f"Language code (default: {DEFAULT_LANG_CODE})",
+        help=f'Language code (default: {DEFAULT_LANG_CODE})',
     )
     args = ap.parse_args()
 
@@ -319,11 +315,11 @@ def main():
         sys.exit(1)
 
     base = script_dir()
-    total_counter = {"total": 0}
+    total_counter = {'total': 0}
     files_seen = 0
 
     for name in sorted(os.listdir(base)):
-        if not name.endswith(".json"):
+        if not name.endswith('.json'):
             continue
         files_seen += 1
         loaded = read_json_file(os.path.join(base, name))
@@ -348,7 +344,7 @@ def main():
                         limit=args.limit,
                         counter=total_counter,
                     )
-                    if args.limit is not None and total_counter["total"] >= args.limit:
+                    if args.limit is not None and total_counter['total'] >= args.limit:
                         break
         elif isinstance(data, dict):
             inspect_record(
@@ -365,16 +361,16 @@ def main():
                 limit=args.limit,
                 counter=total_counter,
             )
-        if args.limit is not None and total_counter["total"] >= args.limit:
+        if args.limit is not None and total_counter['total'] >= args.limit:
             break
 
     if files_seen == 0:
-        print("No JSON files found", file=sys.stderr)
+        print('No JSON files found', file=sys.stderr)
         sys.exit(1)
 
     print(SEPARATOR)
-    print(f"Total grammar issues shown: {total_counter['total']}")
+    print(f'Total grammar issues shown: {total_counter["total"]}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

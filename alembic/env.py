@@ -8,14 +8,14 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-DB_TARGET = os.getenv("DB_TARGET", "bible").lower()
+DB_TARGET = os.getenv('DB_TARGET', 'bible').lower()
 
-if DB_TARGET == "bible":
-    url = os.getenv("BIBLE_VERSE_DATABASE_URL")
-    include_schemas = {"bible"}
-elif DB_TARGET == "devotional":
-    url = os.getenv("DEVOTIONAL_DATABASE_URL")
-    include_schemas = {"devotional"}
+if DB_TARGET == 'bible':
+    url = os.getenv('BIBLE_VERSE_DATABASE_URL')
+    include_schemas = {'bible'}
+elif DB_TARGET == 'devotional':
+    url = os.getenv('DEVOTIONAL_DATABASE_URL')
+    include_schemas = {'devotional'}
 else:
     raise RuntimeError("DB_TARGET must be 'bible' or 'devotional'")
 
@@ -26,10 +26,10 @@ target_metadata = models.metadata
 
 
 def include_object(object, name, type_, reflected, compare_to):
-    obj_schema = getattr(object, "schema", None)
+    obj_schema = getattr(object, 'schema', None)
     if obj_schema and obj_schema in include_schemas:
         return True
-    if type_ == "table" and name == "alembic_version":
+    if type_ == 'table' and name == 'alembic_version':
         return True
     return False
 
@@ -44,7 +44,7 @@ def run_migrations_offline():
         literal_binds=True,
         compare_type=True,
         compare_server_default=True,
-        dialect_opts={"paramstyle": "named"},
+        dialect_opts={'paramstyle': 'named'},
     )
     with context.begin_transaction():
         context.run_migrations()
@@ -52,8 +52,8 @@ def run_migrations_offline():
 
 def run_migrations_online():
     connectable = engine_from_config(
-        {"sqlalchemy.url": url},
-        prefix="sqlalchemy.",
+        {'sqlalchemy.url': url},
+        prefix='sqlalchemy.',
         poolclass=pool.NullPool,
         future=True,
     )

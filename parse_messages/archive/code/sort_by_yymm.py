@@ -5,13 +5,13 @@ from pathlib import Path
 from email.utils import parsedate_to_datetime
 
 # Configuration (project-root relative)
-SOURCE_DIR = Path.cwd() / "missing"  # where your 2600+ .txt files currently live
-GLOB_PATTERN = "*.txt"  # pattern for message files
+SOURCE_DIR = Path.cwd() / 'missing'  # where your 2600+ .txt files currently live
+GLOB_PATTERN = '*.txt'  # pattern for message files
 FORCE_OVERWRITE = False  # set True to overwrite if a dest file exists
 
 # Regex to capture the Date header line (case-insensitive), e.g.:
 # date      : Fri, 1 Apr 2011 12:20:19 -0500
-DATE_LINE_RE = re.compile(r"^date\s*:\s*(.+)$", re.IGNORECASE)
+DATE_LINE_RE = re.compile(r'^date\s*:\s*(.+)$', re.IGNORECASE)
 
 
 def extract_date_header(text: str) -> str | None:
@@ -32,7 +32,7 @@ def header_to_yymm(header_date: str) -> str | None:
     """
     try:
         dt = parsedate_to_datetime(header_date)
-        return f"{dt.year % 100:02d}{dt.month:02d}"
+        return f'{dt.year % 100:02d}{dt.month:02d}'
     except Exception:
         return None
 
@@ -40,7 +40,7 @@ def header_to_yymm(header_date: str) -> str | None:
 def main():
     src = SOURCE_DIR
     if not src.exists():
-        print(f"Source directory not found: {src}")
+        print(f'Source directory not found: {src}')
         return
 
     files = sorted(src.glob(GLOB_PATTERN))
@@ -55,11 +55,11 @@ def main():
     skipped_exists = 0
     errors = 0
 
-    print(f"Scanning {total} files in {src} ...")
+    print(f'Scanning {total} files in {src} ...')
 
     for i, fp in enumerate(files, 1):
         try:
-            text = fp.read_text(encoding="utf-8", errors="replace")
+            text = fp.read_text(encoding='utf-8', errors='replace')
             header_date = extract_date_header(text)
             if not header_date:
                 skipped_no_date += 1
@@ -87,20 +87,20 @@ def main():
 
         except Exception as e:
             errors += 1
-            print(f"ERROR processing {fp.name}: {e}")
+            print(f'ERROR processing {fp.name}: {e}')
 
         if i % 200 == 0 or i == total:
-            print(f"Processed {i}/{total} files...")
+            print(f'Processed {i}/{total} files...')
 
-    print("\nSummary:")
-    print(f"- Total files scanned: {total}")
-    print(f"- Moved: {moved}")
-    print(f"- Skipped (no Date header): {skipped_no_date}")
-    print(f"- Skipped (Date parse failed): {skipped_parse}")
-    print(f"- Skipped (exists, no overwrite): {skipped_exists}")
-    print(f"- Errors: {errors}")
-    print(f"YYMM directories created at: {Path.cwd()}")
+    print('\nSummary:')
+    print(f'- Total files scanned: {total}')
+    print(f'- Moved: {moved}')
+    print(f'- Skipped (no Date header): {skipped_no_date}')
+    print(f'- Skipped (Date parse failed): {skipped_parse}')
+    print(f'- Skipped (exists, no overwrite): {skipped_exists}')
+    print(f'- Errors: {errors}')
+    print(f'YYMM directories created at: {Path.cwd()}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

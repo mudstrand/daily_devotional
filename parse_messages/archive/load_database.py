@@ -7,32 +7,32 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, List, Iterable, Optional
 
-TABLE_NAME = "devotionals"
+TABLE_NAME = 'devotionals'
 
 # Database column order (first seven explicitly ordered, rest follow)
 COLUMNS = [
-    "message_id",
-    "msg_date",
-    "subject",
-    "verse",
-    "reading",
-    "reflection",
-    "holiday",  # NEW: directly after reflection
+    'message_id',
+    'msg_date',
+    'subject',
+    'verse',
+    'reading',
+    'reflection',
+    'holiday',  # NEW: directly after reflection
     # remaining fields (any order after the first seven)
-    "ai_prayer",
-    "ai_reading",
-    "ai_reflection_corrected",
-    "ai_subject",
-    "ai_verse",
-    "date_utc",
-    "original_content",
-    "orignal_subject",  # intentional spelling per spec
-    "prayer",
-    "verse_source",
-    "verse_text",
+    'ai_prayer',
+    'ai_reading',
+    'ai_reflection_corrected',
+    'ai_subject',
+    'ai_verse',
+    'date_utc',
+    'original_content',
+    'orignal_subject',  # intentional spelling per spec
+    'prayer',
+    'verse_source',
+    'verse_text',
 ]
 
-DB_PATH = "/Users/mark/shared/daily_devotional_v2.db"
+DB_PATH = '/Users/mark/shared/daily_devotional_v2.db'
 
 CREATE_TABLE_SQL = f"""
 CREATE TABLE IF NOT EXISTS {TABLE_NAME} (
@@ -58,18 +58,18 @@ CREATE TABLE IF NOT EXISTS {TABLE_NAME} (
 """
 
 INSERT_SQL = f"""
-INSERT INTO {TABLE_NAME} ({", ".join(COLUMNS)})
-VALUES ({", ".join(["?"] * len(COLUMNS))});
+INSERT INTO {TABLE_NAME} ({', '.join(COLUMNS)})
+VALUES ({', '.join(['?'] * len(COLUMNS))});
 """
 
 
 def connect_sqlite(db_path: str) -> sqlite3.Connection:
     conn = sqlite3.connect(db_path)
     # Ensure NOT WAL mode: single main .db file (a transient -journal may appear during transactions)
-    conn.execute("PRAGMA journal_mode=DELETE;")
+    conn.execute('PRAGMA journal_mode=DELETE;')
     # Strong durability for shared/network drives
-    conn.execute("PRAGMA synchronous=FULL;")
-    conn.execute("PRAGMA foreign_keys=ON;")
+    conn.execute('PRAGMA synchronous=FULL;')
+    conn.execute('PRAGMA foreign_keys=ON;')
     return conn
 
 
@@ -91,24 +91,24 @@ def parse_iso_ymd_from_date_utc(value: Any) -> Optional[str]:
         return None
 
     # Fast path if the prefix is already YYYY-MM-DD
-    if len(s) >= 10 and s[4] == "-" and s[7] == "-":
+    if len(s) >= 10 and s[4] == '-' and s[7] == '-':
         ymd = s[:10]
         try:
-            datetime.strptime(ymd, "%Y-%m-%d")
+            datetime.strptime(ymd, '%Y-%m-%d')
             return ymd
         except Exception:
             pass
 
     # ISO 8601 attempts (stdlib only)
-    ss = s.replace("Z", "+00:00")
+    ss = s.replace('Z', '+00:00')
     try:
         dt = datetime.fromisoformat(ss)
         return dt.date().isoformat()
     except Exception:
         # Try space-to-T
-        if " " in ss and "T" not in ss:
+        if ' ' in ss and 'T' not in ss:
             try:
-                dt = datetime.fromisoformat(ss.replace(" ", "T"))
+                dt = datetime.fromisoformat(ss.replace(' ', 'T'))
                 return dt.date().isoformat()
             except Exception:
                 pass
@@ -121,7 +121,7 @@ def parse_iso_ymd_from_date_utc(value: Any) -> Optional[str]:
         pass
 
     # Common patterns without offsets
-    for fmt in ("%Y-%m-%d", "%Y-%m-%d %H:%M", "%Y-%m-%d %H:%M:%S"):
+    for fmt in ('%Y-%m-%d', '%Y-%m-%d %H:%M', '%Y-%m-%d %H:%M:%S'):
         try:
             dt = datetime.strptime(s[: len(fmt)], fmt)
             return dt.date().isoformat()
@@ -129,10 +129,10 @@ def parse_iso_ymd_from_date_utc(value: Any) -> Optional[str]:
             continue
 
     # Final fallback: trust first 10 chars if they validate
-    if len(s) >= 10 and s[4] == "-" and s[7] == "-":
+    if len(s) >= 10 and s[4] == '-' and s[7] == '-':
         ymd = s[:10]
         try:
-            datetime.strptime(ymd, "%Y-%m-%d")
+            datetime.strptime(ymd, '%Y-%m-%d')
             return ymd
         except Exception:
             pass
@@ -141,7 +141,7 @@ def parse_iso_ymd_from_date_utc(value: Any) -> Optional[str]:
 
 
 def load_json_records(path: Path) -> List[Dict[str, Any]]:
-    with path.open("r", encoding="utf-8") as f:
+    with path.open('r', encoding='utf-8') as f:
         data = json.load(f)
     if isinstance(data, dict):
         return [data]
@@ -158,26 +158,24 @@ def project_record(rec: Dict[str, Any]) -> List[Any]:
     out = dict(rec)  # shallow copy
 
     # msg_date
-    if not out.get("msg_date"):
-        msg_date = parse_iso_ymd_from_date_utc(out.get("date_utc"))
+    if not out.get('msg_date'):
+        msg_date = parse_iso_ymd_from_date_utc(out.get('date_utc'))
         if msg_date:
-            out["msg_date"] = msg_date
+            out['msg_date'] = msg_date
         else:
-            out.setdefault("msg_date", None)
+            out.setdefault('msg_date', None)
 
     # Canonical prominent fields
-    out.setdefault("subject", out.get("subject"))
-    out.setdefault("verse", out.get("verse"))
-    out.setdefault("reading", out.get("reading"))
+    out.setdefault('subject', out.get('subject'))
+    out.setdefault('verse', out.get('verse'))
+    out.setdefault('reading', out.get('reading'))
     out.setdefault(
-        "reflection",
-        out.get("reflection")
-        or out.get("ai_reflection_corrected")
-        or out.get("original_content"),
+        'reflection',
+        out.get('reflection') or out.get('ai_reflection_corrected') or out.get('original_content'),
     )
 
     # holiday: pass through if present; else None
-    out.setdefault("holiday", out.get("holiday", None))
+    out.setdefault('holiday', out.get('holiday', None))
 
     return [out.get(col) for col in COLUMNS]
 
@@ -190,7 +188,7 @@ def iter_input_files(patterns: Iterable[str]) -> List[Path]:
     seen = set()
     for f in files:
         p = Path(f)
-        if p.suffix.lower() == ".json" and p.is_file():
+        if p.suffix.lower() == '.json' and p.is_file():
             rp = p.resolve()
             if rp not in seen:
                 seen.add(rp)
@@ -200,14 +198,14 @@ def iter_input_files(patterns: Iterable[str]) -> List[Path]:
 
 def main(argv: List[str]) -> None:
     if len(argv) < 2:
-        print("Usage: python load_json_to_sqlite.py <glob1> [<glob2> ...]")
+        print('Usage: python load_json_to_sqlite.py <glob1> [<glob2> ...]')
         print("Example: python load_json_to_sqlite.py './data/*.json' 'more/**/*.json'")
         sys.exit(2)
 
     patterns = argv[1:]
     files = iter_input_files(patterns)
     if not files:
-        print("No JSON files matched the given patterns.")
+        print('No JSON files matched the given patterns.')
         sys.exit(1)
 
     conn = connect_sqlite(DB_PATH)
@@ -222,30 +220,30 @@ def main(argv: List[str]) -> None:
                 try:
                     records = load_json_records(jf)
                 except json.JSONDecodeError as e:
-                    raise RuntimeError(f"Invalid JSON in file {jf}: {e}") from e
+                    raise RuntimeError(f'Invalid JSON in file {jf}: {e}') from e
 
                 for rec in records:
-                    if not rec.get("message_id"):
-                        raise RuntimeError(f"Missing message_id in file {jf}")
+                    if not rec.get('message_id'):
+                        raise RuntimeError(f'Missing message_id in file {jf}')
 
                     params = project_record(rec)
                     cur.execute(INSERT_SQL, params)
                     total_rows += 1
 
-        print(f"Completed. Files processed: {len(files)}, rows inserted: {total_rows}")
+        print(f'Completed. Files processed: {len(files)}, rows inserted: {total_rows}')
 
     except sqlite3.IntegrityError as e:
         # PK conflict or other constraint issue: abort everything
-        print(f"ERROR: Integrity constraint violated: {e}")
-        print("All changes have been rolled back. No rows were inserted.")
+        print(f'ERROR: Integrity constraint violated: {e}')
+        print('All changes have been rolled back. No rows were inserted.')
         sys.exit(1)
     except Exception as e:
-        print(f"ERROR: {e}")
-        print("All changes have been rolled back.")
+        print(f'ERROR: {e}')
+        print('All changes have been rolled back.')
         sys.exit(1)
     finally:
         conn.close()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main(sys.argv)

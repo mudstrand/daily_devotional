@@ -6,16 +6,16 @@ import sys
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
-SEPARATOR = "=" * 50
+SEPARATOR = '=' * 50
 
 # >>> You can edit this list to add more allowed terminal characters for verse_text
 VALID_VERSE_END_CHARS = [
-    ".",  # period
+    '.',  # period
     '"',  # straight double quote
-    "?",
-    "!",
-    ",",
-    ";",
+    '?',
+    '!',
+    ',',
+    ';',
     # Add more if needed: "”", "’", "!", "?", "…"
 ]
 
@@ -32,17 +32,17 @@ READING_AI_SUFFIX = re.compile(r"""^(?P<reading>.*?\S)\s+AI\.?\s*$""", re.IGNORE
 READING_CLEAN = re.compile(r"""^.*\S$""")
 
 NEW_FIELDS = [
-    "verse_text",
-    "reading_text",
-    "original_verse_text",
-    "original_verse",
-    "original_reflection_text",
-    "original_reading_text",
-    "original_subject",
-    "verse_source",
-    "original_verse_source",
-    "reading_source",
-    "original_reading",
+    'verse_text',
+    'reading_text',
+    'original_verse_text',
+    'original_verse',
+    'original_reflection_text',
+    'original_reading_text',
+    'original_subject',
+    'verse_source',
+    'original_verse_source',
+    'reading_source',
+    'original_reading',
 ]
 
 
@@ -52,21 +52,21 @@ def extract_verse_parts(verse_value: str) -> Tuple[str, str, str, bool]:
     Returns (verse_text, reference, source, matched)
     """
     if not isinstance(verse_value, str):
-        return ("", "", "", False)
+        return ('', '', '', False)
     candidate = verse_value.strip()
     m = VERSE_PATTERN_WITH_SOURCE.match(candidate)
     if not m:
-        return ("", "", "", False)
-    verse_text = (m.group("text") or "").strip()
-    verse_ref = (m.group("ref") or "").strip()
-    verse_src = (m.group("src") or "").strip()
+        return ('', '', '', False)
+    verse_text = (m.group('text') or '').strip()
+    verse_ref = (m.group('ref') or '').strip()
+    verse_src = (m.group('src') or '').strip()
     return (verse_text, verse_ref, verse_src, True)
 
 
 def normalize_source_token(src: str) -> str:
     if not src:
-        return ""
-    s = src.strip().rstrip(".")
+        return ''
+    s = src.strip().rstrip('.')
     return s.upper()
 
 
@@ -75,72 +75,72 @@ def handle_reading(rec: Dict[str, Any], changes: Dict[str, Any]) -> Tuple[bool, 
     Process 'reading' for AI suffix and populate fields.
     Returns (ok, error_message). ok=False indicates a parse failure.
     """
-    reading_val = rec.get("reading", "")
+    reading_val = rec.get('reading', '')
 
     if not isinstance(reading_val, str):
-        return (False, "reading is not a string")
+        return (False, 'reading is not a string')
 
     reading = reading_val.strip()
-    if reading == "":
+    if reading == '':
         # Empty reading is acceptable; still set defaults
-        if "ai_reading" not in rec:
-            rec["ai_reading"] = False
-            changes["ai_reading"] = False
-        if not rec.get("original_reading"):
-            rec["original_reading"] = ""
-            changes["original_reading"] = "(empty)"
-        if not rec.get("original_reading_text"):
-            rec["original_reading_text"] = ""
-            changes["original_reading_text"] = "(empty)"
-        return (True, "")
+        if 'ai_reading' not in rec:
+            rec['ai_reading'] = False
+            changes['ai_reading'] = False
+        if not rec.get('original_reading'):
+            rec['original_reading'] = ''
+            changes['original_reading'] = '(empty)'
+        if not rec.get('original_reading_text'):
+            rec['original_reading_text'] = ''
+            changes['original_reading_text'] = '(empty)'
+        return (True, '')
 
     m_ai = READING_AI_SUFFIX.match(reading)
     if m_ai:
         # AI-generated reading
-        cleaned = m_ai.group("reading").strip()
-        if cleaned != rec.get("reading"):
-            rec["reading"] = cleaned
-            changes["reading"] = cleaned
-        if rec.get("ai_reading") is not True:
-            rec["ai_reading"] = True
-            changes["ai_reading"] = True
-        if rec.get("reading_source") != "AI":
-            rec["reading_source"] = "AI"
-            changes["reading_source"] = "AI"
-        if not rec.get("original_reading_text"):
-            rec["original_reading_text"] = reading_val
-            changes["original_reading_text"] = "(copied from reading before AI cleanup)"
-        return (True, "")
+        cleaned = m_ai.group('reading').strip()
+        if cleaned != rec.get('reading'):
+            rec['reading'] = cleaned
+            changes['reading'] = cleaned
+        if rec.get('ai_reading') is not True:
+            rec['ai_reading'] = True
+            changes['ai_reading'] = True
+        if rec.get('reading_source') != 'AI':
+            rec['reading_source'] = 'AI'
+            changes['reading_source'] = 'AI'
+        if not rec.get('original_reading_text'):
+            rec['original_reading_text'] = reading_val
+            changes['original_reading_text'] = '(copied from reading before AI cleanup)'
+        return (True, '')
 
     # Must be clean reading without AI suffix
     if not READING_CLEAN.match(reading):
-        return (False, "reading failed to match expected pattern")
+        return (False, 'reading failed to match expected pattern')
 
     # If the string contains ' AI ' internally or at start, flag as parse error
     # Accept only if no ' AI' token at end (already matched above)
-    if re.search(r"\bAI\b", reading, flags=re.IGNORECASE):
+    if re.search(r'\bAI\b', reading, flags=re.IGNORECASE):
         # Contains AI token but not in accepted suffix position -> parse error
         return (False, "reading contains misplaced 'AI' token")
 
     # Not AI: set fields
-    if "ai_reading" not in rec:
-        rec["ai_reading"] = False
-        changes["ai_reading"] = False
-    if not rec.get("original_reading"):
-        rec["original_reading"] = reading
-        changes["original_reading"] = "(copied from reading)"
-    if "original_reading_text" not in rec or rec["original_reading_text"] == "":
-        rec["original_reading_text"] = reading
-        changes["original_reading_text"] = "(copied from reading)"
+    if 'ai_reading' not in rec:
+        rec['ai_reading'] = False
+        changes['ai_reading'] = False
+    if not rec.get('original_reading'):
+        rec['original_reading'] = reading
+        changes['original_reading'] = '(copied from reading)'
+    if 'original_reading_text' not in rec or rec['original_reading_text'] == '':
+        rec['original_reading_text'] = reading
+        changes['original_reading_text'] = '(copied from reading)'
 
-    return (True, "")
+    return (True, '')
 
 
 def verse_text_ends_with_valid_char(text: str) -> bool:
     """
     Return True if the trimmed verse_text ends with any character in VALID_VERSE_END_CHARS.
     """
-    if not isinstance(text, str) or text.strip() == "":
+    if not isinstance(text, str) or text.strip() == '':
         return False
     t = text.rstrip()
     return any(t.endswith(ch) for ch in VALID_VERSE_END_CHARS)
@@ -158,56 +158,56 @@ def update_record(
     # Ensure new fields exist with default ""
     for f in NEW_FIELDS:
         if f not in rec:
-            rec[f] = ""
-            changes[f] = "(added default)"
+            rec[f] = ''
+            changes[f] = '(added default)'
 
     # Copy subject to original_subject if available
-    if "subject" in rec:
-        if rec.get("original_subject", "") != rec["subject"]:
-            rec["original_subject"] = rec["subject"]
-            changes["original_subject"] = rec["subject"]
+    if 'subject' in rec:
+        if rec.get('original_subject', '') != rec['subject']:
+            rec['original_subject'] = rec['subject']
+            changes['original_subject'] = rec['subject']
 
     # Preserve original reflection into original_reflection_text if present
-    if "reflection" in rec and not rec.get("original_reflection_text"):
-        rec["original_reflection_text"] = rec["reflection"] or ""
-        if rec["original_reflection_text"]:
-            changes["original_reflection_text"] = "(copied from reflection)"
+    if 'reflection' in rec and not rec.get('original_reflection_text'):
+        rec['original_reflection_text'] = rec['reflection'] or ''
+        if rec['original_reflection_text']:
+            changes['original_reflection_text'] = '(copied from reflection)'
 
     # Reading handling
     reading_ok, reading_err = handle_reading(rec, changes)
 
     # Verse handling
-    verse_value = rec.get("verse", "")
+    verse_value = rec.get('verse', '')
     verse_text, verse_ref, verse_src, verse_ok = extract_verse_parts(verse_value)
 
     verse_text_end_ok = True
     if verse_ok:
-        rec["verse_text"] = verse_text
-        rec["original_verse_text"] = verse_text
-        changes["verse_text"] = verse_text
-        changes["original_verse_text"] = "(copied from verse_text)"
+        rec['verse_text'] = verse_text
+        rec['original_verse_text'] = verse_text
+        changes['verse_text'] = verse_text
+        changes['original_verse_text'] = '(copied from verse_text)'
 
-        rec["original_verse"] = verse_ref
-        changes["original_verse"] = verse_ref
+        rec['original_verse'] = verse_ref
+        changes['original_verse'] = verse_ref
 
-        rec["verse"] = verse_ref
-        changes["verse"] = verse_ref
+        rec['verse'] = verse_ref
+        changes['verse'] = verse_ref
 
         norm_src = normalize_source_token(verse_src)
         if norm_src:
-            rec["original_verse_source"] = norm_src
-            rec["verse_source"] = norm_src
-            changes["original_verse_source"] = norm_src
-            changes["verse_source"] = norm_src
+            rec['original_verse_source'] = norm_src
+            rec['verse_source'] = norm_src
+            changes['original_verse_source'] = norm_src
+            changes['verse_source'] = norm_src
 
         # Validate final character of verse_text
         verse_text_end_ok = verse_text_ends_with_valid_char(verse_text)
     else:
         if isinstance(verse_value, str):
             orig = verse_value.strip()
-            if rec.get("original_verse", "") != orig:
-                rec["original_verse"] = orig
-                changes["original_verse"] = "(kept original; pattern not matched)"
+            if rec.get('original_verse', '') != orig:
+                rec['original_verse'] = orig
+                changes['original_verse'] = '(kept original; pattern not matched)'
         # If verse didn't parse, skip end-char validation to avoid double error
 
     return rec, changes, verse_ok, reading_ok, reading_err, verse_text_end_ok
@@ -215,9 +215,9 @@ def update_record(
 
 def process_file(path: Path, preview: bool) -> int:
     try:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = json.loads(path.read_text(encoding='utf-8'))
     except Exception as e:
-        print(f"[ERROR] {path}: failed to parse JSON: {e}")
+        print(f'[ERROR] {path}: failed to parse JSON: {e}')
         return 1
 
     # Identify the record list
@@ -232,16 +232,14 @@ def process_file(path: Path, preview: bool) -> int:
             records = data[key_in_container]
             container = data
         else:
-            print(
-                f"[ERROR] {path}: expected a list or a dict with a single list of records"
-            )
+            print(f'[ERROR] {path}: expected a list or a dict with a single list of records')
             return 1
     else:
-        print(f"[ERROR] {path}: unsupported JSON structure")
+        print(f'[ERROR] {path}: unsupported JSON structure')
         return 1
 
     if not isinstance(records, list):
-        print(f"[ERROR] {path}: records is not a list")
+        print(f'[ERROR] {path}: records is not a list')
         return 1
 
     updated_records: List[Dict[str, Any]] = []
@@ -252,14 +250,12 @@ def process_file(path: Path, preview: bool) -> int:
 
     for idx, rec in enumerate(records):
         if not isinstance(rec, dict):
-            print(f"[WARN] {path}: record {idx + 1} is not an object; skipping")
+            print(f'[WARN] {path}: record {idx + 1} is not an object; skipping')
             updated_records.append(rec)
-            all_changes.append({"_note": "skipped non-object"})
+            all_changes.append({'_note': 'skipped non-object'})
             continue
 
-        upd, changes, verse_ok, reading_ok, reading_err, verse_text_end_ok = (
-            update_record(rec)
-        )
+        upd, changes, verse_ok, reading_ok, reading_err, verse_text_end_ok = update_record(rec)
         updated_records.append(upd)
         all_changes.append(changes)
 
@@ -273,32 +269,28 @@ def process_file(path: Path, preview: bool) -> int:
     # Strict preview behavior: any failure => print and exit
     if preview and (verse_failures or reading_failures or verse_text_end_failures):
         for line_no in verse_failures:
-            print(
-                f"[PARSE ERROR] {path}:{line_no} verse did not match '<text> (<ref>) [source]'"
-            )
+            print(f"[PARSE ERROR] {path}:{line_no} verse did not match '<text> (<ref>) [source]'")
         for line_no, msg in reading_failures:
-            print(f"[PARSE ERROR] {path}:{line_no} {msg}")
+            print(f'[PARSE ERROR] {path}:{line_no} {msg}')
         for line_no in verse_text_end_failures:
-            allowed = ", ".join(repr(ch) for ch in VALID_VERSE_END_CHARS)
-            print(
-                f"[PARSE ERROR] {path}:{line_no} verse_text must end with one of: {allowed}"
-            )
+            allowed = ', '.join(repr(ch) for ch in VALID_VERSE_END_CHARS)
+            print(f'[PARSE ERROR] {path}:{line_no} verse_text must end with one of: {allowed}')
         return 2
 
     # Preview output
     if preview:
-        print(f"\n=== Preview: {path} ===")
+        print(f'\n=== Preview: {path} ===')
         for i, changes in enumerate(all_changes, start=1):
             print(SEPARATOR)
-            print(f"Record {i}:")
+            print(f'Record {i}:')
             if changes:
                 for k, v in changes.items():
                     display = v
                     if isinstance(v, str) and len(v) > 140:
-                        display = v[:140] + " …"
-                    print(f"- {k}: {display}")
+                        display = v[:140] + ' …'
+                    print(f'- {k}: {display}')
             else:
-                print("- No changes")
+                print('- No changes')
         print(SEPARATOR)
         return 0
 
@@ -310,13 +302,11 @@ def process_file(path: Path, preview: bool) -> int:
         out_data = container
 
     try:
-        path.write_text(
-            json.dumps(out_data, ensure_ascii=False, indent=2), encoding="utf-8"
-        )
-        print(f"[OK] {path}: updated")
+        path.write_text(json.dumps(out_data, ensure_ascii=False, indent=2), encoding='utf-8')
+        print(f'[OK] {path}: updated')
         return 0
     except Exception as e:
-        print(f"[ERROR] {path}: failed to write updates: {e}")
+        print(f'[ERROR] {path}: failed to write updates: {e}')
         return 1
 
 
@@ -324,13 +314,11 @@ def main():
     parser = argparse.ArgumentParser(
         description="Update devotional JSON files with new fields and parsed verse/reading data. In --preview, stop on any parse failure and when verse_text's final char is invalid."
     )
+    parser.add_argument('files', nargs='+', help='One or more JSON files (e.g., *.json)')
     parser.add_argument(
-        "files", nargs="+", help="One or more JSON files (e.g., *.json)"
-    )
-    parser.add_argument(
-        "--preview",
-        action="store_true",
-        help="Show changes without modifying files. Any parse issue aborts with errors.",
+        '--preview',
+        action='store_true',
+        help='Show changes without modifying files. Any parse issue aborts with errors.',
     )
     args = parser.parse_args()
 
@@ -338,7 +326,7 @@ def main():
     for file_arg in args.files:
         path = Path(file_arg)
         if not path.exists():
-            print(f"[ERROR] {path}: not found")
+            print(f'[ERROR] {path}: not found')
             exit_code = max(exit_code, 1)
             continue
         rc = process_file(path, preview=args.preview)
@@ -349,5 +337,5 @@ def main():
     sys.exit(exit_code)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

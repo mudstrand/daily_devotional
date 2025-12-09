@@ -6,94 +6,94 @@ import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-SEPARATOR = "=" * 50
+SEPARATOR = '=' * 50
 
 # Small/common words typically lowercase in Title Case
 SMALL_WORDS = {
-    "a",
-    "an",
-    "and",
-    "as",
-    "at",
-    "but",
-    "by",
-    "for",
-    "in",
-    "nor",
-    "of",
-    "on",
-    "or",
-    "per",
-    "the",
-    "to",
-    "vs",
-    "via",
-    "is",
-    "be",
-    "am",
-    "are",
-    "was",
-    "were",
-    "from",
-    "with",
-    "into",
-    "over",
-    "under",
-    "than",
-    "then",
-    "so",
-    "yet",
+    'a',
+    'an',
+    'and',
+    'as',
+    'at',
+    'but',
+    'by',
+    'for',
+    'in',
+    'nor',
+    'of',
+    'on',
+    'or',
+    'per',
+    'the',
+    'to',
+    'vs',
+    'via',
+    'is',
+    'be',
+    'am',
+    'are',
+    'was',
+    'were',
+    'from',
+    'with',
+    'into',
+    'over',
+    'under',
+    'than',
+    'then',
+    'so',
+    'yet',
 }
 
 # Acronyms/initialisms to preserve in ALL CAPS
 ACRONYM_KEEP = {
-    "AI",
-    "ESV",
-    "NIV",
-    "KJV",
-    "NKJV",
-    "NASB",
-    "NASB95",
-    "NLT",
-    "CSB",
-    "NRSV",
-    "RSV",
-    "ASV",
+    'AI',
+    'ESV',
+    'NIV',
+    'KJV',
+    'NKJV',
+    'NASB',
+    'NASB95',
+    'NLT',
+    'CSB',
+    'NRSV',
+    'RSV',
+    'ASV',
 }
 
 # Proper devotional terms to prefer exact casing after title-casing
 PROPER_OVERRIDES = {
-    "god": "God",
-    "jesus": "Jesus",
-    "christ": "Christ",
-    "holy": "Holy",  # e.g., Holy Spirit
-    "spirit": "Spirit",  # e.g., Holy Spirit
-    "bible": "Bible",
-    "scripture": "Scripture",
-    "scriptures": "Scriptures",
-    "gospel": "Gospel",
-    "lord": "Lord",
-    "savior": "Savior",
-    "kingdom": "Kingdom",
+    'god': 'God',
+    'jesus': 'Jesus',
+    'christ': 'Christ',
+    'holy': 'Holy',  # e.g., Holy Spirit
+    'spirit': 'Spirit',  # e.g., Holy Spirit
+    'bible': 'Bible',
+    'scripture': 'Scripture',
+    'scriptures': 'Scriptures',
+    'gospel': 'Gospel',
+    'lord': 'Lord',
+    'savior': 'Savior',
+    'kingdom': 'Kingdom',
 }
 
 # Common direct typo fixes before calling spell checker
 DIRECT_FIXES = {
-    "yor": "your",
-    "recieve": "receive",
-    "beleive": "believe",
-    "teh": "the",
-    "widsom": "wisdom",
-    "heavan": "heaven",
-    "heavanly": "heavenly",
-    "provervs": "proverbs",
+    'yor': 'your',
+    'recieve': 'receive',
+    'beleive': 'believe',
+    'teh': 'the',
+    'widsom': 'wisdom',
+    'heavan': 'heaven',
+    'heavanly': 'heavenly',
+    'provervs': 'proverbs',
 }
 
 # Regex helpers
-WORD_SPLIT_RE = re.compile(r"[ \t]+")
-MULTISPACE_RE = re.compile(r"\s{2,}")
-LEADING_TRAIL_NONALNUM_RE = re.compile(r"^[^\w]+|[^\w]+$")
-TRAIL_PUNCT_RE = re.compile(r"([!?\.]+)\s*$")
+WORD_SPLIT_RE = re.compile(r'[ \t]+')
+MULTISPACE_RE = re.compile(r'\s{2,}')
+LEADING_TRAIL_NONALNUM_RE = re.compile(r'^[^\w]+|[^\w]+$')
+TRAIL_PUNCT_RE = re.compile(r'([!?\.]+)\s*$')
 
 
 def init_speller():
@@ -101,20 +101,20 @@ def init_speller():
         import enchant as enchant_mod
 
         try:
-            return enchant_mod.Dict("en_US")
+            return enchant_mod.Dict('en_US')
         except enchant_mod.errors.DictNotFoundError:
             try:
-                return enchant_mod.Dict("en_US-large")
+                return enchant_mod.Dict('en_US-large')
             except Exception:
-                print("Error: pyenchant en_US dictionary not found.", file=sys.stderr)
+                print('Error: pyenchant en_US dictionary not found.', file=sys.stderr)
                 return None
     except Exception as e:
-        print(f"Error: pyenchant unavailable ({e}).", file=sys.stderr)
+        print(f'Error: pyenchant unavailable ({e}).', file=sys.stderr)
         return None
 
 
 def split_words(title: str) -> List[str]:
-    s = MULTISPACE_RE.sub(" ", title.strip())
+    s = MULTISPACE_RE.sub(' ', title.strip())
     if not s:
         return []
     return [w for w in WORD_SPLIT_RE.split(s) if w]
@@ -125,7 +125,7 @@ def is_small(w: str) -> bool:
 
 
 def should_preserve_acronym(token: str) -> bool:
-    core = re.sub(r"[^\w]", "", token)
+    core = re.sub(r'[^\w]', '', token)
     return core in ACRONYM_KEEP
 
 
@@ -157,8 +157,8 @@ def smart_title_case(words: List[str]) -> List[str]:
             continue
 
         # Title-case, including hyphenated parts
-        if "-" in core:
-            parts = core.split("-")
+        if '-' in core:
+            parts = core.split('-')
             tc_parts = []
             for p in parts:
                 if not p:
@@ -167,7 +167,7 @@ def smart_title_case(words: List[str]) -> List[str]:
                     tc_parts.append(p.upper())
                 else:
                     tc_parts.append(p[:1].upper() + p[1:].lower())
-            out.append("-".join(tc_parts))
+            out.append('-'.join(tc_parts))
         else:
             out.append(core[:1].upper() + core[1:].lower())
     return out
@@ -180,7 +180,7 @@ def clean_token_keep_punct(token: str) -> Tuple[str, str]:
     """
     m = re.match(r"^([A-Za-z0-9'’-]+)([^A-Za-z0-9'’-]*)$", token)
     if not m:
-        return token, ""
+        return token, ''
     return m.group(1), m.group(2)
 
 
@@ -196,7 +196,7 @@ def enchant_correct_word(speller, token: str) -> str:
     if not token:
         return token
     # Skip digits/underscores
-    if re.search(r"\d|_", token):
+    if re.search(r'\d|_', token):
         return token
     # Preserve configured acronyms
     if should_preserve_acronym(token):
@@ -210,17 +210,17 @@ def enchant_correct_word(speller, token: str) -> str:
         return DIRECT_FIXES[token.lower()]
 
     # Hyphenated words: correct parts independently
-    if "-" in token:
-        parts = token.split("-")
+    if '-' in token:
+        parts = token.split('-')
         corr_parts = [enchant_correct_word(speller, p) for p in parts]
-        return "-".join(corr_parts)
+        return '-'.join(corr_parts)
 
     # Apostrophes/possessives: correct stem; leave suffix as-is if it's a typical contraction/possessive
-    if "'" in token or "’" in token:
-        apos = "'" if "'" in token else "’"
+    if "'" in token or '’' in token:
+        apos = "'" if "'" in token else '’'
         stem, rest = token.split(apos, 1)
         stem_corr = enchant_correct_word(speller, stem)
-        if rest.lower() in ("s", "d", "ll", "re", "ve", "m", "t"):
+        if rest.lower() in ('s', 'd', 'll', 're', 've', 'm', 't'):
             return stem_corr + apos + rest
         else:
             # Keep arbitrary tail as-is; we don't want to over-correct
@@ -235,10 +235,8 @@ def enchant_correct_word(speller, token: str) -> str:
             if sugg:
                 # Choose first suggestion that is alphabetic and simple
                 for cand in sugg:
-                    if re.match(r"^[A-Za-z]+$", cand):
-                        return (
-                            cand.lower()
-                        )  # return lowercase; title-casing comes later
+                    if re.match(r'^[A-Za-z]+$', cand):
+                        return cand.lower()  # return lowercase; title-casing comes later
             # No good suggestion; keep original
             return token
         else:
@@ -250,7 +248,7 @@ def enchant_correct_word(speller, token: str) -> str:
 
 def title_case_and_spellcheck(subject: str, speller) -> str:
     # Preserve trailing punctuation (. ? !)
-    trailing = ""
+    trailing = ''
     m = TRAIL_PUNCT_RE.search(subject)
     if m:
         trailing = m.group(1)
@@ -259,8 +257,8 @@ def title_case_and_spellcheck(subject: str, speller) -> str:
         s_work = subject.strip()
 
     # Clean edges and collapse spaces
-    s_work = LEADING_TRAIL_NONALNUM_RE.sub("", s_work)
-    s_work = MULTISPACE_RE.sub(" ", s_work)
+    s_work = LEADING_TRAIL_NONALNUM_RE.sub('', s_work)
+    s_work = MULTISPACE_RE.sub(' ', s_work)
 
     words_raw = split_words(s_work)
     if not words_raw:
@@ -279,9 +277,9 @@ def title_case_and_spellcheck(subject: str, speller) -> str:
     # Apply devotional proper-noun overrides
     final_words = [apply_proper_overrides(w) for w in tc_words]
 
-    out = " ".join(final_words).strip()
+    out = ' '.join(final_words).strip()
     if trailing:
-        out = f"{out}{trailing}"
+        out = f'{out}{trailing}'
     return out
 
 
@@ -298,18 +296,16 @@ def load_json_records(data: Any, filename: Path):
         list_keys = [k for k, v in data.items() if isinstance(v, list)]
         if len(list_keys) == 1:
             return data[list_keys[0]], data, list_keys[0]
-        raise ValueError(
-            f"{filename}: expected a list or a dict with a single list of records"
-        )
-    raise ValueError(f"{filename}: unsupported JSON structure")
+        raise ValueError(f'{filename}: expected a list or a dict with a single list of records')
+    raise ValueError(f'{filename}: unsupported JSON structure')
 
 
 def process_file(path: Path, preview: bool) -> int:
     try:
-        raw = json.loads(path.read_text(encoding="utf-8"))
+        raw = json.loads(path.read_text(encoding='utf-8'))
         records, container, key = load_json_records(raw, path)
     except Exception as e:
-        print(f"[ERROR] {path}: cannot read/parse JSON: {e}")
+        print(f'[ERROR] {path}: cannot read/parse JSON: {e}')
         return 2
 
     speller = init_speller()
@@ -322,7 +318,7 @@ def process_file(path: Path, preview: bool) -> int:
             updated_records.append(rec)
             continue
 
-        subj = rec.get("subject")
+        subj = rec.get('subject')
         if not isinstance(subj, str) or not subj.strip():
             updated_records.append(rec)
             continue
@@ -330,21 +326,21 @@ def process_file(path: Path, preview: bool) -> int:
         new_subj = normalize_subject_case_and_spelling(subj, speller)
         if new_subj and new_subj != subj:
             rec_copy = dict(rec)
-            rec_copy["subject"] = new_subj
+            rec_copy['subject'] = new_subj
             updated_records.append(rec_copy)
             if preview:
-                preview_items.append((idx, {"before": subj, "after": new_subj}))
+                preview_items.append((idx, {'before': subj, 'after': new_subj}))
         else:
             updated_records.append(rec)
 
     if preview:
         if preview_items:
-            print(f"\n=== Preview: {path} ===")
+            print(f'\n=== Preview: {path} ===')
             for idx, payload in preview_items:
                 print(SEPARATOR)
-                print(f"Record {idx}:")
-                print(f"- subject (before): {payload['before']}")
-                print(f"- subject (after) : {payload['after']}")
+                print(f'Record {idx}:')
+                print(f'- subject (before): {payload["before"]}')
+                print(f'- subject (after) : {payload["after"]}')
             print(SEPARATOR)
         return 0
 
@@ -354,31 +350,27 @@ def process_file(path: Path, preview: bool) -> int:
         else:
             container[key] = updated_records
             out = container
-        path.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"[OK] {path}: updated")
+        path.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding='utf-8')
+        print(f'[OK] {path}: updated')
         return 0
     except Exception as e:
-        print(f"[ERROR] {path}: failed to write output: {e}")
+        print(f'[ERROR] {path}: failed to write output: {e}')
         return 2
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Fix subject casing to Title Case and spell-check with pyenchant (no shortening)."
+        description='Fix subject casing to Title Case and spell-check with pyenchant (no shortening).'
     )
-    parser.add_argument(
-        "files", nargs="+", help="One or more JSON files (e.g., *.json)"
-    )
-    parser.add_argument(
-        "--preview", action="store_true", help="Show changes without writing files"
-    )
+    parser.add_argument('files', nargs='+', help='One or more JSON files (e.g., *.json)')
+    parser.add_argument('--preview', action='store_true', help='Show changes without writing files')
     args = parser.parse_args()
 
     exit_code = 0
     for file_arg in args.files:
         path = Path(file_arg)
         if not path.exists():
-            print(f"[ERROR] {path}: not found")
+            print(f'[ERROR] {path}: not found')
             exit_code = max(exit_code, 2)
             continue
         rc = process_file(path, preview=args.preview)
@@ -387,5 +379,5 @@ def main():
     sys.exit(exit_code)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

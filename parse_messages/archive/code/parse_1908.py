@@ -5,40 +5,40 @@ import unicodedata
 from pathlib import Path
 from typing import Dict, List
 
-DEFAULT_INPUT_DIR = "1908"
-OUT_JSON = "parsed_1908.json"
+DEFAULT_INPUT_DIR = '1908'
+OUT_JSON = 'parsed_1908.json'
 
-HDR_BODY_SEP = "=" * 67
+HDR_BODY_SEP = '=' * 67
 BODY_HEADER_RE = re.compile(
-    rf"^{re.escape(HDR_BODY_SEP)}\s*Body \(clean, unformatted\):\s*{re.escape(HDR_BODY_SEP)}\s*",
+    rf'^{re.escape(HDR_BODY_SEP)}\s*Body \(clean, unformatted\):\s*{re.escape(HDR_BODY_SEP)}\s*',
     re.MULTILINE,
 )
 
 
 def normalize_keep_newlines(s: str) -> str:
     if s is None:
-        return ""
-    s = unicodedata.normalize("NFKC", s)
+        return ''
+    s = unicodedata.normalize('NFKC', s)
     s = (
-        s.replace("’", "'")
-        .replace("‘", "'")
-        .replace("`", "'")
-        .replace("´", "'")
-        .replace("\u00a0", " ")
-        .replace("\u2007", " ")
-        .replace("\u202f", " ")
-        .replace("\u00ad", "")
+        s.replace('’', "'")
+        .replace('‘', "'")
+        .replace('`', "'")
+        .replace('´', "'")
+        .replace('\u00a0', ' ')
+        .replace('\u2007', ' ')
+        .replace('\u202f', ' ')
+        .replace('\u00ad', '')
     )
-    s = re.sub(r"[ \t]+", " ", s)
+    s = re.sub(r'[ \t]+', ' ', s)
     return s.strip()
 
 
 def scrub_inline(s: str) -> str:
     if s is None:
-        return ""
-    s = s.replace("*", "")
-    s = s.replace("\\n", " ")
-    s = re.sub(r"\s+", " ", s)
+        return ''
+    s = s.replace('*', '')
+    s = s.replace('\\n', ' ')
+    s = re.sub(r'\s+', ' ', s)
     return s.strip()
 
 
@@ -53,18 +53,18 @@ def parse_subject_and_reading(subject_raw: str) -> tuple[str, str | None]:
         subject='SUNSHINE FOR YOUR SOUL', reading='Ps. 84'
     """
     if not subject_raw:
-        return "", None
+        return '', None
 
     # Remove leading 'Subject:' (case-insensitive)
-    m = re.match(r"^\s*Subject\s*:\s*(.*)$", subject_raw, flags=re.IGNORECASE)
+    m = re.match(r'^\s*Subject\s*:\s*(.*)$', subject_raw, flags=re.IGNORECASE)
     s = m.group(1) if m else subject_raw
 
     # Try to find a '(read ...)' parenthetical
     # Capture text after 'read' within the last parenthetical that contains 'read'
     reading = None
-    for pm in re.finditer(r"\(([^)]*read[^)]*)\)", s, flags=re.IGNORECASE):
+    for pm in re.finditer(r'\(([^)]*read[^)]*)\)', s, flags=re.IGNORECASE):
         inside = pm.group(1)
-        mread = re.search(r"read\s+(.+)$", inside, flags=re.IGNORECASE)
+        mread = re.search(r'read\s+(.+)$', inside, flags=re.IGNORECASE)
         if mread:
             reading = scrub_inline(mread.group(1))
             # Remove exactly this parenthetical from subject
@@ -76,18 +76,18 @@ def parse_subject_and_reading(subject_raw: str) -> tuple[str, str | None]:
 
 
 def extract_header_fields(full_text: str) -> Dict[str, str]:
-    hdr = {"message_id": "", "subject": "", "from": "", "to": "", "date": ""}
+    hdr = {'message_id': '', 'subject': '', 'from': '', 'to': '', 'date': ''}
     for line in full_text.splitlines():
-        if line.startswith("message_id: "):
-            hdr["message_id"] = line.split("message_id: ", 1)[1].strip()
-        elif line.startswith("subject   : "):
-            hdr["subject"] = line.split("subject   : ", 1)[1].strip()
-        elif line.startswith("from      : "):
-            hdr["from"] = line.split("from      : ", 1)[1].strip()
-        elif line.startswith("to        : "):
-            hdr["to"] = line.split("to        : ", 1)[1].strip()
-        elif line.startswith("date      : "):
-            hdr["date"] = line.split("date      : ", 1)[1].strip()
+        if line.startswith('message_id: '):
+            hdr['message_id'] = line.split('message_id: ', 1)[1].strip()
+        elif line.startswith('subject   : '):
+            hdr['subject'] = line.split('subject   : ', 1)[1].strip()
+        elif line.startswith('from      : '):
+            hdr['from'] = line.split('from      : ', 1)[1].strip()
+        elif line.startswith('to        : '):
+            hdr['to'] = line.split('to        : ', 1)[1].strip()
+        elif line.startswith('date      : '):
+            hdr['date'] = line.split('date      : ', 1)[1].strip()
         if line.strip() == HDR_BODY_SEP:
             break
     return hdr
@@ -161,38 +161,38 @@ def parse_one(full_text: str) -> Dict[str, object]:
                     break
 
     # Slice raw sections
-    verse_raw = reflection_raw = prayer_raw = ""
+    verse_raw = reflection_raw = prayer_raw = ''
     if v_idx is not None and r_idx is not None:
-        verse_raw = "\n".join(lines[v_idx + 1 : r_idx]).strip()
+        verse_raw = '\n'.join(lines[v_idx + 1 : r_idx]).strip()
     if r_idx is not None:
         stop = p_idx if p_idx is not None else len(lines)
-        reflection_raw = "\n".join(lines[r_idx + 1 : stop]).strip()
+        reflection_raw = '\n'.join(lines[r_idx + 1 : stop]).strip()
     if p_idx is not None:
-        prayer_raw = "\n".join(lines[p_idx:]).strip()
-        prayer_raw = PRAYER_LEADING_SIGNATURE_RE.sub("", prayer_raw, count=1)
+        prayer_raw = '\n'.join(lines[p_idx:]).strip()
+        prayer_raw = PRAYER_LEADING_SIGNATURE_RE.sub('', prayer_raw, count=1)
 
     # Subject + reading from subject
-    subject_clean, reading = parse_subject_and_reading(hdr.get("subject", ""))
+    subject_clean, reading = parse_subject_and_reading(hdr.get('subject', ''))
 
     record: Dict[str, object] = {
-        "message_id": hdr.get("message_id", ""),
-        "date_utc": hdr.get("date", ""),
-        "subject": subject_clean,
-        "verse": scrub_inline(verse_raw),
-        "reflection": scrub_inline(reflection_raw),
-        "prayer": scrub_inline(prayer_raw),
-        "original_content": body,
-        "found_verse": v_idx is not None,
-        "found_reflection": r_idx is not None,
-        "found_prayer": p_idx is not None,
+        'message_id': hdr.get('message_id', ''),
+        'date_utc': hdr.get('date', ''),
+        'subject': subject_clean,
+        'verse': scrub_inline(verse_raw),
+        'reflection': scrub_inline(reflection_raw),
+        'prayer': scrub_inline(prayer_raw),
+        'original_content': body,
+        'found_verse': v_idx is not None,
+        'found_reflection': r_idx is not None,
+        'found_prayer': p_idx is not None,
     }
 
     # Add reading if found, and set found_reading accordingly
     if reading:
-        record["reading"] = reading
-        record["found_reading"] = True
+        record['reading'] = reading
+        record['found_reading'] = True
     else:
-        record["found_reading"] = False  # ensure boolean at the bottom
+        record['found_reading'] = False  # ensure boolean at the bottom
 
     return record
 
@@ -200,36 +200,30 @@ def parse_one(full_text: str) -> Dict[str, object]:
 def main():
     import argparse
 
-    ap = argparse.ArgumentParser(
-        description="Parse 1908-shaped devotionals into JSON with subject-reading extraction"
-    )
+    ap = argparse.ArgumentParser(description='Parse 1908-shaped devotionals into JSON with subject-reading extraction')
     ap.add_argument(
-        "--input-dir",
+        '--input-dir',
         default=DEFAULT_INPUT_DIR,
-        help="Directory containing .txt messages (default: 1908)",
+        help='Directory containing .txt messages (default: 1908)',
     )
-    ap.add_argument(
-        "--out", default=OUT_JSON, help="Output JSON file (default: parsed_1908.json)"
-    )
+    ap.add_argument('--out', default=OUT_JSON, help='Output JSON file (default: parsed_1908.json)')
     args = ap.parse_args()
 
     src = Path(args.input_dir)
-    files = sorted(src.glob("*.txt"))
+    files = sorted(src.glob('*.txt'))
     if not files:
-        print(f"No files found in {src.resolve()}")
-        Path(args.out).write_text("[]", encoding="utf-8")
+        print(f'No files found in {src.resolve()}')
+        Path(args.out).write_text('[]', encoding='utf-8')
         return
 
     rows: List[Dict[str, object]] = []
     for fp in files:
-        txt = fp.read_text(encoding="utf-8", errors="replace")
+        txt = fp.read_text(encoding='utf-8', errors='replace')
         rows.append(parse_one(txt))
 
-    Path(args.out).write_text(
-        json.dumps(rows, indent=2, ensure_ascii=False), encoding="utf-8"
-    )
-    print(f"Wrote {len(rows)} records to {Path(args.out).resolve()}")
+    Path(args.out).write_text(json.dumps(rows, indent=2, ensure_ascii=False), encoding='utf-8')
+    print(f'Wrote {len(rows)} records to {Path(args.out).resolve()}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

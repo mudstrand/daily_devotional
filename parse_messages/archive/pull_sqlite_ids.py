@@ -2,8 +2,8 @@
 import sqlite3
 from pathlib import Path
 
-DB_PATH = "daily_devotional.db"  # change to your .sqlite/.db file
-OUT_FILE = "sqlite_message_ids.txt"  # output file path
+DB_PATH = 'daily_devotional.db'  # change to your .sqlite/.db file
+OUT_FILE = 'sqlite_message_ids.txt'  # output file path
 
 
 def main():
@@ -23,9 +23,9 @@ def main():
         conn.close()
 
     ids = [r[0] for r in rows]
-    Path(OUT_FILE).write_text("\n".join(ids) + "\n", encoding="utf-8")
-    print(f"Wrote {len(ids)} IDs to {OUT_FILE}")
+    Path(OUT_FILE).write_text('\n'.join(ids) + '\n', encoding='utf-8')
+    print(f'Wrote {len(ids)} IDs to {OUT_FILE}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
